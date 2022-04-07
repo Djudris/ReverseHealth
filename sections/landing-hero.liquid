@@ -1,0 +1,30 @@
+{{ 'landing-hero.css' | asset_url | stylesheet_tag }}
+
+<h2 class="hero-title">{{ section.settings.hero-title }}</h2>
+
+
+
+{% schema %}
+  {
+    "name": "Values",
+    "settings": [
+    {
+      "id": "hero-title",
+      "type": "text",
+      "label": "Title",
+      "default":"THE PERFECT BLEND FOR WOMEN AT ANY AGE"
+    },
+    {
+          "id": "hero-subtitle",
+          "type": "text",
+          "label": "Subtitle",
+          "default":"Our products are designed to boost weight loss and increase lifespan"
+    }
+    ],
+    "presets": [
+      {
+        "name": "Values"
+      }
+    ]
+  }
+{% endschema %}
