@@ -1,0 +1,198 @@
+{{ 'landing-reviews.css' | asset_url | stylesheet_tag }}
+
+<section id="reviews" class="reviews-bg">
+    <div class="container">
+        <h2 class="text-center reviews-title">
+            {{ section.settings.title }}
+        </h2>
+        <div  id="review-slider" class="owl-carousel row review-pb">
+            <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
+                <img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein">
+                <div class="reviews-card h-100">
+                    <div class="d-flex">
+                        <div>
+                            <img class="review-card-img" src="{{ 'review_1.png' | asset_url }}" alt="Review">
+                        </div>
+                        <div class="review-card-top">
+                            <div class="review-card-name">{{ section.settings.review-card-1-name }}</div>
+                            <div class="review-card-stars">
+                                <img src="{{ 'rating_5.svg' | asset_url }}" alt="Review">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card-bottom">
+                        <h3 class="review-card-title">
+                            {{ section.settings.review-card-1-title }}
+                        </h3>
+                        <p class="review-card-text mb-0">
+                            {{ section.settings.review-card-1-text }}
+                        </p>
+                    </div>
+                </div>
+                <div class="review-icons row">
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'fat.svg' | asset_url }}" class="review-icon" alt="Review icons">
+                    </div>
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'bones.svg' | asset_url }}" class="review-icon" alt="Review icons">
+
+                    </div>
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'muscles.svg' | asset_url }}" class="review-icon" alt="Review icons">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
+                <img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein">
+
+                <div class="reviews-card h-100">
+                    <div class="d-flex">
+                        <div>
+                            <img class="review-card-img" src="{{ 'review_2.png' | asset_url }}" alt="Review">
+                        </div>
+                        <div class="review-card-top">
+                            <div class="review-card-name">{{ section.settings.review-card-2-name }}</div>
+                            <div class="review-card-stars">
+                                <img src="{{ 'rating_4_5.svg' | asset_url }}" alt="Review">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card-bottom">
+                        <h3 class="review-card-title">
+                            {{ section.settings.review-card-2-title }}
+                        </h3>
+                        <p class="review-card-text mb-0">
+                            {{ section.settings.review-card-2-text }}
+                        </p>
+                    </div>
+                </div>
+                <div class="review-icons row">
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'skin.svg' | asset_url }}" class="review-icon" alt="Review icons">
+                    </div>
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'nails.svg' | asset_url }}" class="review-icon" alt="Review icons">
+
+                    </div>
+                    <div class="col-4  d-flex justify-content-center">
+                        <img src="{{ 'hair.svg' | asset_url }}" class="review-icon" alt="Review icons">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
+                <img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein">
+
+                <div class="reviews-card h-100">
+                    <div class="d-flex">
+                        <div>
+                            <img class="review-card-img" src="{{ 'review_3.png' | asset_url }}" alt="Review">
+                        </div>
+                        <div class="review-card-top">
+                            <div class="review-card-name">{{ section.settings.review-card-3-name }}</div>
+                            <div class="review-card-stars">
+                                <img src="{{ 'rating_4_5.svg' | asset_url }}" alt="Review">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card-bottom">
+                        <h3 class="review-card-title">
+                            {{ section.settings.review-card-3-title }}
+                        </h3>
+                        <p class="review-card-text mb-0">
+                            {{ section.settings.review-card-3-text }}
+                        </p>
+                    </div>
+                </div>
+                <div class="review-icons row">
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'weight.svg' | asset_url }}" class="review-icon" alt="Review icons">
+                    </div>
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'immunity.svg' | asset_url }}" class="review-icon" alt="Review icons">
+
+                    </div>
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="{{ 'heart.svg' | asset_url }}" class="review-icon" alt="Review icons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ 'landing-reviews.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+"name": "t:sections.featured-collection.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"default": "Over 30,000 Five-Star Reviews",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-1-name",
+"default": "Eva",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-1-title",
+"default": "FAT IS MELTING AWAY EACH DAY",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-1-text",
+"default": "I just love this product. I have been using Women’s Protein for 6 weeks and my muscles are better toned and joint pain has almost disappeared. Isn’t that amazing? I highly recommend all ReverseHealth products.",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-2-name",
+"default": "Laura",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-2-title",
+"default": "BEST COLLAGEN FOR WOMEN!",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-2-text",
+"default": "I have tried many collagens and none of them really worked for me. I was skeptical when my friends told me about Women’s Collagen but they were right - it really changed my appearance in just 2 weeks.",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-3-name",
+"default": "Linda",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-3-title",
+"default": "HOW REVERSE HAS HELPED ME",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-3-text",
+"default": "At 57 I was getting sick all the time and my energy level was always low. But since I started using Women’s D3 Vitamin my immune system has improved a lot which makes me feel a little bit safer, especially during a pandemic.",
+"label": "t:sections.featured-collection.settings.title.label"
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-collection.presets.name"
+}
+]
+}
+{% endschema %}

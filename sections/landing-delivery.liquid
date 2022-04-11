@@ -1,0 +1,85 @@
+{{ 'landing-delivery.css' | asset_url | stylesheet_tag }}
+
+<section class="delivery-bg">
+    <div class="container">
+        <h2 class="delivery-title text-center mb-0">{{ section.settings.title }}</h2>
+        <div class="row">
+            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
+                <img src="{{ 'calendar_i.svg' | asset_url }}" alt="Calendar icon" class="delivery-img ">
+                <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-1 }}</h3>
+                <p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>
+            </div>
+            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
+                <img src="{{ 'shipping_i.svg' | asset_url }}" alt="Shipping icon" class="delivery-img ">
+                <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-1 }}</h3>
+                <p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>
+            </div>
+            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
+                <img src="{{ 'money_i.svg' | asset_url }}" alt="Money refund icon" class="delivery-img ">
+                <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-3 }}</h3>
+                <p class="delivery-text  text-center mb-0">{{ section.settings.text-3 }}</p>
+            </div>
+        </div>
+        <div class="delivery-btn-padding d-flex justify-content-center">
+            <button class="btn btn-primary button-top">check availability</button>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "t:sections.featured-collection.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"default": "Risk-free purchase and fast delivery",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "title-sm-1",
+"default": "Fast Delivery Time",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "text-1",
+"default": "Receive your order in 1- 4 business days",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "title-sm-2",
+"default": "Free Shipping",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "text-2",
+"default": "U.S only",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "title-sm-3",
+"default": "Money Back Guarantee",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "text-3",
+"default": "14-day, no questions asked refund",
+"label": "t:sections.featured-collection.settings.title.label"
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-collection.presets.name"
+}
+]
+}
+{% endschema %}
+
