@@ -1,0 +1,30 @@
+.coaches-bg {
+    background: #FCFCFC;
+   padding-bottom: 50px;
+   padding-top:50px
+}
+.coaches-title {
+    text-transform: uppercase;
+    padding-bottom:31px;
+    font-size:18px;
+    line-height: 31px;
+    font-weight: 700;
+}
+.coaches-logo {
+    padding-left: 12px;
+    padding-top:20px;
+}
+@media screen and (min-width: 992px) {
+    .coaches-title {
+        font-size:24px;
+        line-height: 41px;
+        padding-bottom:20px;
+    }
+    .coaches-bg {
+        padding-bottom: 70px;
+        padding-top:70px
+    }
+    .coaches-logo {
+        padding-left: 62px;
+    }
+}

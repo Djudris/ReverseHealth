@@ -1,0 +1,169 @@
+{{ 'single-product-faq.css' | asset_url | stylesheet_tag }}
+<div class="faq-section-wrapper">
+    <div class="container" style="width: 100%;">
+        <h2 class="faq-title text-center">
+            {{ section.settings.faq-title }}
+        </h2>
+        <div class="faq-grid">
+            <div class="faq-div1">
+                <div class="faq-page">
+                    <h3 class="faq-heading">
+                        {{ section.settings.faq-question-1 }}
+                    </h3>
+                    <div class="faq-icon"></div>
+                </div>
+                <p class="faq-text">
+                    {{ section.settings.faq-answer-1 }}
+                </p>
+            </div>
+            <div class="faq-div2">
+                <div class="faq-page">
+                    <h3 class="faq-heading">
+                        {{ section.settings.faq-question-2 }}
+                    </h3>
+                    <div class="faq-icon"></div>
+                </div>
+                <p class="faq-text">
+                    {{ section.settings.faq-answer-2 }}
+                </p>
+            </div>
+            <div class="faq-div3">
+                <div class="faq-page">
+                    <h3 class="faq-heading">
+                        {{ section.settings.faq-question-3 }}
+                    </h3>
+                    <div class="faq-icon"></div>
+                </div>
+                <p class="faq-text">
+                    {{ section.settings.faq-answer-3 }}
+                </p>
+            </div>
+            <div class="faq-div4">
+                <div class="faq-page">
+                    <h3 class="faq-heading">
+                        {{ section.settings.faq-question-4 }}
+                    </h3>
+                    <div class="faq-icon"></div>
+                </div>
+                <p class="faq-text">
+                    {{ section.settings.faq-answer-4 }}
+                </p>
+            </div>
+            <div class="faq-div5">
+                <div class="faq-page">
+                    <h3 class="faq-heading">
+                        {{ section.settings.faq-question-5 }}
+                    </h3>
+                    <div class="faq-icon"></div>
+                </div>
+                <p class="faq-text">
+                    {{ section.settings.faq-answer-5 }}
+                </p>
+            </div>
+            <div class="faq-div6">
+                <div class="faq-page">
+                    <h3 class="faq-heading">
+                        {{ section.settings.faq-question-6 }}
+                    </h3>
+                    <div class="faq-icon"></div>
+                </div>
+                <p class="faq-text">
+                    {{ section.settings.faq-answer-6 }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{ 'single-product-faq.js'  | asset_url | script_tag     }}
+{% schema %}
+{
+"name": "FAQ",
+"settings": [
+{
+"id": "faq-title",
+"type": "text",
+"label": "FAQ title",
+"default":"FREQUENTLY ASKED QUESTIONS"
+},
+{
+"id": "faq-question-1",
+"type": "text",
+"label": "Question 1",
+"default":"QUESTION?"
+},
+{
+"id": "faq-answer-1",
+"type": "textarea",
+"label": "Question 1 answer",
+"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+},
+{
+"id": "faq-question-2",
+"type": "text",
+"label": "Question 2",
+"default":"QUESTION?"
+},
+{
+"id": "faq-answer-2",
+"type": "textarea",
+"label": "Question 2 answer",
+"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+},
+{
+"id": "faq-question-3",
+"type": "text",
+"label": "Question 3",
+"default":"QUESTION?"
+},
+{
+"id": "faq-answer-3",
+"type": "textarea",
+"label": "Question 3 answer",
+"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+},
+{
+"id": "faq-question-4",
+"type": "text",
+"label": "Question 4",
+"default":"QUESTION?"
+},
+{
+"id": "faq-answer-4",
+"type": "textarea",
+"label": "Question 4 answer",
+"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+},
+{
+"id": "faq-question-5",
+"type": "text",
+"label": "Question 5",
+"default":"QUESTION?"
+},
+{
+"id": "faq-answer-5",
+"type": "textarea",
+"label": "Question 5 answer",
+"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+},
+{
+"id": "faq-question-6",
+"type": "text",
+"label": "Question 6",
+"default":"QUESTION?"
+},
+{
+"id": "faq-answer-6",
+"type": "textarea",
+"label": "Question 6 answer",
+"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+}
+
+],
+"presets": [
+{
+"name": "FAQ"
+}
+]
+}
+{% endschema %}

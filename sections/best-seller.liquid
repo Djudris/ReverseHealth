@@ -23,20 +23,20 @@
                             </div>
                             <div>
                                 <div class="pt-3 mt-1 best-seller-card-price d-flex justify-content-center">
-                                    <form style="margin-bottom:20px" class="product-form" action="/cart/add" data-productid="{{product.id}}"  method="post">
-                                        <input type="hidden" name="id" data-productid="{{product.id}}" class="product-select" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                                    <form class="product-form" action="/cart/add" data-productid="{{ product.id }}" method="post">
+                                        <input type="hidden" name="id" data-productid="{{ product.id }}" class="product-select" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}"/>
 
-                                    <button
-                                            id="{{ product_form_id }}-submit"
-                                            type="submit"
-                                            name="add"
-                                            class="quick-add__submit btn best-seller-card-btn"
-                                            aria-haspopup="dialog"
-                                            aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
-                                            aria-live="polite"
-                                            data-sold-out-message="true"
-                                            {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                                    >
+                                        <button
+                                                id="{{ product_form_id }}-submit"
+                                                type="submit"
+                                                name="add"
+                                                class="quick-add__submit btn best-seller-card-btn"
+                                                aria-haspopup="dialog"
+                                                aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
+                                                aria-live="polite"
+                                                data-sold-out-message="true"
+                                                {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                                        >
                             <span>
                       {%- if product.selected_or_first_available_variant.available -%}
                           Add to cart
@@ -44,15 +44,15 @@
                           {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
                     </span>
-                                        <span class="sold-out-message hidden">
+                                            <span class="sold-out-message hidden">
                       {{ 'products.product.sold_out' | t }}
                     </span>
-                                        <div class="loading-overlay__spinner hidden">
-                                            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                                            </svg>
-                                        </div>
-                                    </button>
+                                            <div class="loading-overlay__spinner hidden">
+                                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                </svg>
+                                            </div>
+                                        </button>
                                     </form>
                                 </div>
                                 <div class="py-3 my-1 my-lg-2 text-center">
@@ -62,18 +62,16 @@
                         </div>
                     {%- endfor -%}
                 </div>
-                <div class="row position-absolute carousel-arrows">
-                    <div class="col-6 d-flex justify-content-start">
-                        <button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center">
-                            <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
-                        </button>
-                    </div>
-                    <div class="col-6 d-flex justify-content-end">
-                        <button class="customNextBtn caps d-flex d-sm-inline align-items-center">
-                            <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
+                <div class="css--prev-btn d-flex justify-content-start">
+                    <button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center">
+                        <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
+                    </button>
+                </div>
+                <div class="css--next-btn d-flex justify-content-end">
+                    <button class="customNextBtn caps d-flex d-sm-inline align-items-center">
+                        <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
 
-                        </button>
-                    </div>
+                    </button>
                 </div>
             </div>
 

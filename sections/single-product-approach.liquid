@@ -1,0 +1,30 @@
+{{ 'single-product-approach.css' | asset_url | stylesheet_tag }}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12 order-1">
+                <h2 class="approach-title">
+                    Why do women need a different approach?
+                </h2>
+                <p class="approach-text">
+                    {{ product.metafields.my_fields.approach_text }}
+                </p>
+            </div>
+            <div class="col-lg-6 col-12 d-flex justify-content-center order-2">
+                <img class="approach-photo" src="{{ product.metafields.my_fields.coaches_image | img_url: '800x800' }}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 d-flex justify-content-center order-lg-3 order-4">
+                <img class="approach-circle" src="{{ product.metafields.my_fields.benefits_image | img_url: '800x800' }}" alt="">
+            </div>
+            <div class="col-lg-6 col-12 order-lg-4 order-3">
+                <h2 class="need-title">{{ product.metafields.my_fields.needs_title }}</h2>
+                <p class="need-text">{{ product.metafields.my_fields.needs_text }}</p>
+
+            </div>
+        </div>
+        <div class="delivery-btn-padding d-flex justify-content-center">
+            <a href="#page-top" class="btn btn-primary button-top">shop now</a>
+        </div>
+    </div>
+</section>

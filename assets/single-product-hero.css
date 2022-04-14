@@ -1,0 +1,170 @@
+.product-flavor {
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.product-img {
+    margin-top: 10px;
+}
+
+.product-img img {
+    width: 260px;
+}
+
+.product-header-block {
+    margin-top: 40px;
+}
+
+.product-icon {
+    width: 50px;
+    margin-top: 20px;
+}
+
+.icon-vegan {
+    margin-right: 12px;
+}
+
+.product-description {
+    margin-top: 26px;
+    margin-bottom: 5px;
+}
+
+.product-description p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+
+.bulletpoint-text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.single-bulletpoint {
+    width: 16px;
+    margin-right: 12px;
+}
+
+.single-hero-mb {
+    margin-bottom: 35px;
+}
+
+.owl-dots {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.owl-dots button.owl-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: inline-block;
+    background: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    margin: 0 3px;
+}
+
+.owl-dots button.owl-dot.active {
+    background-color: #959595;
+    border-color: #959595;
+}
+
+.owl-dots button.owl-dot:focus {
+    outline: none;
+}
+
+.customNextBtnSingle, .customPrevBtnSingle {
+    font-size: 12px;
+    border: none;
+    background: transparent;
+}
+
+.css--prev-btn-single {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 30%;
+    left: 0;
+}
+
+.css--next-btn-single {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    right: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .product-flavor {
+        font-size: 18px;
+        line-height: 31px;
+    }
+
+    .product-title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .product-img {
+        margin-top: 40px;
+    }
+
+    .product-img img {
+        width: 400px;
+    }
+
+    .product-header-block {
+        margin-top: 70px;
+    }
+
+    .product-icon {
+        width: 60px;
+        margin-top: 0;
+
+    }
+
+    .icon-vegan {
+        margin-right: 20px;
+    }
+
+    .product-description {
+        margin-top: 25px;
+
+    }
+
+    .product-description p {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .bulletpoint-text {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .single-bulletpoint {
+        width: 19px;
+        margin-right: 17px;
+    }
+
+    .single-hero-mb {
+        margin-bottom: 40px;
+    }
+}

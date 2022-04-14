@@ -1,0 +1,103 @@
+{{ 'single-product-hero.css' | asset_url | stylesheet_tag }}
+
+
+<section id="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 position-relative">
+                <div class="d-lg-none product-header-block">
+                    <h3 class="product-flavor mb-0">{{ product.metafields.single.flavor }}</h3>
+                    <h2 class="product-title mb-0">
+                        {{ product.title }}
+                    </h2>
+                    <div class="d-flex align-items-center justify-content-center">
+                        {% if product.metafields.single.isvegan %}
+                            <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
+                        {% endif %}
+                        <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
+
+                    </div>
+                </div>
+                <div class="position-relative">
+                    <div id="single-product-carousel" class="product-img owl-carousel">
+                        {% for image in product.images %}
+                            <img src="{{ image.src | product_img_url: "400x400" }}" alt="{{ image.alt }}">
+                        {% endfor %}
+                    </div>
+                    <div class="css--prev-btn-single d-flex justify-content-start">
+                        <button class="customPrevBtnSingle caps text-center d-flex d-sm-inline align-items-center">
+                            <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
+                        </button>
+                    </div>
+                    <div class="css--next-btn-single d-flex justify-content-end">
+                        <button class="customNextBtnSingle caps d-flex d-sm-inline align-items-center">
+                            <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="d-lg-block d-none product-header-block">
+                    <div class="row">
+                        <div class="col-8">
+                            <h3 class="product-flavor mb-0">{{ product.metafields.single.flavor }}</h3>
+                            <h2 class="product-title mb-0">
+                                {{ product.title }}
+                            </h2>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-end">
+                            {% if product.metafields.single.isvegan %}
+                                <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
+                            {% endif %}
+                            <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-description">{{ product.description }}</div>
+                <div class="row single-hero-mb">
+                    {% if product.metafields.my_fields.bulletpoint_info_nr_1 %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
+                                {{ product.metafields.my_fields.bulletpoint_info_nr_1 }}</div>
+                        </div>
+                    {% endif %}
+                    {% if product.metafields.my_fields.bulletpoint_info_nr_2 %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
+                                {{ product.metafields.my_fields.bulletpoint_info_nr_2 }}</div>
+                        </div>
+                    {% endif %}
+                    {% if product.metafields.my_fields.bulletpoint_info_nr_3 %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
+                                {{ product.metafields.my_fields.bulletpoint_info_nr_3 }}</div>
+                        </div>
+                    {% endif %}
+                    {% if product.metafields.my_fields.bulletpoint_info_nr_4 %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
+                                {{ product.metafields.my_fields.bulletpoint_info_nr_4 }}</div>
+                        </div>
+                    {% endif %}
+                    {% if product.metafields.my_fields.bulletpoint_info_nr_5 %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
+                                {{ product.metafields.my_fields.bulletpoint_info_nr_5 }}</div>
+                        </div>
+                    {% endif %}
+                    {% if product.metafields.my_fields.bulletpoint_info_nr_6 %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
+                                {{ product.metafields.my_fields.bulletpoint_info_nr_6 }}</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ 'single-product-hero.js' | asset_url | script_tag }}

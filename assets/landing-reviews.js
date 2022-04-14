@@ -17,7 +17,7 @@ $(window).resize(function () {
 });
 
 function startCarouselReview() {
-    $("#review-slider").owlCarousel({
+   let owl3 = $("#review-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
         margin: 10,
         dots: false,
@@ -37,6 +37,12 @@ function startCarouselReview() {
             },
         }
     });
+    $('.customNextBtnReview').click(function () {
+        owl3.trigger('next.owl.carousel');
+    })
+    $('.customPrevBtnReview').click(function () {
+        owl3.trigger('prev.owl.carousel');
+    })
 }
 
 function stopCarouselReview() {

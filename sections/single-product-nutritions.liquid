@@ -1,0 +1,48 @@
+{{ 'single-product-nutritions.css' | asset_url | stylesheet_tag }}
+<section>
+    <div class="container nutritions-bg">
+        <div class="row">
+            {% if product.metafields.my_fields.composition_title %}
+                <div class="col-lg-6 col-12">
+                    <h2 class="composition-title">{{ product.metafields.my_fields.composition_title }}</h2>
+                    <p class="composition-text"> {{ product.metafields.my_fields.composition_text }}</p>
+                </div>
+            {% endif %}
+
+            <div class="d-flex justify-content-between  align-items-center justify-content-lg-center col-lg-6 col-12 {% if product.metafields.my_fields.composition_title == null and product.metafields.my_fields.composition_large_table == false %} order-lg-2 order-1 {% endif %}">
+                {% if product.metafields.my_fields.product_is_sugar_free %}
+                    <img class="nutritions-icon" src="{{ 'sugar_free.svg' | asset_url }}" alt="Sugar Free">
+                {% endif %}
+                {% if product.metafields.my_fields.product_is_gluten_free %}
+                    <img class="nutritions-icon" src="{{ 'gluten-free.svg' | asset_url }}" alt="Gluten Free">
+                {% endif %}
+                {% if product.metafields.my_fields.product_is_non_gmo %}
+                    <img class="nutritions-icon" src="{{ 'non-gmo.svg' | asset_url }}" alt="NON GMO">
+                {% endif %}
+                {% if product.metafields.my_fields.product_is_all_natural %}
+                    <img class="nutritions-icon" src="{{ 'all-natural.svg' | asset_url }}" alt="All Natural">
+                {% endif %}
+                {% if product.metafields.my_fields.product_is_dairy_free %}
+                    <img class="nutritions-icon" src="{{ 'dairy-free.svg' | asset_url }}" alt="Dairy free">
+                {% endif %}
+                {% if product.metafields.my_fields.product_is_lactose_free %}
+                    <img class="nutritions-icon" src="{{ 'lactose-free.svg' | asset_url }}" alt="Lactose Free">
+                {% endif %}
+            </div>
+            <div class="{% if product.metafields.my_fields.composition_large_table %}
+            col-12
+            {% else %}
+            col-lg-6 col-12
+{% endif %}  order-lg-1 order-2">
+                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '1280x360' }}" alt="">
+                <img class="nutritions-table d-lg-none w-100" src="{{ product.metafields.my_fields.composition_mobile | img_url: '710x1023' }}" alt="">
+            </div>
+        </div>
+        <div class="delivery-btn-padding d-flex justify-content-center">
+            <a href="#page-top" class="btn btn-primary button-top">shop now</a>
+        </div>
+        <div class="">
+            <img class="approach-bottom-img" src="{{ product.metafields.my_fields.bottom_image | img_url: '1240x280' }}" alt="">
+        </div>
+    </div>
+</section>

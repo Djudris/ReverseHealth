@@ -16,12 +16,13 @@ $(document).ready(function () {
            },
            768: {
                items: 2,
+               dots:true,
            },
            992: {
                items: 3,
            },
            1200: {
-               items: 4,
+               items: 3,
            }
        },
     });
