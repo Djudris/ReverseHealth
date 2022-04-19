@@ -13,10 +13,17 @@
           "settings": {
             "product": "{{product}}"
           }
+        },
+        "fce5ed28-948d-4031-bec4-244d649f175c": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-photos\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
-        "7f914a96-8ee1-41e4-a2e6-40bd4eed922c"
+        "7f914a96-8ee1-41e4-a2e6-40bd4eed922c",
+        "fce5ed28-948d-4031-bec4-244d649f175c"
       ],
       "settings": {
         "include_margins": true
