@@ -1,0 +1,75 @@
+.mission-btn-padding {
+    padding-top:35px;
+}
+.mission-title-small {
+    text-transform: uppercase;
+    font-size:16px;
+    line-height: 27px;
+    font-weight: 500;
+}
+.mission-title {
+    text-transform: uppercase;
+    padding-top:10px;
+    font-size:18px;
+    line-height: 31px;
+    font-weight: 700;
+}
+.mission-text {
+    font-size:14px;
+    line-height: 24px;
+    padding-top:10px;
+}
+.mission-p {
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.mission-iframe {
+    border-radius: 8px;
+}
+.mission-iframe-padding {
+    padding-top: 30px;
+}
+.mission-img-div {
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    border-radius: 8px;
+    margin-bottom:50px
+}
+@media screen and (min-width: 992px) {
+    .mission-btn-padding {
+        padding-top:40px;
+    }
+    .mission-title-small {
+        font-size:18px;
+        line-height: 31px;
+    }
+    .mission-title {
+        font-size:24px;
+        line-height: 41px;
+    }
+    .mission-text {
+        font-size:16px;
+        line-height: 27px;
+        padding-top:20px;
+    }
+    .mission-p {
+        padding-top:70px;
+        padding-bottom:70px;
+
+    }
+    .mission-iframe {
+        border-radius: 12px;
+    }
+    .mission-iframe-padding {
+        padding-top: 0;
+    }
+    .mission-img-div {
+        height: 280px;
+        border-radius: 12px;
+        background-position-y: -132px;
+        margin-bottom:70px;
+
+    }
+}

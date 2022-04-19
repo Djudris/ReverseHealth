@@ -1,0 +1,109 @@
+{{ 'landing-hero.css' | asset_url | stylesheet_tag }}
+<section id="hero-id" class="position-relative landing-hero-bg">
+    <img class="landing-hero-feather-1" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
+    <img class="landing-hero-feather-2" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
+
+    <div class="container position-unset">
+        <div class="row position-unset">
+            <div class="col-lg-6 col-12 pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2">
+                <div class="landing-hero-custom">&nbsp;</div>
+                <div class="w-100 hero-landing-text-block">
+                    <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
+                    <h2 class="pt-2 hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
+                    <div class="pt-lg-5 mt-lg-2 btn-padding-mobile">
+                        <button class="btn btn-primary button-top">check availability</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100">
+                <div class="slider-parent">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="bg-blue">
+        <div class="container">
+            <div id="hero-slider" class="row owl-carousel icon-slider">
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="{{ 'vegan_i.svg' | asset_url }}" alt="Vegan icon">
+                    </div>
+                    <div class="icons-text mt-3">
+                        vegan
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="{{ 'sugar_i.svg' | asset_url }}" alt="Vegan icon">
+                    </div>
+                    <div class="icons-text mt-3">
+                        sugar free
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="{{ 'gluten_i.svg' | asset_url }}" alt="Vegan icon">
+                    </div>
+                    <div class="icons-text mt-3">
+                        gluten free
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="{{ 'gmo_i.svg' | asset_url }}" alt="Vegan icon">
+                    </div>
+                    <div class="icons-text mt-3">
+                        non gmo
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="{{ 'lactose_i.svg' | asset_url }}" alt="Vegan icon">
+                    </div>
+                    <div class="icons-text mt-3">
+                        lactose free
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="{{ 'natural_i.svg' | asset_url }}" alt="Vegan icon">
+                    </div>
+                    <div class="icons-text mt-3">
+                        all natural
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ 'landing-hero.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+"name": "Values",
+"settings": [
+{
+"id": "hero-title",
+"type": "text",
+"label": "Title",
+"default":"THE PERFECT BLEND FOR WOMEN AT ANY AGE"
+},
+{
+"id": "hero-subtitle",
+"type": "text",
+"label": "Subtitle",
+"default":"Our products are designed to boost weight loss and increase lifespan"
+}
+],
+"presets": [
+{
+"name": "Values"
+}
+]
+}
+{% endschema %}

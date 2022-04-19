@@ -1,0 +1,222 @@
+.reviews-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color:white;
+    padding-top:50px;
+    padding-bottom: 30px;
+}
+.reviews-bg {
+    background: #EB657E;
+}
+.reviews-card {
+    background: #FFFFFF;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 35px 25px 25px 25px;
+    position: relative;
+}
+.review-card-top {
+    margin-left: 15px;
+}
+.review-card-stars {
+    margin-top: 5px;
+}
+.review-card-img {
+    width: 60px;
+    height: 60px;
+}
+.review-card-name {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 27px;
+}
+.review-card-title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+}
+.review-card-text {
+    font-size: 14px;
+    line-height: 24px;
+}
+.review-card-bottom {
+    margin-top:20px
+}
+.review-icons {
+    margin-top:25px;
+}
+.review-icon {
+    height: 60px;
+}
+.review-pb {
+    padding-bottom: 40px;
+}
+.owl-stage {
+    display: flex;
+}
+.owl-item {
+    display: flex;
+    flex: 1 0 auto;
+}
+.review-product-1 {
+    position: absolute;
+    z-index: 10;
+    right: -22px;
+    top: -17px;
+    width: 150px !important;
+}
+.review-product-2 {
+    position: absolute;
+    z-index: 10;
+    right: -21px;
+    top: 3px;
+    width: 150px !important;
+}
+.review-product-3 {
+    position: absolute;
+    z-index: 10;
+    top: -9px;
+    right: -14px;
+    width: 150px !important;
+}
+
+
+@media screen and (max-width: 427px) {
+    .review-product-1 {
+        right: -40px;
+        top: -17px;
+        width: 109px !important;
+    }
+    .review-product-2 {
+        right: -21px;
+        top: -14px;
+        width: 103px !important;
+    }
+    .review-product-3 {
+        top: -19px;
+        right: -58px;
+        width: 129px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .reviews-title {
+        font-size: 24px;
+        line-height: 41px;
+        padding-top: 70px;
+        padding-bottom: 64px;
+    }
+    .reviews-card {
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
+        border-radius: 18px;
+        padding: 25px 20px 20px 20px;
+    }
+    .review-card-top {
+        margin-left: 20px;
+    }
+    .review-card-stars {
+        margin-top: 6px;
+    }
+    .review-card-img {
+        width: 70px;
+        height: 70px;
+    }
+    .review-card-name {
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .review-card-title {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .review-card-text {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .review-card-bottom {
+        margin-top:21px;
+    }
+    .review-icons {
+        margin-top:40px;
+    }
+    .review-icon {
+        display: block;
+        height: 95px;
+    }
+    .review-pb {
+        padding-bottom: 70px;
+    }
+    .review-product-1 {
+        right: -40px;
+        top: -58px;
+        width: 146px !important;
+    }
+    .review-product-2 {
+        right: -58px;
+        top: -52px;
+        width: 157px !important;
+    }
+    .review-product-3 {
+        top: -45px;
+        right: -65px;
+        width: 170px !important;
+    }
+}
+.customNextBtnReview, .customPrevBtnReview {
+    display: inline;
+    font-size: 12px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;}
+.customNextBtnReview {
+    padding:11px 17px 11px 20px;
+    margin-left: 7px;
+
+}
+.customPrevBtnReview {
+    margin-right: 7px;
+    padding:11px 20px 11px 17px
+}
+.review-carousel-btns {
+    padding-bottom: 40px;
+}
+@media screen and (min-width: 1200px) {
+    .review-product-1 {
+        right: -40px;
+        top: -58px;
+        width: 200px !important;
+    }
+    .review-product-2 {
+        right: -58px;
+        top: -52px;
+        width: 200px !important;
+    }
+    .review-product-3 {
+        top: -45px;
+        right: -65px;
+        width: 200px !important;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .review-product-1 {
+        width: auto !important;
+        right: -99px;
+        top: -83px;
+    }
+    .review-product-2 {
+        right: -49px;
+        top: -67px;
+        width: auto !important;
+
+    }
+    .review-product-3 {
+        top: -83px;
+        right: -62px;
+        width: auto !important;
+
+    }
+}
+

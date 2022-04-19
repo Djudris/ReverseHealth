@@ -1,0 +1,69 @@
+{
+  "sections": {
+    "single_product_hero": {
+      "type": "single-product-hero",
+      "settings": {
+      }
+    },
+    "landing_delivery": {
+      "type": "landing-delivery",
+      "settings": {
+        "title": "Risk-free purchase and fast delivery",
+        "title-sm-1": "Fast Delivery Time",
+        "text-1": "Receive your order in 1- 4 business days",
+        "title-sm-2": "Free Shipping",
+        "text-2": "U.S only",
+        "title-sm-3": "Money Back Guarantee",
+        "text-3": "14-day, no questions asked refund"
+      }
+    },
+    "single_product_coaches": {
+      "type": "single-product-coaches",
+      "settings": {
+        "title": "OUR PROGRAM  Health Coaches ARE FEATURED IN"
+      }
+    },
+    "single_product_approach": {
+      "type": "single-product-approach",
+      "settings": {
+      }
+    },
+    "single_product_how": {
+      "type": "single-product-how",
+      "settings": {
+      }
+    },
+    "single_product_nutritions": {
+      "type": "single-product-nutritions",
+      "settings": {
+      }
+    },
+    "faq": {
+      "type": "single-product-faq",
+      "settings": {
+        "faq-title": "Our customers often ask",
+        "faq-question-1": "What will happen after I order?",
+        "faq-answer-1": "1",
+        "faq-question-2": "What will happen after I order??",
+        "faq-answer-2": "2",
+        "faq-question-3": "What will happen after I order?",
+        "faq-answer-3": "3",
+        "faq-question-4": "What will happen after I order?",
+        "faq-answer-4": "4",
+        "faq-question-5": "What will happen after I order?",
+        "faq-answer-5": "5",
+        "faq-question-6": "What will happen after I order?",
+        "faq-answer-6": "6"
+      }
+    }
+  },
+  "order": [
+    "single_product_hero",
+    "landing_delivery",
+    "single_product_coaches",
+    "single_product_approach",
+    "single_product_how",
+    "single_product_nutritions",
+    "faq"
+  ]
+}

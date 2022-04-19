@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "landing_hero": {
+      "type": "landing-hero",
+      "settings": {
+        "hero-title": "THE PERFECT BLEND FOR WOMEN AT ANY AGE",
+        "hero-subtitle": "Our products are designed to boost weight loss and increase lifespan"
+      }
+    },
+    "best_seller": {
+      "type": "best-seller",
+      "settings": {
+        "title": "Our Best Sellers",
+        "collection": "all",
+        "products_to_show": 8
+      }
+    },
+    "reviews": {
+      "type": "landing-reviews",
+      "settings": {
+        "title": "Over 30,000 Five-Star Reviews",
+        "review-card-1-name": "Eva",
+        "review-card-1-title": "FAT IS MELTING AWAY EACH DAY",
+        "review-card-1-text": "I just love this product. I have been using Women’s Protein for 6 weeks and my muscles are better toned and joint pain has almost disappeared. Isn’t that amazing? I highly recommend all ReverseHealth products.",
+        "review-card-2-name": "Laura",
+        "review-card-2-title": "BEST COLLAGEN FOR WOMEN!",
+        "review-card-2-text": "I have tried many collagens and none of them really worked for me. I was skeptical when my friends told me about Women’s Collagen but they were right - it \nreally changed my appearance in just 2 weeks.",
+        "review-card-3-name": "Linda",
+        "review-card-3-title": "HOW REVERSE HAS HELPED ME ",
+        "review-card-3-text": "At 57 I was getting sick all the time and my energy level was always low. But since I started using Women’s D3 Vitamin my immune system has improved a lot which makes me feel a little bit safer, especially during a pandemic."
+      }
+    },
+    "landing_mission": {
+      "type": "landing-mission",
+      "settings": {
+        "title_small": "Our mission",
+        "title": "Empowering women to achieve a healthy body and mind at any age",
+        "text": "Our mission is to empower women to achieve a healthy body and mind at any age, so that they can feel confident, youthful and joyful, positively impacting their relationships with themselves, their family, friends and community. ",
+        "video_url": "https://player.vimeo.com/video/655809473?h=31a23b3f34&title=0&byline=0&portrait=0"
+      }
+    },
+    "landing_delivery": {
+      "type": "landing-delivery",
+      "settings": {
+        "title": "Risk-free purchase and fast delivery",
+        "title-sm-1": "Fast Delivery Time",
+        "text-1": "Receive your order in 1- 4 business days",
+        "title-sm-2": "Free Shipping",
+        "text-2": "U.S only",
+        "title-sm-3": "Money Back Guarantee",
+        "text-3": "14-day, no questions asked refund"
+      }
+    }
+  },
+  "order": [
+    "landing_hero",
+    "best_seller",
+    "reviews",
+    "landing_mission",
+    "landing_delivery"
+  ]
+}

@@ -1,0 +1,134 @@
+.footer-bg {
+    background: #565656;
+    padding-top: 50px;
+    margin-top: 20px;
+}
+.footer-title {
+    color:white;
+    font-size:14px;
+    font-weight: bold;
+    line-height: 19px;
+    text-transform: uppercase;
+
+}
+.footer-subtitle {
+    text-transform: uppercase;
+    color:white;
+    font-size:11px;
+    font-weight: 600;
+    line-height: 19px;
+    margin-bottom:0;
+    margin-top:20px;
+}
+.footer-href {
+    display: block;
+    color: white;
+    font-size: 11px;
+    line-height: 19px;
+    margin-top:10px;
+}
+.footer-text {
+    font-weight: 500;
+    font-size:11px;
+    line-height: 19px;
+    color: white !important;
+    margin-top: 14px;
+}
+.footer-download {
+    margin-top:10px;
+}
+.footer-fb-i {
+    margin-right: 15px;
+    width: 34px;
+}
+.footer-copyright {
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 7px;
+    line-height: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.footer-copyright-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+.footer-bg-2 {
+    background: #494949;
+}
+.footer-info-text {
+    margin-top:20px;
+    margin-bottom: 20px;
+    line-height: 19px;
+    font-size: 11px;
+    color: white !important;
+}
+.footer-border-mobile {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+.footer-social-icons {
+    margin-top:30px;
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 419px) {
+    .footer-download {
+        width: 133px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .footer-bg {
+        padding-top: 70px;
+        margin-top: 25px;
+
+    }
+    .footer-title {
+        font-size:16px;
+        line-height: 19px;
+    }
+    .footer-text {
+        font-size:14px;
+        line-height: 24px;
+        margin-top: 20px;
+    }
+    .footer-subtitle {
+        font-size:14px;
+        line-height: 24px;
+        margin-bottom:4px;
+        margin-top:0;
+
+    }
+    .footer-href {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top:12px;
+    }
+    .footer-download {
+        margin-top:15px;
+    }
+    .footer-fb-i {
+        width: 45px;
+    }
+    .footer-copyright {
+        margin-top: 14px;
+        font-size: 10px;
+        line-height: 17px;
+        margin-bottom: 0;
+
+    }
+    .footer-copyright-line {
+        top: -13px;
+    }
+    .footer-info-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .footer-border-mobile {
+        padding-bottom: 0;
+        border: none;
+    }
+    .footer-social-icons {
+        margin-top:0;
+        margin-bottom: 0;
+    }
+}

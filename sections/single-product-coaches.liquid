@@ -1,0 +1,39 @@
+{{ 'single-product-coaches.css' | asset_url | stylesheet_tag }}
+<section class="coaches-bg">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 col-12">
+                <h2 class="coaches-title text-center">{{ section.settings.title }}</h2>
+
+            </div>
+        </div>
+        <div class="row d-flex align-items-baseline">
+            <div class="col-lg-4 text-center col-10 offset-1 offset-lg-0"><img class="w-100" src="{{ 'thriveglobal.svg' | asset_url }}" alt="Coach logo"></div>
+            <div class="coaches-logo col-lg-2 col-5"><img src="{{ 'medium.svg' | asset_url }}" alt="Coach logo"></div>
+            <div class="offset-2 offset-lg-0 coaches-logo col-lg-2 col-5"><img class="w-100" src="{{ 'femfounder.svg' | asset_url }}" alt="Coach logo"></div>
+            <div class="coaches-logo col-lg-2 col-5"><img src="{{ 'thetimes.svg' | asset_url }}" alt="Coach logo"></div>
+            <div class="offset-2 offset-lg-0 coaches-logo col-lg-2 col-5"><img class="w-100" src="{{ 'theguardian.svg' | asset_url }}" alt="Coach logo"></div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "t:sections.featured-collection.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"default": "OUR PROGRAM  Health Coaches ARE FEATURED IN",
+"label": "t:sections.featured-collection.settings.title.label"
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-collection.presets.name"
+}
+]
+}
+{% endschema %}

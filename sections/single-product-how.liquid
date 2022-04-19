@@ -1,0 +1,32 @@
+{{ 'single-product-how.css' | asset_url | stylesheet_tag }}
+<section class="how-bg" style="background-color: {{ product.metafields.my_fields.how_to_use_background_color }};">
+    <img class="how-svg" src="{{ 'how.svg' | asset_url }}" alt="Review">
+
+    <div class="container">
+        <h2 class="how-title text-center">{{ product.metafields.my_fields.use_heading }}</h2>
+        <div class="row d-flex justify-content-center">
+            {% if product.metafields.my_fields.consumption_heading_1 %}
+                <div class="col-lg-4 col-12 d-flex align-items-center flex-column">
+                    <img class="how-icon" src="{{ product.metafields.my_fields.consumption_icon_1 | img_url: '800x800' }}" alt="Smoothies">
+                    <div><h3 class="how-subtitle">{{ product.metafields.my_fields.consumption_heading_1 }}</h3></div>
+                    <div><p class="how-text text-center">{{ product.metafields.my_fields.consumption_text_1 }}</p></div>
+                </div>
+            {% endif %}
+            {% if product.metafields.my_fields.consumption_heading_2 %}
+                <div class="col-lg-4 col-12 d-flex align-items-center flex-column">
+                    <img class="how-icon" src="{{ product.metafields.my_fields.consumption_icon_2 | img_url: '800x800' }}" alt="Smoothies">
+                    <div><h3 class="how-subtitle">{{ product.metafields.my_fields.consumption_heading_2 }}</h3></div>
+                    <div><p class="how-text text-center">{{ product.metafields.my_fields.consumption_text_2 }}</p></div>
+                </div>
+            {% endif %}
+            {% if product.metafields.my_fields.consumption_heading_3 %}
+                <div class="col-lg-4 col-12 d-flex align-items-center flex-column">
+                    <img class="how-icon" src="{{ product.metafields.my_fields.consumption_icon_3 | img_url: '800x800' }}" alt="Smoothies">
+                    <div><h3 class="how-subtitle">{{ product.metafields.my_fields.consumption_heading_3 }}</h3></div>
+                    <div><p class="how-text text-center">{{ product.metafields.my_fields.consumption_text_3 }}</p></div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+

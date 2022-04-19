@@ -1,0 +1,64 @@
+{{ 'landing-mission.css' | asset_url | stylesheet_tag }}
+
+<section>
+    <div class="container">
+        <div class="row mission-p">
+            <div class="col-lg-6 col-12">
+                <h3 class="mission-title-small mb-0">{{ section.settings.title_small }}</h3>
+                <h2 class="mission-title  mb-0">{{ section.settings.title }}</h2>
+                <p class="mission-text mb-0">{{ section.settings.text }}</p>
+                <div class="mission-btn-padding d-lg-block d-none">
+                    <button class="btn btn-primary button-top">check availability</button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 mission-iframe-padding">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="{{ section.settings.video_url }}" class="mission-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <div class="mission-btn-padding d-lg-none">
+                    <button class="btn btn-primary button-top">check availability</button>
+                </div>
+            </div>
+        </div>
+        <div class="mission-img-div" style="background-image: url('{{ 'mission-img.jpg' | asset_url }}')">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "t:sections.featured-collection.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "text",
+"id": "title_small",
+"default": "Our mission",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "title",
+"default": "Empowering women to achieve a healthy body and mind at any age",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "text",
+"default": "Our mission is to empower women to achieve a healthy body and mind at any age, so that they can feel confident, youthful and joyful, positively impacting their relationships with themselves, their family, friends and community. ",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "video_url",
+"default": "https://player.vimeo.com/video/655809473?h=31a23b3f34&title=0&byline=0&portrait=0",
+"label": "t:sections.featured-collection.settings.title.label"
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-collection.presets.name"
+}
+]
+}
+{% endschema %}
+
