@@ -16,6 +16,7 @@
         },
         "fce5ed28-948d-4031-bec4-244d649f175c": {
           "type": "shopify:\/\/apps\/yotpo-product-reviews-photos\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
