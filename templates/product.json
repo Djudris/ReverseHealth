@@ -5,6 +5,23 @@
       "settings": {
       }
     },
+    "1650358732b7dd8630": {
+      "type": "apps",
+      "blocks": {
+        "7f914a96-8ee1-41e4-a2e6-40bd4eed922c": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-photos\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "7f914a96-8ee1-41e4-a2e6-40bd4eed922c"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "landing_delivery": {
       "type": "landing-delivery",
       "settings": {
@@ -59,6 +76,7 @@
   },
   "order": [
     "single_product_hero",
+    "1650358732b7dd8630",
     "landing_delivery",
     "single_product_coaches",
     "single_product_approach",
