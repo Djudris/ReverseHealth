@@ -1,3 +1,7 @@
+.title {
+  font-family: 'Montserrat', sans-serif;
+}
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;
@@ -44,7 +48,7 @@
   }
 }
 
-.collection__description > * {
+.collection__description>* {
   margin: 0;
 }
 
@@ -77,4 +81,73 @@
 
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
+}
+
+
+.collection-title {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.collection-title h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 170%;
+  text-transform: uppercase;
+  color: #505050;
+  margin: 0;
+}
+
+.grid-section {
+  padding-bottom: 15px;
+}
+
+.product-grid {
+  padding: 0;
+  margin: 0;
+}
+
+.grid__item {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width:768px) {
+  .collection-title {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .collection-title h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  #section-collection-grid .container {
+    padding: 0 30px;
+  }
+
+  .grid-section {
+    padding-bottom: 30px;
+  }
+
+  .product-grid {
+    padding: 0;
+    margin: 0;
+  }
+
+  .grid__item {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #product-grid .grid__item:last-of-type {
+    margin-bottom: 0;
+  }
+
 }

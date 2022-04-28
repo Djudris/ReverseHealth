@@ -4,28 +4,40 @@
   align-items: flex-end;
 }
 
-.totals > * {
+.totals>* {
   font-size: 1.6rem;
   margin: 0;
 }
 
-.totals > h3 {
+.totals>h3 {
   font-size: calc(var(--font-heading-scale) * 1.6rem);
-}
-
-.totals * {
-  line-height: 1;
-}
-
-.totals > * + * {
-  margin-left: 2rem;
 }
 
 .totals__subtotal-value {
   font-size: 1.8rem;
 }
 
-.cart__ctas + .totals {
+@media screen and (max-width:797px) {
+  .totals>h3 {
+    font-size: 1.3rem;
+  }
+
+  .totals__subtotal-value {
+    font-size: 1.5rem;
+  }
+}
+
+.totals * {
+  line-height: 1;
+}
+
+.totals>*+* {
+  margin-left: 2rem;
+}
+
+
+
+.cart__ctas+.totals {
   margin-top: 2rem;
 }
 

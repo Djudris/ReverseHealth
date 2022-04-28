@@ -1,7 +1,7 @@
 {{ 'best-seller.css' | asset_url | stylesheet_tag }}
 
 <section id="best_sellers">
-    <div class="container">
+    <div class="container px-lg-0">
         <div class="">
             <h2 class="text-center best-seller-title">
                 {{ section.settings.title }}
@@ -16,32 +16,30 @@
                             <div>
                                 <div>
                                     <img class="best-seller-img" src="{{ product.featured_image | img_url: '260x260' }}" alt="{{ product.featured_image.alt }}">
+                                    <div class="yotpo bottomLine"
+                                        data-appkey="yjH1ued2tXcyfPboQI4F8pfXTDrX0483ALKaoqfF"
+                                        data-domain="{{shop.permanent_domain | escape }}"
+                                        data-product-id="{{ product.id }}"
+                                        data-product-models="{{ product.id }}"
+                                        data-name="{{ product.title | escape }}"
+                                        data-url="{{ shop.url }}{{ product.url }}"
+                                        data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                                        data-description="{{ product.description | escape }}"
+                                        data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+                                    </div>
                                 </div>
-                                <div class="yotpo bottomLine"
-                                    data-appkey="yjH1ued2tXcyfPboQI4F8pfXTDrX0483ALKaoqfF"
-                                    data-domain="{{shop.permanent_domain | escape }}"
-                                    data-product-id="{{ product.id }}"
-                                    data-product-models="{{ product.id }}"
-                                    data-name="{{ product.title | escape }}"
-                                    data-url="{{ shop.url }}{{ product.url }}"
-                                    data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
-                                    data-description="{{ product.description | escape }}"
-                                    data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
-                                </div>
-                                <div class="best-seller-rating"></div>
                                 <div class="pt-3 best-seller-card-name text-center">{{ product.title }}</div>
                                 <div class="pt-2 best-seller-card-price text-center">from {{ product.price | money }} per bottle</div>
                             </div>
-                            <div>
-                                <div class="pt-3 mt-1 best-seller-card-price d-flex justify-content-center">
-                                    <form class="product-form" action="/cart/add" data-productid="{{ product.id }}" method="post">
+                            <div class="w-100 px-lg-3">
+                                <div class="pt-3 mx-lg-1 mt-1 best-seller-card-price d-flex justify-content-center">
+                                    <form class="product-form w-100" action="/cart/add" data-productid="{{ product.id }}" method="post">
                                         <input type="hidden" name="id" data-productid="{{ product.id }}" class="product-select" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}"/>
-
                                         <button
                                                 id="{{ product_form_id }}-submit"
                                                 type="submit"
                                                 name="add"
-                                                class="quick-add__submit btn best-seller-card-btn"
+                                                class="quick-add__submit btn best-seller-card-btn w-100"
                                                 aria-haspopup="dialog"
                                                 aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
                                                 aria-live="polite"
@@ -74,7 +72,7 @@
                     {%- endfor -%}
                 </div>
                 <div class="css--prev-btn d-flex justify-content-start">
-                    <button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center">
+                    <button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center disabled">
                         <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
                     </button>
                 </div>

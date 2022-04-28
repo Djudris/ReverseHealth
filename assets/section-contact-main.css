@@ -1,0 +1,53 @@
+.contact-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #505050;
+  margin-bottom: 40px;
+}
+
+.contact-description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  letter-spacing: 0.02em;
+  color: #505050;
+  margin-bottom: 128px;
+}
+
+span {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  color: #505050;
+}
+
+.contact-link {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #65d36e;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width:797px) {
+  .contact-title {
+    font-size: 18px;
+  }
+
+  .contact-description {
+    font-size: 16px;
+  }
+
+  span,
+  .contact-link {
+    font-size: 16px;
+  }
+}

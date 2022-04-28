@@ -1,75 +1,148 @@
 .mission-btn-padding {
-    padding-top:35px;
+    padding-top: 35px;
 }
+
 .mission-title-small {
     text-transform: uppercase;
-    font-size:16px;
+    font-size: 16px;
     line-height: 27px;
     font-weight: 500;
 }
+
 .mission-title {
     text-transform: uppercase;
-    padding-top:10px;
-    font-size:18px;
+    padding-top: 10px;
+    font-size: 18px;
     line-height: 31px;
     font-weight: 700;
 }
+
 .mission-text {
-    font-size:14px;
+    font-size: 14px;
     line-height: 24px;
-    padding-top:10px;
+    padding-top: 10px;
 }
+
 .mission-p {
-    padding-top:50px;
-    padding-bottom:50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
+
 .mission-iframe {
     border-radius: 8px;
 }
+
 .mission-iframe-padding {
     padding-top: 30px;
 }
+
 .mission-img-div {
     height: 220px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
     border-radius: 8px;
-    margin-bottom:50px
+    margin-bottom: 50px
 }
+
+.video-overlay {
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(28, 28, 28, 0.6);
+    border-radius: 8px;
+}
+
+#vimeo-id img {
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+}
+
+.mission-p .col-lg-6 {
+    padding: 0;
+}
+
+.mission-p {
+    margin: 0;
+}
+
+#section-mission .container {
+    padding: 0;
+}
+
+@media screen and (max-width:992px) {
+    #section-mission .container {
+        padding: 0 30px;
+    }
+}
+
+
+
+.mission-text {
+    margin-bottom: 30px;
+}
+
 @media screen and (min-width: 992px) {
     .mission-btn-padding {
-        padding-top:40px;
+        padding-top: 40px;
     }
+
     .mission-title-small {
-        font-size:18px;
+        font-size: 18px;
         line-height: 31px;
     }
+
     .mission-title {
-        font-size:24px;
+        font-size: 24px;
         line-height: 41px;
     }
+
     .mission-text {
-        font-size:16px;
+        font-size: 16px;
         line-height: 27px;
-        padding-top:20px;
+        padding-top: 20px;
     }
+
     .mission-p {
-        padding-top:70px;
-        padding-bottom:70px;
+        padding-top: 70px;
+        padding-bottom: 70px;
 
     }
+
     .mission-iframe {
         border-radius: 12px;
     }
+
     .mission-iframe-padding {
         padding-top: 0;
     }
+
     .mission-img-div {
         height: 280px;
         border-radius: 12px;
         background-position-y: -132px;
-        margin-bottom:70px;
+        margin-bottom: 70px;
 
+    }
+
+    .video-overlay {
+        left: 0;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(28, 28, 28, 0.6);
+        border-radius: 12px;
+    }
+
+    #vimeo-id {
+        cursor: pointer;
+        width: 100px;
+        height: auto;
     }
 }

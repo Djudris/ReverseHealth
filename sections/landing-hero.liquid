@@ -3,15 +3,15 @@
     <img class="landing-hero-feather-1" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
     <img class="landing-hero-feather-2" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
 
-    <div class="container position-unset">
+    <div class="container position-unset  px-0">
         <div class="row position-unset">
-            <div class="col-lg-6 col-12 pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2">
+            <div class="col-lg-6 col-12  pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
                 <div class="landing-hero-custom">&nbsp;</div>
                 <div class="w-100 hero-landing-text-block">
                     <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
-                    <h2 class="pt-2 hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
-                    <div class="pt-lg-5 mt-lg-2 btn-padding-mobile">
-                        <button class="btn btn-primary button-top">check availability</button>
+                    <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
+                    <div class=" btn-padding-mobile">
+                        <a href="{{shop.url}}/collections/all"><button  class="btn btn-primary button-top">check availability</button></a>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,7 @@
     </div>
 </section>
 <section>
+    
     <div class="bg-blue">
         <div class="container">
             <div id="hero-slider" class="row owl-carousel icon-slider">

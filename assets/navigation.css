@@ -6,6 +6,7 @@
 }
 
 .announcement-msg {
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     color: white;
     line-height: 12px;
@@ -47,36 +48,90 @@
     line-height: 19px;
     text-transform: uppercase;
 }
+
 .dropdown-menu {
     border-radius: 6px;
     border: none;
     background: #F3F8FF;
 }
+
+
+
 .dropdown-toggle {
     background: transparent;
     border: none;
 }
+
 .dropdown-toggle:hover {
     background: transparent;
     border: none;
     color: #505050;
 }
+
 .dropdown-toggle:focus {
-    outline:none !important;
-    box-shadow: none  !important;
+    outline: none !important;
+    box-shadow: none !important;
     background: transparent;
     border: none;
     color: #505050;
 }
+
 .section-header {
     z-index: 1000 !important;
 }
+
+.dropdown-toggle::after {
+    border: none;
+    content: "\276F";
+    font-weight: 400;
+    vertical-align: 0;
+    transform: rotate(90deg);
+
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(270deg);
+
+}
+
+
+
+.header__icon--menu span {
+    justify-content: start;
+}
+
+@media screen and (max-width:992px) {
+    header.header {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    header-drawer {
+        margin-left: 0 !important;
+    }
+
+    .header__icon--menu {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        height: 60px;
+    }
+}
+
+
+
 @media screen and (min-width: 992px) {
     .announcement-msg {
+        font-family: 'Montserrat', sans-serif;
         font-size: 14px;
         line-height: 17px;
         padding-top: 16px;
         padding-bottom: 17px;
+    }
+
+    .header__heading-link {
+        padding: 0;
+        margin-left: 0;
     }
 
     .navigation-cart-count {
@@ -88,15 +143,61 @@
         margin-right: 55px;
     }
 
+    .header--middle-left {
+        column-gap: 5.625rem;
+    }
+
     .shop-title-logo {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
         font-size: 20px;
         line-height: 24px;
+        text-transform: uppercase;
+        color: #505050;
     }
+
+    .dropdown-toggle {
+        padding: 0;
+    }
+
     .dropdown-menu {
         background: #FFFFFF;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     }
-    .dropdown {
 
+    .dropdown-menu {
+        min-width: 240px;
+    }
+
+    .dropdown-item {
+        padding: 15px 0 15px 15px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu li {
+        padding: 0 15px;
+    }
+
+    .dropdown-item:hover {
+        background: #F3F8FF;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .dropdown-item:active,
+    .dropdown-item:focus {
+        background: none;
+        color: #212529;
+    }
+
+    .dropdown-menu li:not(:last-of-type) a {
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+    }
+}
+
+@media screen and (max-width:1170px) and (min-width:992px) {
+    .header--middle-left {
+        column-gap: 0.625rem;
     }
 }

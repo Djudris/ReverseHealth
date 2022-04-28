@@ -34,7 +34,11 @@
             {% else %}
             col-lg-6 col-12
 {% endif %}  order-lg-1 order-2">
+                {% if product.metafields.my_fields.xl_composition_table %}
+                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '1280x1069' }}" alt="">
+                {% else %}
                 <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '1280x360' }}" alt="">
+                {%endif%}
                 <img class="nutritions-table d-lg-none w-100" src="{{ product.metafields.my_fields.composition_mobile | img_url: '710x1023' }}" alt="">
             </div>
         </div>

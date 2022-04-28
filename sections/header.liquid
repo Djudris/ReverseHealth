@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
     <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
 {%- endif -%}
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
@@ -187,81 +189,31 @@
                                         </a>
                                     {%- endif -%}
                                     <ul class="list list-social list-unstyled" role="list">
-                                        {%- if settings.social_twitter_link != blank -%}
+                                        
+                                        <li class="list-social__item">
+                                            <a href="https://instagram.com/reverse.program" class="list-social__link link" target="blank">
+                                                <img class="header-fb-i" src="{{ 'instagramBlack.svg' | asset_url }}" alt="Instagram icon">
+                                                <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                                            </a>
+                                        </li>
+                                    
+                                       
                                             <li class="list-social__item">
-                                                <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
-                                                    {%- render 'icon-twitter' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_facebook_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
-                                                    {%- render 'icon-facebook' -%}
+                                                <a href="https://www.facebook.com/reverseprogram" class="list-social__link link" target="blank">
+                                                    <img class="header-fb-i" src="{{ 'facebookBlack.svg' | asset_url }}" alt="Instagram icon">
                                                     <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
                                                 </a>
                                             </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_pinterest_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
-                                                    {%- render 'icon-pinterest' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_instagram_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
-                                                    {%- render 'icon-instagram' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_tiktok_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
-                                                    {%- render 'icon-tiktok' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_tumblr_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
-                                                    {%- render 'icon-tumblr' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_snapchat_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
-                                                    {%- render 'icon-snapchat' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_youtube_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
-                                                    {%- render 'icon-youtube' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
-                                        {%- if settings.social_vimeo_link != blank -%}
-                                            <li class="list-social__item">
-                                                <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
-                                                    {%- render 'icon-vimeo' -%}
-                                                    <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-                                                </a>
-                                            </li>
-                                        {%- endif -%}
+                                        
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                        <div class="menu-drawer-seetrough">
+                            <!-- <div id="close" aria-controls="menu-drawer" aria-expanded="true">
+                                
+                            </div> -->
+
                         </div>
                     </div>
                 </details>
@@ -378,7 +330,7 @@
                                 <li><a class="dropdown-item" href="/products/whey-protein">Women’s Whey Protein</a></li>
                                 <li><a class="dropdown-item" href="/products/womens-vitamin-d3">Women’s Vitamin D3</a></li>
                                 <li><a class="dropdown-item" href="{{ link.url }}">Women’s Full Bundle</a></li>
-                                <li><a class="dropdown-item" href="/products">All Products</a></li>
+                                <li><a class="dropdown-item" href="/collections/all">All Products</a></li>
                         </ul>
                     </div>
 
@@ -447,7 +399,14 @@ observer.observe(this.header);
 
 onScroll() {
 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+if(scrollTop>this.headerBounds.bottom){
+    let drawer=document.getElementById("menu-drawer");
+    drawer.style.height="105vh"
 
+}else{
+    let drawer=document.getElementById("menu-drawer");
+    drawer.style.height="100vh"
+}
 if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
 if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
@@ -494,7 +453,7 @@ this.disclosures.forEach(disclosure => disclosure.close());
 
 closeSearchModal() {
 this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-this.searchModal.close(false);
+<!-- this.searchModal.close(false); -->
 }
 }
 

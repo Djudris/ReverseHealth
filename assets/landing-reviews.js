@@ -17,7 +17,7 @@ $(window).resize(function () {
 });
 
 function startCarouselReview() {
-   let owl3 = $("#review-slider").owlCarousel({
+    let owl3 = $("#review-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
         margin: 10,
         dots: false,

@@ -4,82 +4,105 @@
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 31px;
+    margin-top: 50px;
 }
+
+.disabled {
+    opacity: 0.5;
+}
+
+.owl-stage-outer {
+    padding-bottom: 5px;
+}
+
 .best-seller-card-bg {
     background: #FCFCFC;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     width: 100%;
 }
+
 .best-seller-img {
     width: 200px;
     height: 200px;
 }
+
 .best-seller-card-name {
-    font-size:14px;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 700;
 }
+
 .best-seller-card-price {
-    font-size:14px;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 400;
 }
+
 .best-seller-card-btn {
-    color:white;
+    color: white;
     font-weight: 700;
-    font-size:16px;
+    font-size: 16px;
     line-height: 19px;
     background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    border:none;
-    padding:15px 62px 15px 62px;
+    border: none;
+    padding: 15px 62px 15px 62px;
 }
-.best-seller-card-btn:hover{
-    color:white;
+
+.best-seller-card-btn:hover {
+    color: white;
 }
+
 .best-seller-card-lmore {
     font-size: 14px;
     line-height: 24px;
     text-decoration-line: underline;
-    color:#505050
+    color: #505050
 }
-.best-seller-card-lmore:hover{
+
+.best-seller-card-lmore:hover {
     color: black;
 }
-.customNextBtn, .customPrevBtn {
+
+.customNextBtn,
+.customPrevBtn {
     font-size: 12px;
     border: none;
     background: transparent;
 }
+
 .css--prev-btn {
     z-index: 1;
     position: absolute;
-    bottom: -14px;
+    bottom: -7px;
     display: flex;
     width: 30%;
     left: 0;
 }
+
 .css--next-btn {
     z-index: 1;
     position: absolute;
-    bottom: -14px;
+    bottom: -7px;
     display: flex;
     width: 30%;
     right: 0;
 }
+
 .best-seller-pb {
     padding-bottom: 40px;
 }
+
 .owl-dots {
     text-align: center;
-    padding-top: 15px;
+    padding-top: 40px;
 }
 
 .owl-dots button.owl-dot {
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 8px;
     border-radius: 100%;
     display: inline-block;
     background: #F0F0F0;
@@ -89,11 +112,44 @@
 
 .owl-dots button.owl-dot.active {
     background-color: #959595;
-    border-color:#959595;
+    border-color: #959595;
 }
 
 .owl-dots button.owl-dot:focus {
     outline: none;
+}
+
+.yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
+    font-size: 18px;
+}
+
+.yotpo-bottomline.pull-left.star-clickable {
+    align-items: center;
+}
+
+a.text-m {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    text-decoration: underline !important;
+    color: #505050;
+    margin-left: 15px;
+}
+
+.carousel-arrow-img {
+    height: 28px;
+}
+
+@media screen and (max-width:992px) {
+    #best_seller_carousel {
+        padding-left: 30px;
+    }
+
+    .css--prev-btn {
+        left: 17px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -104,36 +160,78 @@
         margin-bottom: 50px;
 
     }
+
     .best-seller-card-btn {
-        font-size:18px;
+        font-size: 18px;
         line-height: 22px;
-        padding:19px 42px 19px 42px;
+        padding: 19px 42px 19px 42px;
         border-radius: 8px;
     }
+
     .best-seller-card-name {
-        font-size:16px;
+        font-size: 16px;
         line-height: 27px;
     }
+
     .best-seller-card-price {
-        font-size:16px;
+        font-size: 16px;
         line-height: 27px;
         font-weight: 400;
     }
+
     .best-seller-img {
         width: 260px;
         height: 260px;
     }
+
     .best-seller-card-lmore {
         font-size: 16px;
         line-height: 27px;
     }
+
     .best-seller-pb {
         padding-bottom: 70px;
     }
-    .css--next-btn, .css--prev-btn {
+
+    .css--next-btn,
+    .css--prev-btn {
         bottom: unset;
         width: 10%;
-        top:50%;
+        top: calc(50% - 50px);
         transform: translateY(-50%);
+    }
+
+    .yotpo-bottomline.pull-left.star-clickable {
+        justify-content: center;
+        float: none;
+    }
+
+    .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
+        font-size: 16px;
+    }
+
+    a.text-m {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        text-decoration: underline !important;
+        color: #505050;
+        margin-left: 10px;
+    }
+
+    .owl-dots button.owl-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        display: inline-block;
+        background: #F0F0F0;
+        border: 1px solid #F0F0F0;
+        margin: 0 3px;
+    }
+
+    .owl-dots {
+        padding-top: 50px;
     }
 }

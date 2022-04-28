@@ -61,7 +61,7 @@ class PredictiveSearch extends HTMLElement {
 
   onKeyup(event) {
     if (!this.getQuery().length) this.close(true);
-    event.preventDefault();
+    //event.preventDefault();
 
     switch (event.code) {
       case 'ArrowUp':
@@ -82,7 +82,7 @@ class PredictiveSearch extends HTMLElement {
       event.code === 'ArrowUp' ||
       event.code === 'ArrowDown'
     ) {
-      event.preventDefault();
+      //event.preventDefault();
     }
   }
 

@@ -16,5 +16,20 @@ $(document).ready(function () {
     $('.customPrevBtnSingle').click(function () {
         owl4.trigger('prev.owl.carousel');
     })
+
+    owl4.on('changed.owl.carousel', function (event) {
+
+        let index = event.item.index;
+        let count = event.item.count
+        $('.customPrevBtnSingle').removeClass("disabled");
+        $('.customNextBtnSingle').removeClass("disabled");
+        if (index === 0) {
+            $('.customPrevBtnSingle').addClass("disabled");
+        }
+        if (index === count - 1) {
+            $('.customNextBtnSingle').addClass("disabled");
+        }
+
+    });
 });
 

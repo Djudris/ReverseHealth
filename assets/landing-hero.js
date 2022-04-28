@@ -26,6 +26,7 @@ function startCarousel() {
         loop: true,
         nav: false,
         center: false,
+
     });
 }
 

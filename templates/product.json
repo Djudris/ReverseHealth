@@ -2,8 +2,7 @@
   "sections": {
     "single_product_hero": {
       "type": "single-product-hero",
-      "settings": {
-      }
+      "settings": {}
     },
     "landing_delivery": {
       "type": "landing-delivery",
@@ -25,18 +24,15 @@
     },
     "single_product_approach": {
       "type": "single-product-approach",
-      "settings": {
-      }
+      "settings": {}
     },
     "single_product_how": {
       "type": "single-product-how",
-      "settings": {
-      }
+      "settings": {}
     },
     "single_product_nutritions": {
       "type": "single-product-nutritions",
-      "settings": {
-      }
+      "settings": {}
     },
     "faq": {
       "type": "single-product-faq",
