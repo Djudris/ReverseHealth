@@ -27,12 +27,12 @@ function startCarouselReview() {
             0: {
                 items: 1,
                 margin: 0,
-                center:false,
+                center: false,
             },
             768: {
                 items: 2,
                 margin: 10,
-                center:false,
+                center: false,
             },
             992: {
                 items: 2,
@@ -49,6 +49,25 @@ function startCarouselReview() {
         owl3.trigger('prev.owl.carousel');
     })
 }
+let owl3 = $("#review-slider");
+
+owl3.on('changed.owl.carousel', function (event) {
+    let index = event.item.index;
+    let count = event.item.count
+
+
+    $('.customPrevBtnReview').removeClass("disabled-review");
+    $('.customNextBtnReview').removeClass("disabled-review");
+    if (index === 0) {
+        $('.customPrevBtnReview').addClass("disabled-review");
+    }
+
+    if (index === count - 1) {
+        $('.customNextBtnReview').addClass("disabled-review");
+    }
+
+
+});
 
 function stopCarouselReview() {
     let owl2 = $('#review-slider');

@@ -66,8 +66,21 @@ owl2.on('changed.owl.carousel', function (event) {
         $('.customPrevBtnHero').addClass("disabled");
     }
 
-    if (index === count - 4) {
-        $('.customNextBtnHero').addClass("disabled");
+    if (screen.width < 369) {
+        if (index === count - 2) {
+            $('.customNextBtnHero').addClass("disabled");
+        }
     }
+    if (screen.width >= 369 && screen.width < 600) {
+        if (index === count - 3) {
+            $('.customNextBtnHero').addClass("disabled");
+        }
+    }
+    if (screen.width >= 600) {
+        if (index === count - 4) {
+            $('.customNextBtnHero').addClass("disabled");
+        }
+    }
+
 
 });

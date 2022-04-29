@@ -104,8 +104,6 @@
     right: -14px;
     width: 150px !important;
 }
-
-
 @media screen and (max-width: 427px) {
     .review-product-1 {
         right: -40px;
@@ -270,4 +268,11 @@
         width: auto !important;
 
     }
+}
+
+.disabled-review {
+    background: #F4ADBB;
+}
+.disabled-review path {
+    fill: white;
 }

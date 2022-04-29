@@ -132,5 +132,14 @@
     max-width: 100%;
     max-height: 275px;
   }
+  .benefits-mobile-margin {
+    margin-top: 15px;
+  }
+  .benefits-mobile-padding {
+    margin-top: 40px;
+  }
+  .benefits-mobile-padding-single {
+    margin-top: 45px;
+  }
 
 }

@@ -7,7 +7,7 @@
         </h2>
         <div  id="review-slider" class="owl-carousel row review-pb">
             <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
-                {% comment %}<img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein">{% endcomment %}
+                <img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein">
                 <div class="reviews-card h-100">
                     <div class="d-flex">
                         <div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
-                {% comment %}<img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein">{% endcomment %}
+                <img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein">
 
                 <div class="reviews-card h-100">
                     <div class="d-flex">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
-                {% comment %}<img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein">{% endcomment %}
+                <img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein">
 
                 <div class="reviews-card h-100">
                     <div class="d-flex">
@@ -120,10 +120,15 @@
         <div class="d-lg-none">
             <div class="d-flex justify-content-center review-carousel-btns ">
                 <button class="customPrevBtnReview caps text-center d-flex d-sm-inline align-items-center">
-                    <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
+                    <svg width="13" height="28" viewBox="0 0 13 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.274277 14.7684L11.4078 27.6834C11.7726 28.1063 12.3632 28.1056 12.7273 27.6812C13.0912 27.2569 13.0903 26.5695 12.7255 26.1463L2.25462 13.9999L12.7258 1.85368C13.0906 1.4304 13.0915 0.743475 12.7277 0.319101C12.5452 0.106367 12.306 0 12.0668 0C11.8283 0 11.5901 0.105656 11.4079 0.316914L0.274277 13.2316C0.098588 13.4349 0 13.7116 0 13.9999C0 14.2883 0.0988703 14.5646 0.274277 14.7684Z" fill="#505050"/>
+                    </svg>
                 </button>
                 <button class="customNextBtnReview caps d-flex d-sm-inline align-items-center">
-                    <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
+                    <svg width="13" height="28" viewBox="0 0 13 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7257 14.7684L1.59219 27.6834C1.22742 28.1063 0.636833 28.1056 0.272667 27.6812C-0.0912166 27.2569 -0.0902763 26.5695 0.274548 26.1463L10.7454 13.9999L0.274172 1.85368C-0.0906056 1.4304 -0.0915459 0.743475 0.272291 0.319101C0.454844 0.106367 0.694002 0 0.933159 0C1.17171 0 1.40992 0.105656 1.59215 0.316914L12.7257 13.2316C12.9014 13.4349 13 13.7116 13 13.9999C13 14.2883 12.9011 14.5646 12.7257 14.7684Z" fill="#505050"/>
+                    </svg>
+
                 </button>
             </div>
 
