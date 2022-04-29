@@ -23,12 +23,12 @@
         </div>
     </div>
 </section>
-<section>
-    
+<section class="position-relative hero-carousel-section">
+
     <div class="bg-blue">
-        <div class="container">
+        <div class="container p-0">
             <div id="hero-slider" class="row owl-carousel icon-slider">
-                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <img src="{{ 'vegan_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
@@ -36,7 +36,7 @@
                         vegan
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <img src="{{ 'sugar_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
@@ -44,7 +44,7 @@
                         sugar free
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <img src="{{ 'gluten_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
@@ -52,7 +52,7 @@
                         gluten free
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <img src="{{ 'gmo_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
@@ -60,7 +60,7 @@
                         non gmo
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <img src="{{ 'lactose_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
@@ -68,7 +68,7 @@
                         lactose free
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <img src="{{ 'natural_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
@@ -76,8 +76,23 @@
                         all natural
                     </div>
                 </div>
+            </div>
+            <div class="container hero-carouse-btn-parent">
+                <div class="position-relative">
+                    <div class="css--prev-btn-hero d-flex justify-content-start d-lg-none">
+                        <button class="customPrevBtnHero caps text-center d-flex d-sm-inline align-items-center disabled">
+                            <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
+                        </button>
+                    </div>
+                    <div class="css--next-btn-hero d-flex justify-content-end d-lg-none">
+                        <button class="customNextBtnHero caps d-flex d-sm-inline align-items-center">
+                            <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
+                        </button>
+                    </div>
+                </div>
 
             </div>
+
         </div>
     </div>
 </section>

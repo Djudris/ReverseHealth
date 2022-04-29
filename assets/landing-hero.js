@@ -20,18 +20,54 @@ function startCarousel() {
     $("#hero-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
         margin: 10,
-        dots: false,
+        dots: true,
         autoplay: false,
-        items: 3.7,
-        loop: true,
+        loop: false,
         nav: false,
         center: false,
+        responsive: {
+            0: {
+                items: 2,
+            },
+            369: {
+                items:3,
+            },
+            600: {
+                items: 4,
 
+            },
+        }
     });
 }
 
+let owl2 = $('#hero-slider');
+
 function stopCarousel() {
-    let owl2 = $('#hero-slider');
+
     owl2.trigger('destroy.owl.carousel');
     owl2.addClass('off');
 }
+
+$('.customNextBtnHero').click(function () {
+    owl2.trigger('next.owl.carousel');
+})
+$('.customPrevBtnHero').click(function () {
+    owl2.trigger('prev.owl.carousel');
+})
+
+owl2.on('changed.owl.carousel', function (event) {
+    let index = event.item.index;
+    let count = event.item.count
+
+
+    $('.customPrevBtnHero').removeClass("disabled");
+    $('.customNextBtnHero').removeClass("disabled");
+    if (index === 0) {
+        $('.customPrevBtnHero').addClass("disabled");
+    }
+
+    if (index === count - 4) {
+        $('.customNextBtnHero').addClass("disabled");
+    }
+
+});

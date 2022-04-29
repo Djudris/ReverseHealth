@@ -131,12 +131,6 @@
   .benefits-photo {
     max-width: 100%;
     max-height: 275px;
-    transform: translateX(50%);
   }
 
-  .benefits-icons {
-    left: 0;
-    right: unset;
-    max-height: 200px;
-  }
 }

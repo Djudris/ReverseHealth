@@ -94,7 +94,9 @@
     top: 3px;
     width: 150px !important;
 }
-
+#review-slider .owl-stage-outer {
+    padding: 0;
+}
 .review-product-3 {
     position: absolute;
     z-index: 10;

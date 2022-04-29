@@ -1,13 +1,13 @@
 {{ 'landing-reviews.css' | asset_url | stylesheet_tag }}
 
 <section id="reviews" class="reviews-bg">
-    <div class="container">
+    <div class="container d-flex flex-column align-items-center">
         <h2 class="text-center reviews-title">
             {{ section.settings.title }}
         </h2>
         <div  id="review-slider" class="owl-carousel row review-pb">
             <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein">
+                {% comment %}<img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein">{% endcomment %}
                 <div class="reviews-card h-100">
                     <div class="d-flex">
                         <div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein">
+                {% comment %}<img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein">{% endcomment %}
 
                 <div class="reviews-card h-100">
                     <div class="d-flex">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="col-lg-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein">
+                {% comment %}<img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein">{% endcomment %}
 
                 <div class="reviews-card h-100">
                     <div class="d-flex">

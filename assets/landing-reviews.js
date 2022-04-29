@@ -19,21 +19,26 @@ $(window).resize(function () {
 function startCarouselReview() {
     let owl3 = $("#review-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
-        margin: 10,
         dots: false,
         autoplay: false,
-        loop: true,
+        loop: false,
         nav: false,
-        center: false,
         responsive: {
             0: {
-                items: 1.2,
+                items: 1,
+                margin: 0,
+                center:false,
             },
             768: {
                 items: 2,
+                margin: 10,
+                center:false,
             },
             992: {
                 items: 2,
+                margin: 10,
+                center: false,
+
             },
         }
     });

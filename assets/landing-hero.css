@@ -130,10 +130,39 @@
     position: absolute;
     bottom: 0;
 }
+.customNextBtnHero,
+.customPrevBtnHero {
+    font-size: 12px;
+    border: none;
+    background: transparent;
+}
+
+.css--prev-btn-hero {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    width: 30%;
+    left: 0;
+}
+
+.css--next-btn-hero {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    width: 30%;
+    right: 0;
+}
+#hero-slider .owl-dots {
+    position: absolute;
+    padding-top: 61px;
+}
+.hero-carouse-btn-parent {
+    position: absolute;
+    bottom: 15px;
+}
 
 @media screen and (max-width: 797px) {
     .bg-blue .container {
-        padding-right: 0px;
     }
 
     #hero-slider {
@@ -162,8 +191,14 @@
         padding: 0 30px;
     }
 
-    #reviews .container {
-        padding: 0px 0px 0px 30px;
+    /*#reviews .container {*/
+    /*    padding: 0px 0px 0px 30px;*/
+    /*}*/
+    .w-100-sm {
+        width: 100%;
+    }
+    .hero-carousel-section {
+        padding-bottom: 63px;
     }
 }
 
@@ -236,6 +271,7 @@
     #hero-slider img {
         filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));
     }
+
 }
 
 @media screen and (min-width: 1200px) {
