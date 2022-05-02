@@ -4,6 +4,30 @@
     border: none;
     backdrop-filter: blur(10px);
 }
+.nav-mobile-single-line {
+    padding-left: 0 !important;
+    margin-top:15px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-top:1px solid #F0F0F0 !important;;
+    width: 100% !important;
+
+}
+.nav-mobile-double-line {
+    padding-left: 0 !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-top:1px solid #F0F0F0 !important;
+    border-bottom:1px solid #F0F0F0 !important;
+    width: 100% !important;
+}
+
+.nav-mobile-single-line-b {
+    padding-left: 0 !important;
+    padding-top: 15px !important;
+    width: 100% !important;
+
+}
 
 .announcement-msg {
     font-family: 'Montserrat', sans-serif;

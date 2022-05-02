@@ -112,68 +112,23 @@
                     <div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1">
                         <div class="menu-drawer__inner-container">
                             <div class="menu-drawer__navigation-container">
-                                <nav class="menu-drawer__navigation">
-                                    <ul class="menu-drawer__menu has-submenu list-menu" role="list">
-                                        {%- for link in section.settings.menu.links -%}
-                                            <li>
-                                                {%- if link.links != blank -%}
-                                                    <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                                                        <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
-                                                            {{ link.title | escape }}
-                                                            {% render 'icon-arrow' %}
-                                                            {% render 'icon-caret' %}
-                                                        </summary>
-                                                        <div id="link-{{ link.title | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
-                                                            <div class="menu-drawer__inner-submenu">
-                                                                <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                                                    {% render 'icon-arrow' %}
-                                                                    {{ link.title | escape }}
-                                                                </button>
-                                                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                                                    {%- for childlink in link.links -%}
-                                                                        <li>
-                                                                            {%- if childlink.links == blank -%}
-                                                                                <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                                    {{ childlink.title | escape }}
-                                                                                </a>
-                                                                            {%- else -%}
-                                                                                <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
-                                                                                    <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                                                        {{ childlink.title | escape }}
-                                                                                        {% render 'icon-arrow' %}
-                                                                                        {% render 'icon-caret' %}
-                                                                                    </summary>
-                                                                                    <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                                                                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                                                                            {% render 'icon-arrow' %}
-                                                                                            {{ childlink.title | escape }}
-                                                                                        </button>
-                                                                                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                                                                            {%- for grandchildlink in childlink.links -%}
-                                                                                                <li>
-                                                                                                    <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                                        {{ grandchildlink.title | escape }}
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                            {%- endfor -%}
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </details>
-                                                                            {%- endif -%}
-                                                                        </li>
-                                                                    {%- endfor -%}
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </details>
-                                                {%- else -%}
-                                                    <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
-                                                        {{ link.title | escape }}
-                                                    </a>
-                                                {%- endif -%}
-                                            </li>
-                                        {%- endfor -%}
-                                    </ul>
+                                <nav class="menu-drawer__navigation d-flex flex-column align-items-start">
+                                    <a href="/" class="navigation-link d-block text-decoration-none">HOME</a>
+                                    <div class="dropdown d-inline w-100">
+                                        <button class=" d-flex nav-mobile-single-line pl-0-mobile btn btn-secondary dropdown-toggle navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            SHOP
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/products/womens-collagen-peptides">Women’s Collagen</a></li>
+                                            <li><a class="dropdown-item " href="/products/whey-protein">Women’s Whey Protein</a></li>
+                                            <li><a class="dropdown-item " href="/products/womens-vitamin-d3">Women’s Vitamin D3</a></li>
+                                            <li><a class="dropdown-item" href="/products/women-s-core-pack">Women’s Full Bundle</a></li>
+                                            <li><a class="dropdown-item" href="/collections/all">All Products</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <a href="/pages/reviews" class=" nav-mobile-double-line navigation-link d-block text-decoration-none">REVIEWS</a>
+                                    <a href="/pages/contact" class="  nav-mobile-single-line-b navigation-link d-block text-decoration-none">CONTACT</a>
                                 </nav>
                                 <div class="menu-drawer__utility-links">
                                     {%- if shop.customer_accounts_enabled -%}
@@ -189,29 +144,29 @@
                                         </a>
                                     {%- endif -%}
                                     <ul class="list list-social list-unstyled" role="list">
-                                        
+
                                         <li class="list-social__item">
                                             <a href="https://instagram.com/reverse.program" class="list-social__link link" target="blank">
                                                 <img class="header-fb-i" src="{{ 'instagramBlack.svg' | asset_url }}" alt="Instagram icon">
                                                 <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
                                             </a>
                                         </li>
-                                    
-                                       
+
+
                                             <li class="list-social__item">
                                                 <a href="https://www.facebook.com/reverseprogram" class="list-social__link link" target="blank">
                                                     <img class="header-fb-i" src="{{ 'facebookBlack.svg' | asset_url }}" alt="Instagram icon">
                                                     <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
                                                 </a>
                                             </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="menu-drawer-seetrough">
                             <!-- <div id="close" aria-controls="menu-drawer" aria-expanded="true">
-                                
+
                             </div> -->
 
                         </div>
@@ -329,13 +284,13 @@
                                 <li><a class="dropdown-item" href="/products/womens-collagen-peptides">Women’s Collagen</a></li>
                                 <li><a class="dropdown-item" href="/products/whey-protein">Women’s Whey Protein</a></li>
                                 <li><a class="dropdown-item" href="/products/womens-vitamin-d3">Women’s Vitamin D3</a></li>
-                                <li><a class="dropdown-item" href="{{ link.url }}">Women’s Full Bundle</a></li>
+                                <li><a class="dropdown-item" href="/products/women-s-core-pack">Women’s Full Bundle</a></li>
                                 <li><a class="dropdown-item" href="/collections/all">All Products</a></li>
                         </ul>
                     </div>
 
-                    <a href="/reviews" class="navigation-link text-decoration-none">REVIEWS</a>
-                    <a href="/contact" class="navigation-link text-decoration-none">CONTACT</a>
+                    <a href="/pages/reviews" class="navigation-link text-decoration-none">REVIEWS</a>
+                    <a href="/pages/contact" class="navigation-link text-decoration-none">CONTACT</a>
 
                 </nav>
             {%- endif -%}
