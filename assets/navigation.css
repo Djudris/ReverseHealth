@@ -5,30 +5,40 @@
     backdrop-filter: blur(10px);
 }
 .nav-mobile-single-line {
-    padding-left: 0 !important;
     margin-top:15px !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
     border-top:1px solid #F0F0F0 !important;;
+    border-bottom:1px solid #F0F0F0 !important;
+
     width: 100% !important;
+}
+.nav-mobile-single-line div {
+    padding: 0 !important;
 
 }
 .nav-mobile-double-line {
-    padding-left: 0 !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
-    border-top:1px solid #F0F0F0 !important;
     border-bottom:1px solid #F0F0F0 !important;
     width: 100% !important;
 }
 
 .nav-mobile-single-line-b {
-    padding-left: 0 !important;
     padding-top: 15px !important;
     width: 100% !important;
-
 }
-
+.nav-mobile-dropdown-single {
+    border-top: 1px solid #FFFFFF;
+    padding-top:15px !important;
+}
+.nav-mobile-dropdown-single-padding {
+    padding-bottom:15px !important;
+}
+.nav-mobile-dropdown-single-first {
+    padding-top:15px !important;
+    padding-bottom:15px !important;
+}
 .announcement-msg {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -115,21 +125,59 @@
 
 .dropdown-toggle[aria-expanded="true"]::after {
     transform: rotate(270deg);
-
 }
-
-
 
 .header__icon--menu span {
     justify-content: start;
 }
+.mobile-nav-dropdown {
+    transform: unset !important;
 
+}
+.mobile-full-dropdown {
+    border-radius: 6px;
+    border-top: none !important;
+    border-bottom: none !important;
+    background: #F3F8FF;
+    margin:  15px 0 0 0 !important;
+    padding: 0 15px 0 15px;
+
+}
+#menu-drawer {
+    backdrop-filter: blur(10px);
+}
+.mobile-nav-el-padding {
+    margin: 0 15px 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.mobile-dropdown-toggle {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.mobile-nav-dropdown {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+}
+.mobile-nav-dropdown a{
+    padding-left: 10px !important;
+}
+
+.menu-drawer__navigation {
+    padding: 127px 15px 0 15px;
+}
+.header__icon--menu[aria-expanded="true"]::after {
+    content: url("close-menu.svg");
+    top: 40px;
+}
 @media screen and (max-width:992px) {
     header.header {
         padding-top: 0;
         padding-bottom: 0;
     }
-
     header-drawer {
         margin-left: 0 !important;
     }
