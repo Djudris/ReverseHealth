@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
-    $(".mobile-dropdown-toggle").click(function() {
-$(".mobile-dropdown", ".mobile-nav-dropdown").toggleClass('mobile-full-dropdown')    });
+    $(".mobile-dropdown-toggle, .mobile-nav-dropdown .dropdown-item").click(function () {
+        $(".mobile-dropdown").toggleClass('mobile-full-dropdown')
+    });
 });
