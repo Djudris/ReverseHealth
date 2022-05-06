@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if ($(window).width() < 992) {
+    if ($(window).width() < 1200) {
         startCarouselReview();
     } else {
         $('#review-slider').addClass('off');
@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 
 $(window).resize(function () {
-    if ($(window).width() < 992) {
+    if ($(window).width() < 1200) {
         startCarouselReview();
 
     } else {

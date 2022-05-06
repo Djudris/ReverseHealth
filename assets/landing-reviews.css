@@ -35,6 +35,7 @@
 .review-card-img {
     width: 60px;
     height: 60px;
+    object-fit: contain;
 }
 
 .review-card-name {
@@ -60,6 +61,7 @@
 
 .review-icons {
     margin-top: 25px;
+    padding:0 25px;
 }
 
 .review-icon {
@@ -186,19 +188,19 @@
 
     .review-product-1 {
         right: -40px;
-        top: -58px;
+        top: -19px;
         width: 146px !important;
     }
 
     .review-product-2 {
-        right: -58px;
-        top: -52px;
+        right: -30px;
+        top: -5px;
         width: 157px !important;
     }
 
     .review-product-3 {
-        top: -45px;
-        right: -65px;
+        top: -29px;
+        right: -35px;
         width: 170px !important;
     }
 }

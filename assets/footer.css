@@ -88,12 +88,16 @@
     padding: 0 30px;
 }
 
-@media screen and (max-width: 419px) {
+@media screen and (max-width: 418.9px) {
     .footer-download {
         width: 150px;
     }
 }
-
+@media screen and (min-width: 419px) {
+    .footer-download {
+        width: 167px;
+    }
+}
 @media screen and (max-width: 360px) {
     .footer-download {
         width: 133px;

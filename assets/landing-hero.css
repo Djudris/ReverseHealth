@@ -203,6 +203,9 @@
 }
 
 @media screen and (min-width: 992px) {
+    .padding-square {
+        padding-right: 10px;
+    }
     .btn-padding-mobile {
         padding-top: 51px;
         padding-bottom: 0;

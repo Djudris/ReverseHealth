@@ -32,7 +32,7 @@
                 <div class="position-relative">
                     <div id="single-product-carousel" class="product-img owl-carousel">
                         {% for image in product.images %}
-                            <img src="{{ image.src | product_img_url: "400x400" }}" alt="{{ image.alt }}">
+                            <img src="{{ image.src | product_img_url: "900x900" }}" alt="{{ image.alt }}">
                         {% endfor %}
                     </div>
                     <div class="css--prev-btn-single d-flex justify-content-start">
@@ -117,7 +117,7 @@
                                 {{ product.metafields.my_fields.bulletpoint_info_nr_6 }}</div>
                         </div>
                     {% endif %}
-                        
+
                 </div>
                 <h3 class="bundle-heading">Choose your bundle</h3>
                         <div class="row opcijas">
@@ -137,7 +137,7 @@
                                         </div>
                                     </div>
                                     <form method="post" action="/cart/add">
-                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />    
+                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                                         <input type="hidden" min="5" type="number" id="quantity" name="quantity" value="5"/>
                                         <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                                     </form>
@@ -152,11 +152,11 @@
                                         <div>
                                             <h3 class="card-quantity">3-pack</h3>
                                             <p class="card-ppp">{{product.price| minus: 1000 |money}}<span> / per pack</span></p>
-                                            <p class="card-total">{{product.price|minus:1000 |times:3| money  }} total price to pay</p>        
+                                            <p class="card-total">{{product.price|minus:1000 |times:3| money  }} total price to pay</p>
                                         </div>
                                     </div>
                                     <form method="post" action="/cart/add">
-                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />    
+                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                                         <input type="hidden" min="3" type="number" id="quantity" name="quantity" value="3"/>
                                         <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                                     </form>
@@ -175,7 +175,7 @@
                                         </div>
                                     </div>
                                     <form method="post" action="/cart/add">
-                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />    
+                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                                         <input type="hidden" min="3" type="number" id="quantity" name="quantity" value="1"/>
                                         <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                                     </form>
