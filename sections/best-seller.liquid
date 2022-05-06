@@ -10,7 +10,7 @@
         <div class="w-100 best-seller-pb">
             <div class="row d-flex justify-content-center position-relative">
                 <div id="best_seller_carousel" class="owl-carousel col-12 col-lg-10">
-                    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+                    {% for product in collections.best-sellers.products %}
 
                         <div class="best-seller-card-bg d-flex flex-column justify-content-between align-items-center">
                             <div>
