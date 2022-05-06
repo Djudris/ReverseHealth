@@ -248,6 +248,10 @@
         right: -65px;
         width: 200px !important;
     }
+    .review-icons {
+        margin-top: 25px;
+        padding:0 11px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -256,7 +260,10 @@
         right: -99px;
         top: -83px;
     }
-
+    .review-icons {
+        margin-top: 25px;
+        padding:0 25px;
+    }
     .review-product-2 {
         right: -49px;
         top: -67px;

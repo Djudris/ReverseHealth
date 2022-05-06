@@ -3,7 +3,7 @@
 
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'TOSPrivacy.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'TOSPrivacy.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
