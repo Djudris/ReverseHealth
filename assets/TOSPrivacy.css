@@ -1,0 +1,20 @@
+.tos-title {
+    font-size: 22.4px !important;
+    margin-bottom: 3rem !important;
+    font-weight: 600;
+    color: #50505 !important;
+}
+.tos-content {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    color: rgba(80, 80, 80, 0.75) !important;
+}
+.tos-content strong {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: rgba(80, 80, 80, 0.75) !important;
+}
+
+@media screen and (min-width: 992px) {
+
+}

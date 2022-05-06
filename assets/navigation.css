@@ -162,6 +162,7 @@ input, select {
     font-size: 14px;
     font-weight: 600;
     line-height: 24px;
+    -webkit-appearance: none;
 }
 .mobile-nav-dropdown {
     font-size: 12px;
