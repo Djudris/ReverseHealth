@@ -158,7 +158,7 @@
 }
 .hero-carouse-btn-parent {
     position: absolute;
-    bottom: 15px;
+    bottom: 24px;
 }
 
 @media screen and (max-width: 797px) {
