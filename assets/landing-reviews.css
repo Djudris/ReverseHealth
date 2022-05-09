@@ -108,8 +108,8 @@
 }
 @media screen and (max-width: 427px) {
     .review-product-1 {
-        right: -40px;
-        top: -17px;
+        right: -25px;
+        top: -16px;
         width: 109px !important;
     }
 
@@ -121,7 +121,7 @@
 
     .review-product-3 {
         top: -19px;
-        right: -58px;
+        right: -30px;
         width: 129px !important;
     }
 }
@@ -258,7 +258,7 @@
     .review-product-1 {
         width: auto !important;
         right: -99px;
-        top: -83px;
+        top: -106px;
     }
     .review-icons {
         margin-top: 25px;
@@ -266,13 +266,13 @@
     }
     .review-product-2 {
         right: -49px;
-        top: -67px;
+        top: -83px;
         width: auto !important;
 
     }
 
     .review-product-3 {
-        top: -83px;
+        top: -97px;
         right: -62px;
         width: auto !important;
 
