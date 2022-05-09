@@ -23,6 +23,7 @@
 }
 
 .delivery-title-sm {
+    text-transform: uppercase;
     padding-top: 10px;
     font-weight: 700;
     font-size: 14px;

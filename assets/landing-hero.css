@@ -65,7 +65,7 @@
 
 .slider-parent:before {
     animation: slideShowHorizontal 3000s infinite;
-    background: transparent url(https://es.ketocycle.diet/assets/images/landing/organic_landing/image_grid_mobile.jpg) no-repeat 50%;
+    background: transparent url("slider-mobile.png") no-repeat 50%;
     background-repeat: repeat-x;
     background-size: cover;
     height: 100%;
@@ -237,7 +237,7 @@
 
     .slider-parent:before {
         animation: slideShowVertical 1800s infinite;
-        background: transparent url(https://es.ketocycle.diet/assets/images/landing/organic_landing/image_grid_desktop.jpg) no-repeat 50%;
+        background: transparent url("slider-desktop.png") no-repeat 50%;
         background-repeat: repeat-y;
         background-size: 100% auto;
     }

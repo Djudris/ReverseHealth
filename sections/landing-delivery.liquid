@@ -7,17 +7,17 @@
             <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
                 <img src="{{ 'calendar_i.svg' | asset_url }}" alt="Calendar icon" class="delivery-img ">
                 <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-1 }}</h3>
-                <p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>
+                {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>{% endcomment %}
             </div>
             <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
                 <img src="{{ 'shipping_i.svg' | asset_url }}" alt="Shipping icon" class="delivery-img ">
                 <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-2 }}</h3>
-                <p class="delivery-text  text-center mb-0">{{ section.settings.text-2 }}</p>
+                {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-2 }}</p>{% endcomment %}
             </div>
             <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
                 <img src="{{ 'money_i.svg' | asset_url }}" alt="Money refund icon" class="delivery-img ">
                 <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-3 }}</h3>
-                <p class="delivery-text  text-center mb-0">{{ section.settings.text-3 }}</p>
+                {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-3 }}</p>{% endcomment %}
             </div>
         </div>
         {% if product.id == blank %}
@@ -44,7 +44,7 @@
 {
 "type": "text",
 "id": "title-sm-1",
-"default": "Free Shipping",
+"default": "1-4 DAYS DELIVERY TIME",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {
@@ -68,7 +68,7 @@
 {
 "type": "text",
 "id": "title-sm-3",
-"default": "Money Back Guarantee",
+"default": "ESSENTIAL DAILY NUTRIENTS",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {
