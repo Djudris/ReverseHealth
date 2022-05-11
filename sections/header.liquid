@@ -20,7 +20,7 @@
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 {{ 'navigation.css' | asset_url | stylesheet_tag }}
-{{ 'navigation.js'  | asset_url | script_tag     }}
+{{ 'navigation.js' | asset_url | script_tag }}
 
 <style>
     header-drawer {
@@ -123,11 +123,16 @@
                                             SHOP
                                         </div>
                                         <ul class="p-0 dropdown-menu position-relative mobile-nav-dropdown">
-                                            <li><a class="dropdown-item nav-mobile-dropdown-single-first" href="/products/womens-collagen-peptides">Women’s Collagen</a></li>
-                                            <li><a class="dropdown-item nav-mobile-dropdown-single nav-mobile-dropdown-single-padding" href="/products/whey-protein">Women’s Whey Protein</a></li>
-                                            <li><a class="dropdown-item nav-mobile-dropdown-single nav-mobile-dropdown-single-padding" href="/products/womens-vitamin-d3">Women’s Vitamin D3</a></li>
-                                            <li><a class="dropdown-item nav-mobile-dropdown-single nav-mobile-dropdown-single-padding" href="/products/women-s-core-pack">Women’s Full Bundle</a></li>
+                                            {%- for product in collections.all.products -%}
+                                                {% if forloop.first == true %}
+                                                    <li><a class="dropdown-item nav-mobile-dropdown-single-first" href="{{ product.url }}"> {{ product.title}}</a></li>
+                                                {%- endif -%}
+                                                {% if forloop.first == false %}
+                                                    <li><a class="dropdown-item nav-mobile-dropdown-single nav-mobile-dropdown-single-padding" href="{{ product.url }}">{{ product.title }}</a></li>
+                                                {%- endif -%}
+                                            {%- endfor -%}
                                             <li><a class="dropdown-item nav-mobile-dropdown-single" href="/collections/all">All Products</a></li>
+
                                         </ul>
                                     </div>
 
@@ -285,10 +290,10 @@
                             SHOP
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/products/womens-collagen-peptides">Women’s Collagen</a></li>
-                            <li><a class="dropdown-item" href="/products/whey-protein">Women’s Whey Protein</a></li>
-                            <li><a class="dropdown-item" href="/products/womens-vitamin-d3">Women’s Vitamin D3</a></li>
-                            <li><a class="dropdown-item" href="/products/women-s-core-pack">Women’s Full Bundle</a></li>
+                            {%- for product in collections.all.products -%}
+                                    <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title}}</a></li>
+                            {%- endfor -%}
+
                             <li><a class="dropdown-item" href="/collections/all">All Products</a></li>
                         </ul>
                     </div>
@@ -443,6 +448,10 @@ customElements.define('sticky-header', StickyHeader);
   }
 
 
+
+
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -459,6 +468,10 @@ customElements.define('sticky-header', StickyHeader);
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
+
+
 
 
     </script>

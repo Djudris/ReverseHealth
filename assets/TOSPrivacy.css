@@ -7,12 +7,12 @@
 .tos-content {
     font-size: 16px !important;
     font-weight: 300 !important;
-    color: rgba(80, 80, 80, 0.75) !important;
+    color: #505050 !important;
 }
 .tos-content strong {
     font-size: 16px !important;
     font-weight: 700 !important;
-    color: rgba(80, 80, 80, 0.75) !important;
+    color: #505050 !important;
 }
 
 @media screen and (min-width: 992px) {

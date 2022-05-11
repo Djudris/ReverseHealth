@@ -1,7 +1,7 @@
 {{ 'single-product-nutritions.css' | asset_url | stylesheet_tag }}
 <section>
     <div class="container nutritions-bg">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             {% if product.metafields.my_fields.composition_title %}
                 <div class="col-lg-6 col-12">
                     <h2 class="composition-title">{{ product.metafields.my_fields.composition_title }}</h2>
@@ -35,9 +35,9 @@
             col-lg-6 col-12
 {% endif %}  order-lg-1 order-2">
                 {% if product.metafields.my_fields.xl_composition_table %}
-                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '1280x1069' }}" alt="">
+                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '3000x3000' }}" alt="">
                 {% else %}
-                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '1280x360' }}" alt="">
+                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '3000x3000' }}" alt="">
                 {%endif%}
                 <img class="nutritions-table d-lg-none w-100" src="{{ product.metafields.my_fields.composition_mobile | img_url: '710x1023' }}" alt="">
             </div>

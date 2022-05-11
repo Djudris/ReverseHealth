@@ -3,10 +3,10 @@
 <section id="section-mission">
     <div class="container px-lg-0">
         <div class="row mission-p">
-            <div class="col-lg-6 col-12">
-                <h3 class="mission-title-small mb-0">{{ section.settings.title_small }}</h3>
-                <h2 class="mission-title  mb-0">{{ section.settings.title }}</h2>
-                <p class="mission-text mb-lg-0">{{ section.settings.text }}</p>
+            <div class="col-lg-6 col-12 pe-lg-4">
+                <h3 class=" mission-title-small mb-0">{{ section.settings.title_small }}</h3>
+                <h2 class=" mission-title  mb-0">{{ section.settings.title }}</h2>
+                <p class=" mission-text mb-lg-0">{{ section.settings.text }}</p>
                 <div class="mission-btn-padding d-lg-block d-none">
                     <a href="{{shop.url}}/collections/all"><button class="btn btn-primary button-top">check availability</button></a>
                 </div>
@@ -39,7 +39,7 @@ $(function() {
     // if (data.event === "ready") {
     //   //attach ready function to the image
     //   document.getElementById("vimeo-id").disabled = false;
-      
+
       $('#vimeo-id').click(function() {
         player[0].contentWindow.postMessage({
           "method": "play"

@@ -4,6 +4,10 @@
 input, select {
     -webkit-appearance: none;
 }
+.dropdown-item {
+    text-transform: uppercase !important;
+
+}
 .bg-announcement {
     background: #565656;
     padding-bottom: 0;
@@ -252,6 +256,8 @@ input, select {
     .dropdown-item {
         padding: 15px 0 15px 15px;
         font-size: 12px;
+        text-transform: uppercase;
+
     }
 
     .dropdown-menu li {

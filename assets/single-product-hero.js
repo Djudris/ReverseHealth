@@ -8,8 +8,12 @@ $(document).ready(function () {
         loop: false,
         nav: false,
         center: false,
-        dotsEach: 2,
+        dotsEach: 1,
     });
+    $('.add-to-cart-card').click(function () {
+        $('.add-to-cart-card').removeClass('selected-opcija');
+        $(this).addClass('selected-opcija');
+    })
     $('.customNextBtnSingle').click(function () {
         owl4.trigger('next.owl.carousel');
     })
