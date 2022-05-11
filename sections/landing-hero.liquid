@@ -1,31 +1,38 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
 <section id="hero-id" class="position-relative landing-hero-bg">
-    <img class="landing-hero-feather-1" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
-    <img class="landing-hero-feather-2" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
-    <div class="position-unset w-100 d-lg-none z-100">
-        <div class="slider-parent">
+    <img class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
+    <img class="landing-hero-feather-2 d-lg-none" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
+
+    <div class="w-100 d-lg-none position-relative">
+            <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile.png' | asset_url }}" alt="Hero picture">
 
         </div>
-    </div>
-    <div class="container position-unset  px-0">
-        <div class="row position-unset">
-            <div class="col-lg-6 col-12  pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
-                <div class="landing-hero-custom">&nbsp;</div>
-                <div class="w-100 hero-landing-text-block padding-square">
-                    <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
-                    <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
-                    <div class=" btn-padding-mobile">
-                        <a href="{{shop.url}}/collections/all"><button  class="btn btn-primary button-top">check availability</button></a>
+        <div class="container position-unset  px-0">
+            <div class="row position-unset">
+                <div class="col-lg-6 col-12  pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
+                    <div class="w-100 hero-landing-text-block padding-square">
+                        <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
+                        <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
+                        <div class=" btn-padding-mobile">
+                            <a href="{{shop.url}}/collections/all"><button  class="btn btn-primary btn-top">check availability</button></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none">
-                <div class="slider-parent">
+                <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
+                    <div class="hero-abs-pic d-flex justify-content-end">
+                        <div class="landing-hero-custom">
+                            {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
+                            <img class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
+                            <img class="desk-hero-prod" src="{{ 'desktop-hero-product.png' | asset_url }}" alt="Hero picture">
+
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
         </div>
-    </div>
+
 </section>
 <section class="position-relative hero-carousel-section">
 

@@ -1,11 +1,28 @@
 .product-link {
     display: none !important;
 }
+.link--text:hover, .link--text:focus, .link--text:active, .header__heading-link:hover .h2{
+    color: white;
+}
+.header-color {
+    background: #EF8498 !important;
+    border: none;
+}
 input, select {
     -webkit-appearance: none;
 }
+.header__heading-link .h2 {
+    color: white;
+}
+.menu-drawer .list-social__link {
+    background: white;
+}
+.menu-drawer__inner-container, .menu-drawer__utility-links {
+    background: #EF8498;
+}
 .dropdown-item {
     text-transform: uppercase !important;
+    color: white;
 
 }
 .bg-announcement {
@@ -62,7 +79,7 @@ input, select {
 }
 
 .navigation-cart-count {
-    color: white;
+    color: #EF8498;
     font-weight: 600;
     line-height: 18px;
     font-size: 12px;
@@ -78,7 +95,7 @@ input, select {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    color: #505050;
+    color: white;
     text-decoration: none;
 }
 
@@ -96,7 +113,7 @@ input, select {
 .dropdown-menu {
     border-radius: 6px;
     border: none;
-    background: #F3F8FF;
+    background: #EF8498;
 }
 
 
@@ -109,7 +126,7 @@ input, select {
 .dropdown-toggle:hover {
     background: transparent;
     border: none;
-    color: #505050;
+    color: white;
 }
 
 .dropdown-toggle:focus {
@@ -117,7 +134,7 @@ input, select {
     box-shadow: none !important;
     background: transparent;
     border: none;
-    color: #505050;
+    color: white;
 }
 
 .section-header {
@@ -144,11 +161,12 @@ input, select {
     transform: unset !important;
 
 }
+
 .mobile-full-dropdown {
     border-radius: 6px;
     border-top: none !important;
     border-bottom: none !important;
-    background: #F3F8FF;
+    background: #EF8498;
     margin:  15px 0 0 0 !important;
     padding: 0 15px 0 15px;
 
@@ -237,7 +255,7 @@ input, select {
         font-size: 20px;
         line-height: 24px;
         text-transform: uppercase;
-        color: #505050;
+        color: white !important;
     }
 
     .dropdown-toggle {
@@ -245,7 +263,7 @@ input, select {
     }
 
     .dropdown-menu {
-        background: #FFFFFF;
+        background: #EF8498;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -255,7 +273,7 @@ input, select {
 
     .dropdown-item {
         padding: 15px 0 15px 15px;
-        font-size: 12px;
+        font-size: 13px;
         text-transform: uppercase;
 
     }
@@ -273,11 +291,11 @@ input, select {
     .dropdown-item:active,
     .dropdown-item:focus {
         background: none;
-        color: #212529;
+        color: white;
     }
 
     .dropdown-menu li:not(:last-of-type) a {
-        border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
     }
 }
 

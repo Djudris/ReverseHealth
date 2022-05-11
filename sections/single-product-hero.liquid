@@ -4,7 +4,7 @@
 <section id="page-top">
     <div class="container p-lg-0">
         <div class="row">
-            <div class="col-lg-4 position-relative">
+            <div class="col-lg-5 position-relative">
                 <div class="d-lg-none product-header-block text-center">
                     <h3 class="product-flavor mb-0">{{ product.metafields.single.flavor }}</h3>
                     <h2 class="product-title mb-0">
@@ -32,7 +32,7 @@
                 <div class="position-relative">
                     <div id="single-product-carousel" class="product-img owl-carousel">
                         {% for image in product.images %}
-                            <img src="{{ image.src | product_img_url: "900x900" }}" alt="{{ image.alt }}">
+                            <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}">
                         {% endfor %}
                     </div>
                     <div class="css--prev-btn-single d-flex justify-content-start">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="d-lg-block d-none product-header-block">
                     <div class="row">
                         <div class="col-8">
