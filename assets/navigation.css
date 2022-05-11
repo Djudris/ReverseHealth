@@ -98,6 +98,9 @@ input, select {
     color: white;
     text-decoration: none;
 }
+.navigation-link:hover {
+    color:white;
+}
 
 .navigation-dropdown {
     border: none;
