@@ -37,7 +37,15 @@
   max-width: calc(10rem / var(--font-body-scale));
 }
 
+cart-items {
+  padding: 0 30px;
+}
+
 @media screen and (min-width: 750px) {
+  cart-items {
+    padding: 0 100px;
+  }
+
   .cart-item__image {
     max-width: 100%;
   }
@@ -210,8 +218,14 @@ cart-remove-button .icon-remove {
     font-size: 1rem;
   }
 
+  .shopify-cleanslate {
+    max-width: 315px;
+    margin: 0 auto;
+  }
+
   .product-option {
     font-size: 1.2rem !important;
+
   }
 
   .cart-items,
@@ -223,6 +237,11 @@ cart-remove-button .icon-remove {
 
   .quantity {
     width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+    max-width: 150px;
+  }
+
+  .quantity__button {
+    max-width: 33%;
   }
 
   .cart-items thead tr {
@@ -260,9 +279,9 @@ cart-remove-button .icon-remove {
   }
 
   .cart-item__totals {
-    display: flex;
+    display: none;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 

@@ -20,7 +20,7 @@ function startCarousel() {
     $("#hero-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
         margin: 10,
-        dots: true,
+        dots: false,
         autoplay: false,
         loop: false,
         nav: false,
@@ -30,7 +30,7 @@ function startCarousel() {
                 items: 2,
             },
             369: {
-                items:3,
+                items: 3,
             },
             600: {
                 items: 4,

@@ -2192,9 +2192,9 @@ input[type='checkbox'] {
     top: 0;
 }
 
-.shopify-section-header-hidden {
+/* .shopify-section-header-hidden {
     transform: translateY(-100%);
-}
+} */
 
 .shopify-section-header-hidden.menu-open {
     transform: translateY(0);
