@@ -2,10 +2,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.owl-stage {
+  padding-bottom: 5px;
+}
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 
