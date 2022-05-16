@@ -22,7 +22,7 @@ function startCarouselReview() {
         dots: false,
         autoplay: false,
         loop: false,
-        nav: false,
+        nav: true,
         responsive: {
             0: {
                 items: 1,
@@ -54,7 +54,7 @@ let owl3 = $("#review-slider");
 owl3.on('changed.owl.carousel', function (event) {
     let index = event.item.index;
     let count = event.item.count
-
+    console.log(event)
 
     $('.customPrevBtnReview').removeClass("disabled-review");
     $('.customNextBtnReview').removeClass("disabled-review");

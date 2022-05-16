@@ -22,7 +22,7 @@ function startCarouselReview() {
     dots: false,
     autoplay: false,
     loop: false,
-    nav: false,
+    nav: true,
     responsive: {
       0: {
         items: 1,
@@ -56,14 +56,14 @@ owl3.on('changed.owl.carousel', function (event) {
   let count = event.item.count
 
 
-  $('.customPrevBtnReview').removeClass("disabled-review");
-  $('.customNextBtnReview').removeClass("disabled-review");
+  $('.owl-prew').removeClass("disabled-review");
+  $('.owl-next').removeClass("disabled-review");
   if (index === 0) {
-    $('.customPrevBtnReview').addClass("disabled-review");
+    $('.owl-prev').addClass("disabled-review");
   }
 
   if (index === count - 1) {
-    $('.customNextBtnReview').addClass("disabled-review");
+    $('.owl-next').addClass("disabled-review");
   }
 
 

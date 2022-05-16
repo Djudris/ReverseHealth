@@ -9,7 +9,7 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                dotsEach: 3,
+                dotsEach: 1,
                 dots: true,
                 margin: 20,
 

@@ -61,7 +61,7 @@
 
 .review-icons {
     margin-top: 25px;
-    padding:0 25px;
+    padding: 0 25px;
 }
 
 .review-icon {
@@ -96,9 +96,11 @@
     top: 3px;
     width: 150px !important;
 }
+
 #review-slider .owl-stage-outer {
     padding: 0;
 }
+
 .review-product-3 {
     position: absolute;
     z-index: 10;
@@ -106,6 +108,7 @@
     right: -14px;
     width: 150px !important;
 }
+
 @media screen and (max-width: 427px) {
     .review-product-1 {
         right: -25px;
@@ -215,6 +218,60 @@
     border-radius: 5px;
 }
 
+.owl-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 40px;
+}
+
+.owl-prev,
+.owl-next {
+    display: inline;
+    font-size: 12px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.owl-nav button {
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-nav span {
+    font-size: 48px;
+    line-height: 0;
+    margin-bottom: 6px;
+}
+
+.disabled span,
+.disabled span {
+    color: #FFFFFF;
+}
+
+button.owl-next.disabled,
+button.owl-prev.disabled {
+    background: #F4ADBB !important;
+    opacity: 1;
+}
+
+button.owl-next.disabled span,
+button.owl-prev.disabled span {
+    color: #FFFFFF;
+}
+
+button.owl-next:not(.disabled),
+button.owl-prev:not(.disabled) {
+    background: white !important;
+}
+
 .customNextBtnReview {
     padding: 11px 17px 11px 20px;
     margin-left: 7px;
@@ -229,6 +286,8 @@
 .review-carousel-btns {
     padding-bottom: 40px;
 }
+
+
 
 @media screen and (min-width: 1200px) {
     .review-product-1 {
@@ -248,9 +307,10 @@
         right: -65px;
         width: 200px !important;
     }
+
     .review-icons {
         margin-top: 25px;
-        padding:0 11px;
+        padding: 0 11px;
     }
 }
 
@@ -260,10 +320,12 @@
         right: -99px;
         top: -106px;
     }
+
     .review-icons {
         margin-top: 25px;
-        padding:0 25px;
+        padding: 0 25px;
     }
+
     .review-product-2 {
         right: -49px;
         top: -83px;
@@ -282,6 +344,7 @@
 .disabled-review {
     background: #F4ADBB;
 }
+
 .disabled-review path {
     fill: white;
 }

@@ -9,6 +9,10 @@
   margin-bottom: 30px;
 }
 
+footer {
+  display: none;
+}
+
 .contact-description {
   font-family: 'Montserrat';
   font-style: normal;

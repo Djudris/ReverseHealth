@@ -4,9 +4,14 @@
     margin-top: 50px
 }
 
+.yotpo div {
+    display: flex;
+    justify-content: center;
+}
+
 .slider-parent:before {
     animation: slideShowHorizontal 3000s infinite;
-    background: transparent url("slider-mobile.png") no-repeat 50%;
+    background: transparent url("mobile.png") no-repeat 50%;
     background-repeat: repeat-x;
     background-size: cover;
     height: 100%;
@@ -47,7 +52,7 @@
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 31px;
-    margin-top: 50px;
+
 }
 
 .disabled {
@@ -67,7 +72,7 @@
 
 .best-seller-img {
     width: 200px;
-    height: 200px;
+    height: 400px;
     object-fit: contain;
 }
 
@@ -136,7 +141,7 @@
 }
 
 .best-seller-pb {
-    padding-bottom: 40px;
+    padding-bottom: 0px;
 }
 
 .owl-dots {
@@ -234,7 +239,7 @@ a.text-m {
     }
 
     .best-seller-pb {
-        padding-bottom: 70px;
+        padding-bottom: 35px;
     }
 
     .css--next-btn,
