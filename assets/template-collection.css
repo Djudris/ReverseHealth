@@ -5,7 +5,9 @@
 .owl-stage {
   padding-bottom: 5px;
 }
-
+.collection .grid__item:only-child {
+  max-width: 100% !important;
+}
 .owl-nav {
   display: flex;
   justify-content: space-between;

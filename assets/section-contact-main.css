@@ -8,9 +8,8 @@
   color: #505050;
   margin-bottom: 30px;
 }
-
-footer {
-  display: none;
+.contact-height {
+  min-height: 77vh;
 }
 
 .contact-description {
@@ -50,6 +49,9 @@ footer {
     line-height: 30px;
     margin-bottom: 20px;
 
+  }
+  .contact-height {
+    min-height: 87vh;
   }
 
   .contact-description {

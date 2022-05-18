@@ -6,12 +6,11 @@
 }
 
 .faq-heading {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 31px;
     color: #505050;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 700;
 }
 
 .faq-page {
@@ -113,9 +112,8 @@
     }
 
     .faq-heading {
-        font-size: 24px;
+        font-size: 16px;
         line-height: 31px;
-        font-weight: 700;
     }
 
     .faq-text {

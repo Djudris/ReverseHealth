@@ -35,13 +35,13 @@
             col-lg-6 col-12
 {% endif %}  order-lg-1 order-2">
                 {% if product.metafields.my_fields.xl_composition_table %}
-                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '3000x3000' }}" alt="">
+                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '6000x6000' }}" alt="">
                 <img class="nutritions-table d-lg-none w-100" src="{{ product.metafields.my_fields.composition_mobile | img_url: '710x2048' }}" alt="">
                 {% else %}
-                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '3000x3000' }}" alt="">
+                <img class="nutritions-table d-lg-block d-none w-100" src="{{ product.metafields.my_fields.composition | img_url: '6000x6000' }}" alt="">
                 <img class="nutritions-table d-lg-none w-100" src="{{ product.metafields.my_fields.composition_mobile | img_url: '710x1023' }}" alt="">
                 {%endif%}
-                
+
             </div>
         </div>
         <div class="delivery-btn-padding d-flex justify-content-center">
