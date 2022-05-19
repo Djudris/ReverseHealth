@@ -13,10 +13,13 @@
   justify-content: space-between;
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 30%;
   z-index: 2;
+  transform: translateY(-50%);
 }
-
+.carousel-arrow-img {
+  height: 28px;
+}
 .owl-prev,
 .owl-next {
   display: flex;
