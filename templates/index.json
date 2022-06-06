@@ -3,7 +3,7 @@
     "landing_hero": {
       "type": "landing-hero",
       "settings": {
-        "hero-title": "THE PERFECT BLEND FOR WOMEN AT ANY AGE",
+        "hero-title": "THE SPECIAL BLEND FOR MATURE WOMEN",
         "hero-subtitle": "Our products are designed to boost weight loss and increase lifespan"
       }
     },
@@ -34,8 +34,8 @@
       "type": "landing-mission",
       "settings": {
         "title_small": "Our mission",
-        "title": "Empowering women to achieve a healthy body and mind at any age",
-        "text": "Our mission is to empower women to achieve a healthy body and mind at any age, so that they can feel confident, youthful and joyful, positively impacting their relationships with themselves, their family, friends and community. ",
+        "title": "PROMOTING CONFIDENCE WITH SIMPLE SUPPLEMENTS",
+        "text": "Our mission is to remove the confusion about supplements created by many marketing companies selling products you don't need. There are only a few, important supplements to fill nutritional gaps for mature women to support weight loss journey, improve wellbeing and feel youthful. ",
         "video_url": "https://player.vimeo.com/video/709901348?h=c94b33e045&title=0&byline=0&portrait=0"
       }
     },
@@ -43,12 +43,30 @@
       "type": "landing-delivery",
       "settings": {
         "title": "Risk-free purchase and fast delivery",
-        "title-sm-1": "1-4 DAYS DELIVERY TIME",
+        "title-sm-1": "FAST DELIVERY TIME",
         "text-1": "Receive your order in 1- 4 business days",
         "title-sm-2": "Free Shipping",
         "text-2": "U.S only",
         "title-sm-3": "ESSENTIAL DAILY NUTRIENTS",
         "text-3": "14-day, no questions asked refund"
+      }
+    },
+    "faq": {
+      "type": "single-product-faq",
+      "settings": {
+        "faq-title": "Our customers often ask",
+        "faq-question-1": "What will happen after I order?",
+        "faq-answer-1": "1",
+        "faq-question-2": "What will happen after I order??",
+        "faq-answer-2": "2",
+        "faq-question-3": "What will happen after I order?",
+        "faq-answer-3": "3",
+        "faq-question-4": "What will happen after I order?",
+        "faq-answer-4": "4",
+        "faq-question-5": "What will happen after I order?",
+        "faq-answer-5": "5",
+        "faq-question-6": "What will happen after I order?",
+        "faq-answer-6": "6"
       }
     }
   },
@@ -57,6 +75,7 @@
     "best_seller",
     "reviews",
     "landing_mission",
-    "landing_delivery"
+    "landing_delivery",
+    "faq"
   ]
 }
