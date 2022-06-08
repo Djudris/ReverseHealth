@@ -38,18 +38,18 @@
       "type": "single-product-faq",
       "settings": {
         "faq-title": "Our customers often ask",
-        "faq-question-1": "What will happen after I order?",
-        "faq-answer-1": "1",
-        "faq-question-2": "What will happen after I order??",
-        "faq-answer-2": "2",
-        "faq-question-3": "What will happen after I order?",
-        "faq-answer-3": "3",
-        "faq-question-4": "What will happen after I order?",
-        "faq-answer-4": "4",
-        "faq-question-5": "What will happen after I order?",
-        "faq-answer-5": "5",
-        "faq-question-6": "What will happen after I order?",
-        "faq-answer-6": "6"
+        "faq-question-1": "What is ReverseHealth?",
+        "faq-answer-1": "ReverseHealth is the first women's only 12-week weight loss program that focuses on female physiology. It offers a holistic health program where supplements are one of the most important parts to success.",
+        "faq-question-2": "Why do I need to use supplements?",
+        "faq-answer-2": "A dietary supplement is something that you can consume to add nutrients to your diet that can otherwise be difficult to attain or to simply fill missing gaps and prevent deficiencies. As an example, we generate most of our vitamin D from exposure to sunlight. But during winter months, many of us, especially in Northern latitudes do not obtain sufficient sunlight exposure and therefore supplementation of vitamin D is necessary. On the other hand nutrients such as collagen can be obtained from dietary sources, but in smaller quantities. Research has shown that collagen consumption in larger quantities can benefit skin strength and appearance, and also joint health and therefore supplementation with specific dosages of collagen is often recommended.\n \nThe Reverse Health approach is simple, fix your diet first then consider supplements second.",
+        "faq-question-3": "Are there any side effects?",
+        "faq-answer-3": "There are no side effects to the supplements we recommend. Most, if not all of the products we sell are made up of natural ingredients that can be obtained from the diet.",
+        "faq-question-4": "What kind of quality controls do you have?",
+        "faq-answer-4": "We rigorously assess the quality and manufacturing processes used to develop our products before selling them on our site. All products and ingredients have FDA approval and all are manufactured in facilities with ISO or HACCP Certification.",
+        "faq-question-5": "Who should use ReverseHealth supplements?",
+        "faq-answer-5": "ReverseHealth supplements have been specifically selected and formulated to support the health, wellbeing and performance of Middle aged women.",
+        "faq-question-6": "How do I know which products are best for me?",
+        "faq-answer-6": "Our products have been selected and developed by nutrition experts, with over 10 years of experience in applied nutrition. They assess each individual ingredient to ensure it is provided in the most bioavailable form, in the most efficacious dosage, with natural ingredients and flavorings, supported by the latest scientific research."
       }
     }
   },
