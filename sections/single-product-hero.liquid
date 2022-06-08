@@ -122,17 +122,15 @@
                 <h3 class="bundle-heading">Choose your bundle</h3>
                         <div class="row opcijas">
                             <div class="col-12 col-lg-4">
-                                <div class="add-to-cart-card selected-opcija">
+                                <div class="add-to-cart-card selected-opcija d-flex flex-column justify-content-end">
                                     <div class="best-value">
-                                        <p>best value - save  $75</p>
+                                        {% assign price_variable = product.price|minus:1500 |times:5 %}
+                                        <p>best value - save  {{product.price|times:5|minus:price_variable| money_without_trailing_zeros   }}</p>
                                     </div>
                                     <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                        <div class="badge-container text-end">
-                                            <img src="{{ 'Badge.svg' | asset_url }}" alt="money back guarantee">
-                                        </div>
-                                        <div>
+                                        <div style="padding-top: 54px;">
                                             <h3 class="card-quantity">5-pack</h3>
-                                            <p class="card-ppp">{{product.price| minus: 1500 |money}}<span> / per pack</span></p>
+                                            <p class="card-ppp">{{product.price| minus: 1500 |money}}<span> / per item</span></p>
                                             <p class="card-total">{{product.price|minus:1500 |times:5| money  }} total price to pay</p>
                                         </div>
                                     </div>
@@ -144,14 +142,11 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <div class="add-to-cart-card">
+                                <div class="add-to-cart-card d-flex flex-column justify-content-end">
                                     <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                        <div class="badge-container text-end">
-                                            <img src="{{ 'Badge.svg' | asset_url }}" alt="money back guarantee">
-                                        </div>
-                                        <div>
+                                        <div style="padding-top: 54px;">
                                             <h3 class="card-quantity">3-pack</h3>
-                                            <p class="card-ppp">{{product.price| minus: 1000 |money}}<span> / per pack</span></p>
+                                            <p class="card-ppp">{{product.price| minus: 1000 |money}}<span> / per item</span></p>
                                             <p class="card-total">{{product.price|minus:1000 |times:3| money  }} total price to pay</p>
                                         </div>
                                     </div>
@@ -163,14 +158,11 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <div class="add-to-cart-card">
+                                <div class="add-to-cart-card d-flex flex-column justify-content-end">
                                     <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                        <div class="badge-container text-end">
-                                            <img src="{{ 'Badge.svg' | asset_url }}" alt="money back guarantee">
-                                        </div>
-                                        <div>
+                                        <div style="padding-top: 54px;">
                                             <h3 class="card-quantity">Single</h3>
-                                            <p class="card-ppp">{{product.price|money}}<span> / per pack</span></p>
+                                            <p class="card-ppp">{{product.price|money}}<span> / per item</span></p>
                                             <p class="card-total">{{product.price| money  }} total price to pay</p>
                                         </div>
                                     </div>
