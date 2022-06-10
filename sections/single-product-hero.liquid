@@ -122,7 +122,7 @@
                 <h3 class="bundle-heading">Choose your bundle</h3>
                         <div class="row opcijas">
                             {% if product.tags contains 'bundle' %}
-                                <form class="d-hidden" method="post" action="/cart/add">
+                                <form class="d-none" method="post" action="/cart/add">
                                     <input type="hidden" name="id" value="{{ product.variants[2].id }}" />
                                     <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
                                     <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
