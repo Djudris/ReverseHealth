@@ -1,7 +1,7 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
 <section id="hero-id" class="position-relative landing-hero-bg">
-    <img class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
-    <img class="landing-hero-feather-2 d-lg-none" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
+    <img loading="lazy" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
+    <img loading="lazy" class="landing-hero-feather-2 d-lg-none" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
 
     <div class="w-100 d-lg-none position-relative">
             <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
@@ -22,7 +22,7 @@
                     <div class="hero-abs-pic d-flex justify-content-end">
                         <div class="landing-hero-custom">
                             {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
-                            <img class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
+                            <img loading="lazy" class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
                             <img class="desk-hero-prod" src="{{ 'desktop-hero-product-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
 
                         </div>
@@ -41,7 +41,7 @@
             <div id="hero-slider" class="row owl-carousel icon-slider">
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img src="{{ 'vegan_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" src="{{ 'vegan_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         vegan
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img src="{{ 'sugar_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" src="{{ 'sugar_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         sugar free
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img src="{{ 'gluten_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" src="{{ 'gluten_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         gluten free
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img src="{{ 'gmo_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" src="{{ 'gmo_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         non gmo
@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img src="{{ 'lactose_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" src="{{ 'lactose_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         lactose free
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img src="{{ 'natural_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" src="{{ 'natural_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         all natural
@@ -92,12 +92,12 @@
                 <div class="position-relative d-none">
                     <div class="css--prev-btn-hero d-flex justify-content-start d-lg-none">
                         <button class="customPrevBtnHero caps text-center d-flex d-sm-inline align-items-center disabled">
-                            <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
+                            <img loading="lazy" class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
                         </button>
                     </div>
                     <div class="css--next-btn-hero d-flex justify-content-end d-lg-none">
                         <button class="customNextBtnHero caps d-flex d-sm-inline align-items-center">
-                            <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
+                            <img loading="lazy" class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
                         </button>
                     </div>
                 </div>
