@@ -18,7 +18,7 @@
   endif
 
   assign compare_at_price = target.compare_at_price
-  assign price = target.variants[2].price | default: 1999
+  assign price = target.variants[2].price| divided_by: 5 | default: 1999
   assign available = target.available | default: false
   assign money_price = price | money
   if settings.currency_code_enabled
