@@ -10,6 +10,24 @@
  */
 {% endcomment %}
 (() => {
-
+  const pageProductHandle = () => {
+    const path = window.location.pathname
+    const searchTerm = '/products/'
+    const start = path.lastIndexOf(searchTerm)
+    if (start < 0) return null
+    const encoded = path.slice(start + searchTerm.length).replace('/', '')
+    return decodeURI(encoded) // Decode to handle non-English letters
+  }
+  const isProductPage = /^.*\/products\/[A-Za-z0-9-_%]+\/?$/i.test(window.location.pathname)
+  const productHandle = isProductPage && pageProductHandle()
+  const compoundProducts = ["basic-bundle"]
+  if (!compoundProducts.includes(productHandle)) return
+  // Override cart URL inside the selector with a localized version if necessary
+  const selector = 'form[action="/cart/add"]'.replace('"/cart/add"', '"{{ routes.cart_add_url }}"')
+  const productForms = productHandle && document.querySelectorAll(selector)
+  const productForm = productForms && productForms.length === 1 && productForms.item(0)
+  if (productForm) {
+    productForm.style.setProperty('visibility', 'hidden')
+  }
 })()
 </script>

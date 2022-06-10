@@ -277,6 +277,7 @@ div.yotpo {
 
 .add-to-cart-card form {
     padding: 0px 20px;
+    display: block !important;
 }
 
 .opcijas .col-12:not(:last-of-type) {
