@@ -9,8 +9,8 @@
 button.disabled {
     opacity: 0.5;
 }
-.picky-combo-container picky-widget {
-    display: none;
+.picky-combo-container .picky-widget {
+    display: none !important;
 }
 .product-title {
     font-size: 18px;
