@@ -72,7 +72,7 @@
 }
 
 .price--on-sale .price-item--regular {
-
+  text-transform: lowercase;
 }
 
 .unit-price {
