@@ -139,6 +139,12 @@
                                         <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
                                         <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                                     </form>
+                                    <div>TEST</div>
+                                    <form method="post" action="/cart/add">
+                                        <input type="hidden" name="id" value="{{ product.variants[2].id }}" />
+                                        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                                        <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
