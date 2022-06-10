@@ -49,9 +49,6 @@
       </span>
     </div>
     <div class="price__sale">
-      {%- unless product.price_varies == false and product.compare_at_price_varies %}
-
-      {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
         {{ money_price }} per bundle
