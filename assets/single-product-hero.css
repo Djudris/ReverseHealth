@@ -9,7 +9,7 @@
 button.disabled {
     opacity: 0.5;
 }
-.picky-combo-container .picky-widget {
+.picky-combo-container {
     display: none !important;
 }
 .product-title {
