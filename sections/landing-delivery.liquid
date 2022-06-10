@@ -29,7 +29,11 @@
     </div>
     {% if product.id == '' %}<div class="landing-faq-padding"></div> {% endif %}
 </section>
+{% if product.id == blank %}
+    <div class="delivery-landing-mt">
 
+    </div>
+{% endif %}
 {% schema %}
 {
 "name": "t:sections.featured-collection.name",

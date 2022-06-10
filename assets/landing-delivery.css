@@ -7,7 +7,9 @@
 .delivery-btn-padding {
     padding-top: 40px;
 }
-
+.delivery-landing-mt {
+    margin-bottom: 20px;
+}
 .delivery-title {
     text-transform: uppercase;
     padding-bottom: 0;
@@ -52,6 +54,9 @@
 
 
 @media screen and (min-width: 992px) {
+    .delivery-landing-mt {
+        margin-bottom: 50px;
+    }
     .delivery-bg {
         padding-top: 70px;
         padding-bottom: 70px;
