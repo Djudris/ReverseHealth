@@ -4,11 +4,9 @@
     padding-bottom: 30px;
 
 }
-
 .landing-faq-padding {
     margin-bottom: 50px;
 }
-
 .faq-heading {
     font-size: 14px;
     line-height: 31px;
@@ -23,7 +21,7 @@
     align-items: center;
     background-color: #F0F0F0;
     border-radius: 5px;
-    height: 100%;
+
 }
 
 .faq-page.active {
@@ -54,7 +52,7 @@
     display: none;
     font-size: 14px;
     line-height: 24px;
-    padding-top: 20px;
+    padding-top:20px;
 
 }
 
@@ -78,13 +76,12 @@
         font-size: 16px;
         line-height: 27px;
     }
-
     .landing-faq-padding {
         margin-bottom: 70px;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width:992px) {
     .faq-section-wrapper {
         padding-bottom: 45px;
     }
@@ -133,6 +130,7 @@
 }
 
 
+
 .faq-page {
     padding: 20px 50px 20px 50px;
 }
@@ -143,7 +141,7 @@
 
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
     .faq-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
