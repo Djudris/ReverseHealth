@@ -266,8 +266,8 @@ cart-items {
   display: block;
 }
 
+
 .cart__checkout-button {
-  height: 42px;
   max-width: 36rem;
 }
 ._1mqqPYZtCQtz5_i0b-po4l ._3TUeZPsTWjDxakSmeDcA4D {
@@ -278,6 +278,13 @@ cart-items {
 }
 
 @media screen and (min-width: 750px) {
+  .cart__checkout-button {
+    height: 42px !important;
+  }
+  .dynamic-checkout__content {
+    display: flex;
+    justify-content: end;
+  }
   .cart-note {
     max-width: 35rem;
   }
