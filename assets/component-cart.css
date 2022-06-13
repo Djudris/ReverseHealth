@@ -267,9 +267,12 @@ cart-items {
 }
 
 .cart__checkout-button {
+  height: 42px;
   max-width: 36rem;
 }
-
+._1mqqPYZtCQtz5_i0b-po4l ._3TUeZPsTWjDxakSmeDcA4D {
+  min-width: 440px !important;
+}
 .cart__ctas {
   text-align: center;
 }
