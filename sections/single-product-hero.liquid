@@ -165,14 +165,14 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <p class="card-ppps">{{product.variants.first.price| money }}<span> / per {% if product.tags contains 'bundle' %}bundle {% else %}item{% endif %}</span></p>
+                                <p class="card-ppp">{{product.variants.first.price| money }}<span> / per {% if product.tags contains 'bundle' %}bundle {% else %}item{% endif %}</span></p>
 
                                 <div class="d-none">{{product.variants.first.price| money }}</div>
                                 <div class="add-to-cart-card d-flex flex-column justify-content-end">
                                     <div class="card-content d-flex flex-row-reverse flex-md-column">
                                         <div style="padding-top: 54px;" class="w-100">
                                             <h3 class="card-quantity">Single</h3>
-                                            <p class="card-ppps">{{product.variants.first.price| money }}<span> / per {% if product.tags contains 'bundle' %}bundle {% else %}item{% endif %}</span></p>
+                                            <p class="card-ppp">{{product.variants.first.price| money }}<span> / per {% if product.tags contains 'bundle' %}bundle {% else %}item{% endif %}</span></p>
                                             <p class="card-total">{{product.variants.first.price| money }} total price to pay</p>
                                         </div>
                                     </div>
