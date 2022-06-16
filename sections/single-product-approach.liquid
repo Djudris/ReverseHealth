@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-6 col-12 order-1">
                 <h2 class="approach-title">
-                    Why do women need a different approach?
+                    {{ section.settings.title }}
                 </h2>
                 <p class="approach-text">
                     {{ product.metafields.my_fields.approach_text }}
@@ -28,3 +28,21 @@
         </div>
     </div>
 </section>
+{
+"name": "t:sections.featured-collection.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"default": "WHY DO WOMEN NEED A DIFFERENT APPROACH?",
+"label": "t:sections.featured-collection.settings.title.label"
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-collection.presets.name"
+}
+]
+}

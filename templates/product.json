@@ -24,7 +24,9 @@
     },
     "single_product_approach": {
       "type": "single-product-approach",
-      "settings": {}
+      "settings": {
+        "title": "WHY DO WOMEN NEED A DIFFERENT APPROACH?"
+      }
     },
     "single_product_how": {
       "type": "single-product-how",
