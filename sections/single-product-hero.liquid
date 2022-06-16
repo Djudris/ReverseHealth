@@ -169,8 +169,8 @@
                                     <div class="card-content d-flex flex-row-reverse flex-md-column">
                                         <div style="padding-top: 54px;" class="w-100">
                                             <h3 class="card-quantity">Single</h3>
-                                            <p class="card-ppp">{{product.variants.first.price| money  }}<span> / per {% if product.tags contains 'bundle' %}bundle {% else %}item{% endif %}</span></p>
-                                            <p class="card-total">{{product.variants.first.price| money  }} total price to pay</p>
+                                            <p class="card-ppp">{{product.variants.first.price| money }}<span> / per {% if product.tags contains 'bundle' %}bundle {% else %}item{% endif %}</span></p>
+                                            <p class="card-total">{{product.variants.first.price| money }} total price to pay</p>
                                         </div>
                                     </div>
                                     <form method="post" action="/cart/add">
