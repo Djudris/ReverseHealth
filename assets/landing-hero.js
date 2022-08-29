@@ -4,31 +4,14 @@ class LocalizationForm extends HTMLElement {
         this.elements = {
             input: this.querySelector('input[name="language_code"], input[name="country_code"]'),
         };
-        this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
-
         this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
     }
-
-
-    onContainerKeyUp(event) {
-        if (event.code.toUpperCase() !== 'ESCAPE') return;
-        this.elements.button.focus();
-    }
-
     onItemClick(event) {
         event.preventDefault();
         const form = this.querySelector('form');
         this.elements.input.value = event.currentTarget.dataset.value;
+        $('.js--country-modal').addClass('d-none')
         if (form) form.submit();
-    }
-
-    openSelector() {
-        this.elements.button.focus();
-        this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
-    }
-
-    closeSelector(event) {
-        const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
     }
 }
 
@@ -36,6 +19,10 @@ customElements.define('localization-form', LocalizationForm);
 
 
 $(document).ready(function () {
+    let localizationCookie = document.cookie.match(new RegExp('(^| )' + 'localization' + '=([^;]+)'));
+    if (localizationCookie) {
+        $('.js--country-modal').addClass('d-none')
+    }
     if ($(window).width() < 992) {
         startCarousel();
     } else {
