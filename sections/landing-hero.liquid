@@ -4,34 +4,44 @@
     <img loading="lazy" class="landing-hero-feather-2 d-lg-none" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
 
     <div class="w-100 d-lg-none position-relative">
+        {% if localization.country.iso_code == 'DE' or localization.country.iso_code == 'GB' %}
+            <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-uk.png' | asset_url }}" alt="Hero picture" loading="lazy">
+        {% else %}
             <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
+        {% endif %}
 
-        </div>
-        <div class="container position-unset  px-0">
-            <div class="row position-unset">
-                <div class="col-lg-6 col-12  pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
-                    <div class="w-100 hero-landing-text-block padding-square">
-                        <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
-                        <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
-                        <div class=" btn-padding-mobile">
-                            <a href="{{shop.url}}/collections/all"><button  class="btn btn-primary btn-top">check availability</button></a>
-                        </div>
+    </div>
+    <div class="container position-unset  px-0">
+        <div class="row position-unset">
+            <div class="col-lg-6 col-12  pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
+                <div class="w-100 hero-landing-text-block padding-square">
+                    <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
+                    <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
+                    <div class=" btn-padding-mobile">
+                        <a href="{{ shop.url }}/collections/all">
+                            <button class="btn btn-primary btn-top">check availability</button>
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
-                    <div class="hero-abs-pic d-flex justify-content-end">
-                        <div class="landing-hero-custom">
-                            {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
-                            <img loading="lazy" class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
-                            <img class="desk-hero-prod" src="{{ 'desktop-hero-product-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
-
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
+            <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
+                <div class="hero-abs-pic d-flex justify-content-end">
+                    <div class="landing-hero-custom">
+                        {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
+                        <img loading="lazy" class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
+                        {% if localization.country.iso_code == 'DE' or localization.country.iso_code == 'GB' %}
+                            <img class="desk-hero-prod" src="{{ 'hero-desktop-uk.png' | asset_url }}" alt="Hero picture" loading="lazy">
+                        {% else %}
+                            <img class="desk-hero-prod" src="{{ 'desktop-hero-product-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
+    </div>
 
 </section>
 <section class="position-relative hero-carousel-section">

@@ -6,11 +6,13 @@ class LocalizationForm extends HTMLElement {
         };
         this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
     }
+
     onItemClick(event) {
         event.preventDefault();
         const form = this.querySelector('form');
         this.elements.input.value = event.currentTarget.dataset.value;
         $('.js--country-modal').addClass('d-none')
+        $('body').removeClass('overflow-hidden')
         if (form) form.submit();
     }
 }
@@ -20,9 +22,17 @@ customElements.define('localization-form', LocalizationForm);
 
 $(document).ready(function () {
     let localizationCookie = document.cookie.match(new RegExp('(^| )' + 'localization' + '=([^;]+)'));
+    let localizationModal = $('.js--country-modal');
     if (localizationCookie) {
-        $('.js--country-modal').addClass('d-none')
+        localizationModal.addClass('d-none')
+        $('body').removeClass('overflow-hidden')
+    } else {
+        $('body').addClass('overflow-hidden')
     }
+    $('.js--country-modal-close').click(function () {
+        localizationModal.addClass('d-none')
+        $('body').removeClass('overflow-hidden')
+    })
     if ($(window).width() < 992) {
         startCarousel();
     } else {
