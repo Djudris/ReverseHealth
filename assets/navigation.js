@@ -21,11 +21,14 @@ $(document).ready(function () {
     })
     $('.modal-country-selector').click(function () {
         let redirectURL = $(this).data('country').split('?')[0];
+        console.log(redirectURL)
+        console.log(currentUrl)
+        console.log(redirectURL === currentUrl)
         if (redirectURL === currentUrl) {
             localStorage.setItem("countrySelected", "true");
             closeModal();
         } else {
-            window.location.href = redirectURL;
+            // window.location.href = redirectURL;
         }
     })
 });
