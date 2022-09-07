@@ -28,7 +28,7 @@ $(document).ready(function () {
             localStorage.setItem("countrySelected", "true");
             closeModal();
         } else {
-            // window.location.href = redirectURL;
+            window.location.href = redirectURL;
         }
     })
 });
