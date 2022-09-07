@@ -20,7 +20,7 @@ $(document).ready(function () {
         closeModal();
     })
     $('.modal-country-selector').click(function () {
-        let redirectURL = $(this).data('country').split('?')[0];
+        let redirectURL = $(this).data('country').split('?')[0].replace(/\/$/,'');
         console.log(redirectURL)
         console.log(currentUrl)
         console.log(redirectURL === currentUrl)
