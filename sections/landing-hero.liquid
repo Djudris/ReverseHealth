@@ -4,12 +4,7 @@
     <img loading="lazy" class="landing-hero-feather-2 d-lg-none" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
 
     <div class="w-100 d-lg-none position-relative">
-        {% if localization.country.iso_code == 'DE' or localization.country.iso_code == 'GB' %}
-            <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-uk.png' | asset_url }}" alt="Hero picture" loading="lazy">
-        {% else %}
-            <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
-        {% endif %}
-
+        <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-uk.png' | asset_url }}" alt="Hero picture" loading="lazy">
     </div>
     <div class="container position-unset  px-0">
         <div class="row position-unset">
@@ -29,12 +24,7 @@
                     <div class="landing-hero-custom">
                         {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
                         <img loading="lazy" class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
-                        {% if localization.country.iso_code == 'DE' or localization.country.iso_code == 'GB' %}
-                            <img class="desk-hero-prod" src="{{ 'hero-desktop-uk.png' | asset_url }}" alt="Hero picture" loading="lazy">
-                        {% else %}
-                            <img class="desk-hero-prod" src="{{ 'desktop-hero-product-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
-                        {% endif %}
-
+                        <img class="desk-hero-prod" src="{{ 'hero-desktop-uk.png' | asset_url }}" alt="Hero picture" loading="lazy">
                     </div>
 
                 </div>
