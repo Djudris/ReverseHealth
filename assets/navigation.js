@@ -20,11 +20,8 @@ $(document).ready(function () {
         closeModal();
     })
     $('.modal-country-selector').click(function () {
-        let redirectURL = $(this).data('country').split('?')[0].replace(/\/$/,'');
-        console.log(redirectURL)
-        console.log(currentUrl)
-        console.log(redirectURL === currentUrl)
-        if (redirectURL === currentUrl) {
+        let redirectURL = $(this).data('country');
+        if (redirectURL.split('?')[0].replace(/\/$/,'') === currentUrl) {
             localStorage.setItem("countrySelected", "true");
             closeModal();
         } else {
