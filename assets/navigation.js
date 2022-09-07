@@ -20,8 +20,7 @@ $(document).ready(function () {
         closeModal();
     })
     $('.modal-country-selector').click(function () {
-        let redirectURL = $(this).data('country');
-        redirectURL = redirectURL.split('?')[0];
+        let redirectURL = $(this).data('country').split('?')[0];
         if (redirectURL === currentUrl) {
             localStorage.setItem("countrySelected", "true");
             closeModal();
