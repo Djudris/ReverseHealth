@@ -306,7 +306,7 @@ select {
     transform: translateY(-50%);
 }
 
-.css--country-modal .modal-country-selector a {
+.css--country-modal .modal-country-selector {
     text-decoration: none;
     font-weight: 500;
     font-size: 18px;
@@ -345,7 +345,7 @@ select {
         padding-bottom: 10px;
     }
 
-    .css--country-modal .modal-country-selector a {
+    .css--country-modal .modal-country-selector {
         text-decoration: none;
         font-weight: 500;
         font-size: 14px;
