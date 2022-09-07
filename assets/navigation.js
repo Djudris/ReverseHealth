@@ -15,6 +15,7 @@ $(document).ready(function () {
     if (!countrySelected && pageLocation) {
         localizationModal.removeClass('d-none')
         $('body').addClass('overflow-hidden')
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     $('.js--country-modal-close').click(function () {
         closeModal();
