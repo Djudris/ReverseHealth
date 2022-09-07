@@ -25,7 +25,7 @@
                         {% if product.metafields.single.isvegan %}
                             <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
                         {% endif %}
-                        {% if localization.country.iso_code != 'DE' or localization.country.iso_code != 'GB' %}
+                        {% if localization.country.iso_code != 'DE' and localization.country.iso_code != 'GB' %}
                             <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
                         {% endif %}
 
@@ -74,7 +74,9 @@
                             {% if product.metafields.single.isvegan %}
                                 <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
                             {% endif %}
-                            <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
+                            {% if localization.country.iso_code != 'DE' and localization.country.iso_code != 'GB' %}
+                                <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
+                            {% endif %}
 
                         </div>
                     </div>

@@ -220,10 +220,10 @@
 {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
 
 <body class="gradient">
-<div class="css--country-modal js--country-modal">
+<div class="css--country-modal js--country-modal d-none">
     <div class="block">
         <div class="close">
-            <button class="js--country-modal-close btn">
+            <button class="js--country-modal-close css--country-modal-close btn p-0">
                 <img loading="lazy" src="{{ 'close.svg' | asset_url }}" alt="Close Modal">
             </button>
         </div>
@@ -231,41 +231,33 @@
             <div class="country-modal-title">
                 PLEASE SELECT YOUR COUNTRY
             </div>
-
-            {% if localization.available_countries.size > -1 %}
-                <localization-form>
-                    {% form 'localization' %}
-                        <div id="CountryList">
-                            <div class="modal-country-selector" tabindex="-1">
-                                <a href="#" aria-current="true" data-value="US">
-                                    <div>
-                                        <img loading="lazy" src="{{ 'us.svg' | asset_url }}" alt="United States">
-                                        United States
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="modal-country-selector" tabindex="-1">
-                                <a href="#" data-value="GB">
-                                    <div>
-                                        <img loading="lazy" src="{{ 'uk.svg' | asset_url }}" alt="United Kingdom">
-                                        United Kingdom
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="modal-country-selector" tabindex="-1">
-                                <a href="#" data-value="DE">
-                                    <div>
-                                        <img loading="lazy" src="{{ 'eu.svg' | asset_url }}" alt="European Union">
-                                        European Union
-                                    </div>
-                                </a>
-                            </div>
-                            <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}"/>
+            <div id="CountryList">
+                <div class="modal-country-selector" tabindex="-1">
+                    <div data-country="https://shop.reverse.health/?country">
+                        <div>
+                            <img loading="lazy" src="{{ 'us.svg' | asset_url }}" alt="United States">
+                            United States
                         </div>
-                    {% endform %}
-                </localization-form>
-            {% endif %}
-
+                    </div>
+                </div>
+                <div class="modal-country-selector" tabindex="-1">
+                    <div data-country="https://uk.shop.reverse.health/?country">
+                        <div>
+                            <img loading="lazy" src="{{ 'uk.svg' | asset_url }}" alt="United Kingdom">
+                            United Kingdom
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-country-selector" tabindex="-1">
+                    <div data-country="https://eu.shop.reverse.health/?country">
+                        <div>
+                            <img loading="lazy" src="{{ 'eu.svg' | asset_url }}" alt="European Union">
+                            European Union
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}"/>
+            </div>
         </div>
     </div>
 </div>

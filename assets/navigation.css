@@ -272,6 +272,7 @@ select {
     line-height: 37px;
     font-weight: 700;
     padding-bottom: 15px;
+    text-align: center;
 }
 
 .css--country-modal .close {
@@ -283,7 +284,7 @@ select {
 
 .css--country-modal-close img {
     width: 30px;
-    height: 100%;
+    height: 30px;
 }
 
 .css--country-modal .modal-country-selector {
@@ -293,6 +294,7 @@ select {
     padding: 15px 30px;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 
 .css--country-modal .modal-country-selector img {
@@ -315,6 +317,41 @@ select {
 
 
 @media screen and (max-width:992px) {
+    .css--country-modal .close {
+        height: 14px;
+    }
+
+    .css--country-modal-close img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .css--country-modal .country-modal {
+        border-radius: 8px;
+        margin-top: 25px;
+        padding: 35px 20px 35px 20px;
+    }
+
+    .css--country-modal .modal-country-selector img {
+        width: 28px;
+        height: 28px;
+        left: 20px;
+    }
+
+    .css--country-modal .country-modal-title {
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    .css--country-modal .modal-country-selector a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        color: #505050;
+    }
+
     .header__icon--cart img {
         max-height: 35px;
     }

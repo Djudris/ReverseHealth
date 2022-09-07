@@ -1,35 +1,31 @@
-class LocalizationForm extends HTMLElement {
-    constructor() {
-        super();
-        this.elements = {
-            input: this.querySelector('input[name="language_code"], input[name="country_code"]'),
-        };
-        this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
-    }
-
-    onItemClick(event) {
-        event.preventDefault();
-        const form = this.querySelector('form');
-        this.elements.input.value = event.currentTarget.dataset.value;
-        $('.js--country-modal').addClass('d-none')
-        $('body').removeClass('overflow-hidden')
-        if (form) form.submit();
-    }
-}
-
-customElements.define('localization-form', LocalizationForm);
-
 $(document).ready(function () {
-    let localizationCookie = document.cookie.match(new RegExp('(^| )' + 'localization' + '=([^;]+)'));
+    let currentUrl = window.location.origin;
+    let countrySelected = localStorage.getItem("countrySelected");
+    let pageLocation = window.location.pathname === '/';
     let localizationModal = $('.js--country-modal');
-    if (localizationCookie) {
+    function closeModal() {
         localizationModal.addClass('d-none')
         $('body').removeClass('overflow-hidden')
-    } else {
+    }
+
+    if (new URLSearchParams(window.location.search).get("redirect") !== null && pageLocation) {
+        localStorage.setItem("countrySelected", "true");
+        countrySelected = true;
+    }
+    if (!countrySelected && pageLocation) {
+        localizationModal.removeClass('d-none')
         $('body').addClass('overflow-hidden')
     }
     $('.js--country-modal-close').click(function () {
-        localizationModal.addClass('d-none')
-        $('body').removeClass('overflow-hidden')
+        closeModal();
+    })
+    $('.modal-country-selector').click(function () {
+        let redirectURL = $(this).data('country').split('?')[0];
+        if (redirectURL === currentUrl) {
+            localStorage.setItem("countrySelected", "true");
+            closeModal();
+        } else {
+            window.location.href = redirectURL;
+        }
     })
 });
