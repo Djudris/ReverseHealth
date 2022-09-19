@@ -42,16 +42,37 @@
         - div.price__regular: Displayed when there are no variants on sale
         - div.price__sale: Displayed when a variant is a sale
     {%- endcomment -%}
+
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }} per bottle
+        {{ money_price }} per
+         {% for t in product.tags %}
+           {% if t contains 'bundle' %}
+             {% assign bundle_exsist = true %}
+           {% endif %}
+         {% endfor %}
+        {% if bundle_exsist %}
+          bundle
+        {% else %}
+          unit
+        {% endif %}
       </span>
     </div>
     <div class="price__sale">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }} per bundle
+        {{ money_price }} per
+         {% for t in product.tags %}
+           {% if t contains 'bundle' %}
+             {% assign bundle_exsist = true %}
+           {% endif %}
+         {% endfor %}
+        {% if bundle_exsist %}
+          bundle
+        {% else %}
+          unit
+        {% endif %}
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">

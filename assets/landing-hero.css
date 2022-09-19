@@ -5,14 +5,17 @@
     margin-bottom: 10px;
     color: white;
 }
+
 .hero-yummy {
     position: absolute;
     left: -121px;
     top: -56px;
 }
+
 .img-hero-mobile {
-    margin-top:40px;
+    margin-top: 40px;
 }
+
 .desk-hero-prod {
     width: auto;
     height: 134%;
@@ -21,6 +24,7 @@
     top: -25%;
     transform: translateX(-50%);
 }
+
 .hero-abs-pic {
     position: absolute;
     width: 50%;
@@ -74,20 +78,22 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
+
 .btn-top {
     width: 100%;
     padding: 15px 0 15px 0;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    color:#505050;
+    color: #505050;
     font-size: 16px;
     background: linear-gradient(180deg, white 0%, white 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
+
 .btn-top:hover {
-    color:#505050;
+    color: #505050;
 }
 
 .icon-slider {
@@ -151,7 +157,7 @@
     width: 100%;
     height: 74%;
     position: relative;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     border-radius: 200px 0 0 200px;
     z-index: 50;
@@ -162,11 +168,12 @@
     left: 0;
     top: 3%;
 }
+
 .landing-hero-feather-2 {
     position: absolute;
     left: 0;
     top: 50%;
-    transform:translateY(-50%);
+    transform: translateY(-50%);
     width: 100%;
 }
 
@@ -192,15 +199,16 @@
     width: 30%;
     right: 0;
 }
+
 #hero-slider .owl-dots {
     position: absolute;
     padding-top: 61px;
 }
+
 .hero-carouse-btn-parent {
     position: absolute;
     bottom: 24px;
 }
-
 @media screen and (max-width: 797px) {
     .bg-blue .container {
     }
@@ -222,7 +230,7 @@
     filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
     #textCol {
         padding: 0 30px;
     }
@@ -233,6 +241,7 @@
     .w-100-sm {
         width: 100%;
     }
+
     .hero-carousel-section {
         padding-bottom: 63px;
     }
@@ -242,6 +251,7 @@
     .padding-square {
         padding-right: 10px;
     }
+
     .btn-padding-mobile {
         padding-top: 51px;
         padding-bottom: 0;
@@ -270,12 +280,14 @@
         width: auto;
 
     }
+
     .btn-top {
         font-size: 18px;
         padding: 16px 96px 16px 96px;
         width: auto;
 
     }
+
     .slider-parent:before {
         animation: slideShowVertical 1800s infinite;
         background: transparent url("slider-desktop.png") no-repeat 50%;
@@ -299,7 +311,6 @@
         padding-top: 60px;
         padding-bottom: 60px;
     }
-
 
 
     .hero-landing-text-block {
