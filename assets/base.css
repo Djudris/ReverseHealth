@@ -2224,7 +2224,7 @@ input[type='checkbox'] {
     padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1384px) {
     .header {
         padding-top: 1.125rem;
         padding-bottom: 1.1063rem;
@@ -2299,7 +2299,7 @@ input[type='checkbox'] {
     width: 100%;
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 1383px) {
 
     .header__heading,
     .header__heading-link {
@@ -2307,7 +2307,7 @@ input[type='checkbox'] {
     }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1384px) {
     .header__heading-link {
         margin-left: -0.75rem;
     }
@@ -2574,7 +2574,7 @@ details[open]>.header__submenu {
     margin-left: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1384px) {
     .header__inline-menu {
         display: block;
     }

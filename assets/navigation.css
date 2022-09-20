@@ -49,8 +49,7 @@ select {
     margin-top: 15px !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
-    border-top: 1px solid #F0F0F0 !important;
-    ;
+    border-top: 1px solid #F0F0F0 !important;;
     border-bottom: 1px solid #F0F0F0 !important;
 
     width: 100% !important;
@@ -142,7 +141,6 @@ select {
 }
 
 
-
 .dropdown-toggle {
     background: transparent;
     border: none;
@@ -172,7 +170,6 @@ select {
     font-weight: 400;
     vertical-align: 0;
     transform: rotate(90deg);
-
 }
 
 .dropdown-toggle[aria-expanded="true"]::after {
@@ -238,7 +235,6 @@ select {
 .header__icon--cart img {
     max-height: 45px;
 }
-
 
 
 .css--country-modal {
@@ -314,9 +310,96 @@ select {
 }
 
 
+.navigation-desktop-country-cart {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}
+
+.navigation-dropdown-desktop {
+    background: white;
+    padding: 14px 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    display: flex;
+}
+
+.navigation-dropdown-desktop .nav-country-selector-div {
+    padding-right: 15px;
+}
+
+.navigation-dropdown-desktop .nav-country-selector-single-selected {
+    text-align: left;
+}
+.dropdown-country-mobile {
+    position: relative !important;
+    transform: unset !important;
+}
+
+.dropdown-mobile {
+    padding: 0 30px 40px 30px;
+}
+
+.dropdown-mobile .nav-country-selector-div {
+    width: 100%;
+}
+
+.dropdown-mobile .navigation-dropdown-desktop {
+    width: 100%;
+}
 
 
-@media screen and (max-width:992px) {
+.navigation-dropdown-desktop:hover, .navigation-dropdown-desktop:focus, .navigation-dropdown-desktop:active {
+    background: white;
+    border: 1px solid #CCCCCC;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navigation-dropdown-desktop::after {
+    border: none;
+    content: "\276F";
+    color: #505050;
+    font-weight: 400;
+    vertical-align: 0;
+    transform: rotate(90deg);
+}
+
+.navigation-dropdown-desktop[aria-expanded="true"]::after {
+    transform: rotate(270deg);
+}
+
+.nav-country-selector-single {
+    padding: 10px 31px 10px 20px;
+    font-size: 14px;
+}
+
+.nav-country-selector-single a, .nav-country-selector-single a:hover, .nav-country-selector-single a:focus {
+    text-decoration: none;
+    color: #505050;
+    font-weight: 500;
+}
+
+.dropdown-country-desktop {
+    background: white !important;
+    border: 1px solid #CCCCCC;
+    min-width: auto !important;
+    margin-top: -10px !important;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none !important;
+    padding-top: 4px;
+}
+
+@media screen and (max-width: 1383px) {
+    .dropdown-desktop {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
     .css--country-modal .close {
         height: 14px;
     }
@@ -351,7 +434,9 @@ select {
         font-size: 14px;
         color: #505050;
     }
+}
 
+@media screen and (max-width: 1383px) {
     .header__icon--cart img {
         max-height: 35px;
     }
@@ -374,8 +459,7 @@ select {
 }
 
 
-
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1384px) {
     .announcement-msg {
         font-family: 'Montserrat', sans-serif;
         font-size: 14px;
@@ -453,7 +537,7 @@ select {
     }
 }
 
-@media screen and (max-width:1170px) and (min-width:992px) {
+@media screen and (max-width: 1170px) and (min-width: 992px) {
     .header--middle-left {
         column-gap: 0.625rem;
     }
