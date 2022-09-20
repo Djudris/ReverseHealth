@@ -325,7 +325,7 @@ select {
 }
 
 .navigation-dropdown-desktop .nav-country-selector-div {
-    padding-right: 15px;
+    padding-right: 37px;
 }
 
 .navigation-dropdown-desktop .nav-country-selector-single-selected {
@@ -370,7 +370,7 @@ select {
 }
 
 .nav-country-selector-single {
-    padding: 10px 31px 10px 20px;
+    padding: 10px 28px 10px 20px;
     font-size: 14px;
 }
 
