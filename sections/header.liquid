@@ -28,7 +28,7 @@
         margin-left: -1.2rem;
     }
 
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: 1384px) {
         header-drawer {
             display: none;
         }
@@ -125,7 +125,7 @@
                                         <ul class="p-0 dropdown-menu position-relative mobile-nav-dropdown">
                                             {%- for product in collections.all.products -%}
                                                 {% if forloop.first == true %}
-                                                    <li><a class="dropdown-item nav-mobile-dropdown-single-first" href="{{ product.url }}"> {{ product.title}}</a></li>
+                                                    <li><a class="dropdown-item nav-mobile-dropdown-single-first" href="{{ product.url }}"> {{ product.title }}</a></li>
                                                 {%- endif -%}
                                                 {% if forloop.first == false %}
                                                     <li><a class="dropdown-item nav-mobile-dropdown-single nav-mobile-dropdown-single-padding" href="{{ product.url }}">{{ product.title }}</a></li>
@@ -140,6 +140,30 @@
                                     <a href="/pages/contact" class="mobile-nav-el-padding nav-mobile-single-line-b navigation-link d-block text-decoration-none">CONTACT</a>
                                 </nav>
                                 <div class="menu-drawer__utility-links">
+                                    <div class="dropdown dropdown-mobile">
+                                        <div class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="nav-country-selector-div">
+                                                <div data-country="https://eu.shop.reverse.health/?redirect" class="nav-country-selector-single-selected">
+                                                    <img loading="lazy" src="{{ 'nav-eu.svg' | asset_url }}" alt="European Union">
+                                                    European Union
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-menu dropdown-country-desktop dropdown-country-mobile">
+                                            <div class="nav-country-selector-single">
+                                                <a href="https://shop.reverse.health/?redirect">
+                                                    <img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">
+                                                    United States
+                                                </a>
+                                            </div>
+                                            <div class="nav-country-selector-single">
+                                                <a href="https://uk.shop.reverse.health/?redirect">
+                                                    <img loading="lazy" src="{{ 'nav-uk.svg' | asset_url }}" alt="United Kingdom">
+                                                    United Kingdom
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     {%- if shop.customer_accounts_enabled -%}
                                         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
                                             {% render 'icon-account' %}
@@ -291,7 +315,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             {%- for product in collections.all.products -%}
-                                    <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title}}</a></li>
+                                <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
                             {%- endfor -%}
 
                             <li><a class="dropdown-item" href="/collections/all">All Products</a></li>
@@ -304,21 +328,47 @@
                 </nav>
             {%- endif -%}
         {%- endif -%}
-
-        <div class="header__icons cart-icon-parent">
-            <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-                <img class="" src="{{ 'cart-bag.svg' | asset_url }}" alt="Cart Icon">
-
-                <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-                {%- if cart != empty -%}
-                    <div class="navigation-cart-count">
-                        {%- if cart.item_count < 100 -%}
-                            <span aria-hidden="true">{{ cart.item_count }}</span>
-                        {%- endif -%}
-                        <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        <div class="navigation-desktop-country-cart">
+            <div class="dropdown dropdown-desktop">
+                <button class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="nav-country-selector-div">
+                        <div data-country="https://uk.shop.reverse.health/?redirect" class="nav-country-selector-single-selected">
+                            <img loading="lazy" src="{{ 'nav-uk.svg' | asset_url }}" alt="United Kingdom">
+                            United Kingdom
+                        </div>
                     </div>
-                {%- endif -%}
-            </a>
+                </button>
+                <div class="dropdown-menu dropdown-country-desktop">
+                    <div class="nav-country-selector-single">
+                        <a href="https://shop.reverse.health/?redirect">
+                            <img src="{{ 'nav-us.svg' | asset_url }}" alt="United States">
+                            United States
+                        </a>
+                    </div>
+                    <div class="nav-country-selector-single">
+                        <a href="https://eu.shop.reverse.health/?redirect">
+                            <img src="{{ 'nav-eu.svg' | asset_url }}" alt="European Union">
+                            European Union
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__icons cart-icon-parent">
+                <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+                    <img class="" src="{{ 'cart-bag.svg' | asset_url }}" alt="Cart Icon">
+
+                    <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+                    {%- if cart != empty -%}
+                        <div class="navigation-cart-count">
+                            {%- if cart.item_count < 100 -%}
+                                <span aria-hidden="true">{{ cart.item_count }}</span>
+                            {%- endif -%}
+                            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                        </div>
+                    {%- endif -%}
+                </a>
+            </div>
         </div>
     </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
@@ -452,6 +502,8 @@ customElements.define('sticky-header', StickyHeader);
 
 
 
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -468,6 +520,8 @@ customElements.define('sticky-header', StickyHeader);
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
 
 
 
