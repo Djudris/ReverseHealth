@@ -336,6 +336,11 @@ select {
     transform: unset !important;
 }
 
+.paypalLight {
+    width: 440px !IMPORTANT;
+    max-width: none;
+}
+
 .dropdown-mobile {
     padding: 0 30px 40px 30px;
 }
