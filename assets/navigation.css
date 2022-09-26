@@ -379,6 +379,10 @@ select {
     color: #505050;
     font-weight: 500;
 }
+.paypalLight {
+    width: 440px !IMPORTANT;
+    max-width: none;
+}
 
 .dropdown-country-desktop {
     background: white !important;
