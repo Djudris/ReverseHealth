@@ -336,7 +336,7 @@ select {
     transform: unset !important;
 }
 
-.shopify-cleanslate.paypalLight {
+.shopify-cleanslate .paypalLight {
     width: 440px !IMPORTANT;
     max-width: none;
 }
