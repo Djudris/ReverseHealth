@@ -336,6 +336,18 @@ select {
     transform: unset !important;
 }
 
+.shopify-cleanslate .paypalLight {
+    width: 440px !IMPORTANT;
+    max-width: none;
+}
+@media screen and (max-width: 749.9px) {
+    .shopify-cleanslate .paypalLight {
+        width: 100% !IMPORTANT;
+    }
+}
+
+
+
 .dropdown-mobile {
     padding: 0 30px 40px 30px;
 }
