@@ -379,10 +379,18 @@ select {
     color: #505050;
     font-weight: 500;
 }
-.paypalLight {
+
+.shopify-cleanslate .paypalLight {
     width: 440px !IMPORTANT;
     max-width: none;
 }
+@media screen and (max-width: 749px) {
+    .shopify-cleanslate .paypalLight {
+        width: 100% !IMPORTANT;
+    }
+}
+
+
 
 .dropdown-country-desktop {
     background: white !important;
