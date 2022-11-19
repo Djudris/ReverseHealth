@@ -1,7 +1,9 @@
 {% comment %}
 Render multiple products to JSON.
 The response is a <section> element containing a JSON string with an array of the requested
-products. The list is limited to at most 20 products.
+products. The information provided is similar to Ajax Product API:
+  https://shopify.dev/api/ajax/reference/product
+Due to a restriction in Liquid, the list is limited to at most 20 products.
 If you choose to uninstall PickyStory, this section can be safely deleted.
 Get the app: https://go.pickystory.com/8nsjceym.
 Contact us for any questions: hello@pickystory.com.
@@ -34,16 +36,29 @@ Copyright (C) 2022 Picky Story Ltd. - All Rights Reserved
         {% assign product_handles_size = product_handles | size %}
         {%- for handle in product_handles -%}
           {% comment %} Send only a subset of product fields {% endcomment %}
+          {% assign decoded_handle = handle | url_decode %}
           {
-            "id": {{ all_products[handle].id | json }},
-            "handle": {{ all_products[handle].handle| json  }},
-            "available": {{ all_products[handle].available | json }},
-            "price": {{ all_products[handle].price | json }},
-            "compareAtPrice": {{ all_products[handle].compare_at_price | json }},
-            "variants": {{ all_products[handle].variants | json }},
-            "featuredImage": {{ all_products[handle].featured_image | json }},
-            "images": {{ all_products[handle].images | json }},
-            "options": {{ all_products[handle].options | json }}
+            "available": {{ all_products[decoded_handle].available | json }},
+            "collections": {{ all_products[decoded_handle].collections | json }},
+            "compareAtPrice": {{ all_products[decoded_handle].compare_at_price | json }},
+            "description": {{ all_products[decoded_handle].description | json }},
+            "featuredImage": {{ all_products[decoded_handle].featured_image | json }},
+            "featuredMedia": {{ all_products[decoded_handle].featured_media | json }},
+            "giftCard": {{ all_products[decoded_handle].gift_card | json }},
+            "handle": {{ all_products[decoded_handle].handle| json  }},
+            "hasOnlyDefaultVariant": {{ all_products[decoded_handle].has_only_default_variant | json }},
+            "id": {{ all_products[decoded_handle].id | json }},
+            "images": {{ all_products[decoded_handle].images | json }},
+            "media": {{ all_products[decoded_handle].media | json }},
+            "options": {{ all_products[decoded_handle].options_with_values | json }},
+            "price": {{ all_products[decoded_handle].price | json }},
+            "requiresSellingPlan": {{ all_products[decoded_handle].requires_selling_plan | json }},
+            "sellingPlanGroups": {{ all_products[decoded_handle].selling_plan_groups | json }},
+            "tags": {{ all_products[decoded_handle].tags | json }},
+            "title": {{ all_products[decoded_handle].title | json  }},
+            "type": {{ all_products[decoded_handle].type | json }},
+            "variants": {{ all_products[decoded_handle].variants | json }},
+            "vendor": {{ all_products[decoded_handle].vendor | json }}
           }
           {% assign product_count = product_count | plus: 1 %}
           {% if product_count != product_handles_size %}
