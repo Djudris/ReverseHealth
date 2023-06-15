@@ -149,20 +149,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="dropdown-menu dropdown-country-desktop dropdown-country-mobile">
-                                            <div class="nav-country-selector-single">
-                                                <a href="https://eu.shop.reverse.health/?redirect">
-                                                    <img loading="lazy" src="{{ 'nav-eu.svg' | asset_url }}" alt="European Union">
-                                                    European Union
-                                                </a>
-                                            </div>
-                                            <div class="nav-country-selector-single">
-                                                <a href="https://uk.shop.reverse.health/?redirect">
-                                                    <img loading="lazy" src="{{ 'nav-uk.svg' | asset_url }}" alt="United Kingdom">
-                                                    United Kingdom
-                                                </a>
-                                            </div>
-                                        </div>
                                     </div>
                                     {%- if shop.customer_accounts_enabled -%}
                                         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
