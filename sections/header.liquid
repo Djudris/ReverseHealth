@@ -338,7 +338,7 @@
                           let dropDown = document.getElementById('shopToggle');
                           let dropDownIcon = document.getElementById('shopToggleIcon');
                           let dropDownMenu = document.getElementById('shopToggleMenu');
-                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu){
+                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu || target.parentNode == dropDownMenu){
                             let isClass = dropDown.classList.contains('dropdown-toggle-hovered');
                             if(type == 'mouseover'){
                               if(isClass) {
