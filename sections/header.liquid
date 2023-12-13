@@ -320,12 +320,14 @@
                           let dropDown = document.getElementById('shopToggle');
   
                           if(dropDown){
-                            dropDown.addEventListener('onmouseover', (e) => toggleClasses(dropDown, e))
+                            dropDown.addEventListener('onmouseover', (e) => toggleClasses(e))
                           }
                         })
 
-                      const toggleClasses = (dropDown, e) => 
+                      const toggleClasses = (e) => 
                       {
+                          let dropDown = document.getElementById('shopToggle');
+
                           if(e.target !== dropDown) {
                             return;
                           }
