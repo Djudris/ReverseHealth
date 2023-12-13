@@ -317,17 +317,16 @@
 
                     <script>
                         document.addEventListener('DOMContentLoaded', () => {
-                          console.log('dropdown', dropDown);
+                          let dropDown = document.getElementById('shopToggle');
   
                           if(dropDown){
                             dropDown.addEventListener('onmouseover', toggleClasses)
                           }
                         })
 
-                      function toggleClasses()
+                      const toggleClasses = () => 
                       {
                           let dropDown = document.getElementById('shopToggle');
-
                           let dropdownIcon = document.getElementById('shopToggleIcon');
                           let dropdownMenu = document.getElementById('shopToggleMenu');
                           console.log(dropdownIcon, dropdownMenu);
