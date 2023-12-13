@@ -176,7 +176,7 @@ select {
     z-index: 1000 !important;
 }
 
-.dropdown-toggle:hover::after {
+.dropdown-toggle:hover:after {
     border: none;
     content: "\276F";
     font-weight: 400 !important;
