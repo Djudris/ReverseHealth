@@ -133,7 +133,7 @@ select {
 }
 
 .dropdown-menu {
-    border-radius: 6px;
+    border-radius: 0.938rem;
     border: none;
     background: #EF8498;
 }
