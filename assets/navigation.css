@@ -381,7 +381,7 @@ select {
 }
 
 .navigation-dropdown-desktop .nav-country-selector-div {
-    padding-right: 37px;
+    font-size: 17px;
 }
 
 .navigation-dropdown-desktop .nav-country-selector-single-selected {
