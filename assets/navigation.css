@@ -241,7 +241,7 @@ select {
 }
 
 .mobile-dropdown-toggle {
-    font-size: 14px;
+    font-size: 1.188rem;
     font-weight: 600;
     line-height: 24px;
     -webkit-appearance: none;
