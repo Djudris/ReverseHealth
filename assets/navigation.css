@@ -251,6 +251,7 @@ select {
 .mobile-dropdown-toggle:hover,
 .mobile-dropdown-toggle:focus,
 .mobile-dropdown-toggle:active {
+  font-weight: 600;
   background-color: white !important;
 }
 
