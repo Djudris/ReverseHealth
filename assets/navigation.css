@@ -33,7 +33,6 @@ select {
 }
 
 .dropdown-item {
-    text-transform: uppercase !important;
     color: black;
 
 }
