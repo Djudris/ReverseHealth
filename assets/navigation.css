@@ -259,6 +259,10 @@ select {
   background-color: white !important;
 }
 
+.mobile-dropdown-toggle:hover + svg {
+  transform: rotate(180deg);
+}
+
 .mobile-nav-dropdown {
     font-size: 12px;
     font-weight: 400;
