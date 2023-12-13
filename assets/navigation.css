@@ -252,7 +252,7 @@ select {
   background-color: white !important;
 }
 
-.mobile-dropdown-toggle .show + .mobile-dropdown-icon {
+.mobile-dropdown-toggle.show > .mobile-dropdown-icon {
   transform: rotate(180deg)
 }
 
