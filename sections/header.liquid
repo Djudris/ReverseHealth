@@ -320,15 +320,15 @@
                           let dropDown = document.getElementById('dropdownMenu2');
                           console.log('dropdown', dropDown);
   
-                          if(dropdown){
-                            dropdown.addEventListener('onmouseover', () => {
+                          if(dropDown){
+                            dropDown.addEventListener('onmouseover', () => {
                               let dropdownIcon = document.getElementById('dropdownMenu2Icon');
                               let dropdownMenu = document.getElementById('dropdownMenu2Menu');
                               console.log(dropdownIcon, dropdownMenu);
   
                               dropdownIcon.classList.add('dropdown-toggle-icon-rotate');
                               dropdownMenu.classList.add('dropdown-menu-hovered');
-                              dropdown.classList.add('dropdown-toggle-hovered');
+                              dropDown.classList.add('dropdown-toggle-hovered');
                             })
                           }
                         })
