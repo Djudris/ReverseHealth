@@ -321,6 +321,7 @@
                           let dropDown = document.getElementById('shopToggle');
                           let dropDownMenu = document.getElementById('shopToggleMenu');
                           let dropDownMenuDiv = document.getElementById('shopMenuDiv');
+                          let dropDownMenuSvg = document.getElementById('shopToggleIcon');
   
                           if(dropDown){
                             dropDown.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
@@ -329,6 +330,8 @@
                             dropDownMenu.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
                             dropDownMenuDiv.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
                             dropDownMenuDiv.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            dropDownMenuSvg.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDownMenuSvg.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
                           }
                         })
 
