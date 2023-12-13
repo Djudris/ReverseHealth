@@ -551,7 +551,7 @@ select {
 
     .dropdown-item {
         padding: 6px 0 6px 6px;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .dropdown-menu li {
