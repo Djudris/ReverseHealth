@@ -214,7 +214,10 @@ select {
 
 .mobile-nav-dropdown {
     transform: unset !important;
+}
 
+.mobile-drawer__navigation {
+  width: 17.813rem;
 }
 
 .mobile-full-dropdown {
