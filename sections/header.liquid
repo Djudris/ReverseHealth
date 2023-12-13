@@ -332,12 +332,13 @@
                           let dropDownIcon = document.getElementById('shopToggleIcon');
                           let dropDownMenu = document.getElementById('shopToggleMenu');
                           if(target == dropDown || target == dropDownIcon || target == dropDownMenu){
+                            let isClass = dropDown.classList.contains('dropdown-toggle-hovered');
                             if(type == 'mouseover'){
-                              if(dropDown.classList.contains('dropdown-toggle-hovered')) {
+                              if(isClass) {
                                 return;
                               }
                             } else {
-                              if(!dropDown.classList.contains('dropdown-toggle-hovered')) {
+                              if(!isClass) {
                                 return;
                               }
                             }
