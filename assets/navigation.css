@@ -266,7 +266,12 @@ select {
     line-height: 15px;
 }
 
+.mobile-nav-dropdown li {
+  max-width: 17rem;
+}
+
 .mobile-nav-dropdown a {
+  text-wrap: wrap;
     padding-left: 50px !important;
 }
 
