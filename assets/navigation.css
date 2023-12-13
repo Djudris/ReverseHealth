@@ -552,10 +552,8 @@ select {
     }
 
     .dropdown-item {
-        padding: 15px 0 15px 15px;
+        padding: 6px 0 6px 6px;
         font-size: 13px;
-        text-transform: uppercase;
-
     }
 
     .dropdown-menu li {
