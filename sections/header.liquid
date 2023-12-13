@@ -317,10 +317,13 @@
                     <script>
                         document.addEventListener('DOMContentLoaded', () => {
                           let dropDown = document.getElementById('shopToggle');
+                          let dropDownMenu = document.getElementById('shopToggleMenu');
   
                           if(dropDown){
                             dropDown.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
                             dropDown.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            dropDownMenu.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDownMenu.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
                           }
                         })
 
