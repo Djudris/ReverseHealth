@@ -153,6 +153,7 @@ select {
     font-weight: 600;
 }
 
+
 .dropdown-toggle:hover + .dropdown-menu {
   display: block;
   position: absolute;
@@ -175,7 +176,7 @@ select {
     z-index: 1000 !important;
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle:hover::after {
     border: none;
     content: "\276F";
     font-weight: 400 !important;
