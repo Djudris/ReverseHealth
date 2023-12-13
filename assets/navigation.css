@@ -51,7 +51,7 @@ select {
     margin-top: 15px !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
-    border-top: 1px solid #F0F0F0 !important;;
+    /* border-top: 1px solid #F0F0F0 !important;; */
     /* border-bottom: 1px solid #F0F0F0 !important; */
 
     width: 100% !important;
@@ -75,7 +75,7 @@ select {
 }
 
 .nav-mobile-dropdown-single {
-    border-top: 1px solid #FFFFFF;
+    /* border-top: 1px solid #FFFFFF; */
     padding-top: 15px !important;
   background-color: white !important;
 }
