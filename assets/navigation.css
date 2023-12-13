@@ -65,7 +65,7 @@ select {
 .nav-mobile-double-line {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
-    border-bottom: 1px solid #F0F0F0 !important;
+    /* border-bottom: 1px solid #F0F0F0 !important; */
     width: 100% !important;
 }
 
