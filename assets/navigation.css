@@ -232,7 +232,7 @@ select {
 }
 
 .mobile-nav-el-padding {
-    margin: 0 15px 0 15px;
+    margin: 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
