@@ -150,6 +150,7 @@ select {
     background: transparent;
     border: none;
     color: #1D2E42;
+    font-weight: 600;
 }
 
 .dropdown-toggle:focus {
@@ -158,6 +159,7 @@ select {
     background: transparent;
     border: none;
     color: #1D2E42;
+    font-weight: 600;
 }
 
 .section-header {
