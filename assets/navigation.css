@@ -182,6 +182,7 @@ select {
     content: "\276F";
     font-weight: 400 !important;
     vertical-align: 0;
+  transform: rotate(-90deg);
 }
 
 .dropdown-toggle:hover:after {
