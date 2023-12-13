@@ -321,6 +321,7 @@
   
                           if(dropDown){
                             dropDown.addEventListener('mouseover', toggleClasses);
+                            dropDown.addEventListener('mouseleave', toggleClasses);
                           }
                         })
 
@@ -330,9 +331,9 @@
                           let dropdownIcon = document.getElementById('shopToggleIcon');
                           let dropdownMenu = document.getElementById('shopToggleMenu');
   
-                          dropdownIcon.classList.add('dropdown-toggle-icon-rotate');
-                          dropdownMenu.classList.add('dropdown-menu-hovered');
-                          dropDown.classList.add('dropdown-toggle-hovered');
+                          dropdownIcon.classList.toggle('dropdown-toggle-icon-rotate');
+                          dropdownMenu.classList.toggle('dropdown-menu-hovered');
+                          dropDown.classList.toggle('dropdown-toggle-hovered');
                         }
                     </script>
                 </nav>
