@@ -322,11 +322,11 @@
   
                           if(dropDown){
                             console.log(dropDown);
-                            dropDown.addEventListener('onmouseover', toggleClasses())
+                            dropDown.addEventListener('onmouseover', toggleClasses(dropDown))
                           }
                         })
 
-                      function toggleClasses()
+                      function toggleClasses(dropDown)
                         {
                             let dropdownIcon = document.getElementById('shopToggleIcon');
                             let dropdownMenu = document.getElementById('shopToggleMenu');
