@@ -271,7 +271,8 @@ select {
 }
 
 .mobile-nav-dropdown a {
-  text-wrap: wrap;
+    text-wrap: wrap;
+    padding-right: 0 !important;
     padding-left: 50px !important;
 }
 
