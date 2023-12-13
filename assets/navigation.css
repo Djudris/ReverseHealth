@@ -261,7 +261,7 @@ select {
 
 .header__icon--menu[aria-expanded="true"]::after {
     content: url("close-menu.svg");
-    top: 40px;
+    top: -20px;
 }
 
 .header__icon--cart img {
