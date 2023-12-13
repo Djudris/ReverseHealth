@@ -176,8 +176,11 @@ select {
     z-index: 1000 !important;
 }
 
+.dropdown-toggle:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
     border: none;
     content: "\276F";
     font-weight: 400 !important;
@@ -191,7 +194,7 @@ select {
     font-weight: 400 !important;
     vertical-align: 0;
     transform: rotate(90deg);
-}
+} */
 
 .dropdown-toggle[aria-expanded="true"]::after {
     transform: rotate(270deg);
