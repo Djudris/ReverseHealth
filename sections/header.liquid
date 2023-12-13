@@ -317,25 +317,25 @@
 
                     <script>
                         document.addEventListener('DOMContentLoaded', () => {
-                          let dropDown = document.getElementById('shopToggle');
                           console.log('dropdown', dropDown);
   
                           if(dropDown){
-                            dropDown.addEventListener('onmouseover', () => toggleClasses(dropDown))
+                            dropDown.addEventListener('onmouseover', toggleClasses())
                           }
                         })
 
-                      function toggleClasses(dropDown)
-                        {
-                            let dropdownIcon = document.getElementById('shopToggleIcon');
-                            let dropdownMenu = document.getElementById('shopToggleMenu');
-                            console.log(dropdownIcon, dropdownMenu);
+                      function toggleClasses()
+                      {
+                          let dropDown = document.getElementById('shopToggle');
 
-                            dropdownIcon.classList.add('dropdown-toggle-icon-rotate');
-                            dropdownMenu.classList.add('dropdown-menu-hovered');
-                            dropDown.classList.add('dropdown-toggle-hovered');
-                        }
-                      
+                          let dropdownIcon = document.getElementById('shopToggleIcon');
+                          let dropdownMenu = document.getElementById('shopToggleMenu');
+                          console.log(dropdownIcon, dropdownMenu);
+
+                          dropdownIcon.classList.add('dropdown-toggle-icon-rotate');
+                          dropdownMenu.classList.add('dropdown-menu-hovered');
+                          dropDown.classList.add('dropdown-toggle-hovered');
+                      }
                     </script>
                 </nav>
             {%- endif -%}
