@@ -169,6 +169,7 @@ select {
 }
 
 .dropdown-toggle-hovered {
+    background-color: unset !important;
     font-weight: 600;
 }
 
@@ -177,7 +178,6 @@ select {
 }
 
 .dropdown-menu-hovered {
-  background-color: unset !important;
   display: block;
   position: absolute;
   inset: 0px auto auto 0px;
