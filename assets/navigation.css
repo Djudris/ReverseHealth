@@ -191,10 +191,6 @@ select {
 }
 
 
-.dropdown-toggle:hover .dropdown-icon {
-  transform: rotate(180deg);
-}
-
 .dropdown-toggle::after {
     content: "";
     display: none !important;
