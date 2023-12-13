@@ -9,6 +9,10 @@
     color: white;
 }
 
+.mobile-header-icon {
+  padding: 1.313rem 0 0 0.938rem;
+}
+
 .header-color {
     background: #F1E4D4 !important;
     border: none;
