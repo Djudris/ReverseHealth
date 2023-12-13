@@ -116,8 +116,7 @@
                         <div class="menu-drawer__inner-container">
                             <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
                                 {%- if section.settings.logo != blank -%}
-                                    {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
-                                    <img src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+                                    <img src="{{ section.settings.logo }}"
                                          loading="lazy"
                                          class="header__heading-logo"
                                          width="125"
