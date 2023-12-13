@@ -146,13 +146,13 @@ select {
     border: none;
 }
 
-.dropdown-toggle:hover {
+/* .dropdown-toggle:hover {
     background: transparent;
     border: none;
     color: #1D2E42;
     font-weight: 600;
 }
-
+ */
 
 .dropdown-toggle:focus {
     outline: none !important;
