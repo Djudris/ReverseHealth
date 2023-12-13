@@ -322,6 +322,7 @@
                           let dropDownMenu = document.getElementById('shopToggleMenu');
                           let dropDownMenuDiv = document.getElementById('shopMenuDiv');
                           let dropDownMenuSvg = document.getElementById('shopToggleIcon');
+                          let svgPath  = dropDownMenuSvg.querySelector('path');
   
                           if(dropDown){
                             dropDown.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
@@ -332,6 +333,8 @@
                             dropDownMenuDiv.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
                             dropDownMenuSvg.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
                             dropDownMenuSvg.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            svgPath.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            svgPath.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
                           }
                         })
 
@@ -340,9 +343,10 @@
                           let target = e.target;
                           let dropDown = document.getElementById('shopToggle');
                           let dropDownIcon = document.getElementById('shopToggleIcon');
+                          let svgPath  = dropDownIcon.querySelector('path');
                           let dropDownMenu = document.getElementById('shopToggleMenu');
                           let dropDownMenuDiv = document.getElementById('shopMenuDiv');
-                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu || target == dropDownMenuDiv){
+                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu || target == dropDownMenuDiv || target == svgPath){
                             let isClass = dropDown.classList.contains('dropdown-toggle-hovered');
                             if(type == 'mouseover'){
                               if(isClass) {
