@@ -180,15 +180,13 @@ select {
   transform: rotate(180deg);
 }
 
-/* .dropdown-toggle::after {
-    border: none;
-    content: "\276F";
-    font-weight: 400 !important;
-    vertical-align: 0;
-  transform: rotate(-90deg);
+.dropdown-toggle::after {
+
+    content: "";
+
 }
 
-.dropdown-toggle:hover:after {
+/* .dropdown-toggle:hover:after {
     border: none;
     content: "\276F";
     font-weight: 400 !important;
