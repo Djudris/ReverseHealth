@@ -234,6 +234,7 @@ select {
 
 #menu-drawer {
     backdrop-filter: blur(10px);
+  overflow: hidden !important;
 }
 
 .mobile-nav-el-padding {
