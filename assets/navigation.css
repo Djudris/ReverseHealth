@@ -125,6 +125,7 @@ select {
 
 .navigation-link:hover {
     color: #1D2E42;
+
 }
 
 .navigation-dropdown {
@@ -245,6 +246,11 @@ select {
     font-weight: 600;
     line-height: 24px;
     -webkit-appearance: none;
+}
+
+.mobile-dropdown-toggle:focus,
+.mobile-dropdown-toggle:active {
+  background-color: white !important;
 }
 
 .mobile-nav-dropdown {
