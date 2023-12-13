@@ -154,14 +154,6 @@ select {
 }
 
 
-.dropdown-toggle:hover + .dropdown-menu {
-  display: block;
-  position: absolute;
-  inset: 0px auto auto 0px;
-  margin: 0px;
-  transform: translate(0px, 25px);
-}
-
 .dropdown-toggle:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -182,6 +174,14 @@ select {
 
 .dropdown-toggle-icon-rotate {
     transform: rotate(180deg);
+}
+
+.dropdown-menu-hovered {
+  display: block;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(0px, 25px);
 }
 
 .dropdown-toggle:hover .dropdown-icon {
