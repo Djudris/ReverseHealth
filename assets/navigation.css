@@ -149,7 +149,7 @@ select {
 .dropdown-toggle:hover {
     background: transparent;
     border: none;
-    color: white;
+    color: #1D2E42;
 }
 
 .dropdown-toggle:focus {
