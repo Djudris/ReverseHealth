@@ -176,6 +176,14 @@ select {
     z-index: 1000 !important;
 }
 
+.dropdown-toggle-hovered {
+    font-weight: 600;
+}
+
+.dropdown-toggle-icon-rotate {
+    transform: rotate(180deg);
+}
+
 .dropdown-toggle:hover .dropdown-icon {
   transform: rotate(180deg);
 }
