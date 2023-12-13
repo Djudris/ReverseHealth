@@ -217,7 +217,7 @@ select {
 }
 
 .mobile-drawer__navigation {
-  width: 17.813rem;
+  width: 19.688rem !important;
 }
 
 .mobile-full-dropdown {
