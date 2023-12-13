@@ -256,7 +256,7 @@ select {
   background-color: white !important;
 }
 
-.mobile-dropdown-toggle:hover + svg {
+.mobile-dropdown-toggle .show + svg {
   transform: rotate(180deg)
 }
 
