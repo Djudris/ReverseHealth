@@ -329,14 +329,14 @@
                         {
                           let target = e.target;
                           let dropDown = document.getElementById('shopToggle');
-                          let dropdownIcon = document.getElementById('shopToggleIcon');
-                          let dropdownMenu = document.getElementById('shopToggleMenu');
-                          if(target == dropDown || target == dropDownIcon || target == dropdownMenu){
+                          let dropDownIcon = document.getElementById('shopToggleIcon');
+                          let dropDownMenu = document.getElementById('shopToggleMenu');
+                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu){
                             return;
                           }
   
-                          dropdownIcon.classList.toggle('dropdown-toggle-icon-rotate');
-                          dropdownMenu.classList.toggle('dropdown-menu-hovered');
+                          dropDownIcon.classList.toggle('dropdown-toggle-icon-rotate');
+                          dropDownMenu.classList.toggle('dropdown-menu-hovered');
                           dropDown.classList.toggle('dropdown-toggle-hovered');
                         }
                     </script>
