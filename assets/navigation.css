@@ -179,7 +179,7 @@ select {
 }
 
 .dropdown-toggle-icon-rotate {
-    transform: rotate(0) !important;
+    transform: rotate(180deg);
 }
 
 .dropdown-menu-hovered {
@@ -195,7 +195,7 @@ select {
 }
 
 .dropdown-toggle:hover .dropdown-icon {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 .dropdown-toggle::after {
@@ -260,7 +260,7 @@ select {
 }
 
 .mobile-dropdown-toggle:hover + svg {
-  transform: rotate(0deg);
+  transform: rotate(180deg)
 }
 
 .mobile-nav-dropdown {
