@@ -320,19 +320,28 @@
                           let dropDown = document.getElementById('shopToggle');
   
                           if(dropDown){
-                            dropDown.addEventListener('mouseover', (e) => toggleClasses(e));
-                            dropDown.addEventListener('mouseleave', (e) => toggleClasses(e));
+                            dropDown.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDown.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
                           }
                         })
 
-                        const toggleClasses = (e) => 
+                        const toggleClasses = (e, type) => 
                         {
                           let target = e.target;
                           let dropDown = document.getElementById('shopToggle');
                           let dropDownIcon = document.getElementById('shopToggleIcon');
                           let dropDownMenu = document.getElementById('shopToggleMenu');
                           if(target == dropDown || target == dropDownIcon || target == dropDownMenu){
-                            return;
+                            if(type == 'mouseover'){
+                              if(dropDown.classList.contains('dropdown-toggle-hovered')) {
+                                return;
+                              }
+                            } else {
+                              if(!dropDown.classList.contains('dropdown-toggle-hovered')) {
+                                return;
+                              }
+                            }
+                            
                           }
   
                           dropDownIcon.classList.toggle('dropdown-toggle-icon-rotate');
