@@ -342,21 +342,7 @@
                 </a>
             </div>
         </div>
-        <script>
-          function showDropdown(element) {
-            if (window.innerWidth > 991) { // Check viewport width for responsiveness
-              element.classList.add('show');
-              var dropdownMenu = element.querySelector('.dropdown-menu');
-              dropdownMenu.classList.add('show');
-            }
-          }
-        
-          function hideDropdown(element) {
-            element.classList.remove('show');
-            var dropdownMenu = element.querySelector('.dropdown-menu');
-            dropdownMenu.classList.remove('show');
-          }
-        </script>
+                                      
     </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
