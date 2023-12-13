@@ -179,7 +179,7 @@ select {
 }
 
 .dropdown-toggle-icon-rotate {
-    transform: rotate(180deg);
+    transform: rotate(0) !important;
 }
 
 .dropdown-menu-hovered {
