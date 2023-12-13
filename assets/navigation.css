@@ -153,6 +153,14 @@ select {
     font-weight: 600;
 }
 
+.dropdown-toggle:hover + .dropdown-menu {
+  display: block;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(0px, 25px);
+}
+
 .dropdown-toggle:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -161,6 +169,7 @@ select {
     color: #1D2E42;
     font-weight: 600;
 }
+
 
 .section-header {
     z-index: 1000 !important;
