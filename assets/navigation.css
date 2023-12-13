@@ -169,7 +169,7 @@ select {
 .dropdown-toggle::after {
     border: none;
     content: "\276F";
-    font-weight: 400;
+    font-weight: 400 !important;
     vertical-align: 0;
     transform: rotate(90deg);
 }
