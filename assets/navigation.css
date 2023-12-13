@@ -181,7 +181,7 @@ select {
 }
 
 .dropdown-toggle::after {
-  content: "";
+    content: "";
     display: none !important;
 }
 
