@@ -248,6 +248,7 @@ select {
     -webkit-appearance: none;
 }
 
+.mobile-dropdown-toggle:hover,
 .mobile-dropdown-toggle:focus,
 .mobile-dropdown-toggle:active {
   background-color: white !important;
