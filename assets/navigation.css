@@ -191,7 +191,7 @@ select {
 }
 
 .dropdown-icon {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 
 .dropdown-toggle:hover .dropdown-icon {
