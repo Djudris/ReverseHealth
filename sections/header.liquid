@@ -301,7 +301,7 @@
                                 <path d="M10.4003 0.189884L19.298 7.89771C19.5893 8.15025 19.5888 8.55912 19.2965 8.81123C19.0041 9.06315 18.5306 9.0625 18.239 8.80993L9.87091 1.56089L1.50286 8.81019C1.21125 9.06273 0.737997 9.06338 0.445629 8.81149C0.299068 8.68511 0.225788 8.51954 0.225788 8.35397C0.225788 8.18882 0.298578 8.0239 0.444122 7.89775L9.34156 0.189884C9.48164 0.0682526 9.67229 0 9.87091 0C10.0695 0 10.26 0.0684481 10.4003 0.189884Z" fill="#1D2E42"/>
                             </svg>
                         </a>
-                        <div style="height:30px; width: 200px;" class="dropdown-menu-hovered" id="shopMenuDiv">
+                        <div style="height:30px; width: 80px;" class="dropdown-menu-hovered" id="shopMenuDiv">
                           <ul class="dropdown-menu" id="shopToggleMenu">
                               {%- for product in collections.all.products -%}
                                   <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
@@ -350,7 +350,6 @@
                                 return;
                               }
                             }
-                            
                           }
   
                           dropDownIcon.classList.toggle('dropdown-toggle-icon-rotate');
