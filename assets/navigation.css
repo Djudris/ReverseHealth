@@ -190,9 +190,6 @@ select {
   transform: translate(0px, 20px);
 }
 
-.dropdown-icon {
-  transform: rotate(0);
-}
 
 .dropdown-toggle:hover .dropdown-icon {
   transform: rotate(180deg);
