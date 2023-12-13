@@ -33,7 +33,6 @@ select {
 
 .menu-drawer__inner-container,
 .menu-drawer__utility-links {
-  padding-bottom: 12px !important;
     background: white;
 }
 
