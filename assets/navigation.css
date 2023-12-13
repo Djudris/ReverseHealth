@@ -271,7 +271,7 @@ select {
 }
 
 .menu-drawer__navigation {
-    padding: 127px 15px 0 15px;
+    padding: 45px 15px 0 15px;
 }
 
 .header__icon--menu[aria-expanded="true"]::after {
