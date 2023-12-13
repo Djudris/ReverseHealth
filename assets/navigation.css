@@ -75,6 +75,8 @@ select {
 }
 
 .nav-mobile-dropdown-single {
+  max-width: 17.5;
+  word-break: break-word;
     /* border-top: 1px solid #FFFFFF; */
     padding-top: 12px !important;
   background-color: white !important;
