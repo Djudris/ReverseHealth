@@ -177,6 +177,7 @@ select {
 }
 
 .dropdown-menu-hovered {
+  background-color: unset !important;
   display: block;
   position: absolute;
   inset: 0px auto auto 0px;
