@@ -181,9 +181,7 @@ select {
 }
 
 .dropdown-toggle::after {
-
-    content: "";
-
+    display: none !important;
 }
 
 /* .dropdown-toggle:hover:after {
