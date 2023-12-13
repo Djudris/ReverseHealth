@@ -340,7 +340,8 @@
                           let dropDown = document.getElementById('shopToggle');
                           let dropDownIcon = document.getElementById('shopToggleIcon');
                           let dropDownMenu = document.getElementById('shopToggleMenu');
-                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu){
+                          let dropDownMenuDiv = document.getElementById('shopMenuDiv');
+                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu || target == dropDownMenuDiv){
                             let isClass = dropDown.classList.contains('dropdown-toggle-hovered');
                             if(type == 'mouseover'){
                               if(isClass) {
