@@ -3,14 +3,12 @@
 }
 
 .mission-title-small {
-    text-transform: uppercase;
     font-size: 16px;
     line-height: 27px;
     font-weight: 500;
 }
 
 .mission-title {
-    text-transform: uppercase;
     padding-top: 10px;
     font-size: 18px;
     line-height: 31px;

@@ -85,14 +85,18 @@
 
 .button-top {
     width: 100%;
-    padding: 15px 0 15px 0;
+    padding: 18px 47px;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    font-size: 16px;
-    background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #4F4B91;
+    border-radius: 0.75rem;
+}
+
+.button-top:hover {
+    background-color: rgb(79,75,145, 0.9);
+    color: white;
 }
 
 .btn-top {
@@ -300,10 +304,10 @@
     }
 
     .button-top {
-        font-size: 18px;
-        padding: 16px 96px 16px 96px;
+        border-radius: 15px;
+        font-size: 20px;
+        padding: 20px 79px;
         width: auto;
-
     }
 
     .btn-top {
