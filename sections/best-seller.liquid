@@ -10,7 +10,7 @@
         </div>
         <div class="w-100 best-seller-pb">
             <div class="row d-flex justify-content-center position-relative">
-                <div id="best_seller_carousel" class="owl-carousel col-12 col-lg-10">
+                <div id="best_seller_carousel" class="owl-carousel col-12">
                     {% for product in collections.best-sellers.products %}
 
                         <div class="best-seller-card-bg d-flex flex-column justify-content-between align-items-center">
@@ -29,7 +29,10 @@
                                          data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
                                     </div>
                                 </div>
-                                <div class="pt-3 best-seller-card-name text-center text-uppercase">{{ product.title }}</div>
+
+                            </div>
+                            <div class="w-100 px-lg-3">
+                                <div class="pt-3 best-seller-card-name text-center">{{ product.title }}</div>
                                 <div class="pt-2 best-seller-card-price text-center">from {{ product.variants[2].price | divided_by: 5 | money }} per
                                     {% for t in product.tags %}
                                         {% if t contains 'bundle' %}
@@ -42,16 +45,14 @@
                                         unit
                                     {% endif %}
                                 </div>
-                            </div>
-                            <div class="w-100 px-lg-3">
                                 <div class="pt-3 mx-lg-1 mt-1 best-seller-card-price d-flex justify-content-center">
-                                    <form class="product-form w-100" action="/cart/add" data-productid="{{ product.id }}" method="post">
+                                    <form class="product-form w-100 text-center" action="/cart/add" data-productid="{{ product.id }}" method="post">
                                         <input type="hidden" name="id" data-productid="{{ product.id }}" class="product-select" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}"/>
                                         <button
                                                 id="{{ product_form_id }}-submit"
                                                 type="submit"
                                                 name="add"
-                                                class="quick-add__submit btn best-seller-card-btn w-100"
+                                                class="quick-add__submit btn best-seller-card-btn best-seller-btn-max-w w-100 "
                                                 aria-haspopup="dialog"
                                                 aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
                                                 aria-live="polite"
@@ -83,17 +84,17 @@
                         </div>
                     {%- endfor -%}
                 </div>
-                <div class="css--prev-btn d-flex justify-content-start">
-                    <button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center disabled">
-                        <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
-                    </button>
-                </div>
-                <div class="css--next-btn d-flex justify-content-end">
-                    <button class="customNextBtn caps d-flex d-sm-inline align-items-center">
-                        <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
-
-                    </button>
-                </div>
+                {% comment %}<div class="css--prev-btn d-flex justify-content-start">{% endcomment %}
+                    {% comment %}<button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center disabled">{% endcomment %}
+                        {% comment %}<img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">{% endcomment %}
+                    {% comment %}</button>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}<div class="css--next-btn d-flex justify-content-end">{% endcomment %}
+                    {% comment %}<button class="customNextBtn caps d-flex d-sm-inline align-items-center">{% endcomment %}
+                        {% comment %}<img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">{% endcomment %}
+{% comment %}{% endcomment %}
+                    {% comment %}</button>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
             </div>
 
             <div id="shopify-product-review" data-id="7640822218979">{{ product.metafields.spr.reviews }}</div>

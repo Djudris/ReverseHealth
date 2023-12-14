@@ -7,7 +7,7 @@
         </h2>
         <div  id="review-slider" class="owl-carousel row review-pb">
             <div class="col-xl-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein" loading="lazy">
+                {% comment %}<img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein" loading="lazy">{% endcomment %}
                 <div class="reviews-card h-100">
                     <div class="d-flex">
                         <div>
@@ -16,7 +16,7 @@
                         <div class="review-card-top">
                             <div class="review-card-name">{{ section.settings.review-card-1-name }}</div>
                             <div class="review-card-stars">
-                                <img src="{{ 'rating_5.svg' | asset_url }}" alt="Review">
+                                <p>{{ section.settings.review-card-1-rating }}</p>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="review-icons row">
+                <div class="review-icons review-icons-after row">
                     <div class="col-4 d-flex justify-content-center">
                         <img loading="lazy" src="{{ 'fat.svg' | asset_url }}" class="review-icon" alt="Review icons">
                     </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="col-xl-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein" loading="lazy">
+                {% comment %}<img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein" loading="lazy">{% endcomment %}
 
                 <div class="reviews-card h-100">
                     <div class="d-flex">
@@ -53,7 +53,7 @@
                         <div class="review-card-top">
                             <div class="review-card-name">{{ section.settings.review-card-2-name }}</div>
                             <div class="review-card-stars">
-                                <img loading="lazy" src="{{ 'rating_4_5.svg' | asset_url }}" alt="Review">
+                                <p>{{ section.settings.review-card-2-rating }}</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="review-icons row">
+                <div class="review-icons review-icons-after row">
                     <div class="col-4 d-flex justify-content-center">
                         <img loading="lazy" src="{{ 'skin.svg' | asset_url }}" class="review-icon" alt="Review icons">
                     </div>
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="col-xl-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein" loading="lazy">
+                {% comment %}<img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein" loading="lazy">{% endcomment %}
 
                 <div class="reviews-card h-100">
                     <div class="d-flex">
@@ -90,7 +90,7 @@
                         <div class="review-card-top">
                             <div class="review-card-name">{{ section.settings.review-card-3-name }}</div>
                             <div class="review-card-stars">
-                                <img src="{{ 'rating_4_5.svg' | asset_url }}" alt="Review">
+                                <p>{{ section.settings.review-card-3-rating }}</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,13 @@
 {
 "type": "text",
 "id": "review-card-1-name",
-"default": "Eva",
+"default": "Hildur",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-1-rating",
+"default": "❤️ ❤️ ❤️ ❤️ ❤️",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {
@@ -171,7 +177,13 @@
 {
 "type": "text",
 "id": "review-card-2-name",
-"default": "Laura",
+"default": "Hazel",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-2-rating",
+"default": "❤️ ❤️ ❤️ ❤️ ❤️",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {
@@ -189,7 +201,13 @@
 {
 "type": "text",
 "id": "review-card-3-name",
-"default": "Linda",
+"default": "Melanie",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-3-rating",
+"default": "❤️ ❤️ ❤️ ❤️ ❤️",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {

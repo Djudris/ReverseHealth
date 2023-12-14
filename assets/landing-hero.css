@@ -1,8 +1,9 @@
 .hero-title span {
     background-color: #4F4B91;
     color: white;
+    font-size: 30px !important;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 39px;
     padding: 0 10px;
     -webkit-box-decoration-break: clone;
     -moz-box-decoration-break: clone;
@@ -140,7 +141,7 @@
 }
 
 .bg-blue {
-    background: #5E8BFF;
+    background: #12635F;
 }
 
 .icons-text {
@@ -241,7 +242,7 @@
 }
 
 #hero-slider img {
-    filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));
+    /*filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));*/
 }
 
 @media screen and (max-width: 992px) {
@@ -257,7 +258,7 @@
     }
 
     .hero-carousel-section {
-        padding-bottom: 63px;
+        padding-bottom: 50px;
     }
 }
 
@@ -282,10 +283,9 @@
         padding-bottom: 0;
     }
 
-    .hero-title {
-        font-size: 40px;
-        line-height: 155%;
-
+    .hero-title span {
+        font-size: 40px !important;
+        line-height: 60px;
     }
 
     .hero-subtitle {
@@ -343,7 +343,7 @@
     }
 
     #hero-slider img {
-        filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));
+        /*filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));*/
     }
 
 }
