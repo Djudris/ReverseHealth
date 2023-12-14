@@ -1,7 +1,17 @@
 .delivery-bg {
-    background: #5E8BFF;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 50px;
+    min-height: 546px;
+}
+
+.delivery-bg-image-container {
+/*    we need to make image centered and go overflow somehow*/
+}
+
+.delivery-bg-image {
+    /*    we need to make image centered and go overflow somehow*/
+
 }
 
 .delivery-btn-padding {
