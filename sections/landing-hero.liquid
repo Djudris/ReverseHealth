@@ -1,17 +1,19 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
 <section id="hero-id" class="position-relative landing-hero-bg">
-    <img loading="lazy" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'feather1.svg' | asset_url }}" alt="Feather">
-    <img loading="lazy" class="landing-hero-feather-2 d-lg-none" src="{{ 'feather2.svg' | asset_url }}" alt="Feather">
+    <img loading="lazy" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.svg' | asset_url }}" alt="Squares">
+    <img class="landing-hero-feather-2 d-lg-none" src="{{ 'landing_squares2.svg' | asset_url }}" alt="Squares">
 
     <div class="w-100 d-lg-none position-relative">
-        <img class="position-relative w-100 img-hero-mobile" src="{{ 'hero-mobile-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
-
+        <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
+        <img class="position-relative w-96 img-hero-mobile" src="{{ 'hero-mobile-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
     </div>
     <div class="container position-unset  px-0">
         <div class="row position-unset">
             <div class="col-lg-6 col-12  pe-lg-5 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
                 <div class="w-100 hero-landing-text-block padding-square">
-                    <h1 class="hero-title">{{ section.settings.hero-title }}</h1>
+                    <h1 class="hero-title">
+                        <span>{{ section.settings.hero-title }}</span>
+                    </h1>
                     <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
                     <div class=" btn-padding-mobile">
                         <a href="{{ shop.url }}/collections/all">
@@ -24,14 +26,10 @@
                 <div class="hero-abs-pic d-flex justify-content-end">
                     <div class="landing-hero-custom">
                         {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
-                        <img loading="lazy" class="hero-yummy" src="{{ 'hero-yummy.svg' | asset_url }}" alt="Hero Yummy">
-
+                        <img loading="lazy" class="hero-yummy desktop" src="{{ 'hero-yummy-desktop.svg' | asset_url }}" alt="Hero Yummy">
                         <img class="desk-hero-prod" src="{{ 'desktop-hero-product-new.png' | asset_url }}" alt="Hero picture" loading="lazy">
-
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -121,7 +119,7 @@
 "id": "hero-title",
 "type": "text",
 "label": "Title",
-"default":"THE SPECIAL BLEND FOR MATURE WOMEN"
+"default": "THE SPECIAL BLEND FOR MATURE WOMEN"
 },
 {
 "id": "hero-subtitle",
