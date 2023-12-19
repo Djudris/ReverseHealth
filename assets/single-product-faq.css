@@ -8,9 +8,9 @@
     margin-bottom: 50px;
 }
 .faq-heading {
-    font-size: 14px;
-    line-height: 31px;
-    color: #505050;
+    font-size: 1.063rem;
+    line-height: 1.345rem;
+    color: #1D2E42;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -19,18 +19,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F0F0F0;
-    border-radius: 5px;
+    background-color: #F5F7FE;
+    border-radius: 15px;
 
 }
 
 .faq-page.active {
-    background-color: #F0F0F0;
+    background-color: #EEF2FE;
 
 }
 
 .faq-page.active h3 {
-    color: #505050;
+    color: #1D2E42;
 }
 
 .faq-icon {
@@ -38,6 +38,8 @@
     background-image: url(plus.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
     float: right;
 }
 
@@ -47,19 +49,18 @@
 
 .faq-text {
     text-align: start;
-    color: #505050;
+    color: #1D2E42;
     margin-bottom: 0;
     display: none;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.063rem;
+    line-height: 1.594rem;
     padding-top:20px;
 
 }
 
 .faq-title {
-    text-transform: uppercase;
     font-size: 24px;
-    line-height: 31px;
+    line-height: 36px;
     font-weight: 700;
     margin-bottom: 20px;
 
@@ -67,21 +68,19 @@
 
 @media screen and (min-width: 992px) {
     .faq-title {
-        font-size: 24px;
-        line-height: 41px;
+        font-size: 28px;
+        line-height: 42px;
         margin-bottom: 40px;
     }
 
     .faq-text {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 1.25rem;
+        line-height: 1.688rem;
     }
     .landing-faq-padding {
         margin-bottom: 70px;
     }
-}
 
-@media screen and (min-width:992px) {
     .faq-section-wrapper {
         padding-bottom: 45px;
     }
@@ -119,13 +118,8 @@
     }
 
     .faq-heading {
-        font-size: 16px;
-        line-height: 31px;
-    }
-
-    .faq-text {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 1.25rem;
+        line-height: 1.583rem;
     }
 }
 
@@ -135,11 +129,6 @@
     padding: 20px 50px 20px 50px;
 }
 
-.faq-icon {
-    width: 24px;
-    height: 24px;
-
-}
 
 @media screen and (max-width:992px) {
     .faq-grid {
@@ -179,7 +168,7 @@
     }
 
     .faq-icon {
-        width: 14px;
-        height: 14px;
+        width: 23px;
+        height: 23px;
     }
 }
