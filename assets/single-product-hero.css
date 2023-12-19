@@ -1,8 +1,7 @@
 .product-flavor {
-    font-size: 16px;
-    line-height: 27px;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-size: 1.188rem;
+    line-height: 1.781rem;
+    font-weight: 400;
 }
 
 
@@ -13,10 +12,9 @@ button.disabled {
     display: none !important;
 }
 .product-title {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 1.938rem;
+    line-height: 2.906rem;
+    font-weight: 600;
     margin-top: 10px;
 }
 
@@ -48,15 +46,15 @@ button.disabled {
 
 .product-description p {
     margin-bottom: 0;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.063rem;
+    line-height: 150%;
 
 }
 
 .bulletpoint-text {
     margin-top: 15px;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.063rem;
+    line-height: 150%;
 }
 
 .single-bulletpoint {
@@ -146,9 +144,10 @@ div.yotpo {
 
 .bundle-heading {
     text-align: center;
-    font-size: 16px;
-    margin-top: 35px;
-    margin-bottom: 47px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.875rem;
+    margin-bottom: 2.25rem;
 }
 
 .badge-container img {
@@ -156,44 +155,45 @@ div.yotpo {
 }
 
 .selected-opcija {
-    border: 4px solid #5E8BFF;
+    border: 0.094rem  solid #4F4B91 !important;
+    background: #F6F8FE !important;
 }
 
-.add-to-cart-card {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-}
+/*.add-to-cart-card {*/
+/*    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
 .add-to-cart-card {
-    background: #FCFDFF;
+    border: 2px solid #C6CDE4;
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 15px;
     height: 100%;
     position: relative;
 }
 
 .card-content {
-    padding: 29px 20px 20px 20px;
+    padding: 30px 20px 20px 20px;
 }
 
 .best-value p {
-    font-family: 'Dosis';
+    font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 170%;
-    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.938rem;
+    line-height: 150%;
     color: #FFFFFF;
     padding: 7px 22px 8px 20px;
     margin: 0;
 }
 
 .best-value {
-    background: #65D36E;
-    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15);
+    background: #12635F;
+    /*box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15);*/
     clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
     position: absolute;
-    top: -17px;
-    left: -16px;
+    text-transform: capitalize;
+    top: -18px;
+    left: -11px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,12 +203,12 @@ div.yotpo {
 .opcijas .col-12:first-of-type .add-to-cart-card::after {
     content: "";
     display: block;
-    width: 14px;
-    height: 14px;
-    background: #46A84E;
+    width: 11px;
+    height: 9px;
+    background: #3B8581;
     /* transform: rotate(141.09deg); */
     position: absolute;
-    left: -17px;
+    left: -11px;
     top: 17px;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
@@ -216,53 +216,58 @@ div.yotpo {
 .card-quantity {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 170%;
-    color: #505050;
-    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 1.063rem;
+    line-height: 150%;
+    color: #1D2E42;
+    margin-top: 8px;
+    float: right;
 }
 
 .card-ppp {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 24px;
     line-height: 150%;
-    text-transform: uppercase;
-    color: #505050;
+    color: #1D2E42;
     margin-bottom: 5px;
 }
+
 .card-ppp span {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 170%;
-    color: #505050;
+    font-weight: 400;
+    font-size: 1.063rem;
+    line-height: 150%;
+    color: #1D2E42;
     text-decoration: none;
+}
+
+.card-ppp .money {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .card-total {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 170%;
-    color: #A7A7A7;
+    font-weight: 400;
+    font-size: 0.813rem;
+    line-height: 150%;
+    color: #445764;
     margin: 0;
 }
 
 .btn-add-to-cart {
     margin-bottom: 25px;
-    background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    background: #4F4B91;
+    border-radius: 0.75rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 17px;
+    line-height: normal;
     text-transform: uppercase;
     color: #FFFFFF;
     width: 100%;
@@ -298,8 +303,8 @@ div.yotpo {
 
 @media screen and (min-width: 992px) {
     .product-flavor {
-        font-size: 18px;
-        line-height: 31px;
+        font-size: 1.375rem;
+        line-height: 2.063rem;
     }
 
     .opcijas .col-12 {
@@ -307,8 +312,9 @@ div.yotpo {
     }
 
     .product-title {
-        font-size: 24px;
-        line-height: 36px;
+        font-size: 2.813rem;
+        line-height: 4.219rem;
+        font-weight: 600;
     }
 
     .card-content {
@@ -344,18 +350,18 @@ div.yotpo {
     }
 
     .product-description p {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 1.25rem;
+        line-height: 150%;
     }
 
     .bulletpoint-text {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 1.125rem;
+        line-height: 150%;
     }
 
     .single-bulletpoint {
-        width: 19px;
-        margin-right: 17px;
+        width: 1.5rem;
+        margin-right: 0.938rem;
     }
 
     .single-hero-mb {
@@ -390,27 +396,27 @@ div.yotpo {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 1.75rem;
         line-height: 150%;
-        text-transform: uppercase;
-        color: #505050;
-        margin-top: 40px;
-        margin-bottom: 25px;
+        color: #1D2E42;
+        margin-top: 2.188rem;
+        margin-bottom: 2.563rem;
         text-align: left;
     }
 
     .selected-opcija {
-        border: 5px solid #5E8BFF;
+        border: 2px solid #4F4B91 !important;
+        background: #F6F8FE !important;
     }
 
-     .add-to-cart-card {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    }
+    /* .add-to-cart-card {*/
+    /*    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);*/
+    /*}*/
 
     .add-to-cart-card {
-        background: #FCFDFF;
+        border: 2px solid #C6CDE4;
         box-sizing: border-box;
-        border-radius: 12px;
+        border-radius: 20px;
         height: 100%;
         position: relative;
     }
@@ -433,19 +439,19 @@ div.yotpo {
         font-weight: 600;
         font-size: 12px;
         line-height: 170%;
-        text-transform: uppercase;
+        text-transform: capitalize;
         color: #FFFFFF;
         margin: 0;
         padding: 7px 22px 8px 20px;
     }
 
     .best-value {
-        background: #65D36E;
+        background: #12635F;
         box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15);
         clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
         position: absolute;
-        top: 29px;
-        left: -16px;
+        top: -19px;
+        left: -11px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -455,13 +461,13 @@ div.yotpo {
     .opcijas .col-12:first-of-type .add-to-cart-card::after {
         content: "";
         display: block;
-        width: 14px;
-        height: 14px;
-        background: #46A84E;
+        width: 11px;
+        height: 9px;
+        background: #3B8581;
         /* transform: rotate(141.09deg); */
         position: absolute;
-        left: -17px;
-        top: 63px;
+        left: -11px;
+        top: 17px;
         clip-path: polygon(0 0, 100% 0, 100% 100%);
     }
 
@@ -475,30 +481,31 @@ div.yotpo {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 170%;
-        color: #505050;
+        font-size: 1.25rem;
+        line-height: 150%;
+        color: #1D2E42;
         margin-bottom: 10px;
+        float: left;
     }
 
     .card-ppp {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
+        font-weight: 400;
+        font-size: 1.375rem;
         line-height: 150%;
-        text-transform: uppercase;
-        color: #505050;
+        color: #1D2E42;
         margin-bottom: 5px;
+        text-decoration: none;
     }
 
     .card-ppp span {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 170%;
-        color: #505050;
+        font-weight: 400;
+        font-size: 1.375rem;
+        line-height: 150%;
+        color: #1D2E42;
         text-decoration: none;
         vertical-align: 20%;
     }
@@ -506,10 +513,10 @@ div.yotpo {
     .card-total {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 170%;
-        color: #A7A7A7;
+        font-weight: 400;
+        font-size: 0.938rem;
+        line-height: 150%;
+        color: #445764;
         margin: 0;
     }
 
@@ -519,14 +526,13 @@ div.yotpo {
 
     .btn-add-to-cart {
         margin-bottom: 25px;
-        background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
+        background: #4F4B91;
+        border-radius: 15px;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 1.063rem;
+        line-height: normal;
         text-transform: uppercase;
         color: #FFFFFF;
         width: 100%;
