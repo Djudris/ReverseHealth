@@ -1,26 +1,22 @@
 {{ 'landing-delivery.css' | asset_url | stylesheet_tag }}
 
 <section class="delivery-bg" id="section-delivery">
-    <div class="delivery-bg-image-container">
-        <svg class="delivery-bg-image" width="1920" height="546" viewBox="0 0 1920 546" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M532 37.6458C532 16.8546 509.527 0 481.805 0H0V546H1920V0H1438.2C1410.47 0 1388 16.8546 1388 37.6458C1388 58.4371 1365.53 75.2917 1337.8 75.2917H582.195C554.473 75.2917 532 58.4371 532 37.6458Z" fill="#FFF3E5"/>
-        </svg>
-    </div>
-    <div class="container p-lg-0">
+    <div class="tab text-center"><p>Trusted and endorsed by Reverse Health nutritionists</p></div>
+    <div class="container p-lg-0 pt-70">
         <h2 class="delivery-title text-center mb-0">{{ section.settings.title }}</h2>
-        <div class="row">
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                <img loading="lazy" src="{{ 'calendar_i.svg' | asset_url }}" alt="Calendar icon" class="delivery-img ">
+        <div class="row gap-20 justify-content-evenly">
+            <div class="col-lg-4 col-12 d-flex flex-column align-items-center bg-card">
+                <img loading="lazy" src="{{ 'rocket_i.svg' | asset_url }}" alt="Rocket icon" class="delivery-img ">
                 <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-1 }}</h3>
                 {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>{% endcomment %}
             </div>
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                <img loading="lazy" src="{{ 'shipping_i.svg' | asset_url }}" alt="Shipping icon" class="delivery-img ">
+            <div class="col-lg-4 col-12 d-flex flex-column align-items-center bg-card">
+                <img loading="lazy" src="{{ 'box_i.svg' | asset_url }}" alt="Box icon" class="delivery-img ">
                 <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-2 }}</h3>
                 {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-2 }}</p>{% endcomment %}
             </div>
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                <img loading="lazy" src="{{ 'money_i.svg' | asset_url }}" alt="Money refund icon" class="delivery-img ">
+            <div class="col-lg-4 col-12 d-flex flex-column align-items-center bg-card">
+                <img loading="lazy" src="{{ 'microscope_i.svg' | asset_url }}" alt="Ingredients icon" class="delivery-img ">
                 <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-3 }}</h3>
                 {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-3 }}</p>{% endcomment %}
             </div>
