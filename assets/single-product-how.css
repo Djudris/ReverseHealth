@@ -6,13 +6,24 @@
 
 .how-svg {
     position: absolute;
+    width: 100%;
+    padding: 0 2.875rem 0 4.375rem;
+    z-index: 1;
+}
+
+.max-w-30 {
+    max-width: 30%;
+}
+
+.max-w-80 {
+    max-width: 80%;
+}
+
+.how-title {
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 24px;
-    width: 282px;
-}
-.how-title {
-    text-transform: uppercase;
+    max-width: 30%;
     font-size:18px;
     line-height: 31px;
     font-weight: 700;
@@ -36,15 +47,17 @@
 }
 .how-icon {
     width: 110px;
+    z-index: 2;
 }
 @media screen and (min-width: 992px) {
     .how-bg {
-        padding-top: 70px;
+        padding-top: 50px;
         padding-bottom: 70px;
     }
 
     .how-svg {
-        width: 430px;
+        top: 4.188rem;
+        width: 100%;
     }
     .how-title {
         font-size:24px;
