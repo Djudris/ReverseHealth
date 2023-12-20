@@ -467,7 +467,7 @@ div.yotpo {
         /* transform: rotate(141.09deg); */
         position: absolute;
         left: -11px;
-        top: 17px;
+        top: 16px;
         clip-path: polygon(0 0, 100% 0, 100% 100%);
     }
 
@@ -485,7 +485,7 @@ div.yotpo {
         line-height: 150%;
         color: #1D2E42;
         margin-bottom: 10px;
-        float: left;
+        float: unset;
     }
 
     .card-ppp {

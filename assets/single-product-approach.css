@@ -35,12 +35,11 @@
     width: 100%;
     padding: 15px 0 15px 0;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     border: none;
-    font-size: 16px;
-    background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    font-size: 1.063rem;
+    background: #4F4B91;
+    border-radius: 12px;
 }
 .delivery-btn-padding {
     padding-top: 40px;
@@ -64,14 +63,16 @@
     }
     .approach-photo {
         border-radius: 12px;
-        height: 405px;
+        height: 14.688rem;
+        width: 100%;
+        object-fit: cover;
         margin-top:70px
-
     }
     .approach-circle {
         height: 405px;
-        margin-top:27px
-
+        margin-top:27px;
+        max-width: 36.25rem;
+        object-fit: contain;
     }
     .need-title {
         margin-top:70px
@@ -81,7 +82,7 @@
         margin-top:70px
     }
     .button-top {
-        font-size: 18px;
+        font-size: 1.25rem;
         padding: 16px 96px 16px 96px;
         width: auto;
     }
