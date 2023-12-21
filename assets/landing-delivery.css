@@ -1,8 +1,7 @@
 .delivery-bg {
     overflow: hidden !important;
     background: #FFF3E5;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 15px;
     position: relative;
 }
 
@@ -112,8 +111,8 @@
     }
 
     #section-delivery .container {
-        padding: 0 15px;
-        ;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

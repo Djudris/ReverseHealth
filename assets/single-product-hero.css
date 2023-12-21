@@ -298,7 +298,15 @@ div.yotpo {
 }
 
 .container {
+    overflow: hidden;
     padding: 0 15px;
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -472,8 +480,6 @@ div.yotpo {
     }
 
     .container {
-        padding-left: 0;
-        padding-right: 0;
         max-width: 1240px;
     }
 

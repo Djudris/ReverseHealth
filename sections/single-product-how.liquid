@@ -6,7 +6,7 @@
         <h2 class="how-title text-center">{{ product.metafields.my_fields.use_heading }}</h2>
         <div class="how-products d-lg-inline-flex flex-column flex-lg-row d-flex justify-content-evenly w-100">
             {% if product.metafields.my_fields.consumption_heading_1 %}
-                <div class="d-flex align-items-center flex-row flex-lg-column max-w-30">
+                <div class="d-flex align-items-center flex-row flex-lg-column max-w-30 single-product-block">
                     <img class="how-icon" src="{{ product.metafields.my_fields.consumption_icon_1 | img_url: '800x800' }}" alt="Smoothies">
                     <div class="d-flex flex-column">
                         <div class="px-20"><h3 class="how-subtitle text-lg-center">{{ product.metafields.my_fields.consumption_heading_1 }}</h3></div>
@@ -16,7 +16,7 @@
                 </div>
             {% endif %}
             {% if product.metafields.my_fields.consumption_heading_2 %}
-                <div class="d-flex align-items-center flex-row flex-lg-column">
+                <div class="d-flex align-items-center flex-row flex-lg-column single-product-block">
                     <img class="how-icon" src="{{ product.metafields.my_fields.consumption_icon_2 | img_url: '800x800' }}" alt="Smoothies">
                     <div class="d-flex flex-column">
                         <div><h3 class="how-subtitle text-lg-center">{{ product.metafields.my_fields.consumption_heading_2 }}</h3></div>
@@ -25,7 +25,7 @@
                 </div>
             {% endif %}
             {% if product.metafields.my_fields.consumption_heading_3 %}
-                <div class="d-flex align-items-center flex-row flex-lg-column max-w-30">
+                <div class="d-flex align-items-center flex-row flex-lg-column max-w-30 single-product-block">
                     <img class="how-icon" src="{{ product.metafields.my_fields.consumption_icon_3 | img_url: '800x800' }}" alt="Smoothies">
                     <div class="d-flex flex-column">
                         <div class="px-20"><h3 class="how-subtitle text-lg-center">{{ product.metafields.my_fields.consumption_heading_3 }}</h3></div>

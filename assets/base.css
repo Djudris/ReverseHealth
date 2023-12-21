@@ -2226,12 +2226,16 @@ input[type='checkbox'] {
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 @media screen and (min-width: 1384px) {
     .header {
         padding-top: 1.125rem;
         padding-bottom: 1.1063rem;
+        padding-left: 6.26rem;
+        padding-right: 6.25rem;
     }
 
     .header--has-menu:not(.header--middle-left) {
