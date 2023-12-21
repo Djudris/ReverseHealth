@@ -5,6 +5,10 @@
     }
 }
 
+
+#WebPixelsManagerSandboxContainer {
+    display: none !important;
+}
 /* Color custom properties */
 
 :root,
