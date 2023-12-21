@@ -78,12 +78,12 @@ button.disabled {
     display: inline-block;
     background: #F0F0F0;
     border: 1px solid #F0F0F0;
-    margin: 0 3px;
+    margin: 0 10px;
 }
 
 .owl-dots button.owl-dot.active {
-    background-color: #959595;
-    border-color: #959595;
+    background-color: #4F4B91;
+    border-color: #4F4B91;
 }
 
 .owl-dots button.owl-dot:focus {
@@ -298,7 +298,7 @@ div.yotpo {
 }
 
 .container {
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 @media screen and (min-width: 992px) {

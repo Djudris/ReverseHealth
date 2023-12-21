@@ -41,7 +41,7 @@ select {
 }
 
 .bg-announcement {
-    background: #565656;
+    background: #1D2E42;
     padding-bottom: 0;
     border: none;
     backdrop-filter: blur(10px);
@@ -95,14 +95,13 @@ select {
 
 .announcement-msg {
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     color: white;
-    line-height: 12px;
+    line-height: normal;
     font-weight: 600;
-    text-transform: uppercase;
     margin-bottom: 0;
-    padding-top: 11px;
-    padding-bottom: 12px;
+    padding-top: 14px;
+    padding-bottom: 13px;
 }
 
 .navigation-cart-count {
@@ -280,8 +279,9 @@ select {
 }
 
 .header__icon--menu[aria-expanded="true"]::after {
+    position: fixed;
     content: url("close-menu.svg");
-    top: -20px;
+    top: 20px;
 }
 
 .header__icon--cart img {
@@ -290,7 +290,7 @@ select {
 
 
 .css--country-modal {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background: rgba(48, 48, 48, 0.75);
@@ -532,10 +532,10 @@ select {
 @media screen and (min-width: 1384px) {
     .announcement-msg {
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        line-height: 17px;
-        padding-top: 16px;
-        padding-bottom: 17px;
+        font-size: 18px;
+        line-height: normal;
+        padding-top: 12px;
+        padding-bottom: 11px;
     }
 
     .header__heading-link {

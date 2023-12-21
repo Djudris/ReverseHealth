@@ -46,7 +46,7 @@ menu-drawer>details[open]>summary::before {
 
 .menu-drawer {
   height: 100vh;
-  top: -35px;
+  top: -46px;
   background: transparent;
   pointer-events: none;
 }
@@ -270,7 +270,7 @@ details[open].menu-opening>.menu-drawer__submenu {
 }
 
 .menu-drawer__utility-links {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   background-color: #FFFFFF;
 }
 

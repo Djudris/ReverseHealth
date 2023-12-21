@@ -108,11 +108,11 @@
 @media screen and (max-width:991px) {
     .delivery-btn-padding a {
         width: 100%;
-        max-width: 315px;
+        /*max-width: 315px;*/
     }
 
     #section-delivery .container {
-        padding: 0 30px;
+        padding: 0 15px;
         ;
     }
 }

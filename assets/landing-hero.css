@@ -111,6 +111,10 @@
     border-radius: 15px;
 }
 
+#hero-id .container {
+    padding: 0 15px;
+}
+
 .btn-top:hover {
     background-color: rgb(79,75,145, 0.9);
     color: white;
@@ -251,7 +255,7 @@
 
 @media screen and (max-width: 992px) {
     #textCol {
-        padding: 0 30px;
+        padding: 0 15px;
     }
 
     /*#reviews .container {*/

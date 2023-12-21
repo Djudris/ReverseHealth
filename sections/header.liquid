@@ -156,16 +156,16 @@
                                     <a href="/pages/contact" class="mobile-nav-el-padding nav-mobile-single-line-b navigation-link d-block text-decoration-none">Contact</a>
                                 </nav>
                                 <div class="menu-drawer__utility-links">
-                                    <div class="dropdown dropdown-mobile">
-                                        <div class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu5" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <div class="nav-country-selector-div">
-                                                <div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">
-                                                    <img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">
-                                                    <span>United States</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {% comment %}<div class="dropdown dropdown-mobile">{% endcomment %}
+                                        {% comment %}<div class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu5" data-bs-toggle="dropdown" aria-expanded="false">{% endcomment %}
+                                            {% comment %}<div class="nav-country-selector-div">{% endcomment %}
+                                                {% comment %}<div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">{% endcomment %}
+                                                    {% comment %}<img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">{% endcomment %}
+                                                    {% comment %}<span>United States</span>{% endcomment %}
+                                                {% comment %}</div>{% endcomment %}
+                                            {% comment %}</div>{% endcomment %}
+                                        {% comment %}</div>{% endcomment %}
+                                    {% comment %}</div>{% endcomment %}
                                     {%- if shop.customer_accounts_enabled -%}
                                         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
                                             {% render 'icon-account' %}
@@ -312,7 +312,7 @@
                 <nav class="header__inline-menu">
                     <a href="/" class="navigation-link text-decoration-none">Home</a>
                     <div class="dropdown d-inline" >
-                        <a href="#" class="navigation-link text-decoration-none" id="shopToggle">Shop 
+                        <a href="#" class="navigation-link text-decoration-none" id="shopToggle">Shop
                             <svg class="pl-2 dropdown-icon" id="shopToggleIcon" width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.4003 0.189884L19.298 7.89771C19.5893 8.15025 19.5888 8.55912 19.2965 8.81123C19.0041 9.06315 18.5306 9.0625 18.239 8.80993L9.87091 1.56089L1.50286 8.81019C1.21125 9.06273 0.737997 9.06338 0.445629 8.81149C0.299068 8.68511 0.225788 8.51954 0.225788 8.35397C0.225788 8.18882 0.298578 8.0239 0.444122 7.89775L9.34156 0.189884C9.48164 0.0682526 9.67229 0 9.87091 0C10.0695 0 10.26 0.0684481 10.4003 0.189884Z" fill="#1D2E42"/>
                             </svg>
@@ -322,7 +322,7 @@
                               {%- for product in collections.all.products -%}
                                   <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
                               {%- endfor -%}
-  
+
                               <li><a class="dropdown-item" href="/collections/all">All products</a></li>
                           </ul>
                         </div>
@@ -339,7 +339,7 @@
                           let dropDownMenuDiv = document.getElementById('shopMenuDiv');
                           let dropDownMenuSvg = document.getElementById('shopToggleIcon');
                           let svgPath  = dropDownMenuSvg.querySelector('path');
-  
+
                           if(dropDown){
                             dropDown.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
                             dropDown.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
@@ -354,7 +354,7 @@
                           }
                         })
 
-                        const toggleClasses = (e, type) => 
+                        const toggleClasses = (e, type) =>
                         {
                           let target = e.target;
                           let dropDown = document.getElementById('shopToggle');
@@ -374,7 +374,7 @@
                               }
                             }
                           }
-  
+
                           dropDownIcon.classList.toggle('dropdown-toggle-icon-rotate');
                           dropDownMenu.classList.toggle('dropdown-menu-hovered');
                           dropDown.classList.toggle('dropdown-toggle-hovered');
@@ -384,16 +384,16 @@
             {%- endif -%}
         {%- endif -%}
         <div class="navigation-desktop-country-cart">
-            <div class="dropdown dropdown-desktop">
-                <button class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="nav-country-selector-div">
-                        <div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">
-                            <img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">
-                            <span>United States</span>
-                        </div>
-                    </div>
-                </button>
-            </div>
+            {% comment %}<div class="dropdown dropdown-desktop">{% endcomment %}
+                {% comment %}<button class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">{% endcomment %}
+                    {% comment %}<div class="nav-country-selector-div">{% endcomment %}
+                        {% comment %}<div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">{% endcomment %}
+                            {% comment %}<img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">{% endcomment %}
+                            {% comment %}<span>United States</span>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</button>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
 
             <div class="header__icons cart-icon-parent">
                 <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
@@ -411,7 +411,7 @@
                 </a>
             </div>
         </div>
-                                      
+
     </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
@@ -458,11 +458,11 @@ onScroll() {
 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 if(scrollTop>this.headerBounds.bottom){
 let drawer=document.getElementById("menu-drawer");
-drawer.style.height="105vh"
+drawer.style.top="0"
 
 }else{
 let drawer=document.getElementById("menu-drawer");
-drawer.style.height="100vh"
+drawer.style.top="-46px"
 }
 if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 

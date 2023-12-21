@@ -66,6 +66,10 @@
 
 }
 
+.faq-grid div {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 992px) {
     .faq-title {
         font-size: 28px;
