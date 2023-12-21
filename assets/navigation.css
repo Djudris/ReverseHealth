@@ -106,9 +106,9 @@ select {
 }
 
 .navigation-cart-count {
-    color: #EF8498;
+    color: white;
     font-weight: 600;
-    line-height: 18px;
+    line-height: 150%;
     font-size: 12px;
     position: absolute;
     top: 50%;
@@ -544,8 +544,8 @@ select {
     }
 
     .navigation-cart-count {
-        line-height: 18px;
-        font-size: 12px;
+        line-height: 150%;
+        font-size: 14px;
     }
 
     .navigation-link {
