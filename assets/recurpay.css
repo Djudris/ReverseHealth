@@ -519,3 +519,9 @@ min-height:unset;
 .recurpay-hide,button.recurpay-hide{
   display:none !important;
 }
+.recurpay-manage-subscription-link{
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    width: 100%;
+  }
