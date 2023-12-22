@@ -173,7 +173,13 @@
         font-size: calc(var(--font-body-scale) * 62.5%);
         height: 100%;
         }
+        
+        @font-face { 
+          font-family: 'Overpass';
+          src: {{ 'Overpass.woff2' | asset_url }};
+        } 
 
+      
         body {
         display: grid;
         grid-template-rows: auto auto 1fr auto;
