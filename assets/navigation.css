@@ -130,7 +130,15 @@ select {
     text-decoration: none;
 }
 
-.navigation-link:hover {
+.dropdown {
+    cursor: pointer;
+}
+
+.navigation-link:hover,
+.navigation-link:active,
+.navigation-link:focus,
+.navigation-link:visited {
+    background: none;
     color: #37346A;
 }
 

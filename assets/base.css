@@ -2579,7 +2579,7 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 1384px) {
     .header__inline-menu {
-        display: block;
+        display: flex;
     }
 
     .header--top-center .header__inline-menu {
