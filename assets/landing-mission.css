@@ -35,12 +35,18 @@
 }
 
 .mission-img-div {
+    overflow: hidden;
     height: 220px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    border-radius: 8px;
+    border-radius: 15px;
     margin-bottom: 50px
+}
+
+.mission-img-div img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
 .video-overlay {
@@ -120,11 +126,13 @@
     }
 
     .mission-img-div {
+        overflow: hidden;
         height: 280px;
-        border-radius: 12px;
-        background-position-y: -132px;
         margin-bottom: 70px;
-
+    }
+    .mission-img-div img {
+        object-position: center -132px;
+        border-radius: 20px;
     }
 
     .video-overlay {
