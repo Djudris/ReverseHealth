@@ -2914,6 +2914,7 @@ html {
 }
 
 h1,
+.hero-title span,
 .reviews-title,
 .review-card-name,
 .mission-title,
@@ -2927,7 +2928,9 @@ h1,
 .how-title,
 .how-subtitle,
 .composition-title,
-.contact-title
+.contact-title,
+.best-seller-title,
+.review-card-stars p
 {
     color: #1D2E42;
     font-family: 'Jost', sans-serif;

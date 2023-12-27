@@ -71,8 +71,8 @@
 }
 
 .best-seller-title {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 30px;
     margin-bottom: 31px;
 }
@@ -259,10 +259,10 @@ a.text-m {
         max-width: 100%;
     }
     .best-seller-title {
-        font-size: 24px;
+        font-size: 28px;
         line-height: 41px;
         margin-top: 70px;
-        margin-bottom: 50px;
+        margin-bottom: 35px;
 
     }
 

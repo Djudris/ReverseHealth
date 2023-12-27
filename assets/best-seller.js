@@ -10,7 +10,7 @@ $(document).ready(function () {
             0: {
                 items: 1,
                 dotsEach: 1,
-                margin: 20,
+                margin: 0,
                 stagePadding: 30,
             },
             768: {

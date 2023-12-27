@@ -3,12 +3,16 @@
     color: white;
     font-size: 30px !important;
     font-weight: 700;
-    line-height: 39px;
+    line-height: 150%;
     padding: 0 10px;
     -webkit-box-decoration-break: clone;
     -moz-box-decoration-break: clone;
     box-decoration-break: clone;
     display: inline;
+}
+
+.hero-title {
+    margin-bottom: 20px;
 }
 
 .w-96 {
@@ -57,7 +61,7 @@
 }
 
 .btn-padding-mobile {
-    padding-top: 40px;
+    padding-top: 34px;
     padding-bottom: 50px;
 }
 
@@ -286,13 +290,13 @@
     }
 
     .btn-padding-mobile {
-        padding-top: 51px;
+        padding-top: 56px;
         padding-bottom: 0;
     }
 
     .hero-title span {
-        font-size: 40px !important;
-        line-height: 60px;
+        font-size: 45px !important;
+        line-height: 150%;
     }
 
     .hero-subtitle {
