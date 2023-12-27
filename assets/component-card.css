@@ -139,7 +139,6 @@
 }
 
 .yotpo .text-m {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -150,7 +149,6 @@
 
 .card__heading {
   margin-bottom: 8px;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -167,7 +165,6 @@ a:hover {
 
 .price__regular .price-item--regular {
   text-transform: lowercase;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -187,7 +184,6 @@ form {
   background: #4F4B91;
   border-radius: 12px;
   margin-bottom: 20px;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -206,7 +202,6 @@ form {
 
 .card-read-more {
   text-align: center;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 17px;

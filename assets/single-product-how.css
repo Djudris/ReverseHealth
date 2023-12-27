@@ -34,9 +34,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-
-    font-size:18px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 150%;
     font-weight: 700;
     margin-bottom: 0;
     color: white;
@@ -44,16 +43,15 @@
 }
 .how-subtitle {
     color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 150%;
     margin-top: 5px;
 }
 .how-text {
     color: white;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 150%;
     margin-top: 1px;
 }
 .how-icon {
@@ -97,19 +95,19 @@
     }
     .how-title {
         max-width: 30%;
-        font-size:24px;
-        line-height: 41px;
+        font-size: 28px;
+        line-height: 150%;
         padding-bottom: 63px;
     }
     .how-subtitle {
-        font-size: 18px;
-        line-height: 27px;
+        font-size: 22px;
+        line-height: 150%;
         margin-top: 7px;
 
     }
     .how-text {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 20px;
+        line-height: 150%;
         margin-top: 7px;
     }
     .how-icon {

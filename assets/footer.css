@@ -64,7 +64,8 @@
 }
 
 .footer-info-text {
-    margin: 20px 30px;
+    letter-spacing: normal;
+    margin: 20px 0;
     line-height: 170%;
     font-size: 12px;
     color: white !important;
@@ -160,6 +161,7 @@
     }
 
     .footer-info-text {
+        margin: 35px 0;
         font-size: 14px;
         line-height: 150%;
     }

@@ -94,7 +94,6 @@ select {
 }
 
 .announcement-msg {
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: white;
     line-height: normal;
@@ -314,9 +313,9 @@ select {
 }
 
 .css--country-modal .country-modal-title {
-    color: #505050;
-    font-size: 22px;
-    line-height: 37px;
+    color: #1D2E42;
+    font-size: 17px;
+    line-height: 150%;
     font-weight: 700;
     padding-bottom: 15px;
     text-align: center;
@@ -530,7 +529,6 @@ select {
 
 @media screen and (min-width: 1384px) {
     .announcement-msg {
-        font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         line-height: normal;
         padding-top: 12px;
@@ -557,7 +555,6 @@ select {
     }
 
     .shop-title-logo {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
         font-size: 20px;

@@ -3,13 +3,6 @@
   display: block;
 }
 
-.cart-item__name {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.product-option {
-  font-family: 'Montserrat', sans-serif;
-}
 
 .btn.btn-primary {
   background: #4F4B91;

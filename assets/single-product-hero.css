@@ -23,7 +23,7 @@ button.disabled {
 }
 
 .product-img img {
-    width: 260px;
+    max-width: 263px;
 }
 
 .product-header-block {
@@ -40,16 +40,15 @@ button.disabled {
 }
 
 .product-description {
-    font-family: 'Overpass';
-    margin-top: 26px;
-    margin-bottom: 5px;
+    letter-spacing: normal;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .product-description p {
     margin-bottom: 0;
     font-size: 1.063rem;
     line-height: 150%;
-
 }
 
 .bulletpoint-text {
@@ -67,14 +66,19 @@ button.disabled {
     margin-bottom: 35px;
 }
 
+.owl-item {
+    display: flex;
+    justify-content: center;
+}
+
 .owl-dots {
     text-align: center;
     padding-top: 15px;
 }
 
 .owl-dots button.owl-dot {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 100%;
     display: inline-block;
     background: #F0F0F0;
@@ -119,7 +123,7 @@ button.disabled {
 }
 
 div.yotpo {
-    padding-top: 16px;
+    padding-top: 0;
 }
 
 .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
@@ -127,7 +131,6 @@ div.yotpo {
 }
 
 .yotpo .text-m {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -177,14 +180,18 @@ div.yotpo {
 }
 
 .best-value p {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.938rem;
-    line-height: 150%;
+    font-size: 10px;
+    line-height: normal;
     color: #FFFFFF;
-    padding: 7px 22px 8px 20px;
+    padding: 7px 18px 8px 15px;
     margin: 0;
+}
+
+.best-value span {
+    color: #FFF;
+    font-size: 10px;
 }
 
 .best-value {
@@ -210,12 +217,11 @@ div.yotpo {
     /* transform: rotate(141.09deg); */
     position: absolute;
     left: -11px;
-    top: 17px;
+    top: 9px;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
 .card-quantity {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 1.063rem;
@@ -226,7 +232,6 @@ div.yotpo {
 }
 
 .card-ppp {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -236,7 +241,6 @@ div.yotpo {
 }
 
 .card-ppp span {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 1.063rem;
@@ -246,12 +250,12 @@ div.yotpo {
 }
 
 .card-ppp .money {
-    font-size: 1.5rem;
+    font-size: 19px;
+    line-height: 150%;
     font-weight: 700;
 }
 
 .card-total {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 0.813rem;
@@ -264,7 +268,6 @@ div.yotpo {
     margin-bottom: 25px;
     background: #4F4B91;
     border-radius: 0.75rem;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
@@ -311,6 +314,10 @@ div.yotpo {
 }
 
 @media screen and (min-width: 992px) {
+
+    .card-ppp .money {
+        font-size: 22px;
+    }
     .product-flavor {
         font-size: 1.375rem;
         line-height: 2.063rem;
@@ -332,11 +339,16 @@ div.yotpo {
     }
 
     .product-img {
-        margin-top: 40px;
+        margin-top: 67px;
     }
 
     .product-img img {
-        width: 400px;
+        max-width: 390px;
+    }
+
+    #single-product-carousel {
+        max-width: 471px;
+        max-height: 417px;
     }
 
     .product-header-block {
@@ -354,7 +366,7 @@ div.yotpo {
     }
 
     .product-description {
-        margin-top: 25px;
+        margin-top: 15px;
 
     }
 
@@ -377,9 +389,9 @@ div.yotpo {
         margin-bottom: 40px;
     }
 
-    div.yotpo {
-        padding-top: 12px;
-    }
+    /*div.yotpo {*/
+    /*    padding-top: 12px;*/
+    /*}*/
 
     .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
         font-size: 22px;
@@ -391,7 +403,6 @@ div.yotpo {
     }
 
     .yotpo .text-m {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -402,9 +413,7 @@ div.yotpo {
     }
 
     .bundle-heading {
-        font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 700;
         font-size: 1.75rem;
         line-height: 150%;
         color: #1D2E42;
@@ -442,16 +451,19 @@ div.yotpo {
         padding: 16px 3px 30px 20px;
     }
 
-    .best-value p {
-        font-family: 'Dosis';
+    .best-value p
+    {
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 12px;
-        line-height: 170%;
-        text-transform: capitalize;
+        line-height: 150%;
         color: #FFFFFF;
         margin: 0;
-        padding: 7px 22px 8px 20px;
+        padding: 7px 20px 8px 15px;
+    }
+    .best-value span {
+        color: #FFF;
+        font-size: 12px;
     }
 
     .best-value {
@@ -476,7 +488,7 @@ div.yotpo {
         /* transform: rotate(141.09deg); */
         position: absolute;
         left: -11px;
-        top: 16px;
+        top: 13px;
         clip-path: polygon(0 0, 100% 0, 100% 100%);
     }
 
@@ -485,9 +497,8 @@ div.yotpo {
     }
 
     .card-quantity {
-        font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 1.25rem;
         line-height: 150%;
         color: #1D2E42;
@@ -496,7 +507,6 @@ div.yotpo {
     }
 
     .card-ppp {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 1.375rem;
@@ -507,10 +517,9 @@ div.yotpo {
     }
 
     .card-ppp span {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
-        font-size: 1.375rem;
+        font-size: 20px;
         line-height: 150%;
         color: #1D2E42;
         text-decoration: none;
@@ -518,7 +527,6 @@ div.yotpo {
     }
 
     .card-total {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 0.938rem;
@@ -535,7 +543,6 @@ div.yotpo {
         margin-bottom: 25px;
         background: #4F4B91;
         border-radius: 15px;
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
         font-size: 1.063rem;
