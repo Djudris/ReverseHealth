@@ -306,7 +306,7 @@ select {
 }
 
 .css--country-modal .block {
-    overflow: scroll;
+    overflow: auto;
     max-height: 90vh;
     max-width: 517px;
     width: 100%;
