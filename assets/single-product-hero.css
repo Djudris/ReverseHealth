@@ -277,7 +277,7 @@ div.yotpo {
 
 .btn-add-to-cart:hover {
     color: #FFFFFF;
-    transform: scale(1.05);
+    background: #464284;
 }
 
 .add-to-cart-card form {
@@ -548,6 +548,6 @@ div.yotpo {
 
     .btn-add-to-cart:hover {
         color: #FFFFFF;
-        transform: scale(1.05);
+        background: #464284;
     }
 }

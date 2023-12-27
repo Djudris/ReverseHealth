@@ -115,6 +115,7 @@
 
 .best-seller-card-btn:hover {
     color: white;
+    background: #464284;
 }
 
 .best-seller-card-lmore {
@@ -125,7 +126,8 @@
 }
 
 .best-seller-card-lmore:hover {
-    color: rgba(29,46,66, 0.9);
+    text-decoration: none;
+    color: #37346A;
 }
 
 .customNextBtn,

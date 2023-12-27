@@ -201,7 +201,7 @@ form {
 
 .btn-add-to-cart:hover {
   color: white;
-  transform: scale(1.05);
+  background: #464284;
 }
 
 .card-read-more {
@@ -218,7 +218,7 @@ form {
 
 .card-read-more:hover {
   text-decoration: none;
-
+  color: #37346A;
 }
 
 @media screen and (max-width: 768px) {
