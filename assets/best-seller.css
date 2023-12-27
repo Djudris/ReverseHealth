@@ -1,6 +1,6 @@
 .slider-parent {
     position: relative;
-    height: 220px;
+    height: 150px;
     margin-top: 50px
 }
 
@@ -11,7 +11,7 @@
 
 .slider-parent:before {
     animation: slideShowHorizontal 3000s infinite;
-    background: transparent url("mobile.png") no-repeat 50%;
+    background: transparent url("mobile.webp") no-repeat 50%;
     background-repeat: repeat-x;
     background-size: cover;
     height: 100%;
@@ -24,6 +24,13 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+
+@media screen and (min-width: 990px) {
+    .slider-parent {
+        position: relative;
+        height: 315px;
+    }
 }
 
 @keyframes slideShowVertical {
