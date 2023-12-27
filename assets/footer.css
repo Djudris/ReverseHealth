@@ -6,11 +6,9 @@
 
 .footer-title {
     color: white;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
-    line-height: 19px;
-    text-transform: uppercase;
-
+    line-height: 150%;
 }
 
 .footer-subtitle {
@@ -117,8 +115,8 @@
     }
 
     .footer-title {
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 20px;
+        line-height: 150%;
     }
 
     .footer-text {

@@ -40,6 +40,7 @@ button.disabled {
 }
 
 .product-description {
+    font-family: 'Overpass';
     margin-top: 26px;
     margin-bottom: 5px;
 }

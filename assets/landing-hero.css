@@ -162,7 +162,7 @@
 
 .landing-hero-bg {
     background: #FFF3E5;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .hero-landing-text-block {

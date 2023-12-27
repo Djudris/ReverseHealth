@@ -1,7 +1,7 @@
 .reviews-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 150%;
     color: white;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -24,12 +24,16 @@
     position: relative;
 }
 
-.review-card-top {
-    margin-left: 15px;
-}
+/*.review-card-top {*/
+/*    margin-left: 15px;*/
+/*}*/
 
 .review-card-stars {
     margin-top: 5px;
+}
+
+.review-card-stars p {
+    margin-bottom: 0;
 }
 
 .review-card-img {
@@ -46,23 +50,23 @@
 
 .review-card-title {
     font-weight: bold;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 150%;
 }
 
 .review-card-text {
     color: #1D2E42;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 150%;
 }
 
 .review-card-bottom {
-    margin-top: 20px
+    margin-top: 15px
 }
 
 .review-icons {
     position: relative;
-    margin-top: 30px;
+    margin-top: 35px;
     padding: 0 23px;
 }
 
@@ -151,7 +155,7 @@
         font-size: 24px;
         line-height: 41px;
         padding-top: 70px;
-        padding-bottom: 64px;
+        padding-bottom: 35px;
         margin: 0;
     }
 
@@ -161,9 +165,9 @@
         padding: 25px 20px 20px 20px;
     }
 
-    .review-card-top {
-        margin-left: 20px;
-    }
+    /*.review-card-top {*/
+    /*    margin-left: 20px;*/
+    /*}*/
 
     .review-card-stars {
         margin-top: 6px;
@@ -194,17 +198,16 @@
     }
 
     .review-icons {
-        margin-top: 52px;
         padding: 0 11px;
     }
 
     .review-icon {
         display: block;
-        height: 80px;
+        height: 65px;
     }
 
     .review-pb {
-        padding-bottom: 70px;
+        padding-bottom: 98px;
     }
 
     .review-product-1 {
@@ -337,7 +340,7 @@ button.owl-prev:not(.disabled) {
 
     .review-icons {
         position: relative;
-        margin-top: 52px;
+        margin-top: 0px;
         padding: 0 25px;
     }
 

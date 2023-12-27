@@ -590,12 +590,14 @@ select {
     }
 
     .dropdown-item:hover {
-        border-radius: 4px;
+        border-radius: 8px;
     }
 
     .dropdown-item:active,
     .dropdown-item:focus {
+        border-radius: 12px;
         color: black;
+        background: rgba(233, 236, 239, 0.9);
     }
 }
 
