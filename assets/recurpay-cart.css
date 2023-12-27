@@ -89,6 +89,9 @@ html body .upgrade-subscription-cart .subscribe-text-button{
   width: max-content;
   cursor: pointer;
 }
+html body .upgrade-subscription-cart .subscribe-text-button span {
+  color: white;
+}
 html body .upgrade-subscription-cart .cart-plan-dropdown-wrapper{
   width:100%;
   position:relative;
