@@ -1,7 +1,7 @@
 .slider-parent {
     position: relative;
     height: 150px;
-    margin-top: 50px
+    margin: 50px 0;
 }
 
 .yotpo div {
@@ -27,7 +27,24 @@
 }
 
 @media screen and (min-width: 990px) {
+    .slider-parent:before {
+        animation: slideShowHorizontal 3000s infinite;
+        background: transparent url("mobile.webp") no-repeat 50%;
+        background-repeat: repeat-x;
+        height: 100%;
+        width: 100%;
+        background-position-y: 100%;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
     .slider-parent {
+        margin: 50px 0 70px 0;
         position: relative;
         height: 315px;
     }
