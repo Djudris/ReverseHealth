@@ -118,6 +118,10 @@ select {
     top: 50%;
 }
 
+.navigation-cart-count span {
+    color: white;
+}
+
 .cart-icon-parent {
     position: relative;
 }
