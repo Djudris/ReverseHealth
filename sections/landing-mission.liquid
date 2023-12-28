@@ -14,9 +14,9 @@
             <div class="col-lg-6 col-12 mission-iframe-padding">
                 <div style="padding:66.67% 0 0 0;position:relative;">
                     <div class="video-overlay w-100 h-100 position-absolute"id="vimeo-id" >
-                        <img src="{{ 'icon-play.svg'  | asset_url }}" alt="play icon" class="play-icon" >
+                        <img src="{{ 'icon-play.svg'  | asset_url }}" width="50" height="50" alt="Play icon" class="play-icon" >
                     </div>
-                    <iframe id="vimeo-video" src="{{ section.settings.video_url }}" class="mission-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+                    <iframe loading="lazy" id="vimeo-video" src="{{ section.settings.video_url }}" class="mission-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <script src="https://player.vimeo.com/api/player.js defer"></script>
                 <script>
