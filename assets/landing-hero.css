@@ -32,6 +32,8 @@
 }
 
 .img-hero-mobile {
+    width: 96% !important;
+    height: auto !important;
     float: right;
     margin-top: 3.75rem;
 }
