@@ -42,7 +42,7 @@
             <div id="hero-slider" class="row owl-carousel icon-slider">
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" src="{{ 'vegan_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" width="60" height="60" src="{{ 'vegan_i.svg' | asset_url }}" alt="Vegan icon">
                     </div>
                     <div class="icons-text mt-3">
                         Vegan
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" src="{{ 'sugar_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" width="60" height="60" src="{{ 'sugar_i.svg' | asset_url }}" alt="Sugar icon">
                     </div>
                     <div class="icons-text mt-3">
                         Sugar free
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" src="{{ 'gluten_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" width="60" height="60"  src="{{ 'gluten_i.svg' | asset_url }}" alt="Gluten icon">
                     </div>
                     <div class="icons-text mt-3">
                         Gluten free
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" src="{{ 'gmo_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" width="60" height="60" src="{{ 'gmo_i.svg' | asset_url }}" alt="GMO icon">
                     </div>
                     <div class="icons-text mt-3">
                         Non GMO
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" src="{{ 'lactose_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" width="60" height="60" src="{{ 'lactose_i.svg' | asset_url }}" alt="Lactose icon">
                     </div>
                     <div class="icons-text mt-3">
                         Lactose free
@@ -82,29 +82,28 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" src="{{ 'natural_i.svg' | asset_url }}" alt="Vegan icon">
+                        <img loading="lazy" width="60" height="60" src="{{ 'natural_i.svg' | asset_url }}" alt="Natural ingredients icon">
                     </div>
                     <div class="icons-text mt-3">
                         All natural
                     </div>
                 </div>
             </div>
-            <div class="container hero-carouse-btn-parent ">
-                <div class="position-relative d-none">
-                    <div class="css--prev-btn-hero d-flex justify-content-start d-lg-none">
-                        <button class="customPrevBtnHero caps text-center d-flex d-sm-inline align-items-center disabled">
-                            <img loading="lazy" class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
-                        </button>
-                    </div>
-                    <div class="css--next-btn-hero d-flex justify-content-end d-lg-none">
-                        <button class="customNextBtnHero caps d-flex d-sm-inline align-items-center">
-                            <img loading="lazy" class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
+            {% comment %}<div class="container hero-carouse-btn-parent ">{% endcomment %}
+                {% comment %}<div class="position-relative d-none">{% endcomment %}
+                    {% comment %}<div class="css--prev-btn-hero d-flex justify-content-start d-lg-none">{% endcomment %}
+                        {% comment %}<button class="customPrevBtnHero caps text-center d-flex d-sm-inline align-items-center disabled">{% endcomment %}
+                            {% comment %}<img loading="lazy" class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow left">{% endcomment %}
+                        {% comment %}</button>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="css--next-btn-hero d-flex justify-content-end d-lg-none">{% endcomment %}
+                        {% comment %}<button class="customNextBtnHero caps d-flex d-sm-inline align-items-center">{% endcomment %}
+                            {% comment %}<img loading="lazy" class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow right">{% endcomment %}
+                        {% comment %}</button>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+{% comment %}{% endcomment %}
+            {% comment %}</div>{% endcomment %}
         </div>
     </div>
 </section>
