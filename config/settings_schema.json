@@ -1126,17 +1126,6 @@
     ]
   },
   {
-    "name": "Meta description",
-    "settings": [
-      {
-        "type": "text",
-        "id": "meta_description",
-        "label": "Meta description",
-        "info": "Add a meta description to improve your SEO."
-      }
-    ]
-  },
-  {
     "name": "t:settings_schema.currency_format.name",
     "settings": [
       {

@@ -1,11 +1,11 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
 <section id="hero-id" class="position-relative landing-hero-bg">
-    <img loading="lazy" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.webp' | asset_url }}" alt="Squares">
-    <img loading="eager" class="landing-hero-feather-2 d-lg-none" src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
+    <img loading="lazy" width="815" height="538" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.webp' | asset_url }}" alt="Squares">
+    <img loading="eager" width="375" height="569" class="landing-hero-feather-2 d-lg-none"  src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
 
     <div class="w-100 d-lg-none position-relative">
         <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
-        <img loading="eager" class="position-relative w-96 img-hero-mobile" src="{{ 'hero-mobile-new.webp' | asset_url }}" alt="Hero picture">
+        <img loading="eager" fetchpriority="high" class="position-relative w-96 img-hero-mobile" src="{{ 'hero-mobile-new.webp' | asset_url }}" alt="Hero picture">
     </div>
     <div class="container position-unset">
         <div class="row position-unset">

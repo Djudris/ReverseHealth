@@ -96,7 +96,6 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "favicon": "shopify:\/\/shop_images\/favicon.png",
-    "meta_description": "Wellinda demo meta description",
     "currency_code_enabled": true,
     "sections": {
       "announcement-bar": {

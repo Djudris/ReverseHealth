@@ -267,15 +267,6 @@
         }
       }
     },
-    "meta_description": {
-      "name": "Meta description",
-      "settings": {
-        "meta_description": {
-          "label": "Meta description",
-          "info": "Describe your store for search engines and social media."
-        }
-      }
-    },
     "currency_format": {
       "name": "Currency format",
       "settings": {

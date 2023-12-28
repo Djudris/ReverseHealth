@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let owl = $("#best_seller_carousel").owlCarousel({
+    $("#best_seller_carousel").owlCarousel({
         navigation: false, // Show next and prev buttons
         dots: false,
         autoplay: false,
@@ -13,6 +13,10 @@ $(document).ready(function () {
                 margin: 0,
                 stagePadding: 30,
             },
+            450: {
+                margin: 30,
+                items: 2,
+            },
             768: {
                 items: 2,
                 margin: 30,
@@ -20,7 +24,7 @@ $(document).ready(function () {
             },
             992: {
                 items: 3,
-                margin: 24,
+                margin: 25,
             }
         },
 

@@ -125,6 +125,7 @@
 }
 
 .icon-slider {
+    display: flex;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -193,14 +194,16 @@
 .landing-hero-feather-1 {
     position: absolute;
     left: 0;
-    height: 100%;
+    height: 100% !important;
+    width: auto !important;
 }
 
 .landing-hero-feather-2 {
     position: absolute;
     left: 0;
     bottom: -1px;
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
 }
 
 .customNextBtnHero,
