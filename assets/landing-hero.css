@@ -42,7 +42,7 @@
     width: auto;
     height: 460px;
     position: absolute;
-    left: 50%;
+    left: 350px;
     top: -21%;
     transform: translateX(-50%);
 }
