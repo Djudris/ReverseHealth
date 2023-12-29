@@ -31,6 +31,7 @@
 }
 
 .how-title {
+    text-transform: capitalize;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
