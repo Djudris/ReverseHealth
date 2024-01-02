@@ -199,6 +199,10 @@ select {
     transform: rotate(180deg);
 }
 
+.dropdown-toggle-icon-rotate path {
+    fill: #37346A;
+}
+
 .dropdown-menu-hovered {
   display: block;
   position: absolute;
