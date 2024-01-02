@@ -130,7 +130,6 @@
 
 .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
   font-size: 16px;
-  letter-spacing: 3px;
 }
 
 .yotpo-bottomline {
@@ -154,7 +153,6 @@
   font-size: 16px;
   line-height: 170%;
   text-align: center;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #505050;
 }
@@ -228,7 +226,6 @@ form {
 
   .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
     font-size: 18px;
-    letter-spacing: 4px;
   }
 
   /* .yotpo-bottomline {
@@ -441,7 +438,6 @@ form {
 }
 
 .card-information .caption {
-  letter-spacing: 0.07rem;
 }
 
 .card-article-info {

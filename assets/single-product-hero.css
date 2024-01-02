@@ -42,7 +42,6 @@ button.disabled {
 .product-description {
     letter-spacing: normal;
     margin-top: 30px;
-    margin-bottom: 15px;
 }
 
 .product-description p {
@@ -54,7 +53,9 @@ button.disabled {
 .bulletpoint-text {
     margin-top: 15px;
     font-size: 1.063rem;
-    line-height: 150%;
+    display: flex;
+    align-items: center;
+    line-height: normal;
 }
 
 .single-bulletpoint {
@@ -368,7 +369,7 @@ div.yotpo {
 
     .product-description {
         margin-top: 15px;
-
+        margin-bottom: 0;
     }
 
     .product-description p {
@@ -377,8 +378,8 @@ div.yotpo {
     }
 
     .bulletpoint-text {
+        margin-top: 20px;
         font-size: 1.125rem;
-        line-height: 150%;
     }
 
     .single-bulletpoint {
