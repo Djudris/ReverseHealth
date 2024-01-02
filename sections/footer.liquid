@@ -3,8 +3,8 @@
 <footer id="section-footer" class="w-100">
     <div class="footer-bg">
         <div class="container p-lg-0">
-            <div class="row w-100">
-                <div class="col-lg-5 col-12 order-1">
+            <div class="row w-100 m-0">
+                <div class="col-lg-4 col-12 order-1 p-0">
                     {%- if section.settings.logo != blank -%}
                         <img src="{{ section.settings.logo | image_url }}"
                              class="footer-logo"
@@ -16,27 +16,29 @@
                     {%- endif -%}
                     {% comment %}<p class="footer-text mb-0 footer-border-mobile">{{ section.settings.footer-text }}</p>{% endcomment %}
                 </div>
-                <div class="col-lg-2 col-6 order-lg-2 order-3">
-                    <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-1 }}</h3>
-                    <a class="footer-href text-decoration-none" href="/">Home</a>
-                    <a class="footer-href text-decoration-none" href="/collections/all">Shop</a>
-                    {% comment %}<a class="footer-href text-decoration-none" href="/pages/reviews">Reviews</a>{% endcomment %}
-                    <a class="footer-href text-decoration-none" href="/pages/contact">Contact</a>
+                <div class="col-lg-6 col-6 order-lg-2 order-3 d-flex justify-lg-content-center justify-content-between footer-gap p-0">
+                    <div class="footer-links">
+                        <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-1 }}</h3>
+                        <a class="footer-href text-decoration-none" href="/">Home</a>
+                        <a class="footer-href text-decoration-none" href="/collections/all">Shop</a>
+                        {% comment %}<a class="footer-href text-decoration-none" href="/pages/reviews">Reviews</a>{% endcomment %}
+                        <a class="footer-href text-decoration-none" href="/pages/contact">Contact</a>
+                    </div>
+                    <div class="footer-terms">
+                        <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-2 }}</h3>
+                        <a class="footer-href text-decoration-none" href="/pages/terms-of-service">Terms & conditions</a>
+                        <a class="footer-href text-decoration-none" href="/pages/privacy-cookies">Privacy policy</a>
+                        <a class="footer-href text-decoration-none" href="/pages/refunds-and-cancellations">Refunds and cancellation</a>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-6 order-lg-3 order-4">
-                    <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-2 }}</h3>
-                    <a class="footer-href text-decoration-none" href="/pages/terms-of-service">Terms & Conditions</a>
-                    <a class="footer-href text-decoration-none" href="/pages/privacy-cookies">Privacy Policy</a>
-                    <a class="footer-href text-decoration-none" href="/pages/refunds-and-cancellations">Refunds and Cancellations</a>
-                </div>
-                <div class="col-lg-2 col-12 d-lg-flex justify-content-lg-end order-2 order-lg-4">
+                <div class="col-lg-2 col-12 d-lg-flex justify-content-lg-end order-2 order-lg-4 p-0">
                     <div class="w-100 text-lg-center">
                         <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-3 }}</h3>
                         <div class="d-flex d-lg-block justify-content-between">
-                            <a href="https://play.google.com/store/apps/details?id=reverse.health.app&hl=en&gl=US" target="blank">
+                            <a class="download-margin d-flex justify-content-center" href="https://play.google.com/store/apps/details?id=reverse.health.app&hl=en&gl=US" target="blank">
                                 <img loading="lazy" class="footer-download d-lg-block" src="{{ 'GooglePlay.png' | asset_url }}" alt="Download on google play">
                             </a>
-                            <a href="https://apps.apple.com/app/reverse-health-weight-loss/id6464588020" target="blank">
+                            <a class="download-margin d-flex justify-content-center" href="https://apps.apple.com/app/reverse-health-weight-loss/id6464588020" target="blank">
                                 <img loading="lazy" class="footer-download d-lg-block" src="{{ 'AppStore.png' | asset_url }}" alt="Download on apple store">
                             </a>
                         </div>
