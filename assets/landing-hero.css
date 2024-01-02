@@ -90,11 +90,12 @@
 
 .button-top {
     width: 100%;
+    height: 60px;
     padding: 18px 47px;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    font-size: 1rem;
+    font-size: 17px;
     background-color: #4F4B91;
     border-radius: 0.75rem;
 }
@@ -106,6 +107,7 @@
 
 .btn-top {
     width: 100%;
+    height: 60px;
     padding: 15px 0 15px 0;
     text-transform: uppercase;
     font-weight: bold;
@@ -315,6 +317,7 @@
     }
 
     .button-top {
+        height: 70px;
         border-radius: 15px;
         font-size: 20px;
         padding: 20px 79px;
@@ -322,6 +325,7 @@
     }
 
     .btn-top {
+        height: 70px;
         font-size: 20px;
         padding: 20px 70px;
         width: auto;

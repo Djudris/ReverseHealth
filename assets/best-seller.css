@@ -127,6 +127,7 @@
 }
 
 .best-seller-card-btn {
+    height: 60px;
     text-transform: uppercase;
     color: white;
     font-weight: 700;
@@ -135,7 +136,6 @@
     background-color: #4F4B91;
     border-radius: 15px;
     border: none;
-    padding: 20px 0;
 }
 
 .best-seller-card-btn:hover {
@@ -267,9 +267,9 @@ a.text-m {
     }
 
     .best-seller-card-btn {
-        font-size: 17px;
+        height: 70px;
+        font-size: 20px;
         line-height: normal;
-        padding: 20px 0;
         border-radius: 15px;
     }
 

@@ -33,6 +33,7 @@
 
 }
 .button-top {
+    height: 60px;
     width: 100%;
     padding: 15px 0 15px 0;
     text-transform: uppercase;
@@ -86,6 +87,7 @@
         margin-top:70px
     }
     .button-top {
+        height: 70px;
         font-size: 1.25rem;
         padding: 16px 96px 16px 96px;
         width: auto;

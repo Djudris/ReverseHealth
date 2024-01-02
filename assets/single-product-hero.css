@@ -265,6 +265,7 @@ div.yotpo {
 }
 
 .btn-add-to-cart {
+    height: 60px;
     margin-bottom: 25px;
     background: #4F4B91;
     border-radius: 0.75rem;
