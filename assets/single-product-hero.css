@@ -209,7 +209,7 @@ div.yotpo {
     border-radius: 9px 0 0 0;
 }
 
-.opcijas .col-12:first-of-type .add-to-cart-card::after {
+.opcijas .col-12:nth-of-type(2) .add-to-cart-card::after {
     content: "";
     display: block;
     width: 11px;
@@ -446,11 +446,11 @@ div.yotpo {
     }
 
     .card-content {
-        padding: 16px 9px 25px 20px;
+        padding: 32px 9px 25px 20px;
     }
 
     .opcijas .col-12:not(:first-of-type) .card-content {
-        padding: 16px 3px 30px 20px;
+        padding: 32px 3px 30px 20px;
     }
 
     .best-value p
@@ -482,7 +482,7 @@ div.yotpo {
         border-radius: 12px 0 0 0;
     }
 
-    .opcijas .col-12:first-of-type .add-to-cart-card::after {
+    .opcijas .col-12:nth-of-type(2) .add-to-cart-card::after {
         content: "";
         display: block;
         width: 16px;
