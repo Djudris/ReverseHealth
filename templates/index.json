@@ -10,7 +10,7 @@
     "best_seller": {
       "type": "best-seller",
       "settings": {
-        "title": "Our Best Sellers",
+        "title": "Our best sellers",
         "collection": "all",
         "products_to_show": 8
       }
