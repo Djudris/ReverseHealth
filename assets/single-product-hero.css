@@ -186,7 +186,7 @@ div.yotpo {
     font-size: 10px;
     line-height: normal;
     color: #FFFFFF;
-    padding: 7px 18px 8px 15px;
+    padding: 11px 25px 11px 15px;
     margin: 0;
 }
 
@@ -196,17 +196,17 @@ div.yotpo {
 }
 
 .best-value {
+    width: 153px;
     background: #12635F;
     /*box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15);*/
-    clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
     position: absolute;
     text-transform: capitalize;
     top: -18px;
-    left: -11px;
+    left: -12px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 5px 0 0 0;
+    border-radius: 9px 0 0 0;
 }
 
 .opcijas .col-12:first-of-type .add-to-cart-card::after {
@@ -217,8 +217,8 @@ div.yotpo {
     background: #3B8581;
     /* transform: rotate(141.09deg); */
     position: absolute;
-    left: -11px;
-    top: 9px;
+    left: -12px;
+    top: 16px;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
@@ -457,40 +457,41 @@ div.yotpo {
     {
         font-style: normal;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 150%;
         color: #FFFFFF;
         margin: 0;
-        padding: 7px 20px 8px 15px;
+        padding: 11px 32px 11px 20px;
     }
     .best-value span {
         color: #FFF;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .best-value {
+        width: 200px;
         background: #12635F;
         box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.15);
-        clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+        clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
         position: absolute;
-        top: -19px;
-        left: -11px;
+        top: -15px;
+        left: -17px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px 0 0 0;
+        border-radius: 12px 0 0 0;
     }
 
     .opcijas .col-12:first-of-type .add-to-cart-card::after {
         content: "";
         display: block;
-        width: 11px;
-        height: 9px;
+        width: 16px;
+        height: 15px;
         background: #3B8581;
         /* transform: rotate(141.09deg); */
         position: absolute;
-        left: -11px;
-        top: 13px;
+        left: -17px;
+        top: 29px;
         clip-path: polygon(0 0, 100% 0, 100% 100%);
     }
 
