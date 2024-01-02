@@ -1,12 +1,11 @@
 .how-bg {
-   padding-top: 50px;
+    min-height: 646px;
+   padding-top: 40px;
    /*padding-bottom: 50px;*/
    position: relative;
-    min-height: 645px;
 }
 
 .how-products {
-    margin-top: 20px;
     gap: 3.5rem;
 }
 
@@ -25,7 +24,7 @@
     position: absolute;
     min-width: 360px;
     min-height: 519px;
-    top: 38px;
+    top: 92px;
     left: 0;
     z-index: 1;
 }
@@ -33,14 +32,13 @@
 .how-title {
     text-transform: capitalize;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 24px;
     line-height: 150%;
     font-weight: 700;
     margin-bottom: 0;
     color: white;
     padding-bottom: 25px;
+    max-width: 300px;
 }
 .how-subtitle {
     color: white;
@@ -61,15 +59,42 @@
 }
 
 .single-product-block {
+    padding-left: 0;
+    padding-right: 0;
     height: 112px;
 }
+
+.single-product-block div {
+    padding-left: 8px;
+}
+
+.single-product-block div p {
+    max-width: 250px;
+}
+@media screen and (min-width: 1200px) {
+    .how-bg .container {
+        max-width: calc(100% - 140px);
+    }
+}
+
 @media screen and (min-width: 992px) {
     .single-product-block {
+        z-index: 2;
         height: unset;
     }
+
+    .single-product-block div {
+        padding-left: 0;
+    }
+
+    .single-product-block div p {
+        margin: 0 auto;
+        max-width: 450px;
+    }
     .how-bg {
+        min-height: unset;
         padding-top: 50px;
-        padding-bottom: 70px;
+        padding-bottom: 36px;
     }
     .how-products {
         margin-top: 0;
@@ -87,7 +112,12 @@
 
     .how-svg-1 {
         top: 4.188rem;
-        width: 90%;
+        width: calc(100% - 140px);
+        margin: 0;
+        height: 433px;
+        left: 50%;
+        transform: translateX(-50%);
+
     }
 
     .how-svg-2 {
@@ -95,10 +125,11 @@
         width: 100%;
     }
     .how-title {
-        max-width: 30%;
+        max-width: 320px;
         font-size: 28px;
         line-height: 150%;
-        padding-bottom: 63px;
+        padding-bottom: 36px;
+
     }
     .how-subtitle {
         font-size: 22px;
