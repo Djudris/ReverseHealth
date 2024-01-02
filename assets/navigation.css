@@ -138,11 +138,9 @@ select {
     cursor: pointer;
 }
 
-.navigation-link:hover,
-.navigation-link:active,
-.navigation-link:focus,
-.navigation-link:visited {
+.navigation-link:hover {
     background: none;
+    font-weight: 500;
     color: #37346A;
 }
 
@@ -193,7 +191,8 @@ select {
 
 .dropdown-toggle-hovered {
     background-color: unset !important;
-    font-weight: 600;
+    font-weight: 500;
+    color: #37346A;
 }
 
 .dropdown-toggle-icon-rotate {
