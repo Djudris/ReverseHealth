@@ -37,6 +37,7 @@ select {
 }
 
 .dropdown-item {
+    line-height: 150%;
     color: #1D2E42;
 }
 
@@ -600,8 +601,12 @@ select {
     }
 
     .dropdown-item {
-        padding: 6px 0 6px 6px;
+        padding: 0.469rem 0 0.469rem 6px;
         font-size: 1.125rem;
+    }
+
+    .dropdown-menu {
+        padding: 0.781rem 0
     }
 
     .dropdown-menu li {
