@@ -81,8 +81,8 @@
 .hero-subtitle {
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 170%;
+    font-size: 18px;
+    line-height: 150%;
     color: #1D2E42;
     margin: 0;
 }
@@ -115,7 +115,7 @@
     line-height: 150%;
     font-size: 17px;
     background: #4F4B91;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 #hero-id .container {
