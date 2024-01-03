@@ -59,8 +59,13 @@ button.disabled {
 }
 
 .single-bulletpoint {
-    width: 16px;
-    margin-right: 12px;
+    width: 19px;
+    margin-right: 10px;
+}
+
+.bulletpoint-text span {
+    height: 19px;
+    line-height: normal;
 }
 
 .single-hero-mb {
