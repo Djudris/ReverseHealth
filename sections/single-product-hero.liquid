@@ -22,6 +22,9 @@
                         </div>
                     </h2>
                     <div class="d-flex align-items-center justify-content-center">
+                        {% if product.metafields.single.isgrassfed %}
+                            <img class="product-icon icon-vegan" src="{{ 'grassfed.svg' | asset_url }}" alt="Grass fed">
+                        {% endif %}
                         {% if product.metafields.single.isvegan %}
                             <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
                         {% endif %}
@@ -69,6 +72,9 @@
                             </h2>
                         </div>
                         <div class="col-4 d-flex align-items-center justify-content-end">
+                            {% if product.metafields.single.isgrassfed %}
+                                <img class="product-icon icon-vegan" src="{{ 'grassfed.svg' | asset_url }}" alt="Grass fed">
+                            {% endif %}
                             {% if product.metafields.single.isvegan %}
                                 <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
                             {% endif %}
