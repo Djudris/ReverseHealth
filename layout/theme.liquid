@@ -217,36 +217,36 @@
 {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
 
 <body class="gradient">
-<div class="css--country-modal js--country-modal d-none">
-    <div class="block">
-        <div class="close">
-            <button class="js--country-modal-close css--country-modal-close btn p-0">
-                <img loading="lazy" src="{{ 'close.svg' | asset_url }}" alt="Close Modal">
-            </button>
-        </div>
-        <div class="country-modal">
-            <div class="country-modal-title">
-                Please Select Your Country
-            </div>
-            <div id="CountryList">
-                <div data-country="https://shop.reverse.health/?redirect" class="modal-country-selector">
-                    <img loading="lazy" src="{{ 'us.svg' | asset_url }}" alt="United States">
-                    United States
-                </div>
-                <div data-country="https://uk.shop.reverse.health/?redirect" class="modal-country-selector">
-                    <img loading="lazy" src="{{ 'uk.svg' | asset_url }}" alt="United Kingdom">
-                    United Kingdom
-
-                </div>
-                <div data-country="https://eu.shop.reverse.health/?redirect" class="modal-country-selector">
-                    <img loading="lazy" src="{{ 'eu.svg' | asset_url }}" alt="European Union">
-                    European Union
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% comment %}<div class="css--country-modal js--country-modal d-none">{% endcomment %}
+    {% comment %}<div class="block">{% endcomment %}
+        {% comment %}<div class="close">{% endcomment %}
+            {% comment %}<button class="js--country-modal-close css--country-modal-close btn p-0">{% endcomment %}
+                {% comment %}<img loading="lazy" src="{{ 'close.svg' | asset_url }}" alt="Close Modal">{% endcomment %}
+            {% comment %}</button>{% endcomment %}
+        {% comment %}</div>{% endcomment %}
+        {% comment %}<div class="country-modal">{% endcomment %}
+            {% comment %}<div class="country-modal-title">{% endcomment %}
+                {% comment %}Please Select Your Country{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+            {% comment %}<div id="CountryList">{% endcomment %}
+                {% comment %}<div data-country="https://shop.reverse.health/?redirect" class="modal-country-selector">{% endcomment %}
+                    {% comment %}<img loading="lazy" src="{{ 'us.svg' | asset_url }}" alt="United States">{% endcomment %}
+                    {% comment %}United States{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}<div data-country="https://uk.shop.reverse.health/?redirect" class="modal-country-selector">{% endcomment %}
+                    {% comment %}<img loading="lazy" src="{{ 'uk.svg' | asset_url }}" alt="United Kingdom">{% endcomment %}
+                    {% comment %}United Kingdom{% endcomment %}
+{% comment %}{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}<div data-country="https://eu.shop.reverse.health/?redirect" class="modal-country-selector">{% endcomment %}
+                    {% comment %}<img loading="lazy" src="{{ 'eu.svg' | asset_url }}" alt="European Union">{% endcomment %}
+                    {% comment %}European Union{% endcomment %}
+{% comment %}{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+        {% comment %}</div>{% endcomment %}
+    {% comment %}</div>{% endcomment %}
+{% comment %}</div>{% endcomment %}
 
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
