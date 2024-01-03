@@ -482,7 +482,6 @@ div.yotpo {
         top: -15px;
         left: -17px;
         display: flex;
-        justify-content: center;
         align-items: center;
         border-radius: 12px 0 0 0;
     }
