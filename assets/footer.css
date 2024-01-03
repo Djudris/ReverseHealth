@@ -30,7 +30,7 @@
     display: block;
     color: white;
     font-size: 14px;
-    line-height: 150%;
+    line-height: 170%;
 }
 
 .footer-links a:not(:first-of-type),
@@ -168,7 +168,6 @@
 
     .footer-href {
         font-size: 16px;
-        line-height: 150%;
     }
 
     .footer-links a:not(:first-of-type),
