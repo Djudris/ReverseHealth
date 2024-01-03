@@ -2211,16 +2211,21 @@ input[type='checkbox'] {
 }
 
 .header {
+    height: 65px;
     display: grid;
     grid-template-areas: 'left-icon heading icons';
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-    padding: 1rem 15px;
+    padding: 1rem 0;
+}
+
+.header.container {
+    overflow: visible;
 }
 
 @media screen and (min-width: 1384px) {
     .header {
-        padding: 1.125rem 6.25rem 1.1063rem 6.26rem;
+        padding: 1.125rem 0 1.1063rem 0;
     }
 
     .header--has-menu:not(.header--middle-left) {
@@ -2301,6 +2306,9 @@ input[type='checkbox'] {
 }
 
 @media screen and (min-width: 1384px) {
+    .header {
+        height: 80px;
+    }
     .header__heading-link {
         margin-left: -0.75rem;
     }
