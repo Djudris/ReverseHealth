@@ -1,3 +1,7 @@
+#section-footer {
+    background: #1D2E42;
+}
+
 .footer-bg {
     background: #1D2E42;
     padding: 2.188rem 0.938rem;
@@ -58,7 +62,6 @@
 }
 
 .footer-copyright-line {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
 }
 
@@ -75,7 +78,6 @@
 }
 
 .footer-border-mobile {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 20px;
 }
 

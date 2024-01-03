@@ -130,7 +130,7 @@ select {
 .navigation-link {
     font-weight: 400;
     font-size: 1.188rem;
-    line-height: 24px;
+    line-height: 150%;
     color: #1D2E42;
     text-decoration: none;
 }
@@ -142,6 +142,8 @@ select {
 .navigation-link:hover {
     background: none;
     font-weight: 500;
+    line-height: 150%;
+    letter-spacing: normal;
     color: #37346A;
 }
 
@@ -265,15 +267,23 @@ select {
 
 .mobile-dropdown-toggle {
     font-size: 1.188rem;
-    font-weight: 600;
     line-height: 24px;
+    font-weight: 400;
     -webkit-appearance: none;
+}
+
+.mobile-dropdown-toggle[aria-expanded="true"] {
+    font-weight: 600;
+}
+
+.mobile-dropdown-toggle[aria-expanded="false"] {
+    font-weight: 400;
 }
 
 .mobile-dropdown-toggle:hover,
 .mobile-dropdown-toggle:focus,
 .mobile-dropdown-toggle:active {
-  font-weight: 600;
+  color: #1D2E42 !important;
   background-color: white !important;
 }
 
