@@ -156,8 +156,8 @@ div.yotpo {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-top: 1.875rem;
-    margin-bottom: 2.25rem;
+    margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .badge-container img {
@@ -256,7 +256,7 @@ div.yotpo {
 }
 
 .card-ppp .money {
-    font-size: 19px;
+    font-size: 24px;
     line-height: 150%;
     font-weight: 700;
 }
@@ -272,7 +272,7 @@ div.yotpo {
 
 .btn-add-to-cart {
     height: 60px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     background: #4F4B91;
     border-radius: 0.75rem;
     font-style: normal;
