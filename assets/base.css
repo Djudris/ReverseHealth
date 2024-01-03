@@ -2223,6 +2223,13 @@ input[type='checkbox'] {
     overflow: visible;
 }
 
+@media screen and (min-width: 992px) {
+    .header.container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 @media screen and (min-width: 1384px) {
     .header {
         padding: 1.125rem 0 1.1063rem 0;
