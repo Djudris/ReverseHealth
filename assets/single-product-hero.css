@@ -214,18 +214,18 @@ div.yotpo {
     border-radius: 9px 0 0 0;
 }
 
-.opcijas .col-12:nth-of-type(2) .add-to-cart-card::after {
-    content: "";
-    display: block;
-    width: 11px;
-    height: 9px;
-    background: #3B8581;
-    /* transform: rotate(141.09deg); */
-    position: absolute;
-    left: -12px;
-    top: 16px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-}
+/*.opcijas .col-12:nth-of-type(2) .add-to-cart-card::after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    width: 11px;*/
+/*    height: 9px;*/
+/*    background: #3B8581;*/
+/*    !* transform: rotate(141.09deg); *!*/
+/*    position: absolute;*/
+/*    left: -12px;*/
+/*    top: 16px;*/
+/*    clip-path: polygon(0 0, 100% 0, 100% 100%);*/
+/*}*/
 
 .card-quantity {
     font-style: normal;
@@ -308,6 +308,13 @@ div.yotpo {
     align-items: center;
 }
 
+.best-value-image {
+    position: absolute;
+    height: 46px;
+    top: -15px;
+    left: -12px;
+}
+
 .container {
     overflow: hidden;
     padding: 0 15px;
@@ -321,6 +328,11 @@ div.yotpo {
 }
 
 @media screen and (min-width: 992px) {
+    .best-value-image {
+        position: absolute;
+        top: -15px;
+        left: -13px;
+    }
 
     .card-ppp .money {
         font-size: 22px;
@@ -486,18 +498,18 @@ div.yotpo {
         border-radius: 12px 0 0 0;
     }
 
-    .opcijas .col-12:nth-of-type(2) .add-to-cart-card::after {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 15px;
-        background: #3B8581;
-        /* transform: rotate(141.09deg); */
-        position: absolute;
-        left: -17px;
-        top: 29px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%);
-    }
+    /*.opcijas .col-12:nth-of-type(2) .add-to-cart-card::after {*/
+    /*    content: "";*/
+    /*    display: block;*/
+    /*    width: 16px;*/
+    /*    height: 15px;*/
+    /*    background: #3B8581;*/
+    /*    !* transform: rotate(141.09deg); *!*/
+    /*    position: absolute;*/
+    /*    left: -17px;*/
+    /*    top: 29px;*/
+    /*    clip-path: polygon(0 0, 100% 0, 100% 100%);*/
+    /*}*/
 
     .container {
         max-width: 1240px;
