@@ -115,14 +115,14 @@
 
 .best-seller-card-name {
     font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 600;
 }
 
 .best-seller-card-price {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 150%;
     font-weight: 400;
 }
 
@@ -144,8 +144,8 @@
 }
 
 .best-seller-card-lmore {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 150%;
     text-decoration-line: underline;
     color: #1D2E42
 }
@@ -227,7 +227,7 @@ a.text-m {
 }
 
 .best-seller-btn-max-w {
-    max-width: 90%;
+    max-width: calc(100% - 40px);
 }
 
 .carousel-arrow-img {
@@ -256,7 +256,7 @@ a.text-m {
     }
 
     .best-seller-btn-max-w {
-        max-width: 100%;
+        max-width: calc(100% - 18px);
     }
     .best-seller-title {
         font-size: 28px;
