@@ -2914,6 +2914,7 @@ html {
 .btn, .btn span,
 .footer-subtitle{
     color: white;
+    letter-spacing: normal;
     font-family: 'Jost', sans-serif;
 }
 
@@ -2936,6 +2937,7 @@ h1,
 .best-seller-title,
 .review-card-stars p
 {
+    letter-spacing: normal;
     color: #1D2E42;
     font-family: 'Jost', sans-serif;
 }
@@ -2950,6 +2952,7 @@ span,
 .best-value p,
 .announcement-msg,
 p {
+    letter-spacing: normal;
     color: #1D2E42;
     font-family: 'Overpass', sans-serif;
 }

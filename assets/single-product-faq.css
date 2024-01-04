@@ -13,7 +13,7 @@
     -moz-user-select: none;
     font-weight: 400;
     font-size: 1.063rem;
-    line-height: 1.345rem;
+    line-height: normal;
     color: #1D2E42;
     margin-top: 0;
     margin-bottom: 0;
@@ -133,7 +133,6 @@
 
     .faq-heading {
         font-size: 1.25rem;
-        line-height: 1.583rem;
     }
 }
 
