@@ -139,7 +139,7 @@ html body .upgrade-subscription-cart span.cart-plan-saving-text{
 html body .upgrade-subscription-cart .cart-plan-dropdown-title {
   font-size: 10px;
   font-weight: 300;
-  letter-spacing: .8px;
+  letter-spacing: normal;
   padding: 0 5px;
   text-transform: inherit;
   position: absolute;
