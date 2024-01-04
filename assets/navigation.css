@@ -55,9 +55,9 @@ select {
 }
 
 .nav-mobile-single-line {
-    margin-top: 15px !important;
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     /* border-top: 1px solid #F0F0F0 !important;; */
     /* border-bottom: 1px solid #F0F0F0 !important; */
 
@@ -70,15 +70,15 @@ select {
 }
 
 .nav-mobile-double-line {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     /* border-bottom: 1px solid #F0F0F0 !important; */
     width: 100% !important;
 }
 
 .nav-mobile-single-line-b {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     width: 100% !important;
 }
 
