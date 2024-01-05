@@ -35,6 +35,13 @@
 .review-card-stars p {
     letter-spacing: 4px;
     margin-bottom: 0;
+    font-size: 17px;
+}
+
+@media screen and (min-width: 990px) {
+    .review-card-stars p {
+        font-size: 20px;
+    }
 }
 
 .review-card-img {
@@ -196,7 +203,7 @@
     }
 
     .review-card-bottom {
-        margin-top: 21px;
+        margin-top: 15px;
     }
 
     .review-icons {
