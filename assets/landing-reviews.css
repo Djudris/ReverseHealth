@@ -33,6 +33,7 @@
 }
 
 .review-card-stars p {
+    letter-spacing: 4px;
     margin-bottom: 0;
 }
 
