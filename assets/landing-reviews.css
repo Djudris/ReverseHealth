@@ -12,6 +12,10 @@
     overflow: hidden;
 }
 
+#reviews .container {
+    padding: 0 15px;
+}
+
 .reviews-bg {
     background: #12635F;
 }

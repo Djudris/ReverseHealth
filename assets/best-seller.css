@@ -81,6 +81,10 @@
     padding-right: 0;
 }
 
+#best_sellers .container {
+    padding: 0 15px;
+}
+
 
 .disabled {
     opacity: 0.5;
