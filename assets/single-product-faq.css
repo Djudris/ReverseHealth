@@ -4,6 +4,10 @@
     padding-bottom: 20px;
 
 }
+
+.faq-section-wrapper .container {
+    padding: 0 15px;
+}
 .landing-faq-padding {
     margin-bottom: 50px;
 }
