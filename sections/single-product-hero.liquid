@@ -154,7 +154,7 @@
                             </form>
                         </div>
 
-                        <div class="add-to-cart-card  selected-opcija d-flex flex-column justify-content-end">
+                        <div class="add-to-cart-card padding-top-30-card selected-opcija d-flex flex-column justify-content-between">
                             {% if product.metafields.single.enablebestvalue %}
                                 {% if product.metafields.single.bestvalueimage %}
                                     <img class="best-value-image" src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}" alt="Best value">

@@ -180,6 +180,9 @@ div.yotpo {
     height: 176px;
     position: relative;
 }
+.add-to-cart-card.padding-top-30-card {
+    height: 186px;
+}
 
 .card-content {
     padding: 20px 20px 15px 20px;
@@ -267,6 +270,7 @@ div.yotpo {
 }
 
 .card-total {
+    height: 20px;
     font-style: normal;
     font-weight: 400;
     font-size: 0.813rem;
@@ -352,6 +356,9 @@ div.yotpo {
 
 
 @media screen and (min-width: 992px) {
+    .card-content.padding-top-30 {
+        padding-top: 32px;
+    }
     #single-product-carousel .owl-stage {
         display: flex;
     }
@@ -505,12 +512,16 @@ div.yotpo {
     /*}*/
 
     .add-to-cart-card {
-        height: 230px;
         width: 230px;
+        height: 230px;
         border: 2px solid #C6CDE4;
         box-sizing: border-box;
         border-radius: 20px;
         position: relative;
+    }
+
+    .add-to-cart-card.padding-top-30-card {
+        height: 230px;
     }
 
     .badge-container img {
@@ -578,6 +589,7 @@ div.yotpo {
     }
 
     .card-ppp {
+        height: 33px;
         font-style: normal;
         font-weight: 400;
         font-size: 1.375rem;
@@ -597,9 +609,10 @@ div.yotpo {
     }
 
     .card-total {
+        height: 23px;
         font-style: normal;
         font-weight: 400;
-        font-size: 0.938rem;
+        font-size: 15px;
         line-height: 150%;
         color: #445764;
         margin: 0;
