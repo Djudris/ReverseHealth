@@ -11,6 +11,11 @@
   padding-bottom: 70px
 }
 
+#contacts-page .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .contact-description {
   font-style: normal;
   font-weight: 400;
