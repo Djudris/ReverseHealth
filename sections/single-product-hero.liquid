@@ -3,8 +3,8 @@
 
 <section id="page-top">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5 position-relative">
+        <div class="d-flex hero-head flex-lg-row flex-column">
+            <div class="position-relative">
                 <div class="d-lg-none product-header-block text-center">
                     <h3 class="product-flavor mb-0">{{ product.metafields.single.flavor }}</h3>
                     <h2 class="product-title mb-0">
@@ -32,7 +32,7 @@
 
                     </div>
                 </div>
-                <div class="position-relative">
+                <div class="position-relative min-w-470">
                     <div id="single-product-carousel" class="product-img owl-carousel">
                         {% for image in product.images %}
                             <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}">
@@ -46,12 +46,11 @@
                     <div class="css--next-btn-single d-flex justify-content-end">
                         <button class="customNextBtnSingle caps d-flex d-sm-inline align-items-center">
                             <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
-
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="" >
                 <div class="d-lg-block d-none product-header-block">
                     <div class="row">
                         <div class="col-8">
@@ -125,7 +124,7 @@
 
                 </div>
                 <h3 class="bundle-heading">Choose your bundle</h3>
-                <div class="row opcijas">
+                <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
                     {% for t in product.tags %}
                         {% if t contains 'bundle' %}
                             {% assign bundle_exsist = true %}
@@ -139,7 +138,7 @@
                             <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                         </form>
                     {% endif %}
-                    <div class="col-12 col-lg-4">
+
                         <div class="add-to-cart-card d-flex flex-column justify-content-between">
                             <div class="card-content d-flex flex-row-reverse flex-md-column">
                                 <div class="w-100">
@@ -154,15 +153,22 @@
                                 <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                             </form>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="add-to-cart-card selected-opcija d-flex flex-column justify-content-end">
+
+                        <div class="add-to-cart-card  selected-opcija d-flex flex-column justify-content-end">
                             {% if product.metafields.single.enablebestvalue %}
                                 {% if product.metafields.single.bestvalueimage %}
                                     <img class="best-value-image" src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}" alt="Best value">
+                                    {% assign price_variable = product.variants[2].price %}
+                                    <p class="best-value-text">best value - save
+                                        {% if product.metafields.single.usecustomsave %}
+                                            {{ product.metafields.single.customsavevalue }}
+                                        {% else %}
+                                            {{product.variants.first.price|times:5|minus:price_variable| money_without_trailing_zeros   }}
+                                        {% endif %}
+                                    </p>
                                 {% endif %}
                             {% endif %}
-                            <div class="card-content d-flex flex-row-reverse flex-md-column">
+                            <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
                                 <div class="w-100">
                                     <h3 class="card-quantity">5-pack</h3>
                                     <p class="card-ppp">{{product.variants[2].price| divided_by: 5 |money}}<span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
@@ -176,8 +182,7 @@
                             </form>
                         </div>
 
-                    </div>
-                    <div class="col-12 col-lg-4">
+
                         <div class="add-to-cart-card d-flex flex-column justify-content-between">
                             <div class="card-content d-flex flex-row-reverse flex-md-column">
                                 <div class="w-100">
@@ -192,7 +197,7 @@
                                 <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
                             </form>
                         </div>
-                    </div>
+
                 </div>
             </div>
         </div>

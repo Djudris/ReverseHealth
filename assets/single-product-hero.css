@@ -177,12 +177,16 @@ div.yotpo {
     border: 2px solid #C6CDE4;
     box-sizing: border-box;
     border-radius: 15px;
-    height: 100%;
+    height: 176px;
     position: relative;
 }
 
 .card-content {
-    padding: 30px 20px 20px 20px;
+    padding: 20px 20px 15px 20px;
+}
+
+.card-content.padding-top-30 {
+    padding-top: 30px;
 }
 
 .best-value p {
@@ -234,6 +238,7 @@ div.yotpo {
     line-height: 150%;
     color: #1D2E42;
     margin-top: 8px;
+    margin-bottom: 0;
     float: right;
 }
 
@@ -241,7 +246,7 @@ div.yotpo {
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 150%;
+    line-height: 100%;
     color: #1D2E42;
     margin-bottom: 5px;
 }
@@ -265,14 +270,14 @@ div.yotpo {
     font-style: normal;
     font-weight: 400;
     font-size: 0.813rem;
-    line-height: 150%;
+    line-height: normal;
     color: #445764;
     margin: 0;
 }
 
 .btn-add-to-cart {
     height: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background: #4F4B91;
     border-radius: 0.75rem;
     font-style: normal;
@@ -295,14 +300,6 @@ div.yotpo {
     display: block !important;
 }
 
-.opcijas .col-12:not(:last-of-type) {
-    margin-bottom: 25px;
-}
-
-.opcijas .col-12:last-of-type {
-    margin-bottom: 40px;
-}
-
 .card-content {
     justify-content: space-between;
     align-items: center;
@@ -313,6 +310,28 @@ div.yotpo {
     height: 46px;
     top: -15px;
     left: -12px;
+}
+
+.best-value-text {
+    position: absolute;
+    top: -15px;
+    left: 4px;
+    text-transform: capitalize;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: normal;
+    color: #FFFFFF !important;
+    padding: 11px 0px 11px 0px;
+    margin: 0;
+}
+
+.min-w-470 {
+    min-height: 302px;
+}
+
+.best-value-text span {
+    color: #FFF;
 }
 
 .container {
@@ -327,7 +346,34 @@ div.yotpo {
     }
 }
 
+.opcijas {
+    margin-bottom: 40px;
+}
+
+
 @media screen and (min-width: 992px) {
+    #single-product-carousel .owl-stage {
+        display: flex;
+    }
+
+    .hero-head {
+        gap: 30px;
+    }
+    .min-w-470 {
+        min-width: 470px;
+    }
+
+    #single-product-carousel .owl-stage .owl-item img {
+        width: auto;
+        height: 390px;
+        object-position: center;
+        object-fit: contain;
+    }
+
+    .opcijas {
+        margin-bottom: 70px;
+    }
+
     .best-value-image {
         position: absolute;
         top: -15px;
@@ -335,17 +381,24 @@ div.yotpo {
         height: 60px;
     }
 
+    .best-value-text {
+        top: -17px;
+        left: 5px;
+        font-size: 14px;
+        line-height: normal;
+        padding: 17px 0px 17px 0px;
+        margin: 0;
+    }
+
     .card-ppp .money {
         font-size: 22px;
+        line-height: normal;
     }
     .product-flavor {
         font-size: 1.375rem;
         line-height: 2.063rem;
     }
 
-    .opcijas .col-12 {
-        margin-bottom: 70px !important;
-    }
 
     .product-title {
         font-size: 2.813rem;
@@ -367,7 +420,7 @@ div.yotpo {
     }
 
     #single-product-carousel {
-        max-width: 471px;
+        max-width: 470px;
         max-height: 417px;
     }
 
@@ -452,10 +505,11 @@ div.yotpo {
     /*}*/
 
     .add-to-cart-card {
+        height: 230px;
+        width: 230px;
         border: 2px solid #C6CDE4;
         box-sizing: border-box;
         border-radius: 20px;
-        height: 100%;
         position: relative;
     }
 
@@ -464,12 +518,9 @@ div.yotpo {
     }
 
     .card-content {
-        padding: 32px 9px 25px 20px;
+        padding: 32px 9px 15px 20px;
     }
 
-    .opcijas .col-12:not(:first-of-type) .card-content {
-        padding: 32px 3px 30px 20px;
-    }
 
     .best-value p
     {
@@ -522,7 +573,7 @@ div.yotpo {
         font-size: 1.25rem;
         line-height: 150%;
         color: #1D2E42;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
         float: unset;
     }
 
@@ -530,9 +581,8 @@ div.yotpo {
         font-style: normal;
         font-weight: 400;
         font-size: 1.375rem;
-        line-height: 150%;
+        line-height: 100%;
         color: #1D2E42;
-        margin-bottom: 5px;
         text-decoration: none;
     }
 
@@ -560,7 +610,7 @@ div.yotpo {
     }
 
     .btn-add-to-cart {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         background: #4F4B91;
         border-radius: 15px;
         font-style: normal;
