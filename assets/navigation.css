@@ -129,7 +129,7 @@ select {
 
 .navigation-link {
     font-weight: 400;
-    font-size: 1.188rem;
+    font-size: 19px;
     line-height: 150%;
     color: #1D2E42;
     text-decoration: none;
@@ -262,12 +262,12 @@ select {
 .mobile-nav-el-padding {
     margin: 0;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 150%;
 }
 
 .mobile-dropdown-toggle {
-    font-size: 1.188rem;
-    line-height: 24px;
+    font-size: 19px;
+    line-height: 150%;
     font-weight: 400;
     -webkit-appearance: none;
 }
