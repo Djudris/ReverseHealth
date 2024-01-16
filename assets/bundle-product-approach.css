@@ -77,6 +77,10 @@
   background: #464284;
 }
 
+.benefits-photo {
+  border-radius: 20px;
+}
+
 @media screen and (max-width:992px) {
   .row-margin {
     margin-top: 20px;
@@ -128,6 +132,7 @@
   .benefits-photo {
     max-width: 100%;
     max-height: 300px;
+    border-radius: 15px;
   }
   /*.benefits-mobile-margin {*/
   /*  margin-top: 15px;*/
