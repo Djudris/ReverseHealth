@@ -72,6 +72,10 @@
 .row-margin {
   margin-top: 40px;
 }
+.button-top:hover {
+  color: white;
+  background: #464284;
+}
 
 @media screen and (max-width:992px) {
   .row-margin {
