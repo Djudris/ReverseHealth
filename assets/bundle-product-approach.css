@@ -1,5 +1,5 @@
 .benefits-banner-img {
-  border-radius: 12px;
+  border-radius: 20px;
   max-width: 100%;
 }
 
@@ -82,7 +82,7 @@
     margin-top: 20px;
   }
   .benefits-banner-img {
-    border-radius: 8px;
+    border-radius: 15px;
     height: 210px;
     object-fit: cover;
   }
