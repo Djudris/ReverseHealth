@@ -4,14 +4,13 @@
     font-weight: 600;
     margin-bottom: 0;
 }
-.need-title {
-    margin-top:20px
 
+.row-margin {
+    margin-top: 20px;
 }
+
 .approach-title {
     text-align: center;
-    margin-top:40px
-
 }
 .need-text, .approach-text {
     font-size: 17px;
@@ -24,9 +23,12 @@
 .approach-photo {
     border-radius: 15px;
     height: 210px;
-    margin-top:27px
-
 }
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
 .approach-circle {
     height: 259px;
     margin-top:25px;
@@ -58,6 +60,12 @@
     }
 }
 @media screen and (min-width: 992px) {
+    .margin-top-40 {
+        margin-top: 0;
+    }
+    .row-margin {
+        margin-top: 40px;
+    }
     .need-title, .approach-title {
         font-size:28px;
         line-height: 150%;
@@ -72,7 +80,6 @@
         height: 14.688rem;
         width: 100%;
         object-fit: cover;
-        margin-top:70px
     }
     .approach-circle {
         height: 405px;
@@ -80,13 +87,8 @@
         max-width: 36.25rem;
         object-fit: contain;
     }
-    .need-title {
-        margin-top:70px
-
-    }
     .approach-title {
         text-align: left;
-        margin-top:70px
     }
     .button-top {
         border-radius: 15px;
