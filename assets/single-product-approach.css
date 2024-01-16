@@ -22,7 +22,7 @@
 
 }
 .approach-photo {
-    border-radius: 8px;
+    border-radius: 15px;
     height: 210px;
     margin-top:27px
 
@@ -68,7 +68,7 @@
         line-height: 150%;
     }
     .approach-photo {
-        border-radius: 12px;
+        border-radius: 20px;
         height: 14.688rem;
         width: 100%;
         object-fit: cover;
@@ -89,6 +89,7 @@
         margin-top:70px
     }
     .button-top {
+        border-radius: 15px;
         height: 70px;
         font-size: 1.25rem;
         padding: 16px 96px 16px 96px;

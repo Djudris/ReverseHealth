@@ -69,7 +69,7 @@
 }
 
 .delivery-btn-padding {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .delivery-landing-mt {
     margin-bottom: 50px;
@@ -118,6 +118,9 @@
 
 
 @media screen and (min-width: 992px) {
+    .delivery-btn-padding {
+        padding-top: 40px;
+    }
     .gap-20 {
         gap: 0;
     }
@@ -130,6 +133,7 @@
     .bg-card {
         padding: 0;
         margin: 0 12px;
+        border-radius: 20px;
         max-width: 397px !important;
         max-height: 169px !important;
     }

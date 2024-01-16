@@ -27,7 +27,7 @@
 }
 
 .mission-iframe {
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .mission-iframe-padding {
@@ -57,7 +57,7 @@
     justify-content: center;
     align-items: center;
     background: rgba(28, 28, 28, 0.6);
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 #vimeo-id img {
@@ -118,7 +118,7 @@
     }
 
     .mission-iframe {
-        border-radius: 12px;
+        border-radius: 20px;
     }
 
     .mission-iframe-padding {
@@ -129,6 +129,7 @@
         overflow: hidden;
         height: 280px;
         margin-bottom: 70px;
+        border-radius: 20px;
     }
     .mission-img-div img {
         object-position: center -132px;
@@ -143,7 +144,7 @@
         justify-content: center;
         align-items: center;
         background: rgba(28, 28, 28, 0.6);
-        border-radius: 12px;
+        border-radius: 20px;
     }
 
     #vimeo-id {
