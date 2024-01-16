@@ -26,11 +26,18 @@
     margin-top: 40px;
 }
 
+.approach-bottom-img-container {
+    height: 220px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
 .approach-bottom-img {
     object-fit: cover;
     width: 100%;
+    height: auto;
     object-position: center;
-
 }
 
 @media screen and (max-width: 419px) {
@@ -40,6 +47,14 @@
 }
 
 @media screen and (min-width: 992px) {
+    .approach-bottom-img-container {
+        height: 280px;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .approach-bottom-img {
+        object-position: center -100px;
+    }
     .composition-title {
         text-align: left;
         font-size: 28px;
@@ -51,7 +66,6 @@
         font-size: 20px;
         line-height: 150%;
         margin-bottom: 0;
-
     }
 
     .nutritions-bg {
