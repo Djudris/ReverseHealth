@@ -172,8 +172,11 @@ a:hover {
 form {
   display: flex;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+.card__content {
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 
 .btn-add-to-cart {
@@ -338,6 +341,10 @@ form {
 }
 
 @media screen and (min-width: 990px) {
+  .card__content {
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
 
   .card-wrapper {
     border-radius: 30px;
