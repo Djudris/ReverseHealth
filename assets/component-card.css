@@ -1,11 +1,11 @@
 .card-wrapper {
+  overflow: hidden;
   color: inherit;
   height: 100%;
   position: relative;
   text-decoration: none;
   background: #FCFCFC;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .card__inner {
@@ -340,6 +340,10 @@ form {
 }
 
 @media screen and (min-width: 990px) {
+
+  .card-wrapper {
+    border-radius: 20px;
+  }
 
   .card .media.media--hover-effect>img:only-child,
   .card-wrapper .media.media--hover-effect>img:only-child {
