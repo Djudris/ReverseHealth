@@ -2,7 +2,8 @@
   "sections": {
     "single_product_hero": {
       "type": "single-product-hero",
-      "settings": {}
+      "settings": {
+      }
     },
     "landing_delivery": {
       "type": "landing-delivery",
@@ -23,14 +24,16 @@
       }
     },
     "bundle_product_approach": {
-      "type": "bundle-product-approach.liquid"
+      "type": "bundle-product-approach",
+      "settings": {
+      }
     },
     "faq": {
       "type": "single-product-faq",
       "settings": {
         "faq-title": "Our customers often ask",
-        "faq-question-1": "What will happen after I order?",
-        "faq-answer-1": "1",
+        "faq-question-1": "What is Wellinda?",
+        "faq-answer-1": "Wellinda is a health and wellness brand specializing in tailored supplements for women experiencing menopause. These supplements are carefully crafted to address the unique nutritional needs of women during this life stage, fostering overall well-being.",
         "faq-question-2": "What will happen after I order??",
         "faq-answer-2": "2",
         "faq-question-3": "What will happen after I order?",
