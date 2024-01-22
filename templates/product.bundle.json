@@ -2,7 +2,8 @@
   "sections": {
     "single_product_hero": {
       "type": "single-product-hero",
-      "settings": {}
+      "settings": {
+      }
     },
     "landing_delivery": {
       "type": "landing-delivery",
@@ -23,24 +24,26 @@
       }
     },
     "bundle_product_approach": {
-      "type": "bundle-product-approach.liquid"
+      "type": "bundle-product-approach",
+      "settings": {
+      }
     },
     "faq": {
       "type": "single-product-faq",
       "settings": {
         "faq-title": "Our customers often ask",
-        "faq-question-1": "What will happen after I order?",
-        "faq-answer-1": "1",
-        "faq-question-2": "What will happen after I order??",
-        "faq-answer-2": "2",
-        "faq-question-3": "What will happen after I order?",
-        "faq-answer-3": "3",
-        "faq-question-4": "What will happen after I order?",
-        "faq-answer-4": "4",
-        "faq-question-5": "What will happen after I order?",
-        "faq-answer-5": "5",
-        "faq-question-6": "What will happen after I order?",
-        "faq-answer-6": "6"
+        "faq-question-1": "What is Wellinda?",
+        "faq-answer-1": "Wellinda is a health and wellness brand specializing in tailored supplements for women experiencing menopause. These supplements are carefully crafted to address the unique nutritional needs of women during this life stage, fostering overall well-being.",
+        "faq-question-2": "Why do I need to use supplements?",
+        "faq-answer-2": "A dietary supplement adds essential nutrients that might be hard to obtain from regular diet alone. For instance, in winter, when sunlight exposure is limited, vitamin D supplementation becomes necessary. Similarly, while collagen is available in small quantities from food, taking specific doses via supplements can notably benefit skin and joint health. Wellinda’s approach is simple, fix your diet first then consider supplements.",
+        "faq-question-3": "Are there any side effects?",
+        "faq-answer-3": "There are no side effects to the supplements we recommend. Most, if not all of the products we sell are made up of natural ingredients that can be obtained from the diet.",
+        "faq-question-4": "What kind of quality controls do you have?",
+        "faq-answer-4": "We rigorously assess the quality and manufacturing processes used to develop our products before selling them on our site. All products and ingredients have FDA approval and all are manufactured in facilities with ISO or HACCP Certification.",
+        "faq-question-5": "Who should use Wellinda supplements?",
+        "faq-answer-5": "Wellinda supplements have been specifically selected and formulated to support the health, wellbeing and performance of middle aged women.",
+        "faq-question-6": "How do I know which products are best for me?",
+        "faq-answer-6": "Our products have been selected and developed by nutrition experts, with over 10 years of experience in applied nutrition. They assess each individual ingredient to ensure it is provided in the most bioavailable form, in the most efficacious dosage, with natural ingredients and flavorings, supported by the latest scientific research."
       }
     }
   },
