@@ -95,7 +95,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/favicon_1d3f4684-2640-494c-9d8e-a42d275d7ad0.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.webp",
     "currency_code_enabled": true,
     "sections": {
       "announcement-bar": {
@@ -120,7 +120,6 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/logo.svg",
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
@@ -134,7 +133,6 @@
         "type": "footer",
         "settings": {
           "footer-title": "Wellinda",
-          "logo": "shopify:\/\/shop_images\/logo_white.svg",
           "footer-text": "The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging.",
           "ig-url": "https:\/\/www.instagram.com\/reverse.program\/",
           "fb-url": "https:\/\/www.facebook.com\/reverseprogram",
