@@ -157,7 +157,8 @@
                         <div class="card-content d-flex flex-row-reverse flex-md-column">
                             <div class="w-100">
                                 <h3 class="card-quantity">Single</h3>
-                                <p class="card-ppp">{{ product.variants.first.price | money }}
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants.first.price | money }}</span>
                                     <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
                                 <p class="card-total">{{ product.variants.first.price | money }} total price to pay</p>
                             </div>
@@ -187,7 +188,8 @@
                         <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
                             <div class="w-100">
                                 <h3 class="card-quantity">5-pack</h3>
-                                <p class="card-ppp">{{ product.variants[2].price | divided_by: 5 | money }}
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants[2].price | divided_by: 5 | money }}</span>
                                     <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
                                 <p class="card-total">{{ product.variants[2].price | money }} total price to pay</p>
                             </div>
@@ -202,7 +204,8 @@
                         <div class="card-content d-flex flex-row-reverse flex-md-column">
                             <div class="w-100">
                                 <h3 class="card-quantity">3-pack</h3>
-                                <p class="card-ppp">{{ product.variants[1].price | divided_by: 3 | money }}
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants[1].price | divided_by: 3 | money }}</span>
                                     <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
                                 <p class="card-total">{{ product.variants[1].price | money }} total price to pay</p>
                             </div>
