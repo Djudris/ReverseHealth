@@ -2936,7 +2936,8 @@ h1,
 .contact-title,
 .best-seller-title,
 .review-card-stars p,
-.benefits-title
+.benefits-title,
+.card__heading
 {
     letter-spacing: normal;
     color: #1D2E42;

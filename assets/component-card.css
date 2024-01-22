@@ -147,27 +147,26 @@
 }
 
 .card__heading {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 170%;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
   text-align: center;
-  text-transform: uppercase;
-  color: #505050;
+  color: #1D2E42;
 }
 
 a:hover {
-  color: #505050;
+  color: #37346A;
 }
 
 .price__regular .price-item--regular {
   text-transform: lowercase;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 170%;
-  color: #505050;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1D2E42;
 }
 
 form {
@@ -203,11 +202,11 @@ form {
   text-align: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 170%;
+  font-size: 20px;
+  line-height: 150%;
   text-decoration-line: underline;
   color: #1D2E42;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .card-read-more:hover {
@@ -237,12 +236,11 @@ form {
   }
 
   .card__heading {
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-size: 24px;
   }
 
   .price__regular .price-item--regular {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .btn-add-to-cart {
@@ -253,8 +251,8 @@ form {
   }
 
   .card-read-more {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 17px;
+    margin-bottom: 25px;
   }
 }
 
