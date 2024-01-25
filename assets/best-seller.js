@@ -17,12 +17,7 @@ $(document).ready(function () {
                 margin: 30,
                 items: 2,
             },
-            768: {
-                items: 2,
-                margin: 30,
-
-            },
-            992: {
+            1400: {
                 items: 3,
                 margin: 25,
             }
