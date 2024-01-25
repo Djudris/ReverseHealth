@@ -32,15 +32,10 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-12 d-lg-flex justify-content-lg-end order-2 order-lg-4 p-0">
-                    <div class="w-100 text-lg-center">
+                    <div class="w-100 ">
                         <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-3 }}</h3>
-                        <div class="d-flex d-lg-block justify-content-between">
-                            <a class="download-margin d-flex justify-content-center" href="https://play.google.com/store/apps/details?id=reverse.health.app&hl=en&gl=US" target="blank">
-                                <img loading="lazy" class="footer-download d-lg-block" src="{{ 'GooglePlay.png' | asset_url }}" alt="Download on google play">
-                            </a>
-                            <a class="download-margin d-flex justify-content-center" href="https://apps.apple.com/app/reverse-health-weight-loss/id6464588020" target="blank">
-                                <img loading="lazy" class="footer-download d-lg-block" src="{{ 'AppStore.png' | asset_url }}" alt="Download on apple store">
-                            </a>
+                        <div class="d-flex d-lg-block">
+                            <a href="mailto:{{ section.settings.footer-email }}" class="footer-href text-decoration-none">{{ section.settings.footer-email }}</a>
                         </div>
                     </div>
                 </div>
@@ -96,16 +91,10 @@
 "default":"The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging."
 },
 {
-"id": "ig-url",
+"id": "footer-email",
 "type": "text",
-"label": "Instagram url",
-"default":"https://www.instagram.com/reverse.program/"
-},
-{
-"id": "fb-url",
-"type": "text",
-"label": "Facebook url",
-"default":"https://www.facebook.com/reverseprogram"
+"label": "Contact us email",
+"default":"care@wellinda.health"
 },
 {
 "id": "footer-subtitle-1",
