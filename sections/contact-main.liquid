@@ -2,12 +2,12 @@
 <section id="contacts-page">
     <div class="container contact-height">
         <div class="row d-flex justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <h2 class="contact-title text-center">
                     Do you have questions?
                 </h2>
                 <p class="contact-description text-center">
-                    Explore our <a href="{{ section.settings.contact-url }}" class="contact-link" target="_blank">Help Center</a> for assistance.
+                    Do you have questions? Contact us at <a href="mailto:{{ section.settings.contact-email }}" class="contact-link" target="_blank">{{ section.settings.contact-email }}</a>
                 </p>
             </div>
         </div>
@@ -21,9 +21,9 @@
 "settings": [
 {
 "type": "text",
-"id": "contact-url",
-"default": "https://help.reverse.health/en/",
-"label": "Help center full URL"
+"id": "contact-email",
+"default": "care@wellinda.health",
+"label": "Contact us email"
 }]
 }
 {% endschema %}
