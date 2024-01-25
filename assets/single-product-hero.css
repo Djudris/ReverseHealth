@@ -64,7 +64,7 @@ button.disabled {
 }
 
 .bulletpoint-text span {
-    height: 19px;
+    padding-top: 3px;
     line-height: normal;
 }
 
