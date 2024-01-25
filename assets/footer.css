@@ -71,10 +71,16 @@
 
 .footer-info-text {
     letter-spacing: normal;
-    margin: 20px 30px;
+    margin: 20px 0;
     line-height: 150%;
     font-size: 12px;
     color: white !important;
+}
+
+@media screen and (max-width: 575px) {
+    .footer-info-text {
+        margin: 20px 15px;
+    }
 }
 
 .footer-border-mobile {
