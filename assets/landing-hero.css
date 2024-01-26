@@ -4,7 +4,7 @@
     font-size: 30px !important;
     font-weight: 700;
     line-height: 150%;
-    padding: 0 10px;
+    box-shadow: 10px 0 0 0 #4F4B91, -10px 0 0 0 #4F4B91;
     -webkit-box-decoration-break: clone;
     -moz-box-decoration-break: clone;
     box-decoration-break: clone;
