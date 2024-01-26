@@ -5,16 +5,11 @@
     <div class="container d-flex justify-content-center align-items-center flex-column {% if product.metafields.my_fields.consumption_heading_2 != ''%} {% if product.metafields.my_fields.consumption_heading_3 != ''%} padding-bottom-15 {% endif %} {% endif %}">
         <h2 class="how-title text-center">{{ product.metafields.my_fields.use_heading }}</h2>
         <div class="how-products d-flex row justify-content-between
-        {% if product.metafields.my_fields.consumption_heading_2 != blank %}
+        {% if product.metafields.my_fields.consumption_heading_2 != blank or product.metafields.my_fields.consumption_heading_3 != blank%}
             justify-content-lg-start
         {% else %}
-            {% if product.metafields.my_fields.consumption_heading_3 != blank%}
-                justify-content-lg-start
-            {% else %}
-                justify-content-lg-center
-            {% endif %}
+            justify-content-lg-center
         {% endif %}
-
         w-100">
             {% if product.metafields.my_fields.consumption_heading_1 %}
                 <div class="text-center d-flex d-lg-block width-1  single-product-block">
