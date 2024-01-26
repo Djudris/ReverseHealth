@@ -85,11 +85,24 @@
 }
 @media screen and (min-width: 1200px) {
     .how-bg .container {
-        max-width: calc(100% - 140px);
+        max-width: 1360px !important;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .how-bg .container {
+        padding: 0 15px;
+    }
+    .width-1{
+        width: 31%
+    }
+    .width-3 {
+        width: 32.5%;
+    }
+
+    .width-2 {
+        width: 36.5%;
+    }
     .padding-bottom-15 {
         padding-bottom: 0;
     }
