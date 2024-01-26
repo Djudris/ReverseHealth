@@ -82,6 +82,11 @@
   background: #464284;
 }
 
+.max-h-360 {
+  max-height: 360px;
+  width: auto;
+}
+
 .benefits-photo {
   border-radius: 20px;
 }

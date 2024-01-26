@@ -13,10 +13,10 @@
         <!-- Product 1 -->
         {% if product.metafields.my_fields.bundle_benefits_title_1 %}
             <div class="row-margin row overflow-hidden">
-                <div class="col-lg-6 col-12 d-flex position-relative order-2 justify-content-lg-start justify-content-center">
-                    <img class="benefits-photo w-lg-100" src="{{ product.metafields.my_fields.bundle_product_image_1 | img_url: '1000x1000' }}" alt="Product 1">
+                <div class="col-lg-4 col-12 d-flex position-relative order-2 justify-content-center">
+                    <img class="benefits-photo max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_1 | img_url: '1000x1000' }}" alt="Product 1">
                 </div>
-                <div class="col-lg-6 col-12 d-flex flex-column justify-content-start order-1 ">
+                <div class="col-lg-8 col-12 d-flex flex-column justify-content-start order-1 ">
                     {% if product.metafields.my_fields.bundle_benefits_subtitle_1 %}
                     <h3 class="benefits-subtitle">
                         {{ product.metafields.my_fields.bundle_benefits_subtitle_1 }}
@@ -35,10 +35,10 @@
         <!-- Product 2-->
         {% if product.metafields.my_fields.bundle_benefits_title_2 %}
             <div class="row-margin row bg-gray overflow-hidden benefits-mobile-margin">
-                <div class="col-lg-6 col-12 d-flex order-2 order-lg-1  justify-content-lg-end position-relative justify-content-center">
-                    <img class="benefits-photo w-lg-100" src="{{ product.metafields.my_fields.bundle_product_image_2 | img_url: '1000x1000' }}" alt="Product 2">
+                <div class="col-lg-4 col-12 d-flex order-2 order-lg-1  position-relative justify-content-center">
+                    <img class="benefits-photo max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_2 | img_url: '1000x1000' }}" alt="Product 2">
                 </div>
-                <div class="col-lg-6 col-12 d-flex flex-column order-1 order-lg-2 justify-content-start">
+                <div class="col-lg-8 col-12 d-flex flex-column order-1 order-lg-2 justify-content-start">
                     {% if product.metafields.my_fields.bundle_benefits_subtitle_2 %}
                         <h3 class="benefits-subtitle">
                             {{ product.metafields.my_fields.bundle_benefits_subtitle_2 }}
@@ -58,7 +58,7 @@
         {% if product.metafields.my_fields.bundle_benefits_title_3 %}
 
             <div class="row-margin row overflow-hidden">
-                <div class="col-lg-6 col-12 d-flex flex-column justify-content-start ">
+                <div class="col-lg-8 col-12 d-flex flex-column justify-content-start ">
                     {% if product.metafields.my_fields.bundle_benefits_subtitle_3 %}
                         <h3 class="benefits-subtitle">
                             {{ product.metafields.my_fields.bundle_benefits_subtitle_3 }}
@@ -71,18 +71,18 @@
                         {{ product.metafields.my_fields.bundle_benefits_text_3 }}
                     </p>
                 </div>
-                <div class="col-lg-6 col-12 d-flex position-relative justify-content-lg-start justify-content-center">
-                    <img class="benefits-photo w-lg-100" src="{{ product.metafields.my_fields.bundle_product_image_3 | img_url: '1000x1000' }}" alt="Product 3">
+                <div class="col-lg-4 col-12 d-flex position-relative  justify-content-center">
+                    <img class="benefits-photo max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_3 | img_url: '1000x1000' }}" alt="Product 3">
                 </div>
             </div>
         {% endif %}
         <!-- Product 4-->
         {% if product.metafields.my_fields.bundle_benefits_title_4 %}
             <div class="row-margin row bg-gray overflow-hidden benefits-mobile-margin">
-                <div class="col-lg-6 col-12 d-flex order-2 order-lg-1 justify-content-lg-end position-relative justify-content-center">
-                    <img class="benefits-photo" src="{{ product.metafields.my_fields.bundle_product_image_4 | img_url: '450x500' }}" alt="Product 2">
+                <div class="col-lg-4 col-12 d-flex order-2 order-lg-1 position-relative justify-content-center">
+                    <img class="benefits-photo  max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_4 | img_url: '450x500' }}" alt="Product 2">
                 </div>
-                <div class="col-lg-6 col-12 d-flex order-1 order-lg-2 flex-column justify-content-center ">
+                <div class="col-lg-8 col-12 d-flex order-1 order-lg-2 flex-column justify-content-center ">
                     {% if product.metafields.my_fields.bundle_benefits_subtitle_4 %}
                         <h3 class="benefits-subtitle">
                             {{ product.metafields.my_fields.bundle_benefits_subtitle_4 }}
@@ -101,7 +101,7 @@
         {% if product.metafields.my_fields.bundle_benefits_title_5 %}
 
             <div class="row-margin row overflow-hidden">
-                <div class="col-lg-6 col-12 d-flex flex-column justify-content-center ">
+                <div class="col-lg-8 col-12 d-flex flex-column justify-content-center ">
                     {% if product.metafields.my_fields.bundle_benefits_subtitle_5 %}
                     <h3 class="benefits-subtitle">
                         {{ product.metafields.my_fields.bundle_benefits_subtitle_5 }}
@@ -114,18 +114,18 @@
                         {{ product.metafields.my_fields.bundle_benefits_text_5 }}
                     </p>
                 </div>
-                <div class="col-lg-6 col-12 d-flex position-relative justify-content-lg-start justify-content-center">
-                    <img class="benefits-photo" src="{{ product.metafields.my_fields.bundle_product_image_5 | img_url: '450x500' }}" alt="Product 3">
+                <div class="col-lg-4 col-12 d-flex position-relative justify-content-center">
+                    <img class="benefits-photo  max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_5 | img_url: '450x500' }}" alt="Product 3">
                 </div>
             </div>
         {% endif %}
         <!-- Product 6-->
         {% if product.metafields.my_fields.bundle_benefits_title_6 %}
             <div class="row-margin row bg-gray overflow-hidden benefits-mobile-margin">
-                <div class="col-lg-6 col-12 d-flex justify-content-lg-end position-relative justify-content-center order-2 order-lg-1 ">
-                    <img class="benefits-photo" src="{{ product.metafields.my_fields.bundle_product_image_6 | img_url: '450x500' }}" alt="Product 2">
+                <div class="col-lg-4 col-12 d-flex position-relative justify-content-center order-2 order-lg-1 ">
+                    <img class="benefits-photo  max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_6 | img_url: '450x500' }}" alt="Product 2">
                 </div>
-                <div class="col-lg-6 col-12 d-flex flex-column justify-content-center order-1 order-lg-2 ">
+                <div class="col-lg-8 col-12 d-flex flex-column justify-content-center order-1 order-lg-2 ">
                     {% if product.metafields.my_fields.bundle_benefits_subtitle_6 %}
                     <h3 class="benefits-subtitle">
                         {{ product.metafields.my_fields.bundle_benefits_subtitle_6 }}
@@ -143,7 +143,7 @@
         <!-- Product 7-->
         {% if product.metafields.my_fields.bundle_benefits_title_7 %}
             <div class="row-margin row bg-gray overflow-hidden">
-                <div class="col-lg-6 col-12 d-flex flex-column justify-content-center ">
+                <div class="col-lg-8 col-12 d-flex flex-column justify-content-center ">
                     <h3 class="benefits-subtitle">
                         {{ product.metafields.my_fields.bundle_benefits_subtitle_7 }}
                     </h3>
@@ -154,8 +154,8 @@
                         {{ product.metafields.my_fields.bundle_benefits_text_7 }}
                     </p>
                 </div>
-                <div class="col-lg-6 col-12 d-flex justify-content-lg-end position-relative">
-                    <img class="benefits-photo" src="{{ product.metafields.my_fields.bundle_product_image_7 | img_url: '450x500' }}" alt="Product 2">
+                <div class="col-lg-4 col-12 d-flex justify-content-center position-relative">
+                    <img class="benefits-photo  max-h-360" src="{{ product.metafields.my_fields.bundle_product_image_7 | img_url: '450x500' }}" alt="Product 2">
                 </div>
             </div>
         {% endif %}
