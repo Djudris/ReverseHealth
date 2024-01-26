@@ -112,7 +112,17 @@
   margin-bottom: 1rem;
 }
 
+.collection__title h2.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
 @media screen and (min-width: 990px) {
+  .collection__title h2.title {
+    font-size: 28px;
+  }
+
   .collection__title--desktop-slider .title {
     margin-bottom: 2.5rem;
   }

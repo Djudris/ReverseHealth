@@ -81,6 +81,7 @@ cart-items {
 }
 
 .cart-item__name {
+  font-family: 'Overpass', sans-serif;
   text-decoration: none;
   display: block;
 }
