@@ -9,7 +9,7 @@
                 </div>
             {% endif %}
 
-            <div class="d-flex justify-content-center  align-items-center justify-content-lg-end col-lg-6 col-12 {% if product.metafields.my_fields.composition_title == null and product.metafields.my_fields.composition_large_table == false %} order-lg-2 order-1 {% endif %}">
+            <div class="d-flex justify-content-center nutritions-icons-container align-items-center justify-content-lg-end col-lg-6 col-12 {% if product.metafields.my_fields.composition_title == null and product.metafields.my_fields.composition_large_table == false %} order-lg-2 order-1 {% endif %}">
                 {% if product.metafields.my_fields.product_is_sugar_free %}
                     <img class="nutritions-icon" src="{{ 'sugar_free.svg' | asset_url }}" alt="Sugar Free">
                 {% endif %}
