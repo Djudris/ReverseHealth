@@ -2,12 +2,12 @@
 <section>
     <div class="container nutritions-bg">
         <div class="row d-flex justify-content-center">
-            {% comment %}{% if product.metafields.my_fields.composition_title %}{% endcomment %}
+            {% if product.metafields.my_fields.composition_title %}
                 <div class="col-lg-6 col-12">
                     <h2 class="composition-title">{{ product.metafields.my_fields.composition_title }}</h2>
                     <p class="composition-text"> {{ product.metafields.my_fields.composition_text }}</p>
                 </div>
-            {% comment %}{% endif %}{% endcomment %}
+            {% endif %}
 
             <div class="d-flex justify-content-center nutritions-icons-container align-items-center justify-content-lg-end col-lg-6 col-12 {% if product.metafields.my_fields.composition_title == null and product.metafields.my_fields.composition_large_table == false %} order-lg-2 order-1 {% endif %}">
                 {% if product.metafields.my_fields.product_is_sugar_free %}
