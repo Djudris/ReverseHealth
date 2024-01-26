@@ -311,9 +311,9 @@ div.yotpo {
 
 .best-value-image {
     position: absolute;
-    height: 46px;
-    top: -15px;
-    left: -12px;
+    height: 56px;
+    top: -18px;
+    left: -15px;
 }
 
 .best-value-text {
@@ -323,7 +323,7 @@ div.yotpo {
     text-transform: capitalize;
     font-style: normal;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 14px;
     line-height: normal;
     color: #FFFFFF !important;
     padding: 11px 0px 11px 0px;
