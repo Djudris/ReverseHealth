@@ -9,6 +9,10 @@
     gap: 0rem;
 }
 
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
 .how-bg .container {
     overflow: visible;
 }
@@ -86,6 +90,9 @@
 }
 
 @media screen and (min-width: 992px) {
+    .padding-bottom-15 {
+        padding-bottom: 0;
+    }
     .single-product-block {
         z-index: 2;
         height: unset;
