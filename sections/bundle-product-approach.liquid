@@ -4,10 +4,10 @@
     <div class="container">
         <div class="d-flex justify-content-center">
             {% if product.metafields.my_fields.bundle_top_image %}
-                <img class="benefits-banner-img top desktop" src="{{ product.metafields.my_fields.bundle_top_image | img_url: '1240x280' }}" alt="Coaches">
+                <img class="benefits-banner-img top desktop" src="{{ product.metafields.my_fields.bundle_top_image | img_url: '1920x1080' }}" alt="Coaches">
             {% endif %}
             {% if product.metafields.my_fields.bundle_bottom_image %}
-                <img loading="eager" class="benefits-banner-img top mobile" src="{{ product.metafields.my_fields.bundle_top_image_mobile | img_url: '1240x280' }}" alt="Coaches">
+                <img loading="eager" class="benefits-banner-img top mobile" src="{{ product.metafields.my_fields.bundle_top_image_mobile | img_url: '1240x400' }}" alt="Coaches">
             {% endif %}
         </div>
         <!-- Product 1 -->
@@ -165,10 +165,10 @@
         </div>
         <div class="d-flex justify-content-center">
             {% if product.metafields.my_fields.bundle_bottom_image %}
-                <img class="benefits-banner-img bottom desktop" src="{{ product.metafields.my_fields.bundle_bottom_image | img_url: '1240x280' }}" alt="Benefits bottom image">
+                <img class="benefits-banner-img bottom desktop" src="{{ product.metafields.my_fields.bundle_bottom_image | img_url: '1920x1080' }}" alt="Benefits bottom image">
             {% endif %}
             {% if product.metafields.my_fields.bundle_bottom_image_mobile %}
-                <img loading="eager" class="benefits-banner-img bottom mobile" src="{{ product.metafields.my_fields.bundle_bottom_image_mobile | img_url: '1240x280' }}" alt="Coaches">
+                <img loading="eager" class="benefits-banner-img bottom mobile" src="{{ product.metafields.my_fields.bundle_bottom_image_mobile | img_url: '1240x400' }}" alt="Coaches">
             {% endif %}
         </div>
     </div>
