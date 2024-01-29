@@ -8,7 +8,7 @@
     "landing_delivery": {
       "type": "landing-delivery",
       "settings": {
-        "title": "Risk-free purchase and fast delivery",
+        "title": "14-day money back guarantee and fast delivery",
         "title-sm-1": "Fast delivery time",
         "text-1": "Receive your order in 1- 4 business days",
         "title-sm-2": "Free shipping",
@@ -20,7 +20,7 @@
     "single_product_coaches": {
       "type": "single-product-coaches",
       "settings": {
-        "title": "Our program health coaches are featured in"
+        "title": "Our wellness advisors are featured in"
       }
     },
     "single_product_approach": {
