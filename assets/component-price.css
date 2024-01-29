@@ -8,7 +8,15 @@
 }
 
 .price--end {
+  font-weight: 600;
+  font-size: 17px;
   text-align: right;
+}
+
+@media screen and (min-width: 992px) {
+  .price--end {
+    font-size: 20px;
+  }
 }
 
 .price .price-item {
