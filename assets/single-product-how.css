@@ -64,6 +64,11 @@
     line-height: 150%;
     margin-top: 1px;
 }
+
+.how-text::after {
+    content: ' \A\A';
+    white-space: pre;
+}
 .how-icon {
     width: 110px;
     height: 110px;
