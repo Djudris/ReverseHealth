@@ -52,6 +52,7 @@
     margin-top: 5px;
 }
 
+.line-clamp-4,
 .line-clamp-3 {
     overflow: hidden;
     display: -webkit-box;
@@ -59,6 +60,11 @@
     -webkit-line-clamp: 3;
     -webkit-text-fill-color: white;
 }
+
+.line-clamp-4 {
+    -webkit-line-clamp: 4;
+}
+
 .how-text {
     color: white;
     font-size: 17px;
@@ -118,6 +124,7 @@
         height: unset;
     }
 
+    .line-clamp-4,
     .line-clamp-3 {
         overflow: visible;
         display: block;

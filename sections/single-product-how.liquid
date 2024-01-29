@@ -40,5 +40,19 @@
             {% endif %}
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const howTextHeaders = document.querySelectorAll('.how-subtitle');
+            howTextHeaders.forEach((header) => {
+                if (header.clientHeight <= 30) {
+                    const textParent = header.parentElement.parentElement.querySelector('.line-clamp-3');
+                    if(textParent) {
+                        textParent.classList.remove('line-clamp-3');
+                        textParent.classList.add('line-clamp-4');
+                    }
+                }
+            })
+        })
+    </script>
 </section>
 
