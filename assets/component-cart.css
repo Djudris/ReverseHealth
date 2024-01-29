@@ -250,6 +250,8 @@ cart-items {
   }
 }
 
+
+
 .cart-note__label {
   display: inline-block;
   margin-bottom: 1rem;
@@ -272,6 +274,10 @@ cart-items {
 }
 .cart__ctas {
   text-align: center;
+}
+
+.dynamic-checkout__content iframe {
+  border-radius: 15px;
 }
 
 @media screen and (min-width: 750px) {
