@@ -12,15 +12,15 @@
     margin-bottom: 50px;
 }
 .faq-heading {
+    margin-top: 4px;
     padding-top: 4px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     font-weight: 400;
     font-size: 1.063rem;
-    line-height: 1.063rem;
+    line-height: 150%;
     color: #1D2E42;
-    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -138,6 +138,7 @@
 
     .faq-heading {
         padding-top: 4px;
+        margin-top: 0;
         font-size: 1.25rem;
         line-height: 1.25rem;
     }

@@ -80,6 +80,18 @@
 
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if(window.innerWidth >= 992) return;
+            const faqHeadings = document.querySelectorAll('.faq-heading');
+            faqHeadings.forEach((heading) => {
+                if(heading.clientHeight <= 30) {
+                    // set the heading parent element height to 60
+                    heading.parentElement.style.height = '60px';
+                }
+            });
+        })
+    </script>
 
 </div>
 {{ 'single-product-faq.js'  | asset_url | script_tag     }}
