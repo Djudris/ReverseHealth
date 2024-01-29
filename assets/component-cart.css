@@ -107,6 +107,9 @@ cart-items.is-empty .title-wrapper-with-link,
 }
 
 @media screen and (min-width: 990px) {
+  [data-testid="ApplePay-button"] {
+    border-radius: 15px !important;
+  }
   .cart__warnings {
     padding: 7rem 0 1rem;
   }
@@ -238,6 +241,10 @@ cart-items {
 
 .cart__blocks>*+* {
   margin-top: 1rem;
+}
+
+[data-testid="ApplePay-button"] {
+  border-radius: 12px;
 }
 
 .cart__dynamic-checkout-buttons div[role='button'] {
