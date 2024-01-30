@@ -1207,7 +1207,7 @@ summary::-webkit-details-marker {
     display: block;
     max-width: calc(100% - 40px);
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 20px;
     height: 100%;
     width: 100%;
