@@ -78,14 +78,14 @@
         "heading_KGtFjJ": {
           "type": "heading",
           "settings": {
-            "heading": "Join for Exclusive Offers: Be Part of Our Community!",
+            "heading": "Join for Exclusive Offers: Be Part of Our Wellness Community!",
             "heading_size": "h2"
           }
         },
         "paragraph_chVdQ4": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about exclusive offers and wellness news. <strong>We are grateful for your trust and promise to respect your inbox. <\/strong><\/p>"
+            "text": "<p><strong>We are grateful for your trust and promise to respect your inbox. <\/strong><\/p>"
           }
         },
         "email_form_CEBVph": {
@@ -103,7 +103,7 @@
         "color_scheme": "background-1",
         "full_width": false,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 60
       }
     }
   },
