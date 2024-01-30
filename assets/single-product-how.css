@@ -89,7 +89,6 @@
 .single-product-block {
     padding-left: 0;
     padding-right: 0;
-    height: 170px;
 }
 
 .single-product-block div {
@@ -105,23 +104,40 @@
     }
 }
 
+.width-1,
+.width-1-1 {
+    height: 180px;
+}
+
+.width-3 {
+    height: 175px;
+}
+
+.width-2 {
+    height: 155px;
+}
+
 @media screen and (min-width: 992px) {
     .how-bg .container {
         padding: 0 15px;
     }
     .width-1{
-        width: 31%
+        width: 31%;
+        height: unset;
     }
     .width-3 {
         width: 31.5%;
+        height: unset;
     }
 
     .width-1-1 {
         width: 34%;
+        height: unset;
     }
 
     .width-2 {
         width: 36.5%;
+        height: unset;
     }
     .padding-bottom-30 {
         padding-bottom: 0;
