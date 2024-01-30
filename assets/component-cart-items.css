@@ -354,13 +354,15 @@ cart-remove-button .icon-remove {
 }
 
 @media screen and (min-width: 990px) {
-
+  .cart-item cart-remove-button {
+    padding-bottom: 1rem;
+  }
   .cart-item .cart-item__quantity,
   .cart-items .cart-items__heading--wide {
     padding-left: 6rem;
   }
   .cart-item__price-wrapper>*:only-child:not(.cart-item__discounted-prices) {
-    margin-top: 1.25rem;
+    margin-top: 1.45rem;
   }
 
   .cart-item__details {
