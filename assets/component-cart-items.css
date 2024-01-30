@@ -303,12 +303,12 @@ cart-remove-button .icon-remove {
 }
 
 cart-remove-button .button {
-  padding-bottom: 0.4rem;
+  padding-top: 0.4rem;
 }
 
 @media screen and (min-width: 750px) {
   cart-remove-button .button {
-    padding-bottom: 0;
+    padding-top: 0;
   }
   .cart-items {
     border-spacing: 0;
