@@ -1,7 +1,10 @@
 {
   "sections": {
     "main": {
-      "type": "contact-main"
+      "type": "contact-main",
+      "settings": {
+        "contact-email": "care@wellinda.health"
+      }
     }
   },
   "order": [
