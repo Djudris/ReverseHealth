@@ -56,6 +56,40 @@
         "faq-question-6": "How do I know which products are best for me?",
         "faq-answer-6": "Our products have been selected and developed by nutrition experts, with over 10 years of experience in applied nutrition. They assess each individual ingredient to ensure it is provided in the most bioavailable form, in the most efficacious dosage, with natural ingredients and flavorings, supported by the latest scientific research."
       }
+    },
+    "newsletter_iXxtdL": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_Cp9V3U": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8rz3ga": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email_form_aTzKgT": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_Cp9V3U",
+        "paragraph_8rz3ga",
+        "email_form_aTzKgT"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -65,6 +99,7 @@
     "single_product_approach",
     "single_product_how",
     "single_product_nutritions",
-    "faq"
+    "faq",
+    "newsletter_iXxtdL"
   ]
 }
