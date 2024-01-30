@@ -173,6 +173,7 @@ cart-remove-button .button:not([disabled]):hover {
 cart-remove-button .icon-remove {
   height: 1.5rem;
   width: 1.5rem;
+  color: #1D2E42;
 }
 
 .cart-item .loading-overlay {
@@ -248,6 +249,7 @@ cart-remove-button .icon-remove {
 
   .quantity {
     width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+    color: #1D2E42;
     max-width: 150px;
   }
 
