@@ -697,7 +697,7 @@ details > * {
 
 .underlined-link,
 .customer a {
-    color: rgba(var(--color-link), var(--alpha-link));
+    color: rgba(29,46,66, var(--alpha-link));
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
     transition: text-decoration-thickness ease 100ms;
@@ -949,7 +949,7 @@ summary::-webkit-details-marker {
 }
 
 .title-wrapper-with-link a {
-    color: rgb(var(--color-link));
+    color: #1D2E42;
     margin-top: 0;
     flex-shrink: 0;
 }
