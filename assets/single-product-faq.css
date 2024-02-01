@@ -25,12 +25,12 @@
 }
 
 .faq-page {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F5F7FE;
     border-radius: 15px;
-
 }
 
 .faq-page.active {
@@ -69,7 +69,6 @@
 }
 
 .faq-box {
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
