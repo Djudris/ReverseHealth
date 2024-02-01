@@ -25,16 +25,6 @@
 }
 
 
-.contact-link {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  color: #12635F;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 @media screen and (max-width:992px) {
   .contact-title {
     font-size: 24px;
@@ -47,9 +37,4 @@
     line-height: 150%;
   }
 
-
-  .contact-link {
-    font-size: 17px;
-    line-height: 150%;
-  }
 }
