@@ -62,6 +62,22 @@
         "title": "Our program health Coaches are featured in"
       }
     },
+    "image_with_text_k78bkh": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "faq": {
       "type": "single-product-faq",
       "settings": {
@@ -122,6 +138,7 @@
     "landing_mission",
     "landing_delivery",
     "landing_coaches",
+    "image_with_text_k78bkh",
     "faq",
     "newsletter_xDdayT"
   ]
