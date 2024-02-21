@@ -17,6 +17,7 @@
     },
     "reviews": {
       "type": "landing-reviews",
+      "disabled": true,
       "settings": {
         "title": "3,200+ women already added collagen to their order!",
         "review-card-1-name": "Jane",
@@ -35,6 +36,7 @@
     },
     "landing_mission": {
       "type": "landing-mission",
+      "disabled": true,
       "settings": {
         "title_small": "Our mission",
         "title": "Promoting confidence with simple supplements",
@@ -52,6 +54,12 @@
         "text-2": "U.S only",
         "title-sm-3": "Essential daily nutrients",
         "text-3": "14-day, no questions asked refund"
+      }
+    },
+    "single_product_coaches_BBJAim": {
+      "type": "single-product-coaches",
+      "settings": {
+        "title": "Our program health Coaches are featured in"
       }
     },
     "faq": {
@@ -113,6 +121,7 @@
     "reviews",
     "landing_mission",
     "landing_delivery",
+    "single_product_coaches_BBJAim",
     "faq",
     "newsletter_xDdayT"
   ]
