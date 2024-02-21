@@ -282,7 +282,7 @@ div.yotpo {
 .btn-add-to-cart {
     height: 60px;
     margin-bottom: 15px;
-    background: #4F4B91;
+    background: var(--primary-button-color, #FF6F61);
     border-radius: 0.75rem;
     font-style: normal;
     font-weight: 700;
@@ -296,7 +296,7 @@ div.yotpo {
 
 .btn-add-to-cart:hover {
     color: #FFFFFF;
-    background: #464284;
+    background: var(--primary-button-hover-color, #ff5b4d);
 }
 
 .add-to-cart-card form {
@@ -624,7 +624,6 @@ div.yotpo {
 
     .btn-add-to-cart {
         margin-bottom: 20px;
-        background: #4F4B91;
         border-radius: 15px;
         font-style: normal;
         font-weight: 700;
@@ -638,6 +637,5 @@ div.yotpo {
 
     .btn-add-to-cart:hover {
         color: #FFFFFF;
-        background: #464284;
     }
 }

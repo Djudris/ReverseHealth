@@ -56,8 +56,8 @@
         "text-3": "14-day, no questions asked refund"
       }
     },
-    "single_product_coaches_BBJAim": {
-      "type": "single-product-coaches",
+    "landing_coaches": {
+      "type": "landing-coaches",
       "settings": {
         "title": "Our program health Coaches are featured in"
       }
@@ -121,7 +121,7 @@
     "reviews",
     "landing_mission",
     "landing_delivery",
-    "single_product_coaches_BBJAim",
+    "landing_coaches",
     "faq",
     "newsletter_xDdayT"
   ]

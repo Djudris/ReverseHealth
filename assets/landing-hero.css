@@ -95,12 +95,12 @@
     font-weight: bold;
     border: none;
     font-size: 17px;
-    background-color: #4F4B91;
+    background-color: var(--primary-button-color, #FF6F61);
     border-radius: 0.75rem;
 }
 
 .button-top:hover {
-    background: #464284;
+    background: var(--primary-button-hover-color, #ff5b4d);
     color: white;
 }
 
@@ -114,7 +114,7 @@
     color: white;
     line-height: 150%;
     font-size: 17px;
-    background: #4F4B91;
+    background: var(--primary-button-color, #FF6F61);
     border-radius: 12px;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .btn-top:hover {
-    background-color: #464284;
+    background-color: var(--primary-button-hover-color, #ff5b4d);
     color: white;
 }
 

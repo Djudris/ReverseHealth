@@ -138,14 +138,14 @@
     font-weight: 700;
     font-size: 17px;
     line-height: normal;
-    background-color: #4F4B91;
+    background-color: var(--primary-button-color, #FF6F61);
     border-radius: 15px;
     border: none;
 }
 
 .best-seller-card-btn:hover {
     color: white;
-    background: #464284;
+    background: var(--primary-button-hover-color, #ff5b4d);
 }
 
 .best-seller-card-lmore {

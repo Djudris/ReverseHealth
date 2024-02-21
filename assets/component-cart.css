@@ -5,7 +5,7 @@
 
 
 .btn.btn-primary {
-  background: #4F4B91;
+  background: var(--primary-button-color, #FF6F61);
   border-radius: 15px;
   border: none;
   font-style: normal;
@@ -22,7 +22,7 @@
 }
 
 .btn.btn-primary:hover {
-  background: #464284;
+  background: var(--primary-button-hover-color, #ff5b4d);
 }
 
 a.btn.btn-primary.empty-button {

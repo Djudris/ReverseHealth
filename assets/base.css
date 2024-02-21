@@ -693,6 +693,10 @@ details > * {
     --duration-short: 100ms;
     --duration-default: 200ms;
     --duration-long: 500ms;
+    --primary-button-color: #FF6F61;
+    --primary-button-hover-color: #ff5b4d;
+    --primary-link-color: #FF6F61;
+    --primary-link-hover-color: #ff5b4d;
 }
 
 .underlined-link,
@@ -2984,7 +2988,7 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    color: #12635F;
+    color: var(--primary-link-color, #FF6F61);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -2995,3 +2999,5 @@ p {
         line-height: 150%;
     }
 }
+
+
