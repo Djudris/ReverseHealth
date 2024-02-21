@@ -1,13 +1,10 @@
 {{ 'landing-bottom-image.css' | asset_url | stylesheet_tag }}
-
-<section>
     <div class="container image-bg">
         <div class="approach-bottom-img-container">
             <img class="approach-bottom-img mobile" fetchpriority="high" loading="eager" src="{{ section.settings.mobile_image | img_url: '1920x1080' }}" alt="{{ section.settings.mobile_image.alt | escape }}">
             <img class="approach-bottom-img desktop" src="{{ section.settings.image | img_url: '1920x1080' }}" alt="'{{ section.settings.image.alt | escape }}'">
         </div>
     </div>
-</section>
 {% schema %}
 {
   "name": "Landing Bottom Image",

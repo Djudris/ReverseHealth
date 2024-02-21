@@ -4,7 +4,7 @@
 }
 
 .approach-bottom-img-container {
-    height: fit-content;
+    max-height: 500px;
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
@@ -13,7 +13,7 @@
 .approach-bottom-img {
     object-fit: cover;
     width: 100%;
-    height: auto;
+    max-height: 500px;
     object-position: center;
     border-radius:15px;
 }
