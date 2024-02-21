@@ -1,0 +1,28 @@
+{{ 'landing-bottom-image.css' | asset_url | stylesheet_tag }}
+
+<section>
+    <div class="container image-bg">
+        <div class="approach-bottom-img-container">
+            <img class="approach-bottom-img mobile" fetchpriority="high" loading="eager" src="{{ section.settings.image | img_url: '1920x1080' }}" alt="{{ section.settings.image.alt | escape }}">
+            <img class="approach-bottom-img desktop" src="{{ section.settings.image | img_url: '1920x1080' }}" alt="'{{ section.settings.image.alt | escape }}'">
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Landing Bottom Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Upload an image to display in this section."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Bottom Image"
+    }
+  ]
+}
+{% endschema %}
