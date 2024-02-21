@@ -1,0 +1,42 @@
+{{ 'landing-img-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="image-with-text">
+  <div class="image-with-text-wrapper">
+    <div class="image-with-text-image">
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">
+    </div>
+    <div class="image-with-text-content">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Upload an image for this section."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The best supplements for menopause relief"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
+    }
+  ],
+  "presets": [{
+    "name": "Default Image with Text"
+  }]
+}
+{% endschema %}
