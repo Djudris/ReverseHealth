@@ -65,8 +65,8 @@
     "landing_bottom_image": {
       "type": "landing-bottom-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/bundle-desktop-2.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/bundle-mobile-2.jpg"
+        "image": "shopify:\/\/shop_images\/bundle-desktop-1.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/bundle-mobile-1.jpg"
       }
     },
     "faq": {
