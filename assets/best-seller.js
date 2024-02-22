@@ -10,10 +10,14 @@ $(document).ready(function () {
             0: {
                 items: 1,
                 dotsEach: 1,
-                margin: 0,
+                margin: 30,
                 stagePadding: 30,
             },
             450: {
+                margin: 30,
+                items: 1,
+            },
+            767: {
                 margin: 30,
                 items: 2,
             },

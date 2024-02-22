@@ -3031,7 +3031,7 @@ p {
         text-transform: uppercase;
         font-weight: bold;
         border: none;
-        font-size: 17px;
+        font-size: 14px;
         background-color: var(--primary-button-color, #FF6F61);
         border-radius: 12px;
     }
@@ -3053,9 +3053,10 @@ p {
     font-weight: 600;
 }
 
-.rounded-image {
+.rounded-image, .rounded-image:hover, .rounded-image:focus, .rounded-image:active {
     border-radius: 12px;
 }
+
 
 .landing-shop-button-padding {
     padding-top: 20px;
@@ -3083,7 +3084,7 @@ p {
         }
     }
 
-    .rounded-image {
+    .rounded-image, .rounded-image:hover, .rounded-image:focus, .rounded-image:active {
         border-radius: 15px;
     }
 }
