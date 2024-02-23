@@ -36,12 +36,28 @@
             "image": "{{ collection.metafields.collection_fields.static_image_3.value }}",
             "text": "{{ collection.metafields.collection_fields.static_image_text_3.value }}"
           }
+        },
+        "symptom_ypENqQ": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_1.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_2.value }}"
+          }
+        },
+        "symptom_HbgPL9": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_2.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_2.value }}"
+          }
         }
       },
       "block_order": [
         "symptom_4GthUj",
         "symptom_teBtTz",
-        "symptom_9WWi69"
+        "symptom_9WWi69",
+        "symptom_ypENqQ",
+        "symptom_HbgPL9"
       ],
       "settings": {
         "title": "{{ collection.metafields.collection_fields.static_image_heading.value }}"
