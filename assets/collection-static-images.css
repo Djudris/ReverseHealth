@@ -1,41 +1,60 @@
-.menopausal-symptoms-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+.symptoms-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.menopausal-symptoms-section .section-header h2 {
-  margin-bottom: 30px;
-  font-size: 24px;
+.section-header h2 {
+  font-family: 'Jost', sans-serif;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 28px;
 }
 
 .symptoms-blocks {
-  display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
 .symptom-block {
-  flex: 1;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+  margin-bottom: 20px;
+}
+
+.symptom-block .symptom-image{
+  margin-bottom: 10px;
 }
 
 .symptom-block .symptom-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 8px; /* Adjust as needed */
+  border-radius: 15px;
 }
 
 .symptom-block .symptom-text p {
-  font-size: 16px;
-  color: #333;
+  font-size: 24px;
   margin: 0;
+  align-self: flex-start;
 }
 
-@media (max-width: 767px) {
-  .symptoms-blocks {
-    flex-direction: column;
+@media (max-width: 992px) {
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .symptom-block {
+    flex-basis: calc(50% - 20px); /* 2 columns layout */
+  }
+
+  .symptom-block .symptom-image img {
+    border-radius: 12px;
+  }
+
+  .symptom-block .symptom-text p {
+    font-size: 17px;
   }
 }
