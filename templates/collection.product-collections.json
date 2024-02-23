@@ -16,7 +16,36 @@
     "collection_static_images": {
       "type": "collection-static-images",
       "blocks": {
+        "symptom_4GthUj": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_1.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_1.value }}"
+          }
+        },
+        "symptom_teBtTz": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_2.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_3.value }}"
+          }
+        },
+        "symptom_9WWi69": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_3.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_3.value }}"
+          }
         }
+      },
+      "block_order": [
+        "symptom_4GthUj",
+        "symptom_teBtTz",
+        "symptom_9WWi69"
+      ],
+      "settings": {
+        "title": "{{ collection.metafields.collection_fields.static_image_heading.value }}"
+      }
     }
   },
   "order": [
