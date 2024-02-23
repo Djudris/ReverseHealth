@@ -1,0 +1,58 @@
+{{ 'collection-static-images.css' | asset_url | stylesheet_tag }}
+{% if section.blocks.size > 0 %}
+  <section class="menopausal-symptoms-section">
+    <div class="section-header">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="symptoms-blocks">
+      {% for block in section.blocks %}
+        <div class="symptom-block">
+          <div class="symptom-image">
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text | escape }}">
+          </div>
+          <div class="symptom-text">
+            <p>{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Menopausal Symptoms",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Targeted Menopausal Symptoms"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "symptom",
+      "name": "Symptom",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menopausal Symptoms",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

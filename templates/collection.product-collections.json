@@ -13,38 +13,9 @@
         "products_to_show": 8
       }
     },
-    "multicolumn_hcX7xX": {
-      "type": "multicolumn",
+    "collection_static_images": {
+      "type": "collection-static-images",
       "blocks": {
-        "column_8R6Ata": {
-          "type": "column",
-          "settings": {
-            "image": "{{ collection.metafields.collection_fields.static_image_1.value }}",
-            "title": "{{ collection.metafields.collection_fields.static_image_text_1.value }}",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_DGmHRQ": {
-          "type": "column",
-          "settings": {
-            "image": "{{ collection.metafields.collection_fields.static_image_2.value }}",
-            "title": "{{ collection.metafields.collection_fields.static_image_text_2.value }}",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_dyEc9G": {
-          "type": "column",
-          "settings": {
-            "image": "{{ collection.metafields.collection_fields.static_image_3.value }}",
-            "title": "{{ collection.metafields.collection_fields.static_image_text_3.value }}",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -73,6 +44,6 @@
   "order": [
     "collection_img_with_text",
     "collection_product_slider",
-    "multicolumn_hcX7xX"
+    "collection_static_images"
   ]
 }

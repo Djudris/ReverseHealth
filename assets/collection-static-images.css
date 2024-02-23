@@ -1,0 +1,41 @@
+.menopausal-symptoms-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.menopausal-symptoms-section .section-header h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.symptoms-blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.symptom-block {
+  flex: 1;
+  margin: 10px;
+}
+
+.symptom-block .symptom-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px; /* Adjust as needed */
+}
+
+.symptom-block .symptom-text p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .symptoms-blocks {
+    flex-direction: column;
+  }
+}
