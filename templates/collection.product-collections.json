@@ -17,28 +17,6 @@
       "type": "collection-static-images",
       "blocks": {
         }
-      },
-      "block_order": [
-        "column_8R6Ata",
-        "column_DGmHRQ",
-        "column_dyEc9G"
-      ],
-      "settings": {
-        "title": "{{ collection.metafields.collection_fields.static_image_heading.value }}",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
