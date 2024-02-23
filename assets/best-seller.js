@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#best_seller_carousel").owlCarousel({
+   let owl = $("#best_seller_carousel").owlCarousel({
         navigation: false, // Show next and prev buttons
         dots: false,
         autoplay: false,
@@ -28,39 +28,33 @@ $(document).ready(function () {
         },
 
     });
-    // $('.customNextBtn').click(function () {
-    //     owl.trigger('next.owl.carousel');
-    // })
-    // $('.customPrevBtn').click(function () {
-    //     owl.trigger('prev.owl.carousel');
-    // })
-    //
-    // owl.on('changed.owl.carousel', function (event) {
-    //     let index = event.item.index;
-    //     let count = event.item.count
-    //
-    //
-    //     $('.customPrevBtn').removeClass("disabled");
-    //     $('.customNextBtn').removeClass("disabled");
-    //     if (index === 0) {
-    //         $('.customPrevBtn').addClass("disabled");
-    //     }
-    //
-    //     if (screen.width >= 992) {
-    //         if (index === count - 3) {
-    //             $('.customNextBtn').addClass("disabled");
-    //         }
-    //     }
-    //     if (screen.width >= 768 && screen.width < 992) {
-    //         if (index === count - 2) {
-    //             $('.customNextBtn').addClass("disabled");
-    //         }
-    //     }
-    //     if (screen.width < 768) {
-    //         if (index === count - 1) {
-    //             $('.customNextBtn').addClass("disabled");
-    //         }
-    //     }
-    // });
+    $('.customNextBtn').click(function () {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.customPrevBtn').click(function () {
+        owl.trigger('prev.owl.carousel');
+    })
+
+    owl.on('changed.owl.carousel', function (event) {
+        let items_per_page = event.page.size; // Get the number of items per page
+        let total_items = event.item.count;   // Total number of items
+        let current_position = event.item.index; // Current position
+
+        // Enable buttons by default
+        $('.customPrevBtn').removeClass("disabled");
+        $('.customNextBtn').removeClass("disabled");
+
+        // Disable prev button at the start
+        if (current_position === 0) {
+            $('.customPrevBtn').addClass("disabled");
+        }
+
+        // Disable next button at the end
+        // Calculate the index of the first item of the last page
+        let last_page_first_item_index = total_items - items_per_page;
+        if (current_position >= last_page_first_item_index || total_items <= items_per_page) {
+            $('.customNextBtn').addClass("disabled");
+        }
+    });
 });
 

@@ -1,8 +1,14 @@
+@media screen and (min-width: 1400px) {
+    .image-with-text.container {
+        max-width: 1500px !important;
+    }
+}
+
 .image-with-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 0px;
+    padding-top: 20px;
 }
 
 .image-with-text-wrapper {
@@ -86,7 +92,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 20px;
     }
 
     .image-with-text-wrapper {
