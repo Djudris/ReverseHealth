@@ -2930,14 +2930,14 @@ html {
 }
 
 .btn:active {
-    background: var(--primary-button-color) !important;
-    border-color: var(--primary-button-color) !important;
+    background: var(--primary-button-hover-color) !important;
+    border-color: var(--primary-button-hover-color) !important;
     box-shadow: none;
 }
 
 .btn:focus {
-    background: var(--primary-button-color) !important;
-    border-color: var(--primary-button-color) !important;
+    background: var(--primary-button-hover-color) !important;
+    border-color: var(--primary-button-hover-color) !important;
     box-shadow: none;
 }
 

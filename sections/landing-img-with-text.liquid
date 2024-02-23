@@ -1,6 +1,6 @@
 {{ 'landing-img-with-text.css' | asset_url | stylesheet_tag }}
 
-<div class="image-with-text">
+<div class="image-with-text container">
   <div class="image-with-text-wrapper">
     <div class="image-with-text-image">
       <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">

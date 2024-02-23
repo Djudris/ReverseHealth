@@ -1,0 +1,34 @@
+{{ 'collection-img-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'learn-more.js' | asset_url | script_tag }}
+<div class="image-with-text container">
+    <div class="image-with-text-wrapper">
+        <div class="image-with-text-image">
+            <img src="{{ collection.metafields.collection_fields.header_image | img_url: 'master' }}" alt="{{ collection.metafields.collection_fields.header_text | escape }}">
+        </div>
+        <div class="image-with-text-content">
+            <div>
+                <h2>{{ collection.metafields.collection_fields.header_text }}</h2>
+                <div id="summary">
+                    <p class="collapse" id="collapseSummary">{{ collection.metafields.collection_fields.header_description }}</p>
+                    <span role="button" class="collapsed" data-toggle="collapse" href="" aria-expanded="false" aria-controls="collapseSummary"> Learn More... </span>
+                </div>
+            </div>
+            <div class="key-benefits">
+                {% if collection.metafields.collection_fields.benefits_header %}
+                    <p>{{ collection.metafields.collection_fields.benefits_header }}</p>
+                {% endif %}
+                <div class="row">
+                    {% for benefit in collection.metafields.collection_fields.benefits.value %}
+                        <div class="col-lg-6 col-12">
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ benefit }}</span></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

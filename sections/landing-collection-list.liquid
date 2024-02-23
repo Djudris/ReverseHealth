@@ -26,8 +26,8 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="landing-collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
+<div class="color-{{ section.settings.color_scheme }} gradient container">
+  <div class="landing-collection-list-wrapper isolate {% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
       <div class="landing-collection-list-title-wrapper">
         <h2 class="landing-collection-list-title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>

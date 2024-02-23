@@ -1,0 +1,126 @@
+.image-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.image-with-text-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.image-with-text-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-with-text-image img {
+    max-height: 800px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.image-with-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.image-with-text-content h2 {
+    font-weight: 600;
+    margin-bottom: 40px;
+    width: 90%;
+    font-size: 28px;
+    font-family: 'Jost', sans-serif;
+}
+
+.image-with-text-content p {
+    margin-bottom: 0;
+    white-space: pre-wrap;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#summary p.collapse:not(.show) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+#summary span {
+    display: none;
+    color: var(--primary-button-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.bulletpoint-text {
+    margin-top: 20px;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    line-height: normal;
+}
+
+.single-bulletpoint {
+    width: 19px;
+    margin-right: 10px;
+}
+
+.bulletpoint-text span {
+    padding-top: 3px;
+    line-height: normal;
+}
+
+@media screen and (max-width: 992px) {
+    .image-with-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    .image-with-text-wrapper {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .image-with-text-content {
+        padding: 0 20px;
+    }
+
+    .image-with-text-content h2 {
+        font-size: 24px;
+    }
+
+    .image-with-text-content p {
+        font-size: 17px;
+    }
+
+    #summary p.collapse:not(.show) {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 14;
+        -webkit-box-orient: vertical;
+    }
+
+    .bulletpoint-text {
+        margin-top: 15px;
+        font-size: 1.063rem;
+    }
+
+    .single-bulletpoint {
+        width: 1.5rem;
+        margin-right: 0.938rem;
+    }
+
+}
