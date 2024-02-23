@@ -9,6 +9,7 @@
       "type": "collection-product-slider",
       "settings": {
         "title": "Shop the collection",
+        "collection": "",
         "products_to_show": 8
       }
     },
@@ -18,8 +19,8 @@
         "column_8R6Ata": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bundle-mobile-2.jpg",
-            "title": "Text22131231",
+            "image": "{{ collection.metafields.collection_fields.static_image_1.value }}",
+            "title": "{{ collection.metafields.collection_fields.static_image_text_1.value }}",
             "text": "",
             "link_label": "",
             "link": ""
@@ -28,8 +29,8 @@
         "column_DGmHRQ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-            "title": "Text 2",
+            "image": "{{ collection.metafields.collection_fields.static_image_2.value }}",
+            "title": "{{ collection.metafields.collection_fields.static_image_text_2.value }}",
             "text": "",
             "link_label": "",
             "link": ""
@@ -38,8 +39,8 @@
         "column_dyEc9G": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/collagen_bottom_image.jpg",
-            "title": "A little longer text for testing",
+            "image": "{{ collection.metafields.collection_fields.static_image_3.value }}",
+            "title": "{{ collection.metafields.collection_fields.static_image_text_3.value }}",
             "text": "",
             "link_label": "",
             "link": ""
@@ -52,7 +53,7 @@
         "column_dyEc9G"
       ],
       "settings": {
-        "title": "Targeted something yes",
+        "title": "Heading",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
