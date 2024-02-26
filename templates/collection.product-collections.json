@@ -81,11 +81,20 @@
             "title": "{{ collection.metafields.collection_fields.alternating_title_2.value }}",
             "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_2 | metafield_tag }}<\/p>"
           }
+        },
+        "content_xPkzgB": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_3.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_3.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_3 | metafield_tag }}<\/p><p><\/p>"
+          }
         }
       },
       "block_order": [
         "content_txy7Bb",
-        "content_yghVMN"
+        "content_yghVMN",
+        "content_xPkzgB"
       ],
       "settings": {
       }
