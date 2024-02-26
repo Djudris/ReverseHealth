@@ -3,7 +3,8 @@
 <section class="alternating-image-text-section">
     <div class="container">
         {% for block in section.blocks %}
-            {% if forloop.index | minus: 1 | modulo: 2 == 0 %}
+            {% assign is_even = forloop.index0 | modulo: 2 %}
+            {% if is_even == 0 %}
                 <div class="row content-block">
                     <div class="col-lg-6 col-12 image-block">
                         <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
