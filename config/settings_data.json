@@ -100,7 +100,7 @@
     "checkout_logo_image": "shopify:\/\/shop_images\/logo_dark.svg",
     "checkout_logo_position": "left",
     "checkout_sidebar_background_color": "#f5f5f5",
-    "checkout_accent_color": "#ff6f61",
+    "checkout_accent_color": "#1d2e42",
     "checkout_button_color": "#3b8581",
     "sections": {
       "announcement-bar": {
