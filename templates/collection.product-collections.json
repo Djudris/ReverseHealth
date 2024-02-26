@@ -63,8 +63,8 @@
         "title": "{{ collection.metafields.collection_fields.static_image_heading.value }}"
       }
     },
-    "single_product_approach_CJrVyV": {
-      "type": "single-product-approach",
+    "collection_approach": {
+      "type": "collection-approach",
       "settings": {
         "title": "WHY DO WOMEN NEED A DIFFERENT APPROACH?"
       }
