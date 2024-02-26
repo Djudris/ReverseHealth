@@ -3,27 +3,29 @@
 <section class="alternating-image-text-section">
     <div class="container">
         {% for block in section.blocks %}
-            {% assign is_even = forloop.index0 | modulo: 2 %}
-            {% if is_even == 0 %}
-                <div class="row content-block">
-                    <div class="col-lg-6 col-12 image-block">
-                        <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
+            {% if block.settings.image %}
+                {% assign is_even = forloop.index0 | modulo: 2 %}
+                {% if is_even == 0 %}
+                    <div class="row content-block">
+                        <div class="col-lg-6 col-12 image-block">
+                            <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
+                        </div>
+                        <div class="col-lg-6 col-12 text-block">
+                            <h2>{{ block.settings.title }}</h2>
+                            <p>{{ block.settings.text_area }}</p>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-12 text-block">
-                        <h2>{{ block.settings.title }}</h2>
-                        <p>{{ block.settings.text }}</p>
+                {% else %}
+                    <div class="row content-block">
+                        <div class="col-lg-6 col-12 text-block">
+                            <h2>{{ block.settings.title }}</h2>
+                            <p>{{ block.settings.text_area }}</p>
+                        </div>
+                        <div class="col-lg-6 col-12 image-block">
+                            <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
+                        </div>
                     </div>
-                </div>
-            {% else %}
-                <div class="row content-block">
-                    <div class="col-lg-6 col-12 text-block">
-                        <h2>{{ block.settings.title }}</h2>
-                        <p>{{ block.settings.text }}</p>
-                    </div>
-                    <div class="col-lg-6 col-12 image-block">
-                        <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
-                    </div>
-                </div>
+                {% endif %}
             {% endif %}
         {% endfor %}
     </div>
@@ -52,7 +54,7 @@
         },
         {
           "type": "textarea",
-          "id": "text",
+          "id": "text_area",
           "label": "Text",
           "default": "Your text here"
         }
