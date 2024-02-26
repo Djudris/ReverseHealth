@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  row-gap: 40px;
 }
 
 .section-header h2 {
@@ -10,11 +10,6 @@
   padding: 40px 0;
   text-align: center;
   font-size: 28px;
-}
-
-.symptoms-blocks {
-  justify-content: space-between;
-  gap: 20px;
 }
 
 .symptom-block {
@@ -39,6 +34,10 @@
   font-size: 24px;
   margin: 0;
   align-self: flex-start;
+}
+.symptom-block--spacer {
+  flex-basis: calc(33.333% - 20px); /* same as your symptom blocks */
+  visibility: hidden; /* make them invisible */
 }
 
 @media (max-width: 992px) {

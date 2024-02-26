@@ -1,22 +1,28 @@
 {{ 'collection-static-images.css' | asset_url | stylesheet_tag }}
 {% if section.blocks.size > 0 %}
-  <section class="container">
-    <div class="section-header">
-      <h2>{{ section.settings.title }}</h2>
-    </div>
-    <div class="symptoms-section">
-    {% for block in section.blocks %}
-      <div class="symptom-block">
-        <div class="symptom-image">
-          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text | escape }}" class="img-fluid">
+    <section class="container">
+        <div class="section-header">
+            <h2>{{ section.settings.title }}</h2>
         </div>
-        <div class="symptom-text">
-          <p>{{ block.settings.text }}</p>
+        <div class="symptoms-section">
+            {% for block in section.blocks %}
+                {% if block.settings.image %}
+                    <div class="symptom-block">
+                        <div class="symptom-image">
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text | escape }}" class="img-fluid">
+                        </div>
+                        <div class="symptom-text">
+                            <p>{{ block.settings.text }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% assign spacers_needed = 3 | minus: section.blocks.size | modulo: 3 %}
+            {% for i in (1..spacers_needed) %}
+                <div class="symptom-block symptom-block--spacer"> </div>
+            {% endfor %}
         </div>
-      </div>
-    {% endfor %}
-    </div>
-  </section>
+    </section>
 {% endif %}
 
 {% schema %}
