@@ -65,8 +65,35 @@
     },
     "collection_approach": {
       "type": "collection-approach",
+      "blocks": {
+        "content_bNWKLP": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_1.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_1.value }}"
+          }
+        },
+        "content_BRjbGT": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_2.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_2.value }}"
+          }
+        },
+        "content_cEJFgW": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_3.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_3.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "content_bNWKLP",
+        "content_BRjbGT",
+        "content_cEJFgW"
+      ],
       "settings": {
-        "title": "WHY DO WOMEN NEED A DIFFERENT APPROACH?"
       }
     }
   },
