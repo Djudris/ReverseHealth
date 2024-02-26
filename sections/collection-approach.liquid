@@ -12,14 +12,14 @@
                         </div>
                         <div class="col-lg-6 col-12 text-block">
                             <h2>{{ block.settings.title }}</h2>
-                            <p>{{ block.settings.text }}</p>
+                            <p>{{ block.settings.richtext }}</p>
                         </div>
                     </div>
                 {% else %}
                     <div class="row content-block">
                         <div class="col-lg-6 col-12 text-block">
                             <h2>{{ block.settings.title }}</h2>
-                            <p>{{ block.settings.text }}</p>
+                            <p>{{ block.settings.richtext }}</p>
                         </div>
                         <div class="col-lg-6 col-12 image-block">
                             <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
@@ -53,8 +53,8 @@
           "default": "Section Title"
         },
         {
-          "type": "text",
-          "id": "text",
+          "type": "richtext",
+          "id": "richtext",
           "label": "Text",
           "default": "Your text here"
         }
