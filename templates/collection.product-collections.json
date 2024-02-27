@@ -83,31 +83,40 @@
       "settings": {
       }
     },
-    "featured_collection_VEeEEV": {
-      "type": "featured-collection",
+    "collection_learn_more": {
+      "type": "collection-learn-more",
+      "blocks": {
+        "content_txy7Bb": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_1.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_1.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_1 | metafield_tag }}<\/p>"
+          }
+        },
+        "content_yghVMN": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_2.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_2.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_2 | metafield_tag }}<\/p>"
+          }
+        },
+        "content_xPkzgB": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_3.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_3.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_3 | metafield_tag }}<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_txy7Bb",
+        "content_yghVMN",
+        "content_xPkzgB"
+      ],
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
@@ -116,6 +125,6 @@
     "collection_product_slider",
     "collection_static_images",
     "collection_approach",
-    "featured_collection_VEeEEV"
+    "collection_learn_more"
   ]
 }
