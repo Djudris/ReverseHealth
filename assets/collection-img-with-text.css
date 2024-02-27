@@ -99,9 +99,6 @@
         grid-template-columns: 1fr;
     }
 
-    .image-with-text-content {
-        padding: 0 20px;
-    }
 
     .image-with-text-content h2 {
         font-size: 24px;
