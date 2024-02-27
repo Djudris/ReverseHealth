@@ -3,12 +3,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 20px;
+  margin-bottom: 80px;
 }
 
 .section-header h2 {
   font-family: 'Jost', sans-serif;
   padding: 40px 0;
   text-align: center;
+  font-weight: 600;
   font-size: 28px;
 }
 
@@ -43,6 +45,10 @@
 }
 
 @media (max-width: 992px) {
+  .symptoms-section {
+    margin-bottom: 20px;
+  }
+
   .section-header h2 {
     font-size: 24px;
   }
