@@ -5,10 +5,10 @@
         {% for block in section.blocks %}
             {% if block.settings.image %}
                 {% assign is_even = forloop.index0 | modulo: 2 %}
-                {% if is_even == 0 %}
+                {% if is_even != 0 %}
                     <div class="row content-block">
-                        <div class="col-lg-6 col-12 image-block">
-                            <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
+                        <div class="col-lg-6 col-12 image-block ">
+                            <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.title }}">
                         </div>
                         <div class="col-lg-6 col-12 text-block">
                             <h2>{{ block.settings.title }}</h2>
@@ -17,12 +17,12 @@
                     </div>
                 {% else %}
                     <div class="row content-block">
-                        <div class="col-lg-6 col-12 text-block">
+                        <div class="col-lg-6 col-12 text-block order-1 order-lg-0">
                             <h2>{{ block.settings.title }}</h2>
-                            <p>{{ block.settings.rich_text }}</p>
+                            {{ block.settings.rich_text }}
                         </div>
-                        <div class="col-lg-6 col-12 image-block">
-                            <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.text }}">
+                        <div class="col-lg-6 col-12 image-block order-0 order-lg-1">
+                            <img src="{{ block.settings.image | img_url: '800x800' }}" alt="{{ block.settings.title }}">
                         </div>
                     </div>
                 {% endif %}
