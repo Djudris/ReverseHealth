@@ -85,11 +85,8 @@
     },
     "collection_learn_more": {
       "type": "collection-learn-more",
-      "blocks": {
-      },
-      "block_order": [
-      ],
       "settings": {
+        "section_title": "Learn More"
       }
     }
   },
