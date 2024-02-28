@@ -31,11 +31,13 @@
     },
     "single_product_how": {
       "type": "single-product-how",
+      "disabled": true,
       "settings": {
       }
     },
     "single_product_nutritions": {
       "type": "single-product-nutritions",
+      "disabled": true,
       "settings": {
       }
     },
