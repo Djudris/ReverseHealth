@@ -202,8 +202,16 @@
                             <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
                         </form>
                     </div>
-                    <div class="add-to-cart-card d-flex flex-column justify-content-between">
-                        <div class="card-content d-flex flex-row-reverse flex-md-column">
+                    <div class="add-to-cart-card padding-top-30-card d-flex flex-column justify-content-between">
+                        {% if product.metafields.single.three_pack_label_is_enabled %}
+                            {% if product.metafields.single.three_pack_label_image %}
+                                <img class="best-value-image"
+                                     src="{{ product.metafields.single.three_pack_label_image | img_url: 'x60' }}"
+                                     alt={{ product.metafields.single.three_pack_label_text }}>
+                                <p class="best-value-text">{{ product.metafields.single.three_pack_label_text }}</p>
+                            {% endif %}
+                        {% endif %}
+                        <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
                             <div class="w-100">
                                 <h3 class="card-quantity">3-pack</h3>
                                 <p class="card-ppp">
