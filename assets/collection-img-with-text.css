@@ -111,7 +111,7 @@
     #summary p.collapse:not(.show) {
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 14;
+        -webkit-line-clamp: 10;
         -webkit-box-orient: vertical;
     }
 

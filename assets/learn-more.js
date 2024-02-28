@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let summary = document.getElementById('summary');
     let collapseText = summary.querySelector('.collapse');
-    let collapseButton = summary.querySelector('span');
+    let collapseButton = summary.querySelector('#collapseButton');
 
     function isTextClamped(element) {
         return element.scrollHeight > element.clientHeight;
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isCollapsed) {
             collapseText.classList.remove('show');
             collapseText.style.display = '-webkit-box';
-            collapseButton.textContent = 'Learn More';
+            collapseButton.textContent = 'Learn More...';
             collapseButton.classList.add('collapsed');
         } else {
             // If the text is collapsed, expand it

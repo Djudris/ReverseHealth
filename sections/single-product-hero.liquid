@@ -1,4 +1,5 @@
 {{ 'single-product-hero.css' | asset_url | stylesheet_tag }}
+{{ 'learn-more.js' | asset_url | script_tag }}
 
 
 <section id="page-top">
@@ -39,7 +40,7 @@
                             <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}">
                         {% endfor %}
                     </div>
-                    {% if product.images.size > 1  %}
+                    {% if product.images.size > 1 %}
                         <div class="css--prev-btn-single d-flex justify-content-start">
                             <button class="customPrevBtnSingle caps text-center d-flex d-sm-inline align-items-center disabled">
                                 <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
@@ -88,7 +89,10 @@
                 </div>
 
 
-                <div class="product-description">{{ product.description }}</div>
+                <div class="product-description" id="summary">
+                    <div class="collapse" id="collapseSummary">{{ product.description }}</div>
+                    <span role="button" id="collapseButton" class="collapsed" data-toggle="collapse" href="" aria-expanded="false" aria-controls="collapseSummary"> Learn More... </span>
+                </div>
                 <div class="row single-hero-mb">
                     {% if product.metafields.my_fields.bulletpoint_info_nr_1 %}
                         <div class="col-lg-6 col-12">

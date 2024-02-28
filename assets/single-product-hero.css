@@ -4,6 +4,19 @@
     font-weight: 400;
 }
 
+#summary div.collapse:not(.show) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 14;
+    -webkit-box-orient: vertical;
+}
+
+#summary #collapseButton {
+    display: none;
+    color: var(--primary-button-color);
+    font-weight: 600;
+    text-decoration: none;
+}
 
 button.disabled {
     opacity: 0.5;
@@ -356,6 +369,20 @@ div.yotpo {
 
 
 @media screen and (min-width: 992px) {
+    #summary div.collapse:not(.show) {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+    }
+
+    #summary #collapseButton {
+        display: none;
+        color: var(--primary-button-color);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
     .card-content.padding-top-30 {
         padding-top: 32px;
     }
