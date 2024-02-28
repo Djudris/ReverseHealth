@@ -1,5 +1,6 @@
 {{ 'single-product-hero.css' | asset_url | stylesheet_tag }}
 {{ 'learn-more.js' | asset_url | script_tag }}
+{{ 'magnifier.js' | asset_url | script_tag }}
 
 
 <section id="page-top">
@@ -37,7 +38,7 @@
                 <div class="position-relative min-w-470">
                     <div id="single-product-carousel" class="product-img owl-carousel">
                         {% for image in product.images %}
-                            <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}">
+                            <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}" class="magnifiedImg">
                         {% endfor %}
                     </div>
                     {% if product.images.size > 1 %}
