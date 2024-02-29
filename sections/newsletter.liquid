@@ -22,7 +22,7 @@
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+          <h2 class="{{ block.settings.heading_size }} newsletter-heading" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'paragraph' -%}
           <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
@@ -55,7 +55,7 @@
                     {{ 'newsletter.label' | t }}
                   </label>
                   <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
+                    {% render 'icon-new-arrow' %}
                   </button>
                 </div>
                 {%- if form.errors -%}
