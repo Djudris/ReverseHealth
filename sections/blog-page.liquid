@@ -1,0 +1,40 @@
+{{ 'blog-page.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+    {% assign blog_handles = block.settings.handles | split: ',' %}
+    {% for handle in blog_handles %}
+        <p>handle</p>
+        {% assign blog = blogs[handle] %}
+        <h1>{{ blog.title }}</h1>
+        {% for article in blog.articles %}
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.content | strip_html | truncatewords: 50 }}</p>
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+
+{% schema %}
+{
+  "name": "Blog section",
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog Handle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "handles",
+          "label": "Blog Handles (name of blog tags - comma-separated)",
+          "default": "news,blog1,blog2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Blogs"
+    }
+  ]
+}
+{% endschema %}
