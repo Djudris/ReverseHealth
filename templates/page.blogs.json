@@ -9,6 +9,17 @@
     },
     "blog_page": {
       "type": "blog-page",
+      "blocks": {
+        "blog_wVeyTy": {
+          "type": "blog",
+          "settings": {
+            "handles": "news,blog1,blog2"
+          }
+        }
+      },
+      "block_order": [
+        "blog_wVeyTy"
+      ],
       "settings": {
       }
     }
