@@ -13,7 +13,7 @@
         "blog_wVeyTy": {
           "type": "blog",
           "settings": {
-            "handles": "news,blog1,blog2"
+            "handles": "news,technology,blog2"
           }
         }
       },
