@@ -25,7 +25,7 @@
 
 
 <div class="container">
-    <h1>{{ section.settings.page_header | escape }}</h1>
+    <h1 class="page-header">{{ section.settings.page_header | escape }}</h1>
     <div class="tag-filter">
         {% assign categories = 'All' %}
         {% for block in section.blocks %}
