@@ -5,8 +5,8 @@
       "settings": {
       }
     },
-    "collection_product_slider_7Uc8tz": {
-      "type": "collection-product-slider",
+    "article_product_slider": {
+      "type": "article-product-slider",
       "settings": {
         "title": "Inspired by this post",
         "collection": "best-sellers",
@@ -50,7 +50,7 @@
   },
   "order": [
     "blog_article",
-    "collection_product_slider_7Uc8tz",
+    "article_product_slider",
     "newsletter_fRW64U"
   ]
 }
