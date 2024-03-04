@@ -7,7 +7,7 @@
           "type": "blog",
           "settings": {
             "page_header": "Blogs",
-            "handles": "news,technology,blog2"
+            "handles": "news,technology,health"
           }
         }
       },
