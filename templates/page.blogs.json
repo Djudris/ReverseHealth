@@ -17,9 +17,44 @@
       "settings": {
         "page_header": "The Wellness Journal"
       }
+    },
+    "newsletter_C7NCAF": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_kVrgzg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_iiPdVW": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email_form_FbU4Kk": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_kVrgzg",
+        "paragraph_iiPdVW",
+        "email_form_FbU4Kk"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "blog_page"
+    "blog_page",
+    "newsletter_C7NCAF"
   ]
 }
