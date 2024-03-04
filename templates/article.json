@@ -2,9 +2,15 @@
   "sections": {
     "blog_article": {
       "type": "blog-article",
-      "blocks": {
-      },
       "settings": {
+      }
+    },
+    "collection_product_slider_7Uc8tz": {
+      "type": "collection-product-slider",
+      "settings": {
+        "title": "Inspired by this post",
+        "collection": "best-sellers",
+        "products_to_show": 4
       }
     },
     "newsletter_fRW64U": {
@@ -44,6 +50,7 @@
   },
   "order": [
     "blog_article",
+    "collection_product_slider_7Uc8tz",
     "newsletter_fRW64U"
   ]
 }
