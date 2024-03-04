@@ -33,6 +33,7 @@
 
 @media screen and (max-width: 989px) {
     .article-image {
+        padding: 40px 0;
         border-radius: 13px;
     }
 
