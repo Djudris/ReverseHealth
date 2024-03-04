@@ -6,7 +6,6 @@
         "blog_wVeyTy": {
           "type": "blog",
           "settings": {
-            "page_header": "Blogs",
             "handles": "news,technology,health"
           }
         }
