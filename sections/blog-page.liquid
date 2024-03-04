@@ -1,18 +1,106 @@
 {{ 'blog-page.css' | asset_url | stylesheet_tag }}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring
+        | split: '"pageurl":"'
+        | last
+        | split: '"'
+        | first
+        | split: '.myshopify.com'
+        | last
+        | replace: '\/', '/'
+        | replace: '%20', ' '
+        | replace: '\u0026', '&'
+-%}
+{% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
+{%- assign querystring = finalurl | split: "?" | last -%}
+{%- assign params = querystring | split: "&" -%}
+{%- assign current_category = "" -%}
 
-{% for block in section.blocks %}
-    {% assign blog_handles = block.settings.handles | split: ',' %}
-    {% for handle in blog_handles %}
-        <p>handle</p>
-        {% assign blog = blogs[handle] %}
-        <h1>{{ blog.title }}</h1>
-        {% for article in blog.articles %}
-            <h2>{{ article.title }}</h2>
-            <p>{{ article.content | strip_html | truncatewords: 50 }}</p>
+{%- for param in params -%}
+    {%- assign key_value = param | split: "=" -%}
+    {%- if key_value.first == "category" -%}
+        {%- assign current_category = key_value.last -%}
+    {%- endif -%}
+{%- endfor -%}
+
+
+<div class="container">
+    <h1>{{ section.settings.page_header | escape }}</h1>
+    <div class="tag-filter">
+        {% assign categories = 'All' %}
+        {% for block in section.blocks %}
+            {% assign categories = block.settings.handles | split: ',' %}
+
+            <a href="?category={{ 'All' | url_encode }}">All</a>
+            {% for category in categories %}
+                <a href="?category={{ category | url_encode }}">{{ category }}</a>
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
-{% endfor %}
+    </div>
 
+    <div class="articles">
+        {% for block in section.blocks %}
+            {% if current_category == empty or current_category == "All" %}
+                {% assign block_handles = block.settings.handles | split: ',' %}
+            {% else %}
+                {% assign block_handles = current_category %}
+            {% endif %}
+            {% for handle in block_handles %}
+                {% assign blog = blogs[handle] %}
+                {% paginate blog.articles by 1 %}
+                    {% for article in blog.articles %}
+                        <div class="article-card">
+                            <img src="{{ article.image.src | img_url: 'master' }}" alt="{{ article.image.alt }}">
+                            <p>{{ blog.title }} | {{ article.published_at | date: "%B %d, %Y" }}</p>
+                            <h2>{{ article.title }}</h2>
+                        </div>
+                    {% endfor %}
+                {% endpaginate %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="pagination">
+    {% if paginate.pages > 1 %}
+        <span class="prev">{% if paginate.previous %}<a href="{{ paginate.previous.url }}" aria-label="Previous">&laquo;</a>{% endif %}</span>
+        {% for part in paginate.parts %}
+            {% if part.is_link %}
+                <a href="{{ part.url }}">{{ part.title }}</a>
+            {% else %}
+                <span class="current">{{ part.title }}</span>
+            {% endif %}
+        {% endfor %}
+        <span class="next">{% if paginate.next %}<a href="{{ paginate.next.url }}" aria-label="Next">&raquo;</a>{% endif %}</span>
+    {% endif %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let urlParams = new URLSearchParams(window.location.search);
+        let category = urlParams.get('category');
+
+        document.cookie = "category=" + category;
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let category = document.cookie.replace(/(?:(?:^|.*;\s*)category\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        let links = document.querySelectorAll('.tag-filter a');
+        console.log(category);
+        if (category === null || category === '' || category === 'null'){
+            console.log('empty');
+            links[0].classList.add('active-filter');
+            return;
+        }
+
+        links.forEach(link => {
+            if (link.textContent === category) {
+                link.classList.add('active-filter');
+            }
+        });
+    });
+
+</script>
 
 {% schema %}
 {
@@ -22,6 +110,12 @@
       "type": "blog",
       "name": "Blog Handle",
       "settings": [
+        {
+          "type": "text",
+          "id": "page_header",
+          "label": "Page Header",
+          "default": "Blogs"
+        },
         {
           "type": "text",
           "id": "handles",

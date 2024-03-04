@@ -1,12 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "blog_page": {
       "type": "blog-page",
       "blocks": {
@@ -25,7 +18,6 @@
     }
   },
   "order": [
-    "main",
     "blog_page"
   ]
 }
