@@ -24,11 +24,13 @@
     font-family: 'Jost', sans-serif;
     font-size: 18px;
     color: #6c757d;
-    padding: 20px 0;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 .article-content {
     font-family: 'Jost', sans-serif;
+    padding-bottom: 40px;
 }
 
 @media screen and (max-width: 989px) {
