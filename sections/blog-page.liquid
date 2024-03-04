@@ -23,6 +23,16 @@
     {%- endif -%}
 {%- endfor -%}
 
+<style>
+    .articles {
+        grid-template-columns: repeat({{ section.settings.articles_columns_desktop }}, 1fr);
+    }
+    @media (max-width: 989px) {
+        .articles {
+            grid-template-columns: repeat({{ section.settings.articles_columns_mobile }}, 1fr);
+        }
+    }
+</style>
 
 <div class="container">
     <h1 class="page-header">{{ section.settings.page_header | escape }}</h1>
@@ -111,6 +121,26 @@
       "id": "page_header",
       "label": "Page Header",
       "default": "Blogs"
+    },
+    {
+      "type": "range",
+      "id": "articles_columns_desktop",
+      "label": "Articles Columns on Desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "info": "Choose how many columns to display in the articles section on desktop screens."
+    },
+    {
+      "type": "range",
+      "id": "articles_columns_mobile",
+      "label": "Articles Columns on Mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "info": "Choose how many columns to display in the articles section on mobile screens."
     }
   ],
   "blocks": [
