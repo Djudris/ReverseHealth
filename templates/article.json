@@ -9,7 +9,6 @@
       "type": "article-product-slider",
       "settings": {
         "title": "Inspired by this post",
-        "collection": "best-sellers",
         "products_to_show": 4
       }
     },
