@@ -1,5 +1,7 @@
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+
 {%- if blog.comments_enabled? -%}
-    <div class="article-template__comment-wrapper background-secondary">
+    <div class="article-template__comment-wrapper background-secondary container">
         <div id="comments" class="page-width page-width--narrow">
             {%- if article.comments_count > 0 -%}
                 {%- assign anchorId = '#Comments-' | append: article.id -%}
