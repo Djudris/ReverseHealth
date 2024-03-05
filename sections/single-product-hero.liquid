@@ -395,19 +395,38 @@
                     </div>
                 {% else %}
                     <div id="back-in-stock" class="terms-and-conditions">
-                        <div>
+                        <h2>Join the waiting list!</h2>
+                        <p>
+                            Be among the first to know when our product is available.
+                            Secure your spot for early access and priority ordering. Don't miss out!
+                        </p>
+                        <div class="stock-checkbox">
                             <input type="checkbox" id="back-in-stock-newsletter"/>
-                            <label for="back-in-stock-newsletter">Subscribe to newsletter</label>
+                            <label for="back-in-stock-newsletter">Receive news, deals, and offers from Wellinda</label>
                         </div>
-                        <div>
+                        <div class="stock-checkbox">
                             <input type="checkbox" id="back-in-stock-privacy" name="back-in-stock-privacy" required>
                             <label for="back-in-stock-privacy">I have read and agree to Wellinda's <a href="/pages/terms-of-service" target="_blank">terms & conditions</a> and <a href="/pages/privacy-cookies" target="_blank">privacy policy</a>.</label>
                         </div>
-                        <input type="email" id="back-in-stock-email" placeholder="Enter your email for restock alerts" required/>
-
-                        <button id="back-in-stock-submit">Notify Me</button>
+                        <div class="newsletter-form__field-wrapper">
+                            <div class="field">
+                                <input type="email" id="back-in-stock-email" class="field__input" placeholder="{{ 'newsletter.label' | t }}" required/>
+                                <label class="field__label" for="back-in-stock-email">
+                                    {{ 'newsletter.label' | t }}
+                                </label>
+                                <button type="submit" class="newsletter-form__button field__button" name="commit" id="back-in-stock-submit" aria-label="{{ 'newsletter.button_label' | t }}">
+                                    {% render 'icon-new-arrow' %}
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
+                <div id="waiting-listed">
+                    <h2>You're on the waiting list</h2>
+                    <p>
+                        We'll email you as soon as {{ product.title }} is ready!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -418,21 +437,18 @@
         var submitButton = document.getElementById('back-in-stock-submit');
 
         submitButton.addEventListener('click', function (e) {
-
+            var apiKey = 'W7YYih';
             var emailInput = document.getElementById('back-in-stock-email');
             var emailValue = emailInput.value;
             var newsletterCheckbox = document.getElementById('back-in-stock-newsletter');
             var privacyCheckbox = document.getElementById('back-in-stock-privacy');
-            var apiKey = 'W7YYih';
 
             console.log(privacyCheckbox.checked);
-            // Check if the privacy policy checkbox is checked
             if (!privacyCheckbox.checked) {
                 alert('You must agree to the privacy policy.');
                 return;
             }
 
-            // Validate the email address
             if (!emailValue || !validateEmail(emailValue)) {
                 alert('Please enter a valid email address.');
                 return;
@@ -474,29 +490,50 @@
 
             fetch("https://a.klaviyo.com/client/back-in-stock-subscriptions/?company_id=" + apiKey, requestOptions)
                 .then(result => console.log(result))
-                .catch(error => console.log('error', error))
+                .catch(error => alert(error))
                 .finally(() => {
-                    if(newsletterCheckbox.checked){
-                        var formData = new FormData();
-                        formData.append('contact[email]', emailValue);
-                        formData.append('form_type', 'customer');
-
-                        fetch('/contact', {
-                            method: 'POST',
-                            body: formData
-                        })
-                            .then(response => {
-                                if(response.ok) {
-                                    console.log('Subscription successful');
-                                } else {
-                                    console.log('Subscription failed');
+                    if (newsletterCheckbox.checked) {
+                        const newsletterPayload = {
+                            "data": {
+                                "type": "subscription",
+                                "attributes": {
+                                    "profile": {
+                                        "data": {
+                                            "type": "profile",
+                                            "attributes": {
+                                                "email": emailValue,
+                                            },
+                                        }
+                                    },
+                                },
+                                "relationships": {
+                                    "list": {
+                                        "data": {
+                                            "type": "list",
+                                            "id": "TF8i52"
+                                        }
+                                    }
                                 }
-                            })
-                            .catch((error) => console.error('Error:', error));
+                            }
+                        }
+
+                        var newsletterRequestOptions = {
+                            method: 'POST',
+                            headers: {
+                                "Content-Type": "application/json",
+                                "revision": "2023-12-15",
+                            },
+                            body: JSON.stringify(newsletterPayload),
+                        };
+                        fetch("https://a.klaviyo.com/client/subscriptions/?company_id=" + apiKey, newsletterRequestOptions)
+                            .then(result => console.log(result))
+                            .catch(error => alert(error))
                     }
-                    alert('You have been successfully subscribed to the back in stock notifications.');
+                    document.getElementById('back-in-stock').style.display = 'none';
+                    document.getElementById('waiting-listed').style.display = 'flex';
                 });
         });
+
 
         function validateEmail(email) {
             let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
