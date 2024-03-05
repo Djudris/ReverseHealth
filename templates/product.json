@@ -5,6 +5,22 @@
       "settings": {
       }
     },
+    "1709628751c40a6d46": {
+      "type": "apps",
+      "blocks": {
+        "bundles_upsell_pickystory_fbt_widget_c8B7EC": {
+          "type": "shopify:\/\/apps\/bundles-upsell-pickystory\/blocks\/fbt-widget\/f54ff67e-3f69-4df2-845e-7476ce633252",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "bundles_upsell_pickystory_fbt_widget_c8B7EC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "landing_delivery": {
       "type": "landing-delivery",
       "settings": {
@@ -96,6 +112,7 @@
   },
   "order": [
     "single_product_hero",
+    "1709628751c40a6d46",
     "landing_delivery",
     "single_product_coaches",
     "single_product_approach",
