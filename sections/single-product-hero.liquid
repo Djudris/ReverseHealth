@@ -305,6 +305,7 @@
                     {% endif %}
 
                 </div>
+                {% if product.selected_or_first_available_variant.available %}
                 <h3 class="bundle-heading">Choose your bundle</h3>
                 <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
                     {% for t in product.tags %}
@@ -392,8 +393,97 @@
                         </form>
                     </div>
                 </div>
+                {% else %}
+                    <div id="back-in-stock" class="terms-and-conditions">
+                        <div>
+                            <input type="checkbox" id="back-in-stock-newsletter"/>
+                            <label for="back-in-stock-newsletter">Subscribe to newsletter</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="back-in-stock-privacy" name="back-in-stock-privacy" required>
+                            <label for="back-in-stock-privacy">I have read and agree to Wellinda's <a href="/pages/terms-of-service" target="_blank">terms & conditions</a> and <a href="/pages/privacy-cookies" target="_blank">privacy policy</a>.</label>
+                        </div>
+                        <input type="email" id="back-in-stock-email" placeholder="Enter your email for restock alerts" required/>
+
+                        <button id="back-in-stock-submit">Notify Me</button>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
 </section>
 {{ 'single-product-hero.js' | asset_url | script_tag }}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submitButton = document.getElementById('back-in-stock-submit');
+
+        submitButton.addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            var emailInput = document.getElementById('back-in-stock-email');
+            var emailValue = emailInput.value;
+            var newsletterCheckbox = document.getElementById('back-in-stock-newsletter');
+            var privacyCheckbox = document.getElementById('back-in-stock-privacy');
+            var variantId = '{{ product.variants.first.id }}';
+            var apiKey = 'W7YYih';
+
+            // Check if the privacy policy checkbox is checked
+            if (!privacyCheckbox.checked) {
+                alert('You must agree to the privacy policy.');
+                return;
+            }
+
+            // Validate the email address
+            if (!emailValue || !validateEmail(emailValue)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Prepare the data for the Back in Stock request
+            var postData = {
+                "a": apiKey,
+                "email": emailValue,
+                "variant": variantId,
+                "platform": "shopify"
+            };
+
+            // Send the POST request for Back in Stock
+            fetch('https://a.klaviyo.com/api/v1/catalog/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: Object.keys(postData).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(postData[key])).join('&')
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Thank you! We will notify you when the product is back in stock.');
+
+                    // If newsletter is checked, subscribe the user to Shopify newsletter
+                    if (newsletterCheckbox.checked) {
+                        addToShopifyNewsletter(emailValue);
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('An error occurred while trying to subscribe you for notifications.');
+                });
+        });
+
+        // Function to handle Shopify newsletter subscription
+        function addToShopifyNewsletter(email) {
+            // Add your code to subscribe the user to your Shopify newsletter
+            // This typically involves another POST request to a Shopify endpoint or your server
+        }
+
+        // Simple email validation function
+        function validateEmail(email) {
+            let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    });
+
+
+</script>

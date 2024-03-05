@@ -677,3 +677,52 @@ div.yotpo {
         color: #FFFFFF;
     }
 }
+
+.terms-and-conditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: start;
+    gap: 10px;
+    width: 100%;
+}
+
+.terms-and-conditions label {
+    font-size: 16px;
+    max-width: 450px;
+}
+
+.terms-and-conditions input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border: 2px solid #757575;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.terms-and-conditions input[type="checkbox"]:checked:before {
+    content: '✔';
+    font-size: 18px;
+    color: var(--primary-button-color);
+    line-height: 24px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.terms-and-conditions a {
+    color: var(--primary-button-color);
+    text-decoration: none;
+    font-weight: 600;
+}
