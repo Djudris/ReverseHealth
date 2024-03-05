@@ -440,45 +440,44 @@
                 return;
             }
 
-            // Prepare the data for the Back in Stock request
-            var postData = {
-                "a": apiKey,
-                "email": emailValue,
-                "variant": variantId,
-                "platform": "shopify"
-            };
-
-            // Send the POST request for Back in Stock
-            fetch('https://a.klaviyo.com/api/v1/catalog/subscribe', {
+            const payload = {
+                "data": {
+                    "type": "back-in-stock-subscription",
+                    "attributes": {
+                        "profile": {
+                            "data": {
+                                "type": "profile",
+                                "attributes": {
+                                    "email": emailValue,
+                                }
+                            }
+                        },
+                        "channels": ["EMAIL"],
+                    },
+                    "relationships": {
+                        "variant": {
+                            "data": {
+                                "type": "catalog-variant",
+                                "id": "$shopify:::$default:::{{ product.id }}:::{{ product.variants.first.id }}"
+                            }
+                        }
+                    }
+                }
+            }
+            var requestOptions = {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    "Content-Type": "application/json",
+                    "revision": new Date().toDateString(),
                 },
-                body: Object.keys(postData).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(postData[key])).join('&')
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                    alert('Thank you! We will notify you when the product is back in stock.');
+                body: JSON.stringify(payload),
+            };
 
-                    // If newsletter is checked, subscribe the user to Shopify newsletter
-                    if (newsletterCheckbox.checked) {
-                        addToShopifyNewsletter(emailValue);
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    alert('An error occurred while trying to subscribe you for notifications.');
-                });
+            fetch("https://a.klaviyo.com/client/back-in-stock-subscriptions/?company_id=" + apiKey,requestOptions)
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
         });
 
-        // Function to handle Shopify newsletter subscription
-        function addToShopifyNewsletter(email) {
-            // Add your code to subscribe the user to your Shopify newsletter
-            // This typically involves another POST request to a Shopify endpoint or your server
-        }
-
-        // Simple email validation function
         function validateEmail(email) {
             let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(String(email).toLowerCase());
