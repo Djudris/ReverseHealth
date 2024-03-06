@@ -305,7 +305,6 @@
                     {% endif %}
 
                 </div>
-                {% if product.selected_or_first_available_variant.available %}
                     <h3 class="bundle-heading">Choose your bundle</h3>
                     <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
                         {% for t in product.tags %}
@@ -393,40 +392,39 @@
                             </form>
                         </div>
                     </div>
-                {% else %}
-                    <div id="back-in-stock" class="terms-and-conditions">
-                        <h2>Join the waiting list!</h2>
-                        <p>
-                            Be among the first to know when our product is available.
-                            Secure your spot for early access and priority ordering. Don't miss out!
-                        </p>
-                        <div class="stock-checkbox">
-                            <input type="checkbox" id="back-in-stock-newsletter"/>
-                            <label for="back-in-stock-newsletter">Receive news, deals, and offers from Wellinda</label>
-                        </div>
-                        <div class="stock-checkbox">
-                            <input type="checkbox" id="back-in-stock-privacy" name="back-in-stock-privacy" required>
-                            <label for="back-in-stock-privacy">I have read and agree to Wellinda's <a href="/pages/terms-of-service" target="_blank">terms & conditions</a> and <a href="/pages/privacy-cookies" target="_blank">privacy policy</a>.</label>
-                        </div>
-                        <div class="newsletter-form__field-wrapper">
-                            <div class="field">
-                                <input type="email" id="back-in-stock-email" class="field__input" placeholder="{{ 'newsletter.label' | t }}" required/>
-                                <label class="field__label" for="back-in-stock-email">
-                                    {{ 'newsletter.label' | t }}
-                                </label>
-                                <button type="submit" class="newsletter-form__button field__button" name="commit" id="back-in-stock-submit" aria-label="{{ 'newsletter.button_label' | t }}">
-                                    {% render 'icon-new-arrow' %}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-                <div id="waiting-listed">
-                    <h2>You're on the waiting list</h2>
-                    <p>
-                        We'll email you as soon as {{ product.title }} is ready!
-                    </p>
-                </div>
+                    {% comment %}this is code is for back in stock feature which was not needed{% endcomment %}
+                    {% comment %}<div id="back-in-stock" class="terms-and-conditions">{% endcomment %}
+                        {% comment %}<h2>Join the waiting list!</h2>{% endcomment %}
+                        {% comment %}<p>{% endcomment %}
+                            {% comment %}Be among the first to know when our product is available.{% endcomment %}
+                            {% comment %}Secure your spot for early access and priority ordering. Don't miss out!{% endcomment %}
+                        {% comment %}</p>{% endcomment %}
+                        {% comment %}<div class="stock-checkbox">{% endcomment %}
+                            {% comment %}<input type="checkbox" id="back-in-stock-newsletter"/>{% endcomment %}
+                            {% comment %}<label for="back-in-stock-newsletter">Receive news, deals, and offers from Wellinda</label>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                        {% comment %}<div class="stock-checkbox">{% endcomment %}
+                            {% comment %}<input type="checkbox" id="back-in-stock-privacy" name="back-in-stock-privacy" required>{% endcomment %}
+                            {% comment %}<label for="back-in-stock-privacy">I have read and agree to Wellinda's <a href="/pages/terms-of-service" target="_blank">terms & conditions</a> and <a href="/pages/privacy-cookies" target="_blank">privacy policy</a>.</label>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                        {% comment %}<div class="newsletter-form__field-wrapper">{% endcomment %}
+                            {% comment %}<div class="field">{% endcomment %}
+                                {% comment %}<input type="email" id="back-in-stock-email" class="field__input" placeholder="{{ 'newsletter.label' | t }}" required/>{% endcomment %}
+                                {% comment %}<label class="field__label" for="back-in-stock-email">{% endcomment %}
+                                    {% comment %}{{ 'newsletter.label' | t }}{% endcomment %}
+                                {% comment %}</label>{% endcomment %}
+                                {% comment %}<button type="submit" class="newsletter-form__button field__button" name="commit" id="back-in-stock-submit" aria-label="{{ 'newsletter.button_label' | t }}">{% endcomment %}
+                                    {% comment %}{% render 'icon-new-arrow' %}{% endcomment %}
+                                {% comment %}</button>{% endcomment %}
+                            {% comment %}</div>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}<div id="waiting-listed">{% endcomment %}
+                    {% comment %}<h2>You're on the waiting list</h2>{% endcomment %}
+                    {% comment %}<p>{% endcomment %}
+                        {% comment %}We'll email you as soon as {{ product.title }} is ready!{% endcomment %}
+                    {% comment %}</p>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
             </div>
         </div>
     </div>
