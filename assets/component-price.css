@@ -8,7 +8,15 @@
 }
 
 .price--end {
+  font-weight: 600;
+  font-size: 17px;
   text-align: right;
+}
+
+@media screen and (min-width: 992px) {
+  .price--end {
+    font-size: 20px;
+  }
 }
 
 .price .price-item {
@@ -32,7 +40,6 @@
 .price--large {
   font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.13rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -78,7 +85,6 @@
 .unit-price {
   display: block;
   font-size: 1.1rem;
-  letter-spacing: 0.04rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   margin-top: 0.2rem;
   text-transform: uppercase;

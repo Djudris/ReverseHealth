@@ -5,117 +5,119 @@
         <h2 class="text-center reviews-title">
             {{ section.settings.title }}
         </h2>
-        <div  id="review-slider" class="owl-carousel row review-pb">
-            <div class="col-xl-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein" loading="lazy">
+        <div id="review-slider" class="owl-carousel justify-content-center row review-pb">
+            <div class="col-lg-3 d-block"></div>
+            <div class="col-lg-6 position-relative d-flex flex-column justify-content-between p-0">
+                {% comment %}<img class="review-product-1"  src="{{ 'protein.png' | asset_url }}" alt="Whey Protein" loading="lazy">{% endcomment %}
                 <div class="reviews-card h-100">
                     <div class="d-flex">
-                        <div>
-                            <img class="review-card-img" src="{{ 'review_1.png' | asset_url }}" alt="Review" loading="lazy">
-                        </div>
+                        {% comment %}<div>{% endcomment %}
+                            {% comment %}<img class="review-card-img" src="{{ 'review_1.png' | asset_url }}" alt="Review" loading="lazy">{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
                         <div class="review-card-top">
                             <div class="review-card-name">{{ section.settings.review-card-1-name }}</div>
                             <div class="review-card-stars">
-                                <img src="{{ 'rating_5.svg' | asset_url }}" alt="Review">
+                                <p>{{ section.settings.review-card-1-rating }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="review-card-bottom">
-                        <h3 class="review-card-title">
-                            {{ section.settings.review-card-1-title }}
-                        </h3>
+                        {% if section.settings.review-card-1-title != '' %}
+                            <h3 class="review-card-title">
+                                {{ section.settings.review-card-1-title }}
+                            </h3>
+                        {% endif %}
                         <p class="review-card-text mb-0">
                             {{ section.settings.review-card-1-text }}
                         </p>
                     </div>
                 </div>
-                <div class="review-icons row">
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'fat.svg' | asset_url }}" class="review-icon" alt="Review icons">
-                    </div>
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'bones.svg' | asset_url }}" class="review-icon" alt="Review icons">
-
-                    </div>
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'muscles.svg' | asset_url }}" class="review-icon" alt="Review icons">
-                    </div>
+            </div>
+            <div class="review-icons col-12 justify-content-between d-flex flex-lg-column col-lg-3 row">
+                <div class="col-4 d-flex justify-content-center">
+                    <img loading="lazy" src="{{ 'skin.svg' | asset_url }}" class="review-icon" alt="Skin icon">
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <img loading="lazy" src="{{ 'nails.svg' | asset_url }}" class="review-icon" alt="Nails icon">
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <img loading="lazy" src="{{ 'hair.svg' | asset_url }}" class="review-icon" alt="Hair icon">
                 </div>
             </div>
-            <div class="col-xl-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein" loading="lazy">
-
-                <div class="reviews-card h-100">
-                    <div class="d-flex">
-                        <div>
-                            <img class="review-card-img" src="{{ 'review_2.png' | asset_url }}" alt="Review" loading="lazy">
-                        </div>
-                        <div class="review-card-top">
-                            <div class="review-card-name">{{ section.settings.review-card-2-name }}</div>
-                            <div class="review-card-stars">
-                                <img loading="lazy" src="{{ 'rating_4_5.svg' | asset_url }}" alt="Review">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card-bottom">
-                        <h3 class="review-card-title">
-                            {{ section.settings.review-card-2-title }}
-                        </h3>
-                        <p class="review-card-text mb-0">
-                            {{ section.settings.review-card-2-text }}
-                        </p>
-                    </div>
-                </div>
-                <div class="review-icons row">
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'skin.svg' | asset_url }}" class="review-icon" alt="Review icons">
-                    </div>
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'nails.svg' | asset_url }}" class="review-icon" alt="Review icons">
-
-                    </div>
-                    <div class="col-4  d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'hair.svg' | asset_url }}" class="review-icon" alt="Review icons">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 position-relative d-flex flex-column justify-content-between">
-                <img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein" loading="lazy">
-
-                <div class="reviews-card h-100">
-                    <div class="d-flex">
-                        <div>
-                            <img class="review-card-img" src="{{ 'review_3.png' | asset_url }}" alt="Review" loading="lazy">
-                        </div>
-                        <div class="review-card-top">
-                            <div class="review-card-name">{{ section.settings.review-card-3-name }}</div>
-                            <div class="review-card-stars">
-                                <img src="{{ 'rating_4_5.svg' | asset_url }}" alt="Review">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card-bottom">
-                        <h3 class="review-card-title">
-                            {{ section.settings.review-card-3-title }}
-                        </h3>
-                        <p class="review-card-text mb-0">
-                            {{ section.settings.review-card-3-text }}
-                        </p>
-                    </div>
-                </div>
-                <div class="review-icons row">
-                    <div  class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'weight.svg' | asset_url }}" class="review-icon" alt="Review icons">
-                    </div>
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'immunity.svg' | asset_url }}" class="review-icon" alt="Review icons">
-
-                    </div>
-                    <div class="col-4 d-flex justify-content-center">
-                        <img loading="lazy" src="{{ 'heart.svg' | asset_url }}" class="review-icon" alt="Review icons">
-                    </div>
-                </div>
-            </div>
+            {% comment %}<div class="col-xl-4 position-relative d-flex flex-column justify-content-between">{% endcomment %}
+                {% comment %}{% comment %}<img class="review-product-2"  src="{{ 'collagen.png' | asset_url }}" alt="Whey Protein" loading="lazy">{% endcomment %}{% endcomment %}
+{% comment %}{% endcomment %}
+                {% comment %}<div class="reviews-card h-100">{% endcomment %}
+                    {% comment %}<div class="d-flex">{% endcomment %}
+                        {% comment %}<div>{% endcomment %}
+                            {% comment %}<img class="review-card-img" src="{{ 'review_2.png' | asset_url }}" alt="Review" loading="lazy">{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                        {% comment %}<div class="review-card-top">{% endcomment %}
+                            {% comment %}<div class="review-card-name">{{ section.settings.review-card-2-name }}</div>{% endcomment %}
+                            {% comment %}<div class="review-card-stars">{% endcomment %}
+                                {% comment %}<p>{{ section.settings.review-card-2-rating }}</p>{% endcomment %}
+                            {% comment %}</div>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="review-card-bottom">{% endcomment %}
+                        {% comment %}<h3 class="review-card-title">{% endcomment %}
+                            {% comment %}{{ section.settings.review-card-2-title }}{% endcomment %}
+                        {% comment %}</h3>{% endcomment %}
+                        {% comment %}<p class="review-card-text mb-0">{% endcomment %}
+                            {% comment %}{{ section.settings.review-card-2-text }}{% endcomment %}
+                        {% comment %}</p>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}<div class="review-icons review-icons-after row">{% endcomment %}
+                    {% comment %}<div class="col-4 d-flex justify-content-center">{% endcomment %}
+                        {% comment %}<img loading="lazy" src="{{ 'skin.svg' | asset_url }}" class="review-icon" alt="Review icons">{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="col-4 d-flex justify-content-center">{% endcomment %}
+                        {% comment %}<img loading="lazy" src="{{ 'nails.svg' | asset_url }}" class="review-icon" alt="Review icons">{% endcomment %}
+{% comment %}{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="col-4  d-flex justify-content-center">{% endcomment %}
+                        {% comment %}<img loading="lazy" src="{{ 'hair.svg' | asset_url }}" class="review-icon" alt="Review icons">{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+            {% comment %}<div class="col-xl-4 position-relative d-flex flex-column justify-content-between">{% endcomment %}
+                {% comment %}{% comment %}<img class="review-product-3"  src="{{ 'vitamin.png' | asset_url }}" alt="Whey Protein" loading="lazy">{% endcomment %}{% endcomment %}
+{% comment %}{% endcomment %}
+                {% comment %}<div class="reviews-card h-100">{% endcomment %}
+                    {% comment %}<div class="d-flex">{% endcomment %}
+                        {% comment %}<div>{% endcomment %}
+                            {% comment %}<img class="review-card-img" src="{{ 'review_3.png' | asset_url }}" alt="Review" loading="lazy">{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                        {% comment %}<div class="review-card-top">{% endcomment %}
+                            {% comment %}<div class="review-card-name">{{ section.settings.review-card-3-name }}</div>{% endcomment %}
+                            {% comment %}<div class="review-card-stars">{% endcomment %}
+                                {% comment %}<p>{{ section.settings.review-card-3-rating }}</p>{% endcomment %}
+                            {% comment %}</div>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="review-card-bottom">{% endcomment %}
+                        {% comment %}<h3 class="review-card-title">{% endcomment %}
+                            {% comment %}{{ section.settings.review-card-3-title }}{% endcomment %}
+                        {% comment %}</h3>{% endcomment %}
+                        {% comment %}<p class="review-card-text mb-0">{% endcomment %}
+                            {% comment %}{{ section.settings.review-card-3-text }}{% endcomment %}
+                        {% comment %}</p>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}<div class="review-icons row">{% endcomment %}
+                    {% comment %}<div  class="col-4 d-flex justify-content-center">{% endcomment %}
+                        {% comment %}<img loading="lazy" src="{{ 'weight.svg' | asset_url }}" class="review-icon" alt="Review icons">{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="col-4 d-flex justify-content-center">{% endcomment %}
+                        {% comment %}<img loading="lazy" src="{{ 'immunity.svg' | asset_url }}" class="review-icon" alt="Review icons">{% endcomment %}
+{% comment %}{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<div class="col-4 d-flex justify-content-center">{% endcomment %}
+                        {% comment %}<img loading="lazy" src="{{ 'heart.svg' | asset_url }}" class="review-icon" alt="Review icons">{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
         </div>
         <!-- <div class="d-xl-none">
             <div class="d-flex justify-content-center review-carousel-btns ">
@@ -153,7 +155,13 @@
 {
 "type": "text",
 "id": "review-card-1-name",
-"default": "Eva",
+"default": "Hildur",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-1-rating",
+"default": "❤️ ❤️ ❤️ ❤️ ❤️",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {
@@ -171,7 +179,13 @@
 {
 "type": "text",
 "id": "review-card-2-name",
-"default": "Laura",
+"default": "Hazel",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-2-rating",
+"default": "❤️ ❤️ ❤️ ❤️ ❤️",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {
@@ -189,7 +203,13 @@
 {
 "type": "text",
 "id": "review-card-3-name",
-"default": "Linda",
+"default": "Melanie",
+"label": "t:sections.featured-collection.settings.title.label"
+},
+{
+"type": "text",
+"id": "review-card-3-rating",
+"default": "❤️ ❤️ ❤️ ❤️ ❤️",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {

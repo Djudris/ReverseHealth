@@ -8,25 +8,25 @@
     "landing_delivery": {
       "type": "landing-delivery",
       "settings": {
-        "title": "Risk-free purchase and fast delivery",
-        "title-sm-1": "FAST DELIVERY TIME",
+        "title": "30-Day Money-Back Guarantee",
+        "title-sm-1": "Fast delivery time",
         "text-1": "Receive your order in 1- 4 business days",
-        "title-sm-2": "Free Shipping",
+        "title-sm-2": "Free shipping",
         "text-2": "U.S only",
-        "title-sm-3": "ESSENTIAL DAILY NUTRIENTS",
+        "title-sm-3": "Essential daily nutrients",
         "text-3": "14-day, no questions asked refund"
       }
     },
     "single_product_coaches": {
       "type": "single-product-coaches",
       "settings": {
-        "title": "OUR PROGRAM  Health Coaches ARE FEATURED IN"
+        "title": "Our wellness advisors are featured in"
       }
     },
     "single_product_approach": {
       "type": "single-product-approach",
       "settings": {
-        "title": "OUR RECOMMENDATION"
+        "title": "Our recommendation"
       }
     },
     "single_product_how": {
@@ -43,18 +43,52 @@
       "type": "single-product-faq",
       "settings": {
         "faq-title": "Our customers often ask",
-        "faq-question-1": "What is ReverseHealth?",
-        "faq-answer-1": "ReverseHealth is the first women's only 12-week weight loss program that focuses on female physiology. It offers a holistic health program where supplements are one of the most important parts to success.",
+        "faq-question-1": "What is Wellinda?",
+        "faq-answer-1": "We are a women's wellness brand dedicated to supporting all stages of menopause, foundational health, and graceful aging. With our deep understanding of the complex symptoms and challenges of menopause, we offer targeted relief through evidence-based supplements and holistic health protocols. Each ingredient is included at an efficacious dosage, rigorously tested for safety and potency. Wellinda products are designed to empower women to achieve optimal vitality and wellbeing.",
         "faq-question-2": "Why do I need to use supplements?",
-        "faq-answer-2": "A dietary supplement is something that you can consume to add nutrients to your diet that can otherwise be difficult to attain or to simply fill missing gaps and prevent deficiencies. As an example, we generate most of our vitamin D from exposure to sunlight. But during winter months, many of us, especially in Northern latitudes do not obtain sufficient sunlight exposure and therefore supplementation of vitamin D is necessary. On the other hand nutrients such as collagen can be obtained from dietary sources, but in smaller quantities. Research has shown that collagen consumption in larger quantities can benefit skin strength and appearance, and also joint health and therefore supplementation with specific dosages of collagen is often recommended.\n \nThe Reverse Health approach is simple, fix your diet first then consider supplements second.",
+        "faq-answer-2": "Supplements provide essential nutrients that are difficult to obtain in sufficient quantities from food alone, especially during life stages such as menopause. For instance, Collagen supplements can help offset the decline in natural collagen production during menopause, offering notable benefits for skin and joint health. While Protein supplements are a practical and convenient way to increase total protein intake, which is known to benefit weight loss, muscle tone and hormonal balance. Wellinda’s supplements, including those specifically for menopause, offer an added layer of support and relief, enhancing overall wellbeing without solely relying on dietary changes. Our Evidence-based products are designed to complement your lifestyle, ensuring optimal health and graceful aging.",
         "faq-question-3": "Are there any side effects?",
-        "faq-answer-3": "There are no side effects to the supplements we recommend. Most, if not all of the products we sell are made up of natural ingredients that can be obtained from the diet.",
+        "faq-answer-3": "While our products are designed with a focus on safety and are based on natural ingredients, individual reactions can vary. Most, if not all, of the products we sell are composed of natural ingredients that can be obtained from targeted diets. We recommend consulting with a healthcare professional before beginning any new supplement regimen, especially if you are pregnant, nursing, have existing health conditions, or are taking other medications.",
         "faq-question-4": "What kind of quality controls do you have?",
-        "faq-answer-4": "We rigorously assess the quality and manufacturing processes used to develop our products before selling them on our site. All products and ingredients have FDA approval and all are manufactured in facilities with ISO or HACCP Certification.",
-        "faq-question-5": "Who should use ReverseHealth supplements?",
-        "faq-answer-5": "ReverseHealth supplements have been specifically selected and formulated to support the health, wellbeing and performance of Middle aged women.",
+        "faq-answer-4": "We uphold the highest standards of quality control through meticulous evaluation of our product development and manufacturing processes. Each product is manufactured in facilities that are committed to Good Manufacturing Practices (GMP), ensuring compliance with the most stringent quality guidelines. Our facilities are not only NSF certified but also adhere to FDA regulations, highlighting our dedication to safety and excellence. To reinforce our commitment to quality, we conduct extensive third-party testing for purity and potency, guaranteeing that our customers receive products of the highest integrity and effectiveness.",
+        "faq-question-5": "Who should use Wellinda supplements?",
+        "faq-answer-5": "Wellinda supplements are meticulously crafted to support women during perimenopause, menopause, and post-menopause, paving the way for improved health, wellbeing, and graceful aging. Our products are tailored to address the unique needs of women during these transformative stages, ensuring they can embrace each phase with strength and vitality.",
         "faq-question-6": "How do I know which products are best for me?",
-        "faq-answer-6": "Our products have been selected and developed by nutrition experts, with over 10 years of experience in applied nutrition. They assess each individual ingredient to ensure it is provided in the most bioavailable form, in the most efficacious dosage, with natural ingredients and flavorings, supported by the latest scientific research."
+        "faq-answer-6": "Our products have been selected and developed by nutrition experts, with over 10 years of experience in applied nutrition. They assess each individual ingredient to ensure it is provided in the most bioavailable form, in the most efficacious dosage, with natural ingredients and flavorings, supported by the latest scientific research. Review the benefits listed for each product to determine which is best suited to meet your needs. Or, don’t hesitate to contact our Customer Care Team at <a href=\"mailto:care@wellinda.health\" class=\"contact-link\">care@wellinda.health<\/a>"
+      }
+    },
+    "newsletter_iXxtdL": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_Cp9V3U": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join for Exclusive Offers: Be Part of Our Wellness Community!",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_8rz3ga": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>We are grateful for your trust and promise to respect your inbox. <\/strong><\/p>"
+          }
+        },
+        "email_form_aTzKgT": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_Cp9V3U",
+        "paragraph_8rz3ga",
+        "email_form_aTzKgT"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 60
       }
     }
   },
@@ -65,6 +99,7 @@
     "single_product_approach",
     "single_product_how",
     "single_product_nutritions",
-    "faq"
+    "faq",
+    "newsletter_iXxtdL"
   ]
 }

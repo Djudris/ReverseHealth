@@ -1,67 +1,40 @@
 .contact-title {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 40px;
-  text-transform: uppercase;
-  color: #505050;
-  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 150%;
+  color: #1D2E42;
+  margin-bottom: 15px;
 }
 .contact-height {
-  min-height: 77vh;
+  padding-top: 70px;
+  padding-bottom: 70px
+}
+
+#contacts-page .container {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .contact-description {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  letter-spacing: 0.02em;
-  color: #505050;
-  margin-bottom: 80px;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1D2E42;
 }
 
-.container span {
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  color: #505050;
-  line-height: 30px;
-
-}
-
-.contact-link {
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  color: #65d36e;
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 @media screen and (max-width:992px) {
   .contact-title {
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 20px;
-
-  }
-  .contact-height {
-    min-height: 87vh;
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 10px;
   }
 
   .contact-description {
-    font-size: 16px;
-    line-height: 27px;
+    font-size: 17px;
+    line-height: 150%;
   }
 
-  span,
-  .contact-link {
-    font-size: 16px;
-    line-height: 27px;
-  }
 }

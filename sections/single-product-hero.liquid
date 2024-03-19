@@ -2,53 +2,56 @@
 
 
 <section id="page-top">
-    <div class="container p-lg-0">
-        <div class="row">
-            <div class="col-lg-5 position-relative">
+    <div class="container">
+        <div class="d-flex hero-head flex-lg-row flex-column">
+            <div class="position-relative">
                 <div class="d-lg-none product-header-block text-center">
                     <h3 class="product-flavor mb-0">{{ product.metafields.single.flavor }}</h3>
                     <h2 class="product-title mb-0">
                         {{ product.title }}
                         <div class="yotpo bottomLine"
                              data-appkey="yjH1ued2tXcyfPboQI4F8pfXTDrX0483ALKaoqfF"
-                             data-domain="{{shop.permanent_domain | escape }}"
+                             data-domain="{{ shop.permanent_domain | escape }}"
                              data-product-id="{{ product.id }}"
                              data-product-models="{{ product.id }}"
                              data-name="{{ product.title | escape }}"
                              data-url="{{ shop.url }}{{ product.url }}"
-                             data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                             data-image-url="{{ product.featured_image | product_img_url: 'large' | replace: '?', '%3F' | replace: '&', '%26' }}"
                              data-description="{{ product.description | escape }}"
                              data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
                         </div>
                     </h2>
                     <div class="d-flex align-items-center justify-content-center">
-                        {% if product.metafields.single.isvegan %}
-                            <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
+                        {% if product.metafields.single.isgrassfed %}
+                            <img class="product-icon icon-vegan" src="{{ 'grassfed.svg' | asset_url }}" alt="Grass fed">
                         {% endif %}
-                        <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
-
+                        {% if product.metafields.single.isvegan %}
+                            <img class="product-icon icon-vegan" src="{{ 'vegan-logo.svg' | asset_url }}"
+                                 alt="Vegan friendly">
+                        {% endif %}
                     </div>
                 </div>
-                <div class="position-relative">
+                <div class="position-relative min-w-470">
                     <div id="single-product-carousel" class="product-img owl-carousel">
                         {% for image in product.images %}
                             <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}">
                         {% endfor %}
                     </div>
-                    <div class="css--prev-btn-single d-flex justify-content-start">
-                        <button class="customPrevBtnSingle caps text-center d-flex d-sm-inline align-items-center disabled">
-                            <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
-                        </button>
-                    </div>
-                    <div class="css--next-btn-single d-flex justify-content-end">
-                        <button class="customNextBtnSingle caps d-flex d-sm-inline align-items-center">
-                            <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
-
-                        </button>
-                    </div>
+                    {% if product.images.size > 1  %}
+                        <div class="css--prev-btn-single d-flex justify-content-start">
+                            <button class="customPrevBtnSingle caps text-center d-flex d-sm-inline align-items-center disabled">
+                                <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
+                            </button>
+                        </div>
+                        <div class="css--next-btn-single d-flex justify-content-end">
+                            <button class="customNextBtnSingle caps d-flex d-sm-inline align-items-center">
+                                <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
+                            </button>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="">
                 <div class="d-lg-block d-none product-header-block">
                     <div class="row">
                         <div class="col-8">
@@ -57,22 +60,26 @@
                                 {{ product.title }}
                                 <div class="yotpo bottomLine"
                                      data-appkey="yjH1ued2tXcyfPboQI4F8pfXTDrX0483ALKaoqfF"
-                                     data-domain="{{shop.permanent_domain | escape }}"
+                                     data-domain="{{ shop.permanent_domain | escape }}"
                                      data-product-id="{{ product.id }}"
                                      data-product-models="{{ product.id }}"
                                      data-name="{{ product.title | escape }}"
                                      data-url="{{ shop.url }}{{ product.url }}"
-                                     data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                                     data-image-url="{{ product.featured_image | product_img_url: 'large' | replace: '?', '%3F' | replace: '&', '%26' }}"
                                      data-description="{{ product.description | escape }}"
                                      data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
                                 </div>
                             </h2>
                         </div>
                         <div class="col-4 d-flex align-items-center justify-content-end">
-                            {% if product.metafields.single.isvegan %}
-                                <img class="product-icon icon-vegan" src="{{ 'vegan.svg' | asset_url }}" alt="Vegan friendly">
+                            {% if product.metafields.single.isgrassfed %}
+                                <img class="product-icon icon-vegan" src="{{ 'grassfed.svg' | asset_url }}"
+                                     alt="Grass fed">
                             {% endif %}
-                            <img class="product-icon" src="{{ 'fda.svg' | asset_url }}" alt="FDA Approved">
+                            {% if product.metafields.single.isvegan %}
+                                <img class="product-icon icon-vegan" src="{{ 'vegan-logo.svg' | asset_url }}"
+                                     alt="Vegan friendly">
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -82,44 +89,56 @@
                 <div class="row single-hero-mb">
                     {% if product.metafields.my_fields.bulletpoint_info_nr_1 %}
                         <div class="col-lg-6 col-12">
-                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
-                                {{ product.metafields.my_fields.bulletpoint_info_nr_1 }}</div>
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ product.metafields.my_fields.bulletpoint_info_nr_1 }}</span></div>
                         </div>
                     {% endif %}
                     {% if product.metafields.my_fields.bulletpoint_info_nr_2 %}
                         <div class="col-lg-6 col-12">
-                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
-                                {{ product.metafields.my_fields.bulletpoint_info_nr_2 }}</div>
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ product.metafields.my_fields.bulletpoint_info_nr_2 }}</span></div>
                         </div>
                     {% endif %}
                     {% if product.metafields.my_fields.bulletpoint_info_nr_3 %}
                         <div class="col-lg-6 col-12">
-                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
-                                {{ product.metafields.my_fields.bulletpoint_info_nr_3 }}</div>
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ product.metafields.my_fields.bulletpoint_info_nr_3 }}</span></div>
                         </div>
                     {% endif %}
                     {% if product.metafields.my_fields.bulletpoint_info_nr_4 %}
                         <div class="col-lg-6 col-12">
-                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
-                                {{ product.metafields.my_fields.bulletpoint_info_nr_4 }}</div>
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ product.metafields.my_fields.bulletpoint_info_nr_4 }}</span></div>
                         </div>
                     {% endif %}
                     {% if product.metafields.my_fields.bulletpoint_info_nr_5 %}
                         <div class="col-lg-6 col-12">
-                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
-                                {{ product.metafields.my_fields.bulletpoint_info_nr_5 }}</div>
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ product.metafields.my_fields.bulletpoint_info_nr_5 }}</span></div>
                         </div>
                     {% endif %}
                     {% if product.metafields.my_fields.bulletpoint_info_nr_6 %}
                         <div class="col-lg-6 col-12">
-                            <div class="bulletpoint-text"><img class="single-bulletpoint" src="{{ 'bulletpoint.svg' | asset_url }}" alt="Vegan friendly">
-                                {{ product.metafields.my_fields.bulletpoint_info_nr_6 }}</div>
+                            <div class="bulletpoint-text"><img class="single-bulletpoint"
+                                                               src="{{ 'bulletpoint.svg' | asset_url }}"
+                                                               alt="Vegan friendly">
+                                <span>{{ product.metafields.my_fields.bulletpoint_info_nr_6 }}</span></div>
                         </div>
                     {% endif %}
 
                 </div>
                 <h3 class="bundle-heading">Choose your bundle</h3>
-                <div class="row opcijas">
+                <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
                     {% for t in product.tags %}
                         {% if t contains 'bundle' %}
                             {% assign bundle_exsist = true %}
@@ -128,68 +147,73 @@
 
                     {% if bundle_exsist %}
                         <form class="d-none" method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants[2].id }}" />
+                            <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
                             <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
                         </form>
                     {% endif %}
-                    <div class="col-12 col-lg-4">
-                        <div class="add-to-cart-card selected-opcija d-flex flex-column justify-content-end">
-                            <div class="best-value">
+                    <div class="add-to-cart-card d-flex flex-column justify-content-between">
+                        <div class="card-content d-flex flex-row-reverse flex-md-column">
+                            <div class="w-100">
+                                <h3 class="card-quantity">Single</h3>
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants.first.price | money }}</span>
+                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                <p class="card-total">{{ product.variants.first.price | money }} total price to pay</p>
+                            </div>
+                        </div>
+                        <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
+                    </div>
+                    <div class="add-to-cart-card padding-top-30-card selected-opcija d-flex flex-column justify-content-between">
+                        {% if product.metafields.single.enablebestvalue %}
+                            {% if product.metafields.single.bestvalueimage %}
+                                <img class="best-value-image"
+                                     src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}"
+                                     alt="Best value">
                                 {% assign price_variable = product.variants[2].price %}
-                                <p>best value - save
+                                <p class="best-value-text">best value - save
                                     {% if product.metafields.single.usecustomsave %}
                                         {{ product.metafields.single.customsavevalue }}
                                     {% else %}
-                                        {{product.variants.first.price|times:5|minus:price_variable| money_without_trailing_zeros   }}
+                                        {{ product.variants.first.price | times: 5 | minus: price_variable | money_without_trailing_zeros }}
                                     {% endif %}
                                 </p>
+                            {% endif %}
+                        {% endif %}
+                        <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
+                            <div class="w-100">
+                                <h3 class="card-quantity">5-pack</h3>
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants[2].price | divided_by: 5 | money }}</span>
+                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                <p class="card-total">{{ product.variants[2].price | money }} total price to pay</p>
                             </div>
-                            <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                <div style="padding-top: 54px;" class="w-100">
-                                    <h3 class="card-quantity">5-pack</h3>
-                                    <p class="card-ppp">{{product.variants[2].price| divided_by: 5 |money}}<span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                    <p class="card-total">{{product.variants[2].price| money  }} total price to pay</p>
-                                </div>
-                            </div>
-                            <form method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants[2].id }}" />
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
-                            </form>
                         </div>
+                        <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="add-to-cart-card d-flex flex-column justify-content-end">
-                            <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                <div style="padding-top: 54px;" class="w-100">
-                                    <h3 class="card-quantity">3-pack</h3>
-                                    <p class="card-ppp">{{product.variants[1].price| divided_by: 3 |money}}<span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                    <p class="card-total">{{product.variants[1].price | money  }} total price to pay</p>
-                                </div>
+                    <div class="add-to-cart-card d-flex flex-column justify-content-between">
+                        <div class="card-content d-flex flex-row-reverse flex-md-column">
+                            <div class="w-100">
+                                <h3 class="card-quantity">3-pack</h3>
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants[1].price | divided_by: 3 | money }}</span>
+                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                <p class="card-total">{{ product.variants[1].price | money }} total price to pay</p>
                             </div>
-                            <form method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants[1].id }}" />
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
-                            </form>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="add-to-cart-card d-flex flex-column justify-content-end">
-                            <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                <div style="padding-top: 54px;" class="w-100">
-                                    <h3 class="card-quantity">Single</h3>
-                                    <p class="card-ppp">{{product.variants.first.price| money }}<span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                    <p class="card-total">{{product.variants.first.price| money }} total price to pay</p>
-                                </div>
-                            </div>
-                            <form method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart" />
-                            </form>
-                        </div>
+                        <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants[1].id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
                     </div>
                 </div>
             </div>

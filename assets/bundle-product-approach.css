@@ -1,43 +1,31 @@
 .benefits-banner-img {
-  border-radius: 12px;
+  border-radius: 20px;
   max-width: 100%;
 }
 
 .benefits-banner-img.top {
-  margin-bottom: 40px;
+  margin-top: 70px;
 }
 
 .benefits-subtitle {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 170%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #505050;
+  line-height: 150%;
   margin-bottom: 10px;
 }
 
 .benefits-title {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
   line-height: 150%;
-  text-transform: uppercase;
-  color: #505050;
   margin-bottom: 15px;
 }
 
 .benefits-text {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 170%;
-  letter-spacing: 0.02em;
-  color: #505050;
+  font-size: 20px;
+  line-height: 150%;
   margin: 0;
 }
 
@@ -58,57 +46,91 @@
 }
 
 .button-top {
-  max-width: 393px;
-  max-height: 60px;
+  max-width: 390px;
+  height: 70px;
   width: 100%;
-  height: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  background: #4F4B91;
   border: none;
-  border-radius: 8px;
-  font-family: 'Montserrat';
+  border-radius: 15px;
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: normal;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-.button-top:hover {
-  transform: scale(1.05);
-}
 
 .benefits-banner-img.bottom {
   margin-bottom: 70px;
 }
 
+.benefits-banner-img.top.mobile,
+.benefits-banner-img.bottom.mobile {
+  display: none;
+}
+
+.row-margin {
+  margin-top: 40px;
+}
+.button-top:hover {
+  color: white;
+  background: #464284;
+}
+
+.max-h-360 {
+  max-height: 360px;
+  width: auto;
+}
+
+.benefits-photo {
+  border-radius: 20px;
+}
+
 @media screen and (max-width:992px) {
+  .row-margin {
+    margin-top: 20px;
+  }
   .benefits-banner-img {
-    border-radius: 8px;
-    height: 210px;
+    border-radius: 15px;
+    height: 220px;
     object-fit: cover;
   }
 
   .benefits-banner-img.top {
-    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  .benefits-banner-img.top.desktop,
+  .benefits-banner-img.bottom.desktop {
+    display: none;
+  }
+
+  .benefits-banner-img.top.mobile,
+  .benefits-banner-img.bottom.mobile {
+    display: block;
   }
 
   .benefits-subtitle {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .benefits-title {
-    font-size: 18px;
+    text-align: center;
+    font-size: 24px;
     margin-bottom: 10px;
   }
 
+  .margin-top-30 {
+    margin-top: 20px;
+  }
+
   .benefits-text {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .bg-gray {
@@ -116,27 +138,27 @@
   }
 
   .button-top {
-    margin-bottom: 50px;
-    max-width: 315px;
-    height: 50px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: unset;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 17px;
   }
 
   .benefits-banner-img.bottom {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .benefits-photo {
     max-width: 100%;
     max-height: 300px;
+    border-radius: 15px;
   }
-  .benefits-mobile-margin {
-    margin-top: 15px;
-  }
+  /*.benefits-mobile-margin {*/
+  /*  margin-top: 15px;*/
+  /*}*/
   .benefits-mobile-padding {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   .benefits-mobile-padding-single {
     margin-top: 45px;

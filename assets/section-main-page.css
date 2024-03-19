@@ -12,17 +12,6 @@
   }
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-li,
-h1.h0 {
-  font-family: 'Montserrat', sans-serif;
-}
-
 .page-placeholder-wrapper {
   display: flex;
   justify-content: center;

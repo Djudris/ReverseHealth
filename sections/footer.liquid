@@ -1,58 +1,62 @@
 {{ 'footer.css' | asset_url | stylesheet_tag }}
 
-<footer id="section-footer">
+<footer id="section-footer" class="w-100">
     <div class="footer-bg">
         <div class="container p-lg-0">
-            <div class="row">
-                <div class="col-lg-4 col-12 order-1">
-                    <h2 class="footer-title">{{ section.settings.footer-title }}</h2>
-                    <p class="footer-text mb-0 footer-border-mobile">{{ section.settings.footer-text }}</p>
+            <div class="row w-100 m-0">
+                <div class="col-lg-4 col-12 order-1 p-0">
+                    {%- if section.settings.logo != blank -%}
+                        <img src="{{ section.settings.logo | image_url }}"
+                             class="footer-logo"
+                             loading="lazy"
+                             alt="{{ section.settings.footer-title | default: shop.name | escape }}"
+                        >
+                    {%- else -%}
+                        <h2 class="footer-title">{{ section.settings.footer-title }}</h2>
+                    {%- endif -%}
+                    {% comment %}<p class="footer-text mb-0 footer-border-mobile">{{ section.settings.footer-text }}</p>{% endcomment %}
                 </div>
-                <div class="col-lg-2 col-6 order-lg-2 order-3">
-                    <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-1 }}</h3>
-                    <a class="footer-href text-decoration-none" href="/">Home</a>
-                    <a class="footer-href text-decoration-none" href="/collections/all">Shop</a>
-                    <a class="footer-href text-decoration-none" href="/pages/reviews">Reviews</a>
-                    <a class="footer-href text-decoration-none" href="/pages/contact">Contact</a>
-                </div>
-                <div class="col-lg-2 col-6 order-lg-3 order-4">
-                    <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-2 }}</h3>
-                    <a class="footer-href text-decoration-none" href="/pages/terms-of-service">Terms & Conditions</a>
-                    <a class="footer-href text-decoration-none" href="/pages/privacy-cookies">Privacy Policy</a>
-                    <a class="footer-href text-decoration-none" href="/pages/refunds-and-cancellations">Refunds and Cancellations</a>
-                </div>
-                <div class="col-lg-4 col-12 d-lg-flex justify-content-lg-end order-2 order-lg-4">
-                    <div class="text-lg-center">
-                        <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-3 }}</h3>
-                        <div class="d-flex d-lg-block justify-content-between">
-A                            <a href="https://play.google.com/store/apps/details?id=com.suggestic.reversehealth" target="blank"><img loading="lazy" class="footer-download d-lg-block" src="{{ 'GooglePlay.png' | asset_url }}" alt="Download on google play"></a>
-                            <a href="https://apps.apple.com/es/app/reverse-health/id1597150642" target="blank"><img loading="lazy" class="footer-download d-lg-block" src="{{ 'AppStore.png' | asset_url }}" alt="Download on apple store"></a>
-                        </div>
+                <div class="col-lg-6 col-6 order-lg-2 order-3 d-flex justify-lg-content-center justify-content-between footer-gap p-0">
+                    <div class="footer-links">
+                        <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-1 }}</h3>
+                        <a class="footer-href text-decoration-none" href="/">Home</a>
+                        <a class="footer-href text-decoration-none" href="/collections/all">Shop</a>
+                        {% comment %}<a class="footer-href text-decoration-none" href="/pages/reviews">Reviews</a>{% endcomment %}
+                        <a class="footer-href text-decoration-none" href="/pages/contact">Contact</a>
+                    </div>
+                    <div class="footer-terms">
+                        <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-2 }}</h3>
+                        <a class="footer-href text-decoration-none" href="/pages/terms-of-service">Terms & conditions</a>
+                        <a class="footer-href text-decoration-none" href="/pages/privacy-cookies">Privacy policy</a>
+                        <a class="footer-href text-decoration-none" href="/pages/refunds-and-cancellations">Refunds & cancellations</a>
                     </div>
                 </div>
-            </div>
-            <div class="footer-social-icons">
-                <a href="{{ section.settings.ig-url }}" class="text-decoration-none" target="blank">
-                    <img loading="lazy" class="footer-fb-i" src="{{ 'instagram.svg' | asset_url }}" alt="Instagram icon">
-                </a>
-                <a href="{{ section.settings.fb-url }}" class="text-decoration-none footer-fb-i" target="blank">
-                    <img loading="lazy" class="footer-fb-i" src="{{ 'facebook.svg' | asset_url }}" alt="Instagram icon">
-                </a>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="d-flex col-lg-6 col-12 justify-content-center">
-                    <div class="footer-copyright-line w-100 text-center">
-                        <p class="footer-copyright">Copyright @ Reverse Health. All rights reserved.
-                        </p>
-                    </div>
+                <div class="col-lg-2 col-12 d-lg-flex justify-content-lg-end order-2 order-lg-4 p-0">
+
                 </div>
             </div>
+            {% comment %}<div class="footer-social-icons">{% endcomment %}
+                {% comment %}<a href="{{ section.settings.ig-url }}" class="text-decoration-none" target="blank">{% endcomment %}
+                    {% comment %}<img loading="lazy" class="footer-fb-i" src="{{ 'instagram.svg' | asset_url }}" alt="Instagram icon">{% endcomment %}
+                {% comment %}</a>{% endcomment %}
+                {% comment %}<a href="{{ section.settings.fb-url }}" class="text-decoration-none footer-fb-i" target="blank">{% endcomment %}
+                    {% comment %}<img loading="lazy" class="footer-fb-i" src="{{ 'facebook.svg' | asset_url }}" alt="Instagram icon">{% endcomment %}
+                {% comment %}</a>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+            {% comment %}<div class="row d-flex justify-content-center">{% endcomment %}
+                {% comment %}<div class="d-flex col-lg-6 col-12 justify-content-center">{% endcomment %}
+                    {% comment %}<div class="footer-copyright-line w-100 text-center">{% endcomment %}
+                        {% comment %}<p class="footer-copyright">Copyright @ Reverse Health. All rights reserved.{% endcomment %}
+                        {% comment %}</p>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
         </div>
     </div>
     <div class="footer-bg-2">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-10 col-12">
+        <div class="container w-100">
+            <div class="d-flex justify-content-center w-100">
+                <div class="w-100">
                     <p class="footer-info-text text-lg-center">{{ section.settings.footer-text-information }}</p>
                 </div>
             </div>
@@ -71,22 +75,21 @@ A                            <a href="https://play.google.com/store/apps/details
 "default":"reverse health"
 },
 {
+"type": "image_picker",
+"id": "logo",
+"label": "t:sections.header.settings.logo.label"
+},
+{
 "id": "footer-text",
 "type": "text",
 "label": "Footer text",
 "default":"The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging."
 },
 {
-"id": "ig-url",
+"id": "footer-email",
 "type": "text",
-"label": "Instagram url",
-"default":"https://www.instagram.com/reverse.program/"
-},
-{
-"id": "fb-url",
-"type": "text",
-"label": "Facebook url",
-"default":"https://www.facebook.com/reverseprogram"
+"label": "Contact us email",
+"default":"care@wellinda.health"
 },
 {
 "id": "footer-subtitle-1",

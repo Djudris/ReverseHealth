@@ -1,28 +1,35 @@
 {{ 'landing-delivery.css' | asset_url | stylesheet_tag }}
 
-<section class="delivery-bg" id="section-delivery"  {% if product.id %} style="background-color: {{ product.metafields.my_fields.how_to_use_background_color }};" {% endif %}>
-    <div class="container p-lg-0">
+<section class="delivery-bg" id="section-delivery">
+    <div class="tab text-center"><p>Trusted and endorsed by Reverse Health nutritionists</p></div>
+    <div class="container p-lg-0 pt-70">
         <h2 class="delivery-title text-center mb-0">{{ section.settings.title }}</h2>
-        <div class="row">
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                <img loading="lazy" src="{{ 'calendar_i.svg' | asset_url }}" alt="Calendar icon" class="delivery-img ">
-                <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-1 }}</h3>
-                {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>{% endcomment %}
+        <div class="row justify-content-evenly">
+            <div class="col-lg-4 col-12">
+                <div class="d-flex flex-column align-items-center bg-card">
+                    <img loading="lazy" src="{{ 'rocket_i.png' | asset_url }}" alt="Rocket icon" class="delivery-img ">
+                    <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-1 }}</h3>
+                    {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-1 }}</p>{% endcomment %}
+                </div>
             </div>
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                <img loading="lazy" src="{{ 'shipping_i.svg' | asset_url }}" alt="Shipping icon" class="delivery-img ">
-                <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-2 }}</h3>
-                {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-2 }}</p>{% endcomment %}
+            <div class="col-lg-4 col-12">
+                <div class="d-flex flex-column align-items-center bg-card">
+                    <img loading="lazy" src="{{ 'box_i.png' | asset_url }}" alt="Box icon" class="delivery-img ">
+                    <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-2 }}</h3>
+                    {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-2 }}</p>{% endcomment %}
+                </div>
             </div>
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                <img loading="lazy" src="{{ 'money_i.svg' | asset_url }}" alt="Money refund icon" class="delivery-img ">
-                <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-3 }}</h3>
-                {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-3 }}</p>{% endcomment %}
+            <div class="col-lg-4 col-12">
+                <div class="d-flex flex-column align-items-center bg-card">
+                    <img loading="lazy" src="{{ 'microscope_i.png' | asset_url }}" alt="Ingredients icon" class="delivery-img ">
+                    <h3 class="delivery-title-sm text-center mb-0">{{ section.settings.title-sm-3 }}</h3>
+                    {% comment %}<p class="delivery-text  text-center mb-0">{{ section.settings.text-3 }}</p>{% endcomment %}
+                </div>
             </div>
         </div>
         {% if product.id == blank %}
         <div class="delivery-btn-padding d-flex justify-content-center">
-            <a href="{{shop.url}}/collections/all"><button class="btn btn-primary button-top">check availability</button></a>
+            <a href="{{shop.url}}/collections/all" style="min-width: 32%"><button class="btn btn-primary button-top w-100">check availability</button></a>
         </div>
         {% endif %}
 
@@ -61,7 +68,7 @@
 {
 "type": "text",
 "id": "title-sm-2",
-"default": "Free Shipping",
+"default": "Free shipping",
 "label": "t:sections.featured-collection.settings.title.label"
 },
 {

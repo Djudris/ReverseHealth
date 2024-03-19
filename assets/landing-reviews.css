@@ -1,35 +1,51 @@
 .reviews-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
     color: white;
     padding-top: 50px;
     padding-bottom: 30px;
+    margin: 0;
 }
 
 #reviews {
     overflow: hidden;
 }
 
+#reviews .container {
+    padding: 0 15px;
+}
+
 .reviews-bg {
-    background: #EB657E;
+    background: #12635F;
 }
 
 .reviews-card {
     background: #FFFFFF;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);*/
+    border-radius: 15px;
     padding: 35px 25px 25px 25px;
     position: relative;
 }
 
-.review-card-top {
-    margin-left: 15px;
-}
+/*.review-card-top {*/
+/*    margin-left: 15px;*/
+/*}*/
 
 .review-card-stars {
     margin-top: 5px;
+}
+
+.review-card-stars p {
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+@media screen and (min-width: 990px) {
+    .review-card-stars p {
+        font-size: 20px;
+    }
 }
 
 .review-card-img {
@@ -39,29 +55,32 @@
 }
 
 .review-card-name {
-    font-style: italic;
+    font-weight: 600;
     font-size: 16px;
     line-height: 27px;
 }
 
 .review-card-title {
     font-weight: bold;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 150%;
 }
 
 .review-card-text {
-    font-size: 14px;
-    line-height: 24px;
+    letter-spacing: normal;
+    color: #1D2E42;
+    font-size: 17px;
+    line-height: 150%;
 }
 
 .review-card-bottom {
-    margin-top: 20px
+    margin-top: 15px
 }
 
 .review-icons {
-    margin-top: 25px;
-    padding: 0 25px;
+    position: relative;
+    margin-top: 35px;
+    padding: 0 23px;
 }
 
 .review-icon {
@@ -69,7 +88,7 @@
 }
 
 .review-pb {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .owl-stage {
@@ -129,24 +148,39 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .review-icons-after::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        width: 2px;
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-50%);
+        height: 50px;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .reviews-title {
-        font-size: 24px;
+        max-width: 527px;
+        font-size: 28px;
         line-height: 41px;
         padding-top: 70px;
-        padding-bottom: 64px;
+        padding-bottom: 35px;
         margin: 0;
     }
 
     .reviews-card {
-        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
-        border-radius: 18px;
+        /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);*/
+        border-radius: 20px;
         padding: 25px 20px 20px 20px;
     }
 
-    .review-card-top {
-        margin-left: 20px;
-    }
+    /*.review-card-top {*/
+    /*    margin-left: 20px;*/
+    /*}*/
 
     .review-card-stars {
         margin-top: 6px;
@@ -158,8 +192,8 @@
     }
 
     .review-card-name {
-        font-size: 18px;
-        line-height: 31px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .review-card-title {
@@ -168,25 +202,25 @@
     }
 
     .review-card-text {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .review-card-bottom {
-        margin-top: 21px;
+        margin-top: 15px;
     }
 
     .review-icons {
-        margin-top: 40px;
+        padding: 0 11px;
     }
 
     .review-icon {
         display: block;
-        height: 95px;
+        height: 65px;
     }
 
     .review-pb {
-        padding-bottom: 70px;
+        padding-bottom: 98px;
     }
 
     .review-product-1 {
@@ -214,8 +248,7 @@
     font-size: 12px;
     border: none;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .owl-nav {
@@ -232,8 +265,7 @@
     font-size: 12px;
     border: none;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .owl-nav button {
@@ -258,7 +290,8 @@
 
 button.owl-next.disabled,
 button.owl-prev.disabled {
-    background: #F4ADBB !important;
+    border: 1px solid white !important;
+    background: transparent !important;
     opacity: 1;
 }
 
@@ -308,10 +341,7 @@ button.owl-prev:not(.disabled) {
         width: 200px !important;
     }
 
-    .review-icons {
-        margin-top: 25px;
-        padding: 0 11px;
-    }
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -322,7 +352,8 @@ button.owl-prev:not(.disabled) {
     }
 
     .review-icons {
-        margin-top: 25px;
+        position: relative;
+        margin-top: 0px;
         padding: 0 25px;
     }
 

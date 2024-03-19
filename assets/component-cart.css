@@ -3,35 +3,26 @@
   display: block;
 }
 
-.cart-item__name {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.product-option {
-  font-family: 'Montserrat', sans-serif;
-}
 
 .btn.btn-primary {
-  background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  background: #4F4B91;
+  border-radius: 15px;
   border: none;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 150%;
   text-transform: uppercase;
   color: #FFFFFF;
   width: 440px;
-  height: 60px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn.btn-primary:hover {
-  transform: scale(1.05);
+  background: #464284;
 }
 
 a.btn.btn-primary.empty-button {
@@ -43,20 +34,20 @@ a.btn.btn-primary.empty-button {
   .btn.btn-primary {
     max-width: 315px;
     width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    font-size: 15px;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 17px;
     margin: 0 auto;
   }
 
   .empty-button {
-    border-radius: 5px !important;
-    font-size: 16px !important;
+    border-radius: 12px;
+    font-size: 17px !important;
     max-width: 315px;
     margin: 0 auto;
     width: 100% !important;
     padding: 7px 6px 7px 6px !important;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,15 +55,14 @@ a.btn.btn-primary.empty-button {
 }
 
 .empty-button {
-  font-size: 18px;
+  font-size: 20px;
   padding: 16px 96px 16px 96px;
   width: auto;
   text-transform: uppercase;
   font-weight: bold;
   border: none;
   background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 20%);
-  border-radius: 8px;
+  border-radius: 15px;
   color: #FFFFFF;
 }
 
@@ -116,6 +106,14 @@ cart-items.is-empty .title-wrapper-with-link,
   font-size: inherit;
 }
 
+
+[data-testid="ApplePay-button"] {
+  border-radius: 12px;
+}
+
+.dynamic-checkout__content iframe {
+  border-radius: 12px !important;
+}
 @media screen and (min-width: 990px) {
   .cart__warnings {
     padding: 7rem 0 1rem;
@@ -123,6 +121,16 @@ cart-items.is-empty .title-wrapper-with-link,
 
   .cart__empty-text {
     margin: 0 0 3rem;
+  }
+  .dynamic-checkout__content iframe {
+    border-radius: 15px;
+  }
+  [data-testid="ApplePay-button"] {
+    border-radius: 15px;
+  }
+
+  .dynamic-checkout__content iframe {
+    border-radius: 15px !important;
   }
 }
 
@@ -251,8 +259,16 @@ cart-items {
 }
 
 .cart__dynamic-checkout-buttons div[role='button'] {
-  border-radius: var(--buttons-radius-outset) !important;
+  border-radius: 15px !important;
 }
+
+@media screen and (max-width: 992px) {
+  .cart__dynamic-checkout-buttons div[role='button'] {
+    border-radius: 12px !important;
+  }
+}
+
+
 
 .cart-note__label {
   display: inline-block;
@@ -268,6 +284,7 @@ cart-items {
 
 
 .cart__checkout-button {
+  height: 60px;
   max-width: 36rem;
 }
 ._1mqqPYZtCQtz5_i0b-po4l ._3TUeZPsTWjDxakSmeDcA4D {
@@ -277,9 +294,13 @@ cart-items {
   text-align: center;
 }
 
+.dynamic-checkout__content iframe {
+  border-radius: 12px;
+}
+
 @media screen and (min-width: 750px) {
   .cart__checkout-button {
-    height: 42px !important;
+    height: 70px;
   }
   .dynamic-checkout__content {
     display: flex;

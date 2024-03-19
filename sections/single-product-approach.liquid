@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-12 order-1">
+            <div class="col-lg-6 col-12 order-1 row-margin margin-top-40">
                 <h2 class="approach-title">
                     {{ section.settings.title }}
                 </h2>
@@ -11,20 +11,20 @@
                     {{ product.metafields.my_fields.approach_text }}
                 </p>
             </div>
-            <div class="col-lg-6 col-12 d-flex justify-content-center order-2">
+            <div class="col-lg-6 col-12 d-flex justify-content-center order-2 row-margin">
                 <img class="approach-photo" src="{{ product.metafields.my_fields.coaches_image | img_url: '800x800' }}" alt="">
             </div>
-            <div class="col-lg-6 col-12 d-flex justify-content-center order-lg-3 order-4">
+            <div class="col-lg-6 col-12 d-flex justify-content-center order-lg-3 order-4 row-margin">
                 <img class="approach-circle" src="{{ product.metafields.my_fields.benefits_image | img_url: '800x800' }}" alt="">
             </div>
-            <div class="col-lg-6 col-12 order-lg-4 order-3">
+            <div class="col-lg-6 col-12 order-lg-4 order-3 row-margin">
                 <h2 class="need-title">{{ product.metafields.my_fields.needs_title }}</h2>
                 <p class="need-text">{{ product.metafields.my_fields.needs_text }}</p>
 
             </div>
         </div>
         <div class="delivery-btn-padding d-flex justify-content-center">
-            <a href="#page-top" class="btn btn-primary button-top">shop now</a>
+            <a href="#page-top" class="d-flex justify-content-center align-items-center btn btn-primary button-top">shop now</a>
         </div>
     </div>
 </section>

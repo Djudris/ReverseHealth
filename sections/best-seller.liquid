@@ -10,13 +10,15 @@
         </div>
         <div class="w-100 best-seller-pb">
             <div class="row d-flex justify-content-center position-relative">
-                <div id="best_seller_carousel" class="owl-carousel col-12 col-lg-10">
+                <div id="best_seller_carousel" class="owl-carousel col-12">
                     {% for product in collections.best-sellers.products %}
 
-                        <div class="best-seller-card-bg d-flex flex-column justify-content-between align-items-center">
+                        <div onclick="window.location='{{ product.url }}'" role="button" class="best-seller-card-bg d-flex flex-column justify-content-between align-items-center">
                             <div>
                                 <div>
-                                    <img class="best-seller-img" src="{{ product.featured_image | img_url: '1000x1000' }}" alt="{{ product.featured_image.alt }}" loading="lazy">
+                                    <img class="best-seller-img"
+                                         src="{{ product.featured_image | img_url: '1000x1000' }}"
+                                         alt="{{ product.featured_image.alt }}" loading="lazy">
                                     <div class="yotpo bottomLine"
                                          data-appkey="yjH1ued2tXcyfPboQI4F8pfXTDrX0483ALKaoqfF"
                                          data-domain="{{ shop.permanent_domain | escape }}"
@@ -29,8 +31,12 @@
                                          data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
                                     </div>
                                 </div>
-                                <div class="pt-3 best-seller-card-name text-center text-uppercase">{{ product.title }}</div>
-                                <div class="pt-2 best-seller-card-price text-center">from {{ product.variants[2].price | divided_by: 5 | money }} per
+
+                            </div>
+                            <div class="w-100 px-lg-3">
+                                <div class="pt-3 best-seller-card-name text-center">{{ product.title }}</div>
+                                <div class="pt-2 best-seller-card-price text-center">
+                                    from {{ product.variants[2].price | divided_by: 5 | money }} per
                                     {% for t in product.tags %}
                                         {% if t contains 'bundle' %}
                                             {% assign bundle_exsist = true %}
@@ -42,58 +48,62 @@
                                         unit
                                     {% endif %}
                                 </div>
-                            </div>
-                            <div class="w-100 px-lg-3">
-                                <div class="pt-3 mx-lg-1 mt-1 best-seller-card-price d-flex justify-content-center">
-                                    <form class="product-form w-100" action="/cart/add" data-productid="{{ product.id }}" method="post">
-                                        <input type="hidden" name="id" data-productid="{{ product.id }}" class="product-select" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}"/>
+                                <div class="pt-3 mt-1 best-seller-card-price d-flex justify-content-center">
+                                    <form class="product-form w-100 text-center" action="/cart/add"
+                                          data-productid="{{ product.id }}" method="post">
+                                        <input type="hidden" name="id" data-productid="{{ product.id }}"
+                                               class="product-select" value="{{ product.variants[0].id }}"
+                                               data-variant-title="{{ product.variants[0].title }}"/>
                                         <button
                                                 id="{{ product_form_id }}-submit"
                                                 type="submit"
                                                 name="add"
-                                                class="quick-add__submit btn best-seller-card-btn w-100"
+                                                class="quick-add__submit btn best-seller-card-btn best-seller-btn-max-w w-100 "
                                                 aria-haspopup="dialog"
                                                 aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
                                                 aria-live="polite"
                                                 data-sold-out-message="true"
                                                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                                         >
-                            <span>
-                      {%- if product.selected_or_first_available_variant.available -%}
-                          Add to cart
-                      {%- else -%}
-                          {{ 'products.product.sold_out' | t }}
-                      {%- endif -%}
-                    </span>
+                                            <span>
+                                                {%- if product.selected_or_first_available_variant.available -%}
+                                                    Add to cart
+                                                {%- else -%}
+                                                    {{ 'products.product.sold_out' | t }}
+                                                {%- endif -%}
+                                            </span>
                                             <span class="sold-out-message hidden">
-                      {{ 'products.product.sold_out' | t }}
-                    </span>
+                                                {{ 'products.product.sold_out' | t }}
+                                            </span>
                                             <div class="loading-overlay__spinner hidden">
-                                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                <svg aria-hidden="true" focusable="false" role="presentation"
+                                                     class="spinner" viewBox="0 0 66 66"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33"
+                                                            r="30"></circle>
                                                 </svg>
                                             </div>
                                         </button>
                                     </form>
                                 </div>
                                 <div class="py-3 my-1 my-lg-2 text-center">
-                                    <a href="{{ product.url }}" class="best-seller-card-lmore">Learn More</a>
+                                    <a href="{{ product.url }}" class="best-seller-card-lmore">Learn more</a>
                                 </div>
                             </div>
                         </div>
                     {%- endfor -%}
                 </div>
-                <div class="css--prev-btn d-flex justify-content-start">
-                    <button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center disabled">
-                        <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
-                    </button>
-                </div>
-                <div class="css--next-btn d-flex justify-content-end">
-                    <button class="customNextBtn caps d-flex d-sm-inline align-items-center">
-                        <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
-
-                    </button>
-                </div>
+                {% comment %}<div class="css--prev-btn d-flex justify-content-start">{% endcomment %}
+                {% comment %}<button class="customPrevBtn caps text-center d-flex d-sm-inline align-items-center disabled">{% endcomment %}
+                {% comment %}<img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">{% endcomment %}
+                {% comment %}</button>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}<div class="css--next-btn d-flex justify-content-end">{% endcomment %}
+                {% comment %}<button class="customNextBtn caps d-flex d-sm-inline align-items-center">{% endcomment %}
+                {% comment %}<img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">{% endcomment %}
+                {% comment %}{% endcomment %}
+                {% comment %}</button>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
             </div>
 
             <div id="shopify-product-review" data-id="7640822218979">{{ product.metafields.spr.reviews }}</div>
@@ -108,35 +118,35 @@
 
 {% schema %}
 {
-"name": "t:sections.featured-collection.name",
-"tag": "section",
-"class": "section",
-"settings": [
-{
-"type": "text",
-"id": "title",
-"default": "our best sellers",
-"label": "t:sections.featured-collection.settings.title.label"
-},
-{
-"type": "collection",
-"id": "collection",
-"label": "t:sections.featured-collection.settings.collection.label"
-},
-{
-"type": "range",
-"id": "products_to_show",
-"min": 2,
-"max": 12,
-"step": 1,
-"default": 4,
-"label": "t:sections.featured-collection.settings.products_to_show.label"
-}
-],
-"presets": [
-{
-"name": "t:sections.featured-collection.presets.name"
-}
-]
+  "name": "t:sections.featured-collection.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "our best sellers",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.featured-collection.settings.products_to_show.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-collection.presets.name"
+    }
+  ]
 }
 {% endschema %}

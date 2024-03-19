@@ -3,13 +3,13 @@
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
-    "colors_accent_2": "#334fb4",
+    "colors_accent_2": "#3b8581",
     "gradient_accent_2": "",
     "colors_text": "#121212",
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
-    "colors_background_2": "#f3f3f3",
+    "colors_background_2": "#f6f8fe",
     "gradient_background_2": "",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -95,8 +95,13 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/Logo_2.png",
+    "favicon": "shopify:\/\/shop_images\/wellinda-favicon.png",
     "currency_code_enabled": true,
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_dark.svg",
+    "checkout_logo_position": "left",
+    "checkout_sidebar_background_color": "#f5f5f5",
+    "checkout_accent_color": "#1d2e42",
+    "checkout_button_color": "#3b8581",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -120,6 +125,7 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/logo_dark.svg",
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
@@ -132,14 +138,14 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "footer-title": "reverse health",
+          "footer-title": "Wellinda",
+          "logo": "shopify:\/\/shop_images\/logo_light.svg",
           "footer-text": "The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging.",
-          "ig-url": "https:\/\/www.instagram.com\/reverse.program\/",
-          "fb-url": "https:\/\/www.facebook.com\/reverseprogram",
+          "footer-email": "care@wellinda.health",
           "footer-subtitle-1": "General",
           "footer-subtitle-2": "Legal",
-          "footer-subtitle-3": "Get The App",
-          "footer-text-information": "* The information contained on this website is NOT intended as medical advice. You are responsible for your own health and safety at all times. Please consult with a medical professional for any questions. <br>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."
+          "footer-subtitle-3": "Get the app",
+          "footer-text-information": "* The statements on this website regarding our supplements have not been evaluated by the FDA (U.S. Food & Drug Administration). Our products are not intended to diagnose, treat, cure, or prevent any disease. The information provided here is for informational purposes only and is not a substitute for advice from your physician or other healthcare professionals.  Please consult with a medical professional before starting any new supplement regimen, especially if you are pregnant, nursing, have existing health conditions, or are taking any other medications. You are responsible for your own health and safety at all times. Remember, individual health needs vary, and the effectiveness of our products may also vary from person to person"
         }
       },
       "main-password-header": {
@@ -160,8 +166,8 @@
 
     ],
     "blocks": {
-      "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-reviews-photos\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }

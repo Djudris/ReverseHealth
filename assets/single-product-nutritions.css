@@ -1,55 +1,93 @@
 .composition-title {
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 31px;
-    font-weight: 700;
+    text-align: center;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .composition-text {
-    font-size: 14px;
-    line-height: 24px;
+    letter-spacing: normal;
+    font-size: 17px;
+    line-height: 150%;
     margin-bottom: 30px;
 }
 
 .nutritions-bg {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .nutritions-icon {
     height: 80px;
 }
 
+.nutritions-icons-container {
+    gap: 1%;
+}
+
 .nutritions-table {
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+.approach-bottom-img-container {
+    height: fit-content;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .approach-bottom-img {
     object-fit: cover;
     width: 100%;
+    height: auto;
     object-position: center;
+    border-radius:15px;
+}
 
+.approach-bottom-img.mobile {
+    display: block;
+    border-radius:15px;
+}
+
+.approach-bottom-img.desktop {
+    display: none;
 }
 
 @media screen and (max-width: 419px) {
     .nutritions-icon {
-        height: 54px;
+        height: 68px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .nutritions-icons-container {
+        gap: 0;
+    }
+    .approach-bottom-img.mobile {
+        display: none;
+    }
+
+    .approach-bottom-img.desktop {
+        display: block;
+        border-radius: 20px;
+    }
+    .approach-bottom-img-container {
+        height: fit-content;
+        width: 100%;
+        border-radius: 20px;
+    }
     .composition-title {
-        font-size: 24px;
-        line-height: 41px;
+        text-align: left;
+        font-size: 28px;
+        line-height: 150%;
         margin-bottom: 20px;
     }
 
     .composition-text {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 20px;
+        line-height: 150%;
         margin-bottom: 0;
-
     }
 
     .nutritions-bg {
@@ -63,6 +101,6 @@
     }
 
     .nutritions-table {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 }

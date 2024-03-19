@@ -100,7 +100,7 @@
     </symbol>
 </svg>
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper header-color color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-    <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+    <header class="container header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
         {%- if section.settings.menu != blank -%}
             <header-drawer data-breakpoint="tablet">
 
@@ -114,13 +114,29 @@
                     <div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1">
 
                         <div class="menu-drawer__inner-container">
-
+                            <a href="{{ routes.root_url }}" class="header__heading-link mobile-header-icon link link--text focus-inset">
+                                {%- if section.settings.logo != blank -%}
+                                    <img src="{{ section.settings.logo | image_url }}"
+                                         loading="lazy"
+                                         class=""
+                                         width="125px"
+                                         height="22px"
+                                         alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+                                    >
+                                {%- else -%}
+                                    <span class="h2 shop-title-logo">Wellinda</span>
+                                {%- endif -%}
+                            </a>
                             <div class="menu-drawer__navigation-container">
                                 <nav class="menu-drawer__navigation d-flex flex-column align-items-start">
-                                    <a href="/" class="mobile-nav-el-padding navigation-link d-block text-decoration-none">HOME</a>
+                                    <a href="/" class="mobile-nav-el-padding navigation-link d-block text-decoration-none">Home</a>
                                     <div class="mobile-dropdown dropdown mobile-nav-el-padding d-inline w-100 nav-mobile-single-line">
-                                        <div class="mobile-dropdown-toggle d-flex pl-0-mobile btn btn-secondary dropdown-toggle navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                            SHOP
+                                        <div class="mobile-dropdown-toggle d-flex gap-2 align-items-center pl-0-mobile dropdown-toggle navigation-link" type="button" id="dropdownMenu4" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Shop
+                                          <svg class="mobile-dropdown-icon" width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.4004 8.81012L19.2981 1.10229C19.5894 0.849749 19.589 0.440885 19.2966 0.18877C19.0043 -0.06315 18.5307 -0.062499 18.2391 0.190072L9.87104 7.43911L1.50299 0.189811C1.21137 -0.0627269 0.738119 -0.0633779 0.445751 0.188509C0.299191 0.314892 0.22591 0.480463 0.22591 0.646033C0.22591 0.81118 0.2987 0.9761 0.444244 1.10225L9.34169 8.81012C9.48177 8.93175 9.67241 9 9.87104 9C10.0697 9 10.2601 8.93155 10.4004 8.81012Z" fill="#1D2E42"/>
+                                          </svg>
+
                                         </div>
                                         <ul class="p-0 dropdown-menu position-relative mobile-nav-dropdown">
                                             {%- for product in collections.all.products -%}
@@ -136,20 +152,20 @@
                                         </ul>
                                     </div>
 
-                                    <a href="/pages/reviews" class="mobile-nav-el-padding nav-mobile-double-line navigation-link d-block text-decoration-none">REVIEWS</a>
-                                    <a href="/pages/contact" class="mobile-nav-el-padding nav-mobile-single-line-b navigation-link d-block text-decoration-none">CONTACT</a>
+                                    {% comment %}<a href="/pages/reviews" class="mobile-nav-el-padding nav-mobile-double-line navigation-link d-block text-decoration-none">Reviews</a>{% endcomment %}
+                                    <a href="/pages/contact" class="mobile-nav-el-padding nav-mobile-single-line-b navigation-link d-block text-decoration-none">Contact</a>
                                 </nav>
                                 <div class="menu-drawer__utility-links">
-                                    <div class="dropdown dropdown-mobile">
-                                        <div class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <div class="nav-country-selector-div">
-                                                <div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">
-                                                    <img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">
-                                                  United States
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {% comment %}<div class="dropdown dropdown-mobile">{% endcomment %}
+                                        {% comment %}<div class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu5" data-bs-toggle="dropdown" aria-expanded="false">{% endcomment %}
+                                            {% comment %}<div class="nav-country-selector-div">{% endcomment %}
+                                                {% comment %}<div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">{% endcomment %}
+                                                    {% comment %}<img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">{% endcomment %}
+                                                    {% comment %}<span>United States</span>{% endcomment %}
+                                                {% comment %}</div>{% endcomment %}
+                                            {% comment %}</div>{% endcomment %}
+                                        {% comment %}</div>{% endcomment %}
+                                    {% comment %}</div>{% endcomment %}
                                     {%- if shop.customer_accounts_enabled -%}
                                         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
                                             {% render 'icon-account' %}
@@ -162,7 +178,7 @@
                                             -%}
                                         </a>
                                     {%- endif -%}
-                                    <ul class="list list-social list-unstyled" role="list">
+                                    <!-- <ul class="list list-social list-unstyled" role="list">
 
                                         <li class="list-social__item">
                                             <a href="https://instagram.com/reverse.program" class="list-social__link link" target="blank">
@@ -179,7 +195,7 @@
                                             </a>
                                         </li>
 
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -275,8 +291,7 @@
             <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
                 {%- if section.settings.logo != blank -%}
                     {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
-                    <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
-                         src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+                    <img src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
                          loading="lazy"
                          class="header__heading-logo"
                          width="{{ section.settings.logo.width }}"
@@ -284,7 +299,7 @@
                          alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
                     >
                 {%- else -%}
-                    <span class="h2 shop-title-logo">REVERSE HEALTH</span>
+                    <span class="h2 shop-title-logo">Wellinda</span>
                 {%- endif -%}
             </a>
             {%- if request.page_type == 'index' -%}
@@ -294,37 +309,98 @@
         {%- if section.settings.menu != blank -%}
             {%- if section.settings.menu_type_desktop == 'dropdown' -%}
                 <nav class="header__inline-menu">
-                    <a href="/" class="navigation-link text-decoration-none">HOME</a>
-                    <div class="dropdown d-inline">
-                        <button class="btn btn-secondary dropdown-toggle navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                            SHOP
-                        </button>
-                        <ul class="dropdown-menu">
-                            {%- for product in collections.all.products -%}
-                                <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
-                            {%- endfor -%}
+                    <a href="/" class="navigation-link text-decoration-none">Home</a>
+                    <div class="dropdown d-inline" >
+                        <div href="#" class="navigation-link text-decoration-none" id="shopToggle">Shop
+                            <svg style="margin-left: 5px;" class="dropdown-icon" id="shopToggleIcon" width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4004 8.81012L19.2981 1.10229C19.5894 0.849749 19.589 0.440885 19.2966 0.18877C19.0043 -0.06315 18.5307 -0.062499 18.2391 0.190072L9.87104 7.43911L1.50299 0.189811C1.21137 -0.0627269 0.738119 -0.0633779 0.445751 0.188509C0.299191 0.314892 0.22591 0.480463 0.22591 0.646033C0.22591 0.81118 0.2987 0.9761 0.444244 1.10225L9.34169 8.81012C9.48177 8.93175 9.67241 9 9.87104 9C10.0697 9 10.2601 8.93155 10.4004 8.81012Z" fill="#1D2E42"/>
+                            </svg>
+                        </div>
+                        <div style="height:30px; width: 80px;" class="dropdown-menu-hovered" id="shopMenuDiv">
+                          <ul class="dropdown-menu" id="shopToggleMenu">
+                              {%- for product in collections.all.products -%}
+                                  <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
+                              {%- endfor -%}
 
-                            <li><a class="dropdown-item" href="/collections/all">All Products</a></li>
-                        </ul>
+                              <li><a class="dropdown-item" href="/collections/all">All products</a></li>
+                          </ul>
+                        </div>
                     </div>
 
-                    <a href="/pages/reviews" class="navigation-link text-decoration-none">REVIEWS</a>
-                    <a href="/pages/contact" class="navigation-link text-decoration-none">CONTACT</a>
+                    {% comment %}<a href="/pages/reviews" class="navigation-link text-decoration-none">Reviews</a>{% endcomment %}
+                    <a href="/pages/contact" class="navigation-link text-decoration-none">Contact</a>
 
+
+                    <script type="module">
+                        document.addEventListener('DOMContentLoaded', () => {
+                          let dropDown = document.getElementById('shopToggle');
+                          let dropDownMenu = document.getElementById('shopToggleMenu');
+                          let dropDownMenuDiv = document.getElementById('shopMenuDiv');
+                          let dropDownMenuSvg = document.getElementById('shopToggleIcon');
+                          let svgPath  = dropDownMenuSvg.querySelector('path');
+
+                          setTimeout( () => {},50)
+
+                          if(dropDown){
+                            dropDown.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDown.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            dropDownMenu.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDownMenu.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            dropDownMenuDiv.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDownMenuDiv.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            dropDownMenuSvg.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            dropDownMenuSvg.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                            svgPath.addEventListener('mouseover', (e) => toggleClasses(e, 'mouseover'));
+                            svgPath.addEventListener('mouseleave', (e) => toggleClasses(e, 'mouseleave'));
+                          }
+                        })
+
+                        const toggleClasses = (e, type) =>
+                        {
+                          let target = e.target;
+                          if('ontouchstart' in window) {
+                              if(target.tagName.toLowerCase() === 'a'){
+                                  if(target.href !== '#')
+                                    window.location.href = target.href;
+                              }
+                          }
+                          let dropDown = document.getElementById('shopToggle');
+                          let dropDownIcon = document.getElementById('shopToggleIcon');
+                          let svgPath  = dropDownIcon.querySelector('path');
+                          let dropDownMenu = document.getElementById('shopToggleMenu');
+                          let dropDownMenuDiv = document.getElementById('shopMenuDiv');
+                          if(target == dropDown || target == dropDownIcon || target == dropDownMenu || target == dropDownMenuDiv || target == svgPath){
+                            let isClass = dropDown.classList.contains('dropdown-toggle-hovered');
+                            if(type == 'mouseover'){
+                              if(isClass) {
+                                return;
+                              }
+                            } else {
+                              if(!isClass) {
+                                return;
+                              }
+                            }
+                          }
+
+                          dropDownIcon.classList.toggle('dropdown-toggle-icon-rotate');
+                          dropDownMenu.classList.toggle('dropdown-menu-hovered');
+                          dropDown.classList.toggle('dropdown-toggle-hovered');
+                        }
+                    </script>
                 </nav>
             {%- endif -%}
         {%- endif -%}
         <div class="navigation-desktop-country-cart">
-            <div class="dropdown dropdown-desktop">
-                <button class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="nav-country-selector-div">
-                        <div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">
-                            <img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">
-                            United States
-                        </div>
-                    </div>
-                </button>
-            </div>
+            {% comment %}<div class="dropdown dropdown-desktop">{% endcomment %}
+                {% comment %}<button class="btn btn-secondary navigation-dropdown-desktop navigation-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">{% endcomment %}
+                    {% comment %}<div class="nav-country-selector-div">{% endcomment %}
+                        {% comment %}<div data-country="https://shop.reverse.health/?redirect" class="nav-country-selector-single-selected">{% endcomment %}
+                            {% comment %}<img loading="lazy" src="{{ 'nav-us.svg' | asset_url }}" alt="United States">{% endcomment %}
+                            {% comment %}<span>United States</span>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}</button>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
 
             <div class="header__icons cart-icon-parent">
                 <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
@@ -342,6 +418,7 @@
                 </a>
             </div>
         </div>
+
     </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
@@ -388,11 +465,11 @@ onScroll() {
 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 if(scrollTop>this.headerBounds.bottom){
 let drawer=document.getElementById("menu-drawer");
-drawer.style.height="105vh"
+drawer.style.top="0"
 
 }else{
 let drawer=document.getElementById("menu-drawer");
-drawer.style.height="100vh"
+drawer.style.top="-46px"
 }
 if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 

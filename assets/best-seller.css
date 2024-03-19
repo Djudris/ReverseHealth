@@ -1,7 +1,7 @@
 .slider-parent {
     position: relative;
-    height: 220px;
-    margin-top: 50px
+    height: 150px;
+    margin: 50px 0;
 }
 
 .yotpo div {
@@ -26,6 +26,31 @@
     top: 0;
 }
 
+@media screen and (min-width: 990px) {
+    .slider-parent:before {
+        animation: slideShowHorizontal 3000s infinite;
+        background: transparent url("mobile.png") no-repeat 50%;
+        background-size: cover;
+        background-repeat: repeat-x;
+        height: 100%;
+        width: 100%;
+        background-position-y: 100%;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .slider-parent {
+        margin: 50px 0 70px 0;
+        position: relative;
+        height: 315px;
+    }
+}
+
 @keyframes slideShowVertical {
     0% {
         background-position: 0 0;
@@ -47,13 +72,20 @@
 }
 
 .best-seller-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: uppercase;
-    margin-bottom: 31px;
-
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 30px;
 }
+
+#best_seller_carousel {
+    padding-right: 0;
+}
+
+#best_sellers .container {
+    padding: 0 15px;
+}
+
 
 .disabled {
     opacity: 0.5;
@@ -64,55 +96,68 @@
 }
 
 .best-seller-card-bg {
-    background: #FCFCFC;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-    width: 100%;
+    background: #F6F8FE;
+    /*box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);*/
+    border-radius: 30px;
+    height: 460px !important;
+    width: 282px !important;
+}
+
+
+#best_seller_carousel .owl-item {
+    height: 460px !important;
+    width: 282px !important;
+}
+
+#best_seller_carousel.owl-carousel .owl-stage {
+    padding-left: 0 !important;
 }
 
 .best-seller-img {
-    width: 200px;
-    height: 400px;
+    height: 220px;
     object-fit: contain;
 }
 
 .best-seller-card-name {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 700;
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 600;
 }
 
 .best-seller-card-price {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 150%;
     font-weight: 400;
 }
 
 .best-seller-card-btn {
+    height: 60px;
+    text-transform: uppercase;
     color: white;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    background: linear-gradient(180deg, #FE7A88 0%, #EB657E 100%);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    font-size: 17px;
+    line-height: normal;
+    background-color: #4F4B91;
+    border-radius: 15px;
     border: none;
-    padding: 15px 62px 15px 62px;
 }
 
 .best-seller-card-btn:hover {
     color: white;
+    background: #464284;
 }
 
 .best-seller-card-lmore {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 150%;
     text-decoration-line: underline;
-    color: #505050
+    color: #1D2E42
 }
 
 .best-seller-card-lmore:hover {
-    color: black;
+    text-decoration: none;
+    color: #37346A;
 }
 
 .customNextBtn,
@@ -177,7 +222,6 @@
 }
 
 a.text-m {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -185,6 +229,10 @@ a.text-m {
     text-decoration: underline !important;
     color: #505050;
     margin-left: 15px;
+}
+
+.best-seller-btn-max-w {
+    max-width: calc(100% - 40px);
 }
 
 .carousel-arrow-img {
@@ -202,24 +250,39 @@ a.text-m {
 }
 
 @media screen and (min-width: 992px) {
+    .best-seller-card-bg {
+        height: 600px !important;
+        width: 397px !important;
+    }
+
+    #best_seller_carousel .owl-item {
+        width: 397px !important;
+        height: 600px !important;
+    }
+
+    .best-seller-btn-max-w {
+        max-width: calc(100% - 18px);
+    }
     .best-seller-title {
-        font-size: 24px;
+        font-size: 28px;
         line-height: 41px;
         margin-top: 70px;
-        margin-bottom: 50px;
+        margin-bottom: 35px;
 
     }
 
     .best-seller-card-btn {
-        font-size: 18px;
-        line-height: 22px;
-        padding: 19px 42px 19px 42px;
-        border-radius: 8px;
+        height: 70px;
+        font-size: 20px;
+        line-height: normal;
+        border-radius: 15px;
     }
 
     .best-seller-card-name {
-        font-size: 16px;
-        line-height: 27px;
+        padding: 0 10px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
     }
 
     .best-seller-card-price {
@@ -229,13 +292,12 @@ a.text-m {
     }
 
     .best-seller-img {
-        width: 260px;
-        height: 260px;
+        height: 290px;
     }
 
     .best-seller-card-lmore {
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .best-seller-pb {
@@ -260,7 +322,6 @@ a.text-m {
     }
 
     a.text-m {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;

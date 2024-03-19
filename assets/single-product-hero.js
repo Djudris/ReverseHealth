@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let owl4 = $("#single-product-carousel").owlCarousel({
         navigation: false, // Show next and prev buttons
-        margin: 40,
+        margin: 0,
         dots: true,
         autoplay: false,
         items: 1,

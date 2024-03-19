@@ -1,6 +1,4 @@
-.title {
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 .owl-stage {
   padding-bottom: 5px;
@@ -114,7 +112,17 @@
   margin-bottom: 1rem;
 }
 
+.collection__title h2.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
 @media screen and (min-width: 990px) {
+  .collection__title h2.title {
+    font-size: 28px;
+  }
+
   .collection__title--desktop-slider .title {
     margin-bottom: 2.5rem;
   }
@@ -141,17 +149,15 @@
 .collection-title {
   text-align: center;
   padding-top: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
 }
 
 .collection-title h2 {
-  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 170%;
-  text-transform: uppercase;
-  color: #505050;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  color: #1D2E42;
   margin: 0;
 }
 
@@ -176,12 +182,11 @@
   }
 
   .collection-title h2 {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 24px;
   }
 
   #section-collection-grid .container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 
   .grid-section {
