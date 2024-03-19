@@ -3,7 +3,12 @@
 <section class="alternating-product-section">
     <div class="container">
         <h2 class="section-title">{{ section.settings.section_title }}</h2>
-        {% for product in collection.products %}
+       {% assign count = 0 %}
+            {% for product in collection.products %}
+                {% if count == 3 %}
+                {% break %}
+                {% endif %}
+                {% assign count = count | plus: 1 %}
                 {% assign is_even = forloop.index0 | modulo: 2 %}
                 {% if is_even != 0 %}
                     <div class="row content-block">

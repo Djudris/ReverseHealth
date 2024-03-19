@@ -45,15 +45,13 @@
 }
 
 .rte a {
-  color: rgba(var(--color-link), var(--alpha-link));
-  text-underline-offset: 0.3rem;
-  text-decoration-thickness: 0.1rem;
-  transition: text-decoration-thickness var(--duration-short) ease;
+  color: var(--primary-link-color, #FF6F61);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .rte a:hover {
-  color: rgb(var(--color-link));
-  text-decoration-thickness: 0.2rem;
+  color: #0d6efd;
 }
 
 .rte blockquote {
