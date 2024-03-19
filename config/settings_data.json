@@ -97,6 +97,11 @@
     "predictive_search_show_price": false,
     "favicon": "shopify:\/\/shop_images\/wellinda-favicon.png",
     "currency_code_enabled": true,
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_dark.svg",
+    "checkout_logo_position": "left",
+    "checkout_sidebar_background_color": "#f5f5f5",
+    "checkout_accent_color": "#1d2e42",
+    "checkout_button_color": "#3b8581",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
