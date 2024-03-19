@@ -102,39 +102,23 @@
 
 .footer-gap {
     gap: 0;
-    width: 100%;
 }
 
 .footer-terms {
     margin-right: 7px
 }
 
-
-
-@media screen and (max-width: 418.9px) {
-    .footer-download {
-        width: 164px;
-    }
-}
-@media screen and (min-width: 419px) {
-    .footer-download {
-        width: 167px;
-    }
-}
-@media screen and (max-width: 360px) {
-    .footer-download {
-        width: 133px;
-    }
+.footer-download {
+    width: 44px;
 }
 
 @media screen and (min-width: 992px) {
+    .footer-download {
+        width: 68px;
+    }
     .footer-gap{
         gap: 100px;
         width: 50%;
-    }
-
-    .download-margin:not(:first-child) {
-        margin-top: 15px;
     }
 
     .footer-terms {

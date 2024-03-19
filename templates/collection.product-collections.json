@@ -1,0 +1,182 @@
+{
+  "sections": {
+    "collection_img_with_text": {
+      "type": "collection-img-with-text",
+      "settings": {
+      }
+    },
+    "collection_product_slider": {
+      "type": "collection-product-slider",
+      "settings": {
+        "title": "Shop the collection",
+        "collection": "",
+        "products_to_show": 8
+      }
+    },
+    "collection_static_images": {
+      "type": "collection-static-images",
+      "blocks": {
+        "symptom_4GthUj": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_1.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_1.value }}"
+          }
+        },
+        "symptom_ypENqQ": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_3.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_2.value }}"
+          }
+        },
+        "symptom_teBtTz": {
+          "type": "symptom",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.static_image_2.value }}",
+            "text": "{{ collection.metafields.collection_fields.static_image_text_3.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "symptom_4GthUj",
+        "symptom_ypENqQ",
+        "symptom_teBtTz"
+      ],
+      "settings": {
+        "title": "{{ collection.metafields.collection_fields.static_image_heading.value }}"
+      }
+    },
+    "collection_approach": {
+      "type": "collection-approach",
+      "blocks": {
+        "content_txy7Bb": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_1.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_1.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_1 | metafield_tag }}<\/p>"
+          }
+        },
+        "content_yghVMN": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_2.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_2.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_2 | metafield_tag }}<\/p>"
+          }
+        },
+        "content_xPkzgB": {
+          "type": "content",
+          "settings": {
+            "image": "{{ collection.metafields.collection_fields.alternating_image_3.value }}",
+            "title": "{{ collection.metafields.collection_fields.alternating_title_3.value }}",
+            "rich_text": "<p>{{ collection.metafields.collection_fields.alternating_text_3 | metafield_tag }}<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_txy7Bb",
+        "content_yghVMN",
+        "content_xPkzgB"
+      ],
+      "settings": {
+      }
+    },
+    "collection_learn_more": {
+      "type": "collection-learn-more",
+      "settings": {
+        "section_title": "Learn More"
+      }
+    },
+    "landing_delivery_rkrfdV": {
+      "type": "landing-delivery",
+      "settings": {
+        "title": "Risk-free purchase and fast delivery",
+        "title-sm-1": "FAST DELIVERY TIME",
+        "text-1": "U.S delivery only",
+        "title-sm-2": "Free shipping",
+        "text-2": "U.S only",
+        "title-sm-3": "ESSENTIAL DAILY NUTRIENTS",
+        "text-3": "14-day, no questions asked refund"
+      }
+    },
+    "landing_coaches_ei8hAc": {
+      "type": "landing-coaches",
+      "settings": {
+        "title": "Our program pealth Coaches are featured in"
+      }
+    },
+    "landing_bottom_image_H6w798": {
+      "type": "landing-bottom-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bundle-desktop-1.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/bundle-mobile-1.jpg"
+      }
+    },
+    "single_product_faq_mtA93c": {
+      "type": "single-product-faq",
+      "settings": {
+        "faq-title": "FREQUENTLY ASKED QUESTIONS",
+        "faq-question-1": "QUESTION?",
+        "faq-answer-1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+        "faq-question-2": "QUESTION?",
+        "faq-answer-2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+        "faq-question-3": "QUESTION?",
+        "faq-answer-3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+        "faq-question-4": "QUESTION?",
+        "faq-answer-4": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+        "faq-question-5": "QUESTION?",
+        "faq-answer-5": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+        "faq-question-6": "QUESTION?",
+        "faq-answer-6": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."
+      }
+    },
+    "newsletter_6YakkB": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_3JpbqJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_Et7rmP": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email_form_rknA9Q": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_3JpbqJ",
+        "paragraph_Et7rmP",
+        "email_form_rknA9Q"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "collection_img_with_text",
+    "collection_product_slider",
+    "collection_static_images",
+    "collection_approach",
+    "collection_learn_more",
+    "landing_delivery_rkrfdV",
+    "landing_coaches_ei8hAc",
+    "landing_bottom_image_H6w798",
+    "single_product_faq_mtA93c",
+    "newsletter_6YakkB"
+  ]
+}

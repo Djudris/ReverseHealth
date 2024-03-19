@@ -1,5 +1,5 @@
 {{ 'single-product-hero.css' | asset_url | stylesheet_tag }}
-
+{{ 'learn-more.js' | asset_url | script_tag }}
 
 <section id="page-top">
     <div class="container">
@@ -32,23 +32,185 @@
                     </div>
                 </div>
                 <div class="position-relative min-w-470">
-                    <div id="single-product-carousel" class="product-img owl-carousel">
-                        {% for image in product.images %}
-                            <img src="{{ image.src | product_img_url: "3000x3000" }}" alt="{{ image.alt }}">
-                        {% endfor %}
-                    </div>
-                    {% if product.images.size > 1  %}
-                        <div class="css--prev-btn-single d-flex justify-content-start">
-                            <button class="customPrevBtnSingle caps text-center d-flex d-sm-inline align-items-center disabled">
-                                <img class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow">
-                            </button>
+                    {% comment %}magictoolbox code begins{% endcomment %}
+                    {% capture mzp %}{% render 'magiczoomplus', product: product %}{% endcapture %}
+                    {% if mzp contains 'Liquid error' %}
+                        {% comment %}magictoolbox replace code begins{% endcomment %}
+                        {% comment %}magictoolbox replace code ends{% endcomment %}
+                    {% else %}
+                        <div style="display:none">
+                            <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
+                                           data-desktop-layout="{{ section.settings.gallery_layout }}">
+                                <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+                                <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
+                                    <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
+                                        {{ "accessibility.skip_to_product_info" | t }}
+                                    </a>
+                                    <ul id="Slider-Gallery-{{ section.id }}" class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile" role="list">
+                                        {%- liquid
+                                            assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
+                                            assign media_count = product.media.size
+                                            if section.settings.hide_variants
+                                                assign media_count = media_count | minus: variant_images.size | plus: 1
+                                            endif
+
+                                            if section.settings.media_size == 'large'
+                                                assign media_width = 0.65
+                                            elsif section.settings.media_size == 'medium'
+                                                assign media_width = 0.55
+                                            elsif section.settings.media_size == 'small'
+                                                assign media_width = 0.45
+                                            endif
+                                        -%}
+                                        {%- if product.selected_or_first_available_variant.featured_media != null -%}
+                                            {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+                                            <li id="Slide-{{ section.id }}-{{ featured_media.id }}"
+                                                class="product__media-item grid__item slider__slide is-active{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}"
+                                                data-media-id="{{ section.id }}-{{ featured_media.id }}">
+                                                {%- assign media_position = 1 -%}
+                                                {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
+                                            </li>
+                                        {%- endif -%}
+                                        {%- for media in product.media -%}
+                                            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                                                <li id="Slide-{{ section.id }}-{{ media.id }}"
+                                                    class="product__media-item grid__item slider__slide{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+                                                    data-media-id="{{ section.id }}-{{ media.id }}">
+                                                    {%- assign media_position = media_position | default: 0 | plus: 1 -%}
+                                                    {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: true %}
+                                                </li>
+                                            {%- endunless -%}
+                                        {%- endfor -%}
+                                    </ul>
+                                    <div class="slider-buttons no-js-hidden quick-add-hidden{% if media_count < 2 or section.settings.mobile_thumbnails == 'show' %} small-hide{% endif %}">
+                                        <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+                                        <div class="slider-counter caption">
+                                            <span class="slider-counter--current">1</span>
+                                            <span aria-hidden="true"> / </span>
+                                            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                                            <span class="slider-counter--total">{{ media_count }}</span>
+                                        </div>
+                                        <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+                                    </div>
+                                </slider-component>
+                                {%- if first_3d_model -%}
+                                    <button
+                                            class="button button--full-width product__xr-button"
+                                            type="button"
+                                            aria-label="{{ 'products.product.xr_button_label' | t }}"
+                                            data-shopify-xr
+                                            data-shopify-model3d-id="{{ first_3d_model.id }}"
+                                            data-shopify-title="{{ product.title | escape }}"
+                                            data-shopify-xr-hidden
+                                    >
+                                        {% render 'icon-3d-model' %}
+                                        {{ 'products.product.xr_button' | t }}
+                                    </button>
+                                {%- endif -%}
+                                {%- if media_count > 1 and section.settings.gallery_layout != 'stacked' or section.settings.mobile_thumbnails == 'show' -%}
+                                    <slider-component id="GalleryThumbnails-{{ section.id }}" class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% if section.settings.mobile_thumbnails == 'hide' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}">
+                                        <button type="button" class="slider-button slider-button--prev{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}"
+                                                aria-controls="GalleryThumbnails-{{ section.id }}" data-step="3">{% render 'icon-caret' %}</button>
+                                        <ul id="Slider-Thumbnails-{{ section.id }}" class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}">
+                                            {%- if featured_media != null -%}
+                                                {%- liquid
+                                                    capture media_index
+                                                        if featured_media.media_type == 'model'
+                                                            increment model_index
+                                                        elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video'
+                                                            increment video_index
+                                                        elsif featured_media.media_type == 'image'
+                                                            increment image_index
+                                                        endif
+                                                    endcapture
+                                                    assign media_index = media_index | plus: 1
+                                                -%}
+                                                <li id="Slide-Thumbnails-{{ section.id }}-0" class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}"
+                                                    data-target="{{ section.id }}-{{ featured_media.id }}" data-media-position="{{ media_index }}">
+                                                    <button class="thumbnail global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                                                            aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
+                                                            aria-current="true"
+                                                            aria-controls="GalleryViewer-{{ section.id }}"
+                                                            aria-describedby="Thumbnail-{{ section.id }}-0"
+                                                    >
+                                                        <img id="Thumbnail-{{ section.id }}-0" srcset="{% if featured_media.preview_image.width >= 54 %}{{ featured_media.preview_image | image_url: width: 54 }} 54w,{% endif %}
+                      {% if featured_media.preview_image.width >= 74 %}{{ featured_media.preview_image | image_url: width: 74 }} 74w,{% endif %}
+                      {% if featured_media.preview_image.width >= 104 %}{{ featured_media.preview_image | image_url: width: 104 }} 104w,{% endif %}
+                      {% if featured_media.preview_image.width >= 162 %}{{ featured_media.preview_image | image_url: width: 162 }} 162w,{% endif %}
+                      {% if featured_media.preview_image.width >= 208 %}{{ featured_media.preview_image | image_url: width: 208 }} 208w,{% endif %}
+                      {% if featured_media.preview_image.width >= 324 %}{{ featured_media.preview_image | image_url: width: 324 }} 324w,{% endif %}
+                      {% if featured_media.preview_image.width >= 416 %}{{ featured_media.preview_image | image_url: width: 416 }} 416w,{% endif %},
+                      {{ featured_media.preview_image | image_url }} {{ media.preview_image.width }}w"
+                                                             src="{{ featured_media | image_url: width: 416 }}"
+                                                             sizes="(min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: media_width | round }} - 4rem) / 4), (min-width: 990px) calc(({{ media_width | times: 100 }}vw - 4rem) / 4), (min-width: 750px) calc((100vw - 15rem) / 8), calc((100vw - 14rem) / 3)"
+                                                             alt="{{ featured_media.alt | escape }}"
+                                                             height="208"
+                                                             width="208"
+                                                             loading="lazy"
+                                                        >
+                                                    </button>
+                                                </li>
+                                            {%- endif -%}
+                                            {%- for media in product.media -%}
+                                                {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                                                    {%- liquid
+                                                        capture media_index
+                                                            if media.media_type == 'model'
+                                                                increment model_index
+                                                            elsif media.media_type == 'video' or media.media_type == 'external_video'
+                                                                increment video_index
+                                                            elsif media.media_type == 'image'
+                                                                increment image_index
+                                                            endif
+                                                        endcapture
+                                                        assign media_index = media_index | plus: 1
+                                                    -%}
+                                                    <li id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}" class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
+                                                        data-target="{{ section.id }}-{{ media.id }}" data-media-position="{{ media_index }}">
+                                                        {%- if media.media_type == 'model' -%}
+                                                            <span class="thumbnail__badge" aria-hidden="true">
+                        {%- render 'icon-3d-model' -%}
+                      </span>
+                                                        {%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}
+                                                            <span class="thumbnail__badge" aria-hidden="true">
+                        {%- render 'icon-play' -%}
+                      </span>
+                                                        {%- endif -%}
+                                                        <button class="thumbnail global-media-settings global-media-settings--no-shadow {% if media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                                                                aria-label="{%- if media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
+                                                                {% if media == product.selected_or_first_available_variant.featured_media or product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} aria-current="true"{% endif %}
+                                                                aria-controls="GalleryViewer-{{ section.id }}"
+                                                                aria-describedby="Thumbnail-{{ section.id }}-{{ forloop.index }}"
+                                                        >
+                                                            <img id="Thumbnail-{{ section.id }}-{{ forloop.index }}"
+                                                                 srcset="{% if media.preview_image.width >= 59 %}{{ media.preview_image | image_url: width: 59 }} 59x,{% endif %}
+                                {% if media.preview_image.width >= 118 %}{{ media.preview_image | image_url: width: 118 }} 118w,{% endif %}
+                                {% if media.preview_image.width >= 84 %}{{ media.preview_image | image_url: width: 84 }} 84w,{% endif %}
+                                {% if media.preview_image.width >= 168 %}{{ media.preview_image | image_url: width: 168 }} 168w,{% endif %}
+                                {% if media.preview_image.width >= 130 %}{{ media.preview_image | image_url: width: 130 }} 130w,{% endif %}
+                                {% if media.preview_image.width >= 260 %}{{ media.preview_image | image_url: width: 260 }} 260w{% endif %}"
+                                                                 src="{{ media | image_url: width: 84, height: 84 }}"
+                                                                 sizes="(min-width: 1200px) calc((1200px - 19.5rem) / 12), (min-width: 750px) calc((100vw - 16.5rem) / 8), calc((100vw - 8rem) / 5)"
+                                                                 alt="{{ media.alt | escape }}"
+                                                                 height="200"
+                                                                 width="200"
+                                                                 loading="lazy"
+                                                            >
+                                                        </button>
+                                                    </li>
+                                                {%- endunless -%}
+                                            {%- endfor -%}
+                                        </ul>
+                                        <button type="button" class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}" name="next" aria-label="{{ 'general.slider.next_slide' | t }}"
+                                                aria-controls="GalleryThumbnails-{{ section.id }}" data-step="3">{% render 'icon-caret' %}</button>
+                                    </slider-component>
+                                {%- endif -%}
+                            </media-gallery>
                         </div>
-                        <div class="css--next-btn-single d-flex justify-content-end">
-                            <button class="customNextBtnSingle caps d-flex d-sm-inline align-items-center">
-                                <img class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow">
-                            </button>
-                        </div>
+                        {{ mzp }}
                     {% endif %}
+                    {% comment %}magictoolbox code ends{% endcomment %}
+
                 </div>
             </div>
             <div class="">
@@ -85,7 +247,10 @@
                 </div>
 
 
-                <div class="product-description">{{ product.description }}</div>
+                <div class="product-description" id="summary">
+                    <div class="collapse" id="collapseSummary">{{ product.description }}</div>
+                    <span role="button" id="collapseButton" class="collapsed" data-toggle="collapse" href="" aria-expanded="false" aria-controls="collapseSummary"> Learn More... </span>
+                </div>
                 <div class="row single-hero-mb">
                     {% if product.metafields.my_fields.bulletpoint_info_nr_1 %}
                         <div class="col-lg-6 col-12">
@@ -137,87 +302,239 @@
                     {% endif %}
 
                 </div>
-                <h3 class="bundle-heading">Choose your bundle</h3>
-                <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
-                    {% for t in product.tags %}
-                        {% if t contains 'bundle' %}
-                            {% assign bundle_exsist = true %}
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if bundle_exsist %}
-                        <form class="d-none" method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
-                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                        </form>
-                    {% endif %}
-                    <div class="add-to-cart-card d-flex flex-column justify-content-between">
-                        <div class="card-content d-flex flex-row-reverse flex-md-column">
-                            <div class="w-100">
-                                <h3 class="card-quantity">Single</h3>
-                                <p class="card-ppp">
-                                    <span class="money">{{ product.variants.first.price | money }}</span>
-                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                <p class="card-total">{{ product.variants.first.price | money }} total price to pay</p>
-                            </div>
-                        </div>
-                        <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
-                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                        </form>
-                    </div>
-                    <div class="add-to-cart-card padding-top-30-card selected-opcija d-flex flex-column justify-content-between">
-                        {% if product.metafields.single.enablebestvalue %}
-                            {% if product.metafields.single.bestvalueimage %}
-                                <img class="best-value-image"
-                                     src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}"
-                                     alt="Best value">
-                                {% assign price_variable = product.variants[2].price %}
-                                <p class="best-value-text">best value - save
-                                    {% if product.metafields.single.usecustomsave %}
-                                        {{ product.metafields.single.customsavevalue }}
-                                    {% else %}
-                                        {{ product.variants.first.price | times: 5 | minus: price_variable | money_without_trailing_zeros }}
-                                    {% endif %}
-                                </p>
+                    <h3 class="bundle-heading">Choose your bundle</h3>
+                    <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
+                        {% for t in product.tags %}
+                            {% if t contains 'bundle' %}
+                                {% assign bundle_exsist = true %}
                             {% endif %}
+                        {% endfor %}
+
+                        {% if bundle_exsist %}
+                            <form class="d-none" method="post" action="/cart/add">
+                                <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
+                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                            </form>
                         {% endif %}
-                        <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
-                            <div class="w-100">
-                                <h3 class="card-quantity">5-pack</h3>
-                                <p class="card-ppp">
-                                    <span class="money">{{ product.variants[2].price | divided_by: 5 | money }}</span>
-                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                <p class="card-total">{{ product.variants[2].price | money }} total price to pay</p>
+                        <div class="add-to-cart-card d-flex flex-column justify-content-between">
+                            <div class="card-content d-flex flex-row-reverse flex-md-column">
+                                <div class="w-100">
+                                    <h3 class="card-quantity">Single</h3>
+                                    <p class="card-ppp">
+                                        <span class="money">{{ product.variants.first.price | money }}</span>
+                                        <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                    <p class="card-total">{{ product.variants.first.price | money }} total price to pay</p>
+                                </div>
                             </div>
+                            <form method="post" action="/cart/add">
+                                <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
+                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                            </form>
                         </div>
-                        <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
-                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                        </form>
-                    </div>
-                    <div class="add-to-cart-card d-flex flex-column justify-content-between">
-                        <div class="card-content d-flex flex-row-reverse flex-md-column">
-                            <div class="w-100">
-                                <h3 class="card-quantity">3-pack</h3>
-                                <p class="card-ppp">
-                                    <span class="money">{{ product.variants[1].price | divided_by: 3 | money }}</span>
-                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                <p class="card-total">{{ product.variants[1].price | money }} total price to pay</p>
+                        <div class="add-to-cart-card padding-top-30-card selected-opcija d-flex flex-column justify-content-between">
+                            {% if product.metafields.single.enablebestvalue %}
+                                {% if product.metafields.single.bestvalueimage %}
+                                    <img class="best-value-image"
+                                         src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}"
+                                         alt="Best value">
+                                    {% assign price_variable = product.variants[2].price %}
+                                    <p class="best-value-text">best value - save
+                                        {% if product.metafields.single.usecustomsave %}
+                                            {{ product.metafields.single.customsavevalue }}
+                                        {% else %}
+                                            {{ product.variants.first.price | times: 5 | minus: price_variable | money_without_trailing_zeros }}
+                                        {% endif %}
+                                    </p>
+                                {% endif %}
+                            {% endif %}
+                            <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
+                                <div class="w-100">
+                                    <h3 class="card-quantity">5-pack</h3>
+                                    <p class="card-ppp">
+                                        <span class="money">{{ product.variants[2].price | divided_by: 5 | money }}</span>
+                                        <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                    <p class="card-total">{{ product.variants[2].price | money }} total price to pay</p>
+                                </div>
                             </div>
+                            <form method="post" action="/cart/add">
+                                <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
+                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                            </form>
                         </div>
-                        <form method="post" action="/cart/add">
-                            <input type="hidden" name="id" value="{{ product.variants[1].id }}"/>
-                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                        </form>
+                        <div class="add-to-cart-card padding-top-30-card d-flex flex-column justify-content-between">
+                            {% if product.metafields.single.three_pack_label_is_enabled %}
+                                {% if product.metafields.single.three_pack_label_image %}
+                                    <img class="best-value-image"
+                                         src="{{ product.metafields.single.three_pack_label_image | img_url: 'x60' }}"
+                                         alt={{ product.metafields.single.three_pack_label_text }}>
+                                    <p class="best-value-text">{{ product.metafields.single.three_pack_label_text }}</p>
+                                {% endif %}
+                            {% endif %}
+                            <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
+                                <div class="w-100">
+                                    <h3 class="card-quantity">3-pack</h3>
+                                    <p class="card-ppp">
+                                        <span class="money">{{ product.variants[1].price | divided_by: 3 | money }}</span>
+                                        <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                    <p class="card-total">{{ product.variants[1].price | money }} total price to pay</p>
+                                </div>
+                            </div>
+                            <form method="post" action="/cart/add">
+                                <input type="hidden" name="id" value="{{ product.variants[1].id }}"/>
+                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                    {% comment %}this is code is for back in stock feature which was not needed{% endcomment %}
+                    {% comment %}<div id="back-in-stock" class="terms-and-conditions">{% endcomment %}
+                        {% comment %}<h2>Join the waiting list!</h2>{% endcomment %}
+                        {% comment %}<p>{% endcomment %}
+                            {% comment %}Be among the first to know when our product is available.{% endcomment %}
+                            {% comment %}Secure your spot for early access and priority ordering. Don't miss out!{% endcomment %}
+                        {% comment %}</p>{% endcomment %}
+                        {% comment %}<div class="stock-checkbox">{% endcomment %}
+                            {% comment %}<input type="checkbox" id="back-in-stock-newsletter"/>{% endcomment %}
+                            {% comment %}<label for="back-in-stock-newsletter">Receive news, deals, and offers from Wellinda</label>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                        {% comment %}<div class="stock-checkbox">{% endcomment %}
+                            {% comment %}<input type="checkbox" id="back-in-stock-privacy" name="back-in-stock-privacy" required>{% endcomment %}
+                            {% comment %}<label for="back-in-stock-privacy">I have read and agree to Wellinda's <a href="/pages/terms-of-service" target="_blank">terms & conditions</a> and <a href="/pages/privacy-cookies" target="_blank">privacy policy</a>.</label>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                        {% comment %}<div class="newsletter-form__field-wrapper">{% endcomment %}
+                            {% comment %}<div class="field">{% endcomment %}
+                                {% comment %}<input type="email" id="back-in-stock-email" class="field__input" placeholder="{{ 'newsletter.label' | t }}" required/>{% endcomment %}
+                                {% comment %}<label class="field__label" for="back-in-stock-email">{% endcomment %}
+                                    {% comment %}{{ 'newsletter.label' | t }}{% endcomment %}
+                                {% comment %}</label>{% endcomment %}
+                                {% comment %}<button type="submit" class="newsletter-form__button field__button" name="commit" id="back-in-stock-submit" aria-label="{{ 'newsletter.button_label' | t }}">{% endcomment %}
+                                    {% comment %}{% render 'icon-new-arrow' %}{% endcomment %}
+                                {% comment %}</button>{% endcomment %}
+                            {% comment %}</div>{% endcomment %}
+                        {% comment %}</div>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                {% comment %}<div id="waiting-listed">{% endcomment %}
+                    {% comment %}<h2>You're on the waiting list</h2>{% endcomment %}
+                    {% comment %}<p>{% endcomment %}
+                        {% comment %}We'll email you as soon as {{ product.title }} is ready!{% endcomment %}
+                    {% comment %}</p>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
             </div>
         </div>
     </div>
 </section>
 {{ 'single-product-hero.js' | asset_url | script_tag }}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submitButton = document.getElementById('back-in-stock-submit');
+
+        submitButton.addEventListener('click', function (e) {
+            var apiKey = 'W7YYih';
+            var emailInput = document.getElementById('back-in-stock-email');
+            var emailValue = emailInput.value;
+            var newsletterCheckbox = document.getElementById('back-in-stock-newsletter');
+            var privacyCheckbox = document.getElementById('back-in-stock-privacy');
+
+            console.log(privacyCheckbox.checked);
+            if (!privacyCheckbox.checked) {
+                alert('You must agree to the privacy policy.');
+                return;
+            }
+
+            if (!emailValue || !validateEmail(emailValue)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            const payload = {
+                "data": {
+                    "type": "back-in-stock-subscription",
+                    "attributes": {
+                        "profile": {
+                            "data": {
+                                "type": "profile",
+                                "attributes": {
+                                    "email": emailValue,
+                                },
+                            }
+                        },
+                        "channels": ["EMAIL"],
+                    },
+                    "relationships": {
+                        "variant": {
+                            "data": {
+                                "type": "catalog-variant",
+                                "id": "$shopify:::$default:::{{ product.variants.first.id }}"
+                            }
+                        }
+                    }
+                }
+            }
+
+            var requestOptions = {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "revision": "2023-12-15",
+                },
+                body: JSON.stringify(payload),
+            };
+
+            fetch("https://a.klaviyo.com/client/back-in-stock-subscriptions/?company_id=" + apiKey, requestOptions)
+                .then(result => console.log(result))
+                .catch(error => alert(error))
+                .finally(() => {
+                    if (newsletterCheckbox.checked) {
+                        const newsletterPayload = {
+                            "data": {
+                                "type": "subscription",
+                                "attributes": {
+                                    "profile": {
+                                        "data": {
+                                            "type": "profile",
+                                            "attributes": {
+                                                "email": emailValue,
+                                            },
+                                        }
+                                    },
+                                },
+                                "relationships": {
+                                    "list": {
+                                        "data": {
+                                            "type": "list",
+                                            "id": "TF8i52"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        var newsletterRequestOptions = {
+                            method: 'POST',
+                            headers: {
+                                "Content-Type": "application/json",
+                                "revision": "2023-12-15",
+                            },
+                            body: JSON.stringify(newsletterPayload),
+                        };
+                        fetch("https://a.klaviyo.com/client/subscriptions/?company_id=" + apiKey, newsletterRequestOptions)
+                            .then(result => console.log(result))
+                            .catch(error => alert(error))
+                    }
+                    document.getElementById('back-in-stock').style.display = 'none';
+                    document.getElementById('waiting-listed').style.display = 'flex';
+                });
+        });
+
+
+        function validateEmail(email) {
+            let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    });
+
+
+</script>

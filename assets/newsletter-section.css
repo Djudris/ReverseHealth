@@ -3,7 +3,60 @@
   padding-left: calc(4rem / var(--font-body-scale));
 }
 
+.field{
+  border-radius: 12px;
+}
+
+.field:after {
+  border-radius: 12px;
+}
+
+.field:hover.field:after {
+  border-radius: 12px;
+}
+
+.field__input{
+    border-radius: 12px;
+
+}
+.field__input:focus-visible{
+  border-radius: 12px;
+}
+
+.field__input:focus{
+    border-radius: 12px;
+}
+
+.field__button > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 @media screen and (min-width: 750px) {
+  .field{
+    border-radius: 15px;
+  }
+
+  .field:after {
+    border-radius: 15px;
+  }
+
+  .field:hover.field:after {
+    border-radius: 15px;
+  }
+
+  .field__input{
+    border-radius: 15px;
+
+  }
+  .field__input:focus-visible{
+    border-radius: 15px;
+  }
+
+  .field__input:focus{
+    border-radius: 15px;
+  }
+
   .newsletter__wrapper {
     padding-right: 9rem;
     padding-left: 9rem;
@@ -24,6 +77,9 @@
 }
 
 .newsletter__subheading {
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
   max-width: 70rem;
   margin-left: auto;
   margin-right: auto;
@@ -43,6 +99,9 @@
 }
 
 @media screen and (min-width: 750px) {
+  .newsletter__subheading {
+    font-size: 22px;
+  }
   .newsletter__button {
     flex-shrink: 0;
     margin: 0 0 0 1rem;

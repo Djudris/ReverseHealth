@@ -1,0 +1,348 @@
+.slider-parent {
+    position: relative;
+    height: 150px;
+    margin: 50px 0;
+}
+
+.yotpo div {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-parent:before {
+    animation: slideShowHorizontal 3000s infinite;
+    background: transparent url("mobile.png") no-repeat 50%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position-y: 100%;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media screen and (min-width: 990px) {
+    .slider-parent:before {
+        animation: slideShowHorizontal 3000s infinite;
+        background: transparent url("mobile.png") no-repeat 50%;
+        background-size: cover;
+        background-repeat: repeat-x;
+        height: 100%;
+        width: 100%;
+        background-position-y: 100%;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .slider-parent {
+        margin: 50px 0 70px 0;
+        position: relative;
+        height: 315px;
+    }
+}
+
+@keyframes slideShowVertical {
+    0% {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 -10000%
+    }
+}
+
+@keyframes slideShowHorizontal {
+    0% {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000% 0;
+    }
+}
+
+.best-seller-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#best_seller_carousel {
+    padding-right: 0;
+}
+
+#best_sellers .container {
+    padding: 0 15px;
+}
+
+
+.disabled {
+    opacity: 0.5;
+}
+
+.owl-stage-outer {
+    padding-bottom: 5px;
+}
+
+.best-seller-card-bg {
+    background: #F6F8FE;
+    /*box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);*/
+    border-radius: 30px;
+    height: 460px !important;
+    width: 282px !important;
+}
+
+
+#best_seller_carousel .owl-item {
+    height: 460px !important;
+    width: 282px !important;
+}
+
+#best_seller_carousel.owl-carousel .owl-stage {
+    padding-left: 0 !important;
+}
+
+.best-seller-img {
+    height: 220px;
+    object-fit: contain;
+}
+
+.best-seller-card-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.best-seller-card-price {
+    font-size: 17px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.best-seller-card-btn {
+    height: 60px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: normal;
+    background-color: var(--primary-button-color, #FF6F61);
+    border-radius: 15px;
+    border: none;
+}
+
+.best-seller-card-btn:hover {
+    color: white;
+    background: var(--primary-button-hover-color, #ff5b4d);
+}
+
+.best-seller-card-lmore {
+    font-size: 17px;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: #1D2E42
+}
+
+.best-seller-card-lmore:hover {
+    text-decoration: none;
+    color: #37346A;
+}
+
+.customNextBtn,
+.customPrevBtn {
+    font-size: 12px;
+    border: none;
+    background: transparent;
+}
+
+.css--prev-btn {
+    z-index: 1;
+    position: absolute;
+    bottom: 60%;
+    display: flex;
+    width: 30%;
+    left: 0;
+}
+
+.css--next-btn {
+    z-index: 1;
+    position: absolute;
+    bottom: 60%;
+    display: flex;
+    width: 30%;
+    right: 0;
+}
+
+.best-seller-pb {
+    padding-bottom: 0px;
+}
+
+.owl-dots {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.owl-dots button.owl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    display: inline-block;
+    background: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    margin: 0 3px;
+}
+
+.owl-dots button.owl-dot.active {
+    background-color: #959595;
+    border-color: #959595;
+}
+
+.owl-dots button.owl-dot:focus {
+    outline: none;
+}
+
+.yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
+    font-size: 18px;
+}
+
+.yotpo-bottomline.pull-left.star-clickable {
+    align-items: center;
+}
+
+a.text-m {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    text-decoration: underline !important;
+    color: #505050;
+    margin-left: 15px;
+}
+
+.best-seller-btn-max-w {
+    max-width: calc(100% - 40px);
+}
+
+.carousel-arrow-img {
+    height: 28px;
+}
+
+@media screen and (max-width:992px) {
+    /*#best_seller_carousel {*/
+    /*    padding-left: 30px;*/
+    /*}*/
+
+    /*.css--prev-btn {*/
+    /*    left: 17px;*/
+    /*}*/
+}
+
+@media screen and (min-width: 992px) {
+    .best-seller-card-bg {
+        height: 600px !important;
+        width: 397px !important;
+    }
+
+    #best_seller_carousel .owl-item {
+        width: 397px !important;
+        height: 600px !important;
+    }
+
+    .best-seller-btn-max-w {
+        max-width: calc(100% - 18px);
+    }
+    .best-seller-title {
+        font-size: 28px;
+        line-height: 41px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+
+    }
+
+    .best-seller-card-btn {
+        height: 70px;
+        font-size: 20px;
+        line-height: normal;
+        border-radius: 15px;
+    }
+
+    .best-seller-card-name {
+        padding: 0 10px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .best-seller-card-price {
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 400;
+    }
+
+    .best-seller-img {
+        height: 290px;
+    }
+
+    .best-seller-card-lmore {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .best-seller-pb {
+        padding-bottom: 35px;
+    }
+
+    .css--next-btn,
+    .css--prev-btn {
+        bottom: unset;
+        width: 10%;
+        top: calc(50% - 50px);
+        transform: translateY(-50%);
+    }
+
+    .yotpo-bottomline.pull-left.star-clickable {
+        justify-content: center;
+        float: none;
+    }
+
+    .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
+        font-size: 16px;
+    }
+
+    a.text-m {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        text-decoration: underline !important;
+        color: #505050;
+        margin-left: 10px;
+    }
+
+    .owl-dots button.owl-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        display: inline-block;
+        background: #F0F0F0;
+        border: 1px solid #F0F0F0;
+        margin: 0 3px;
+    }
+
+    .owl-dots {
+        padding-top: 50px;
+    }
+}

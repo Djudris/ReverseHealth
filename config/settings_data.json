@@ -142,6 +142,8 @@
           "logo": "shopify:\/\/shop_images\/logo_light.svg",
           "footer-text": "The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging.",
           "footer-email": "care@wellinda.health",
+          "ig-url": "https:\/\/www.instagram.com\/wellindahealth",
+          "fb-url": "https:\/\/www.facebook.com\/wellindahealth",
           "footer-subtitle-1": "General",
           "footer-subtitle-2": "Legal",
           "footer-subtitle-3": "Get the app",
@@ -166,6 +168,12 @@
 
     ],
     "blocks": {
+      "6237893613548423713": {
+        "type": "shopify:\/\/apps\/bundles-upsell-pickystory\/blocks\/main-widget-loader-script\/f54ff67e-3f69-4df2-845e-7476ce633252",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,

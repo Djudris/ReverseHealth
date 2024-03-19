@@ -213,6 +213,8 @@
 
     {% render 'shogun-head' %}
 
+
+	{% capture magic_headers %}{% include 'magiczoomplus.headers' %}{% endcapture %}{% unless magic_headers contains 'Liquid error' %}{{magic_headers}}{% endunless %}
 </head>
 {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
 

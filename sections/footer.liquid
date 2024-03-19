@@ -16,7 +16,7 @@
                     {%- endif -%}
                     {% comment %}<p class="footer-text mb-0 footer-border-mobile">{{ section.settings.footer-text }}</p>{% endcomment %}
                 </div>
-                <div class="col-lg-6 col-6 order-lg-2 order-3 d-flex justify-lg-content-center justify-content-between footer-gap p-0">
+                <div class="col-lg-6 col-8 order-lg-2 order-3 d-flex justify-lg-content-center justify-content-between footer-gap p-0">
                     <div class="footer-links">
                         <h3 class="footer-subtitle">{{ section.settings.footer-subtitle-1 }}</h3>
                         <a class="footer-href text-decoration-none" href="/">Home</a>
@@ -31,8 +31,15 @@
                         <a class="footer-href text-decoration-none" href="/pages/refunds-and-cancellations">Refunds & cancellations</a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-12 d-lg-flex justify-content-lg-end order-2 order-lg-4 p-0">
-
+                <div class="col-lg-2 col-4 d-lg-flex justify-content-lg-center order-4 p-0">
+                        <div class="d-flex flex-column flex-lg-row gap-2 gap-lg-3 footer-subtitle ">
+                            <a class="download-margin d-flex justify-content-center" href="{{ section.settings.fb-url }}" target="blank">
+                                <img loading="lazy" class="footer-download d-lg-block" src="{{ 'FB.svg' | asset_url }}" alt="Download on google play">
+                            </a>
+                            <a class="download-margin d-flex justify-content-center" href="{{ section.settings.ig-url }}" target="blank">
+                                <img loading="lazy" class="footer-download d-lg-block" src="{{ 'IG.svg' | asset_url }}" alt="Download on apple store">
+                            </a>
+                        </div>
                 </div>
             </div>
             {% comment %}<div class="footer-social-icons">{% endcomment %}
@@ -66,60 +73,72 @@
 
 {% schema %}
 {
-"name": "Values",
-"settings": [
-{
-"id": "footer-title",
-"type": "text",
-"label": "Title",
-"default":"reverse health"
-},
-{
-"type": "image_picker",
-"id": "logo",
-"label": "t:sections.header.settings.logo.label"
-},
-{
-"id": "footer-text",
-"type": "text",
-"label": "Footer text",
-"default":"The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging."
-},
-{
-"id": "footer-email",
-"type": "text",
-"label": "Contact us email",
-"default":"care@wellinda.health"
-},
-{
-"id": "footer-subtitle-1",
-"type": "text",
-"label": "Footer subtitle Nr.1",
-"default":"General"
-},
-{
-"id": "footer-subtitle-2",
-"type": "text",
-"label": "Footer subtitle Nr.2",
-"default":"Legal"
-},
-{
-"id": "footer-subtitle-3",
-"type": "text",
-"label": "Footer subtitle Nr.3",
-"default":"Get The App"
-},
-{
-"id": "footer-text-information",
-"type": "text",
-"label": "Footer bottom information text",
-"default":"test The information contained on this website is NOT intended as medical advice. You are responsible for your own health and safety at all times. Please consult with a medical professional for any questions."
-}
-],
-"presets": [
-{
-"name": "Values"
-}
-]
+  "name": "Values",
+  "settings": [
+    {
+      "id": "footer-title",
+      "type": "text",
+      "label": "Title",
+      "default": "reverse health"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "id": "footer-text",
+      "type": "text",
+      "label": "Footer text",
+      "default": "The first weight loss program designed for women's unique needs. The one that finally works with supplements that fill nutritional gaps due to aging."
+    },
+    {
+      "id": "footer-email",
+      "type": "text",
+      "label": "Contact us email",
+      "default": "care@wellinda.health"
+    },
+    {
+      "id": "ig-url",
+      "type": "text",
+      "label": "Instagram url",
+      "default": "https://www.instagram.com/wellindahealth"
+    },
+    {
+      "id": "fb-url",
+      "type": "text",
+      "label": "Facebook url",
+      "default": "https://www.facebook.com/wellindahealth"
+    },
+    {
+      "id": "footer-subtitle-1",
+      "type": "text",
+      "label": "Footer subtitle Nr.1",
+      "default": "General"
+    },
+    {
+      "id": "footer-subtitle-2",
+      "type": "text",
+      "label": "Footer subtitle Nr.2",
+      "default": "Legal"
+    },
+    {
+      "id": "footer-subtitle-3",
+      "type": "text",
+      "label": "Footer subtitle Nr.3",
+      "default": "Get The App"
+    },
+    {
+      "id": "footer-text-information",
+      "type": "text",
+      "label": "Footer bottom information text",
+      "default": "test The information contained on this website is NOT intended as medical advice. You are responsible for your own health and safety at all times. Please consult with a medical professional for any questions."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Values"
+    }
+  ]
 }
 {% endschema %}

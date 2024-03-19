@@ -1,0 +1,322 @@
+{{ 'blog-page.css' | asset_url | stylesheet_tag }}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring
+        | split: '"pageurl":"'
+        | last
+        | split: '"'
+        | first
+        | split: '.myshopify.com'
+        | last
+        | replace: '\/', '/'
+        | replace: '%20', ' '
+        | replace: '\u0026', '&'
+-%}
+{% capture finalurl %}https://{{ pageUrl }}{% endcapture %}
+{%- assign querystring = finalurl | split: "?" | last -%}
+{%- assign params = querystring | split: "&" -%}
+{%- assign current_category = "" -%}
+
+{%- for param in params -%}
+    {%- assign key_value = param | split: "=" -%}
+    {%- if key_value.first == "category" -%}
+        {%- assign current_category = key_value.last -%}
+    {%- endif -%}
+{%- endfor -%}
+
+<style>
+    .articles {
+        grid-template-columns: repeat({{ section.settings.articles_columns_desktop }}, 1fr);
+    }
+
+    @media (max-width: 989px) {
+        .articles {
+            grid-template-columns: repeat({{ section.settings.articles_columns_mobile }}, 1fr);
+        }
+    }
+</style>
+
+<div class="container">
+    <h1 class="page-header">{{ section.settings.page_header | escape }}</h1>
+    <div class="tag-filter">
+        {% assign categories = 'All' %}
+        {% for block in section.blocks %}
+            {% assign categories = block.settings.handles | split: ',' %}
+
+            <a href="?category={{ 'All' | url_encode }}">All</a>
+            {% for category in categories %}
+                <a href="?category={{ category | url_encode }}">{{ category }}</a>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="articles">
+
+        {% for block in section.blocks %}
+            {% if current_category == empty or current_category == "All" %}
+                {% assign block_handles = block.settings.handles | split: ',' %}
+            {% else %}
+                {% assign block_handles = current_category %}
+            {% endif %}
+            {% assign all_articles = "" | split: "" %}
+
+            {% for handle in block_handles %}
+                {% assign blog = blogs[handle] %}
+                {% assign all_articles = all_articles | concat: blog.articles %}
+            {% endfor %}
+
+            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+
+            {% assign json_articles = json_articles | append: "[" %}
+            {% for article in sorted_articles %}
+                {% assign blog_title = "" %}
+                {% for handle in block_handles %}
+                    {% assign blog = blogs[handle] %}
+                    {% if blog.articles contains article %}
+                        {% assign blog_title = blog.title %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+                {% unless forloop.first %}
+                    {% assign json_articles = json_articles | append: "," %}
+                {% endunless %}
+                {% assign image_url = article.image.src | image_url %}
+                {% assign json_articles = json_articles | append: '{"title": "' | append: article.title | append: '", "blog_title": "' | append: blog_title | append: '", "published_at": "' | append: article.published_at | append: '", "image": {"src": "' | append: image_url | append: '", "alt": "' | append: article.image.alt | append: '"}, "url":"' | append: article.url | append: '"}' %}
+            {% endfor %}
+        {% endfor %}
+
+        {% assign json_articles = json_articles | append: "]" %}
+
+    </div>
+
+    <div class="js--pagination"></div>
+
+
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let urlParams = new URLSearchParams(window.location.search);
+        let category = urlParams.get('category');
+
+        document.cookie = "category=" + category;
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let category = document.cookie.replace(/(?:(?:^|.*;\s*)category\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        let links = document.querySelectorAll('.tag-filter a');
+        if (category === null || category === '' || category === 'null') {
+            links[0].classList.add('active-filter');
+            return;
+        }
+
+        links.forEach(link => {
+            if (link.textContent === category) {
+                link.classList.add('active-filter');
+            }
+        });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let allArticles = {{ json_articles }};
+        allArticles = allArticles.concat(allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles,allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles,allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles,allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles, allArticles,allArticles);
+        const articlesPerPage = {{ section.settings.articles_per_page }};
+        let currentPage = 1;
+        const articlesContainer = document.querySelector('.articles');
+        const paginationContainer = document.querySelector('.js--pagination');
+        const totalPages = Math.ceil(allArticles.length / articlesPerPage);
+
+
+        function renderArticles(page) {
+            const startIndex = (page - 1) * articlesPerPage;
+            const endIndex = startIndex + articlesPerPage;
+            const articlesToRender = allArticles.slice(startIndex, endIndex);
+
+            articlesContainer.innerHTML = ''; // Clear current articles
+            articlesToRender.forEach(article => {
+                const articleElement = document.createElement('div');
+                articleElement.className = 'article-card';
+                articleElement.innerHTML = `
+                <img src="${article.image.src}" alt="${article.image.alt}" loading="lazy">
+                <div class="content">
+                    <p> ${article.blog_title} | ${new Date(article.published_at).toLocaleDateString()}</p>
+                    <a href=${article.url}>${article.title}</a>
+                </div>
+            `;
+                articlesContainer.appendChild(articleElement);
+            });
+        }
+
+        function setupPagination() {
+            paginationContainer.innerHTML = '';
+
+            // Previous Button
+            const prevButton = createButton('<', currentPage > 1, goToPage(currentPage - 1));
+            prevButton.disabled = currentPage === 1; // Disable if on the first page
+            paginationContainer.appendChild(prevButton);
+
+            // Dynamic range calculation for page buttons
+            let startPage, endPage;
+            const maxPageButtons = 4; // Maximum number of page buttons to display at once
+            if (totalPages <= maxPageButtons) {
+                // Less than maxPageButtons total pages
+                startPage = 1;
+                endPage = totalPages;
+            } else {
+                // More than maxPageButtons total pages
+                if (currentPage <= 3) {
+                    // Current page near the start
+                    startPage = 1;
+                    endPage = maxPageButtons;
+                } else if (currentPage + 2 >= totalPages) {
+                    // Current page near the end
+                    startPage = totalPages - maxPageButtons + 1;
+                    endPage = totalPages;
+                } else {
+                    // Current page somewhere in the middle
+                    startPage = currentPage - 1;
+                    endPage = currentPage + 1; // End page is current page plus 1 for buffer
+                }
+            }
+
+            // Quick first page button and ellipsis if not on the first pages
+            if (startPage > 1) {
+                paginationContainer.appendChild(createButton('1', true, goToPage(1)));
+                if (startPage > 2) paginationContainer.appendChild(createEllipsis());
+            }
+
+            // Page number buttons
+            for (let i = startPage; i <= endPage; i++) {
+                const pageButton = createButton(i.toString(), i !== currentPage, goToPage(i));
+                paginationContainer.appendChild(pageButton);
+            }
+
+            // Quick last page button and ellipsis if not on the last pages
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) paginationContainer.appendChild(createEllipsis());
+                paginationContainer.appendChild(createButton(totalPages.toString(), true, goToPage(totalPages)));
+            }
+
+            // Next Button
+            const nextButton = createButton('>', currentPage < totalPages, goToPage(currentPage + 1));
+            nextButton.disabled = currentPage === totalPages; // Disable if on the last page
+            paginationContainer.appendChild(nextButton);
+
+            updatePagination();
+        }
+
+        function goToPage(page) {
+            return function () {
+                if (page >= 1 && page <= totalPages) { // Check page is within range
+                    currentPage = page;
+                    renderArticles(currentPage);
+                    setupPagination(); // Re-setup pagination to update button states
+                }
+            };
+        }
+
+        function createButton(text, isEnabled, clickHandler) {
+            const button = document.createElement('button');
+            button.textContent = text;
+            button.disabled = !isEnabled;
+            button.onclick = clickHandler;
+            if (!isNaN(text)) {
+                button.classList.add('page-number-button'); // Add class for page number buttons
+            }
+            return button;
+        }
+
+        function createEllipsis() {
+            const ellipsis = document.createElement('div');
+            ellipsis.textContent = '...';
+            ellipsis.className = 'ellipsis';
+            ellipsis.className = 'ellipsis page-number-button'; // Add class here too
+            return ellipsis;
+        }
+
+        function updatePagination() {
+            const buttons = paginationContainer.querySelectorAll('button');
+            buttons.forEach(button => {
+                if (parseInt(button.textContent) === currentPage) {
+                    button.disabled = true;
+                } else {
+                    button.disabled = false;
+                }
+            });
+        }
+
+        renderArticles(currentPage);
+        setupPagination();
+    });
+
+</script>
+
+{% schema %}
+{
+  "name": "Blog section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "page_header",
+      "label": "Page Header",
+      "default": "Blogs"
+    },
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "label": "Articles per page",
+      "min": 1,
+      "max": 99,
+      "step": 1,
+      "default": 9,
+      "info": "Choose how many article to display per page."
+    },
+    {
+      "type": "range",
+      "id": "articles_columns_desktop",
+      "label": "Articles Columns on Desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "info": "Choose how many columns to display in the articles section on desktop screens."
+    },
+    {
+      "type": "range",
+      "id": "articles_columns_mobile",
+      "label": "Articles Columns on Mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "info": "Choose how many columns to display in the articles section on mobile screens."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog Handle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "page_header",
+          "label": "Page Header",
+          "default": "Blogs"
+        },
+        {
+          "type": "text",
+          "id": "handles",
+          "label": "Blog Handles (name of blog tags - comma-separated)",
+          "default": "news,blog1,blog2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Blogs"
+    }
+  ]
+}
+{% endschema %}

@@ -40,11 +40,11 @@
     font-weight: 700;
     border: none;
     font-size: 1.063rem;
-    background: #4F4B91;
+    background: var(--primary-button-color, #FF6F61);
     border-radius: 12px;
 }
 .button-top:hover {
-    background: #464284;
+    background: var(--primary-button-hover-color, #ff5b4d);
 }
 .delivery-btn-padding {
     padding-top: 30px;

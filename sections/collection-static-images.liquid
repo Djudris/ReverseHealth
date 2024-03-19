@@ -1,0 +1,64 @@
+{{ 'collection-static-images.css' | asset_url | stylesheet_tag }}
+{% if section.blocks.size > 0 %}
+    <section class="container">
+        <div class="section-header">
+            <h2>{{ section.settings.title }}</h2>
+        </div>
+        <div class="symptoms-section">
+            {% for block in section.blocks %}
+                {% if block.settings.image %}
+                    <div class="symptom-block">
+                        <div class="symptom-image">
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text | escape }}" class="img-fluid">
+                        </div>
+                        <div class="symptom-text">
+                            <p>{{ block.settings.text }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% assign spacers_needed = 3 | minus: section.blocks.size | modulo: 3 %}
+            {% for i in (1..spacers_needed) %}
+                <div class="symptom-block symptom-block--spacer"> </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Static Image Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Static Header"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "symptom",
+      "name": "Symptom",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Static Image Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
