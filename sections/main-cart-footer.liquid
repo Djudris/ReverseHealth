@@ -120,15 +120,32 @@ customElements.define('cart-note', CartNote);
 
     document.addEventListener('DOMContentLoaded', function () {
         let checkbox = document.getElementById('cart-terms');
-        let button = document.querySelector('.cart__checkout-button');
+        let checkoutButton = document.querySelector('.cart__checkout-button');
+        let additionalCheckoutButtons = document.querySelector('.additional-checkout-buttons');
+
+        function toggleAdditionalCheckoutButtons(disabled) {
+            if (additionalCheckoutButtons) {
+                if (disabled) {
+                    additionalCheckoutButtons.style.pointerEvents = 'none';
+                    additionalCheckoutButtons.style.opacity = '0.5';
+                } else {
+                    additionalCheckoutButtons.style.pointerEvents = 'auto';
+                    additionalCheckoutButtons.style.opacity = '1';
+                }
+            }
+        }
 
         checkbox.addEventListener('change', function () {
             if (checkbox.checked) {
-                button.removeAttribute('disabled');
+                checkoutButton.removeAttribute('disabled');
+                toggleAdditionalCheckoutButtons(false);
             } else {
-                button.setAttribute('disabled', 'disabled');
+                checkoutButton.setAttribute('disabled', 'disabled');
+                toggleAdditionalCheckoutButtons(true);
             }
         });
+
+        toggleAdditionalCheckoutButtons(!checkbox.checked);
 
         document.querySelector('.cart__checkout-button').addEventListener('click', function (e) {
             if (!document.querySelector('#cart-terms').checked) {
@@ -137,6 +154,16 @@ customElements.define('cart-note', CartNote);
                 alert('You must agree to the terms and conditions before proceeding.');
             }
         });
+
+        if (additionalCheckoutButtons) {
+            document.querySelector('.additional-checkout-buttons').addEventListener('click', function (e) {
+                if (!document.querySelector('#cart-terms').checked) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    alert('You must agree to the terms and conditions before proceeding.');
+                }
+            });
+        }
     });
 
 </script>
