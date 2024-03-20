@@ -10,7 +10,6 @@
     "landing_image_with_text": {
       "type": "landing-img-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2024-01-29_at_10.28.57.png",
         "heading": "The best supplements for menopause relief",
         "text": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
       }
@@ -18,57 +17,36 @@
     "landing_collection_list": {
       "type": "landing-collection-list",
       "blocks": {
-        "featured_collection_cdnf8r": {
+        "featured_collection_Vqebf7": {
           "type": "featured_collection",
           "settings": {
-            "collection": "poor-sleep"
+            "collection": "better-sleep"
           }
         },
-        "featured_collection_hhzhiH": {
+        "featured_collection_7fgtD9": {
           "type": "featured_collection",
           "settings": {
-            "collection": "joint-back-pain"
+            "collection": "bone-and-joint-health"
           }
         },
-        "featured_collection_TbzVTC": {
+        "featured_collection_LRHbWV": {
           "type": "featured_collection",
           "settings": {
-            "collection": "poor-skin-elasticity"
+            "collection": "improved-aging"
           }
         },
-        "featured_collection_BVBMyK": {
+        "featured_collection_RT8A8L": {
           "type": "featured_collection",
           "settings": {
-            "collection": "poor-sleep"
-          }
-        },
-        "featured_collection_biTTfM": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "poor-sleep"
-          }
-        },
-        "featured_collection_WzKTdj": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "poor-skin-elasticity"
-          }
-        },
-        "featured_collection_bfWACc": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "poor-sleep"
+            "collection": "mind-and-mood"
           }
         }
       },
       "block_order": [
-        "featured_collection_cdnf8r",
-        "featured_collection_hhzhiH",
-        "featured_collection_TbzVTC",
-        "featured_collection_BVBMyK",
-        "featured_collection_biTTfM",
-        "featured_collection_WzKTdj",
-        "featured_collection_bfWACc"
+        "featured_collection_Vqebf7",
+        "featured_collection_7fgtD9",
+        "featured_collection_LRHbWV",
+        "featured_collection_RT8A8L"
       ],
       "settings": {
         "title": "How can we help?",
