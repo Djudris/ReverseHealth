@@ -1,7 +1,7 @@
 {
   "sections": {
     "single_product_hero": {
-      "type": "single-product-hero",
+      "type": "single-product-oos-hero",
       "settings": {
       }
     },
