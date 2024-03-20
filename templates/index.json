@@ -18,36 +18,29 @@
     "landing_collection_list": {
       "type": "landing-collection-list",
       "blocks": {
-        "featured_collection_Vqebf7": {
+        "featured_collection_EqqjmX": {
           "type": "featured_collection",
           "settings": {
-            "collection": "better-sleep"
+            "collection": "joint-back-pain"
           }
         },
-        "featured_collection_7fgtD9": {
+        "featured_collection_VrDWLw": {
           "type": "featured_collection",
           "settings": {
-            "collection": "bone-and-joint-health"
+            "collection": "poor-skin-elasticity"
           }
         },
-        "featured_collection_LRHbWV": {
+        "featured_collection_LJnYLC": {
           "type": "featured_collection",
           "settings": {
-            "collection": "improved-aging"
-          }
-        },
-        "featured_collection_RT8A8L": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mind-and-mood"
+            "collection": "poor-sleep"
           }
         }
       },
       "block_order": [
-        "featured_collection_Vqebf7",
-        "featured_collection_7fgtD9",
-        "featured_collection_LRHbWV",
-        "featured_collection_RT8A8L"
+        "featured_collection_EqqjmX",
+        "featured_collection_VrDWLw",
+        "featured_collection_LJnYLC"
       ],
       "settings": {
         "title": "How can we help?",
