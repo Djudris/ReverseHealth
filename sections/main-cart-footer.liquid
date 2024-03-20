@@ -127,9 +127,11 @@ customElements.define('cart-note', CartNote);
             if (additionalCheckoutButtons) {
                 if (disabled) {
                     additionalCheckoutButtons.style.pointerEvents = 'none';
+                    additionalCheckoutButtons.style.userSelect = 'none';
                     additionalCheckoutButtons.style.opacity = '0.5';
                 } else {
                     additionalCheckoutButtons.style.pointerEvents = 'auto';
+                    additionalCheckoutButtons.style.userSelect = 'auto';
                     additionalCheckoutButtons.style.opacity = '1';
                 }
             }
