@@ -20,7 +20,7 @@
 .image-with-text-image {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .image-with-text-image img {

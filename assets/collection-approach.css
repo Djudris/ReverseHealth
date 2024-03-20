@@ -10,7 +10,7 @@
 .alternating-image-text-section .image-block {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .alternating-image-text-section .image-block img {
