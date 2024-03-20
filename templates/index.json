@@ -24,6 +24,12 @@
             "collection": "better-sleep"
           }
         },
+        "featured_collection_M9Q4V9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "digestive-health"
+          }
+        },
         "featured_collection_7fgtD9": {
           "type": "featured_collection",
           "settings": {
@@ -41,13 +47,28 @@
           "settings": {
             "collection": "mind-and-mood"
           }
+        },
+        "featured_collection_XfEbb8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "glp-1-supplement-support"
+          }
+        },
+        "featured_collection_qqhtzp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wellness-essentials"
+          }
         }
       },
       "block_order": [
         "featured_collection_Vqebf7",
+        "featured_collection_M9Q4V9",
         "featured_collection_7fgtD9",
         "featured_collection_LRHbWV",
-        "featured_collection_RT8A8L"
+        "featured_collection_RT8A8L",
+        "featured_collection_XfEbb8",
+        "featured_collection_qqhtzp"
       ],
       "settings": {
         "title": "How can we help?",
