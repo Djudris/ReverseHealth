@@ -6,7 +6,8 @@
         "blog_wVeyTy": {
           "type": "blog",
           "settings": {
-            "handles": "news,technology,health"
+            "page_header": "Blogs",
+            "handles": ""
           }
         }
       },
@@ -14,7 +15,10 @@
         "blog_wVeyTy"
       ],
       "settings": {
-        "page_header": "The Wellness Journal"
+        "page_header": "The Wellness Journal",
+        "articles_per_page": 9,
+        "articles_columns_desktop": 3,
+        "articles_columns_mobile": 2
       }
     },
     "newsletter_C7NCAF": {
