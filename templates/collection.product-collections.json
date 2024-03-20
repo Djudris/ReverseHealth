@@ -20,21 +20,21 @@
           "type": "symptom",
           "settings": {
             "image": "{{ collection.metafields.collection_fields.static_image_1.value }}",
-            "richtext": "{{ collection.metafields.collection_fields.static_image_text_1.value }}"
+            "text": "{{ collection.metafields.collection_fields.static_image_text_1.value }}"
           }
         },
         "symptom_ypENqQ": {
           "type": "symptom",
           "settings": {
             "image": "{{ collection.metafields.collection_fields.static_image_3.value }}",
-            "richtext": "{{ collection.metafields.collection_fields.static_image_text_2.value }}"
+            "text": "{{ collection.metafields.collection_fields.static_image_text_2.value }}"
           }
         },
         "symptom_teBtTz": {
           "type": "symptom",
           "settings": {
             "image": "{{ collection.metafields.collection_fields.static_image_2.value }}",
-            "richtext": "{{ collection.metafields.collection_fields.static_image_text_3.value }}"
+            "text": "{{ collection.metafields.collection_fields.static_image_text_3.value }}"
           }
         }
       },
