@@ -338,7 +338,10 @@
                               {%- for product in collections.all.products -%}
                                   <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
                               {%- endfor -%}
-                            
+                          
+                          </ul>
+                        </div>
+                    </div>
               
                     {% comment %}<a href="/pages/reviews" class="navigation-link text-decoration-none">Reviews</a>{% endcomment %}
                     <a href="/pages/contact" class="navigation-link text-decoration-none">Contact</a>
