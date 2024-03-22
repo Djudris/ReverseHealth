@@ -318,7 +318,7 @@
                                 <path d="M10.4004 8.81012L19.2981 1.10229C19.5894 0.849749 19.589 0.440885 19.2966 0.18877C19.0043 -0.06315 18.5307 -0.062499 18.2391 0.190072L9.87104 7.43911L1.50299 0.189811C1.21137 -0.0627269 0.738119 -0.0633779 0.445751 0.188509C0.299191 0.314892 0.22591 0.480463 0.22591 0.646033C0.22591 0.81118 0.2987 0.9761 0.444244 1.10225L9.34169 8.81012C9.48177 8.93175 9.67241 9 9.87104 9C10.0697 9 10.2601 8.93155 10.4004 8.81012Z" fill="#1D2E42"/>
                             </svg>
                         </div>
-                        <div style="height:30px; width: 80px;" class="dropdown-menu-hovered" id="shopMenuDiv">
+                        <div style="height:30px; width: 80px;" class="dropdown-menu-hovered" >
                           <ul class="dropdown-menu" id="shopToggleMenu">
                             <!---  {%- for product in collections.all.products -%}
                                   <li><a class="dropdown-item" href="{{ product.url }}"> {{ product.title }}</a></li>
@@ -335,8 +335,8 @@
                         </div>
                     </div>
 
-              <div class="dropdown d-inline" >
-                        <a href="#" class="drop">Shop
+                    <div class="dropdown d-inline" >
+                        <div href="#" class="navigation-link text-decoration-none" id="shopToggle"><label>Shop</label>
                             <svg style="margin-left: 5px;" class="dropdown-icon" id="shopToggleIcon" width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.4004 8.81012L19.2981 1.10229C19.5894 0.849749 19.589 0.440885 19.2966 0.18877C19.0043 -0.06315 18.5307 -0.062499 18.2391 0.190072L9.87104 7.43911L1.50299 0.189811C1.21137 -0.0627269 0.738119 -0.0633779 0.445751 0.188509C0.299191 0.314892 0.22591 0.480463 0.22591 0.646033C0.22591 0.81118 0.2987 0.9761 0.444244 1.10225L9.34169 8.81012C9.48177 8.93175 9.67241 9 9.87104 9C10.0697 9 10.2601 8.93155 10.4004 8.81012Z" fill="#1D2E42"/>
                             </svg>
@@ -347,7 +347,7 @@
                               <li><a class="dropdown-item" href="/collections/digestive-health">Digestive Health</a></li>
                
                   <a href="/products/collagen" class="navigation-link text-decoration-none">Most Popular</a>
-              
+
                     {% comment %}<a href="/pages/reviews" class="navigation-link text-decoration-none">Reviews</a>{% endcomment %}
                   <a href="/pages/contact" class="navigation-link text-decoration-none">Contact</a>
 
