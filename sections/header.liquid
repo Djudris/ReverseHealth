@@ -139,15 +139,14 @@
 
                                         </div>
                                         <ul class="p-0 dropdown-menu position-relative mobile-nav-dropdown">
-                                            {%- for product in collections.all.products -%}
-                                                {% if forloop.first == true %}
-                                                    <li><a class="dropdown-item nav-mobile-dropdown-single-first" href="{{ product.url }}"> {{ product.title }}</a></li>
-                                                {%- endif -%}
-                                                {% if forloop.first == false %}
-                                                    <li><a class="dropdown-item nav-mobile-dropdown-single nav-mobile-dropdown-single-padding" href="{{ product.url }}">{{ product.title }}</a></li>
-                                                {%- endif -%}
-                                            {%- endfor -%}
-                                            <li><a class="dropdown-item nav-mobile-dropdown-single" href="/collections/all">All Products</a></li>
+                                          <li><a class="dropdown-item" href="/collections/all">All products</a></li>
+                              <li><a class="dropdown-item" href="/collections/better-sleep">Better Sleep</a></li>
+                              <li><a class="dropdown-item" href="/collections/digestive-health">Digestive Health</a></li>
+                              <li><a class="dropdown-item" href="/collections/bone-and-joint-health">Bone and Joint Health</a></li>
+                              <li><a class="dropdown-item" href="/collections/improved-aging">Improved Aging</a></li>
+                              <li><a class="dropdown-item" href="/collections/mind-and-mood">Mind and Mood</a></li>
+                              <li><a class="dropdown-item" href="/collections/glp-1-supplement-support">GLP-1 Support</a></li>
+                              <li><a class="dropdown-item" href="/collections/wellness-essentials">Wellness Essentials</a></li>
 
                                         </ul>
                                     </div>
