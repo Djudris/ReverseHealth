@@ -11,7 +11,7 @@
 
 .slider-parent:before {
     animation: slideShowHorizontal 3000s infinite;
-    background: transparent url("mobile.webp") no-repeat 50%;
+    background: transparent url("mobile.png") no-repeat 50%;
     background-repeat: repeat-x;
     background-size: cover;
     height: 100%;
