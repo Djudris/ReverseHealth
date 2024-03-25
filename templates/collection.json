@@ -17,17 +17,9 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "landing_img_with_text_ppyXWV": {
-      "type": "landing-img-with-text",
-      "settings": {
-        "heading": "The best supplements for menopause relief",
-        "text": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
-      }
     }
   },
   "order": [
-    "product-grid",
-    "landing_img_with_text_ppyXWV"
+    "product-grid"
   ]
 }
