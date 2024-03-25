@@ -1,5 +1,6 @@
 {{ 'single-product-hero.css' | asset_url | stylesheet_tag }}
 {{ 'learn-more.js' | asset_url | script_tag }}
+{{ 'more-effective-together.js' | asset_url | script_tag }}
 
 <section id="page-top">
     <div class="container">
@@ -302,239 +303,159 @@
                     {% endif %}
 
                 </div>
-                    <h3 class="bundle-heading">Choose your bundle</h3>
-                    <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
-                        {% for t in product.tags %}
-                            {% if t contains 'bundle' %}
-                                {% assign bundle_exsist = true %}
-                            {% endif %}
-                        {% endfor %}
-
-                        {% if bundle_exsist %}
-                            <form class="d-none" method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                            </form>
+                <h3 class="bundle-heading">Choose your bundle</h3>
+                <div class="d-flex flex-lg-row flex-column flex-wrap opcijas" style="gap: 25px;">
+                    {% for t in product.tags %}
+                        {% if t contains 'bundle' %}
+                            {% assign bundle_exsist = true %}
                         {% endif %}
-                        <div class="add-to-cart-card d-flex flex-column justify-content-between">
-                            <div class="card-content d-flex flex-row-reverse flex-md-column">
-                                <div class="w-100">
-                                    <h3 class="card-quantity">Single</h3>
-                                    <p class="card-ppp">
-                                        <span class="money">{{ product.variants.first.price | money }}</span>
-                                        <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                    <p class="card-total">{{ product.variants.first.price | money }} total price to pay</p>
-                                </div>
+                    {% endfor %}
+
+                    {% if bundle_exsist %}
+                        <form class="d-none" method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
+                    {% endif %}
+                    <div class="add-to-cart-card d-flex flex-column justify-content-between">
+                        <div class="card-content d-flex flex-row-reverse flex-md-column">
+                            <div class="w-100">
+                                <h3 class="card-quantity">Single</h3>
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants.first.price | money }}</span>
+                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                <p class="card-total">{{ product.variants.first.price | money }} total price to pay</p>
                             </div>
-                            <form method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                            </form>
                         </div>
-                        <div class="add-to-cart-card padding-top-30-card selected-opcija d-flex flex-column justify-content-between">
-                            {% if product.metafields.single.enablebestvalue %}
-                                {% if product.metafields.single.bestvalueimage %}
-                                    <img class="best-value-image"
-                                         src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}"
-                                         alt="Best value">
-                                    {% assign price_variable = product.variants[2].price %}
-                                    <p class="best-value-text">best value - save
-                                        {% if product.metafields.single.usecustomsave %}
-                                            {{ product.metafields.single.customsavevalue }}
-                                        {% else %}
-                                            {{ product.variants.first.price | times: 5 | minus: price_variable | money_without_trailing_zeros }}
-                                        {% endif %}
-                                    </p>
-                                {% endif %}
-                            {% endif %}
-                            <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
-                                <div class="w-100">
-                                    <h3 class="card-quantity">5-pack</h3>
-                                    <p class="card-ppp">
-                                        <span class="money">{{ product.variants[2].price | divided_by: 5 | money }}</span>
-                                        <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                    <p class="card-total">{{ product.variants[2].price | money }} total price to pay</p>
-                                </div>
-                            </div>
-                            <form method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                            </form>
-                        </div>
-                        <div class="add-to-cart-card padding-top-30-card d-flex flex-column justify-content-between">
-                            {% if product.metafields.single.three_pack_label_is_enabled %}
-                                {% if product.metafields.single.three_pack_label_image %}
-                                    <img class="best-value-image"
-                                         src="{{ product.metafields.single.three_pack_label_image | img_url: 'x60' }}"
-                                         alt={{ product.metafields.single.three_pack_label_text }}>
-                                    <p class="best-value-text">{{ product.metafields.single.three_pack_label_text }}</p>
-                                {% endif %}
-                            {% endif %}
-                            <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
-                                <div class="w-100">
-                                    <h3 class="card-quantity">3-pack</h3>
-                                    <p class="card-ppp">
-                                        <span class="money">{{ product.variants[1].price | divided_by: 3 | money }}</span>
-                                        <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
-                                    <p class="card-total">{{ product.variants[1].price | money }} total price to pay</p>
-                                </div>
-                            </div>
-                            <form method="post" action="/cart/add">
-                                <input type="hidden" name="id" value="{{ product.variants[1].id }}"/>
-                                <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
-                                <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
-                            </form>
-                        </div>
+                        <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
                     </div>
-                    {% comment %}this is code is for back in stock feature which was not needed{% endcomment %}
-                    {% comment %}<div id="back-in-stock" class="terms-and-conditions">{% endcomment %}
-                        {% comment %}<h2>Join the waiting list!</h2>{% endcomment %}
-                        {% comment %}<p>{% endcomment %}
-                            {% comment %}Be among the first to know when our product is available.{% endcomment %}
-                            {% comment %}Secure your spot for early access and priority ordering. Don't miss out!{% endcomment %}
-                        {% comment %}</p>{% endcomment %}
-                        {% comment %}<div class="stock-checkbox">{% endcomment %}
-                            {% comment %}<input type="checkbox" id="back-in-stock-newsletter"/>{% endcomment %}
-                            {% comment %}<label for="back-in-stock-newsletter">Receive news, deals, and offers from Wellinda</label>{% endcomment %}
-                        {% comment %}</div>{% endcomment %}
-                        {% comment %}<div class="stock-checkbox">{% endcomment %}
-                            {% comment %}<input type="checkbox" id="back-in-stock-privacy" name="back-in-stock-privacy" required>{% endcomment %}
-                            {% comment %}<label for="back-in-stock-privacy">I have read and agree to Wellinda's <a href="/pages/terms-of-service" target="_blank">terms & conditions</a> and <a href="/pages/privacy-cookies" target="_blank">privacy policy</a>.</label>{% endcomment %}
-                        {% comment %}</div>{% endcomment %}
-                        {% comment %}<div class="newsletter-form__field-wrapper">{% endcomment %}
-                            {% comment %}<div class="field">{% endcomment %}
-                                {% comment %}<input type="email" id="back-in-stock-email" class="field__input" placeholder="{{ 'newsletter.label' | t }}" required/>{% endcomment %}
-                                {% comment %}<label class="field__label" for="back-in-stock-email">{% endcomment %}
-                                    {% comment %}{{ 'newsletter.label' | t }}{% endcomment %}
-                                {% comment %}</label>{% endcomment %}
-                                {% comment %}<button type="submit" class="newsletter-form__button field__button" name="commit" id="back-in-stock-submit" aria-label="{{ 'newsletter.button_label' | t }}">{% endcomment %}
-                                    {% comment %}{% render 'icon-new-arrow' %}{% endcomment %}
-                                {% comment %}</button>{% endcomment %}
-                            {% comment %}</div>{% endcomment %}
-                        {% comment %}</div>{% endcomment %}
-                    {% comment %}</div>{% endcomment %}
-                {% comment %}<div id="waiting-listed">{% endcomment %}
-                    {% comment %}<h2>You're on the waiting list</h2>{% endcomment %}
-                    {% comment %}<p>{% endcomment %}
-                        {% comment %}We'll email you as soon as {{ product.title }} is ready!{% endcomment %}
-                    {% comment %}</p>{% endcomment %}
-                {% comment %}</div>{% endcomment %}
+                    <div class="add-to-cart-card padding-top-30-card selected-opcija d-flex flex-column justify-content-between">
+                        {% if product.metafields.single.enablebestvalue %}
+                            {% if product.metafields.single.bestvalueimage %}
+                                <img class="best-value-image"
+                                     src="{{ product.metafields.single.bestvalueimage | img_url: 'x60' }}"
+                                     alt="Best value">
+                                {% assign price_variable = product.variants[2].price %}
+                                <p class="best-value-text">best value - save
+                                    {% if product.metafields.single.usecustomsave %}
+                                        {{ product.metafields.single.customsavevalue }}
+                                    {% else %}
+                                        {{ product.variants.first.price | times: 5 | minus: price_variable | money_without_trailing_zeros }}
+                                    {% endif %}
+                                </p>
+                            {% endif %}
+                        {% endif %}
+                        <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
+                            <div class="w-100">
+                                <h3 class="card-quantity">5-pack</h3>
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants[2].price | divided_by: 5 | money }}</span>
+                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                <p class="card-total">{{ product.variants[2].price | money }} total price to pay</p>
+                            </div>
+                        </div>
+                        <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants[2].id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
+                    </div>
+                    <div class="add-to-cart-card padding-top-30-card d-flex flex-column justify-content-between">
+                        {% if product.metafields.single.three_pack_label_is_enabled %}
+                            {% if product.metafields.single.three_pack_label_image %}
+                                <img class="best-value-image"
+                                     src="{{ product.metafields.single.three_pack_label_image | img_url: 'x60' }}"
+                                     alt={{ product.metafields.single.three_pack_label_text }}>
+                                <p class="best-value-text">{{ product.metafields.single.three_pack_label_text }}</p>
+                            {% endif %}
+                        {% endif %}
+                        <div class="card-content padding-top-30 d-flex flex-row-reverse flex-md-column">
+                            <div class="w-100">
+                                <h3 class="card-quantity">3-pack</h3>
+                                <p class="card-ppp">
+                                    <span class="money">{{ product.variants[1].price | divided_by: 3 | money }}</span>
+                                    <span> / per {% if bundle_exsist %}pack {% else %}item{% endif %}</span></p>
+                                <p class="card-total">{{ product.variants[1].price | money }} total price to pay</p>
+                            </div>
+                        </div>
+                        <form method="post" action="/cart/add">
+                            <input type="hidden" name="id" value="{{ product.variants[1].id }}"/>
+                            <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                            <input type="submit" value="Add to cart" class="btn btn-add-to-cart"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="product-met" id="product-met">
+                    {% if product.metafields.my_fields.is_met_enabled %}
+                        <div class="met-heading">
+                            {{ product.metafields.my_fields.met_heading }}
+                        </div>
+                        <div class="met-description">
+                            {{ product.metafields.my_fields.met_description | metafield_tag }}
+                        </div>
+                        <div class="met-products">
+                            {% assign count = 0 %}
+                            {% for met_product in product.metafields.my_fields.met_products.value %}
+                                {% assign out_of_stock = true %}
+                                {% if met_product.variants[0].available or met_product.variants[1].available or met_product.variants[2].available %}
+                                    {% assign out_of_stock = false %}
+                                {% endif %}
+                                {% if count == 3 %}
+                                    {% break %}
+                                {% endif %}
+                                <div class="product-item d-flex justify-content-evenly align-items-center"
+                                     data-single-variant-id="{{ met_product.variants[0].id }}"
+                                     data-three-variant-id="{{ met_product.variants[1].id }}"
+                                     data-five-variant-id="{{ met_product.variants[2].id }}"
+                                     data-single-price="{{ met_product.variants.first.price | money }}"
+                                     data-three-pack-price="{{ met_product.variants[1].price | divided_by: 3 | money }}"
+                                     data-five-pack-price="{{ met_product.variants[2].price | divided_by: 5 | money }}"
+                                     data-three-total-price="{{ met_product.variants[1].price | money }}"
+                                     data-five-total-price="{{ met_product.variants[2].price | money }}">
+                                    <div class="product-checkbox">
+                                        <input type="checkbox" class="product-checkbox js--product-checkbox" {% if out_of_stock == true %} disabled {% endif %}name="product_checkbox_{{ forloop.index }}">
+                                    </div>
+                                    <div>
+                                        <img class="desktop-image" src="{{ met_product.featured_image | img_url: '180x180' }}" alt="{{ met_product.featured_image.alt }}" loading="lazy">
+                                        <img class="mobile-image" src="{{ met_product.featured_image | img_url: '120x120' }}" alt="{{ met_product.featured_image.alt }}" loading="lazy">
+                                    </div>
+                                    <div class="d-flex flex-column w-100 justify-content-center">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                            <p class="met-product-title">{{ met_product.title }}</p>
+                                            <p class="money">{{ met_product.variants.first.price | money }} / per item</p>
+                                        </div>
+                                        <p class="js--total-price">Save when buying a 3-pack or 5-pack</p>
+                                        <div class="select-container">
+                                            {% if out_of_stock == true %}
+                                                <select class="product-select js--product-select" name="product_select_{{ forloop.index }}" disabled>
+                                                    <option value="out_of_stock" disabled selected>Out of stock</option>
+                                                </select>
+                                            {% else %}
+                                                <select class="product-select js--product-select" name="product_select_{{ forloop.index }}">
+                                                    <option value="single" {% if met_product.variants[0].available == false %}disabled{% endif %}>Single</option>
+                                                    <option value="3-pack" {% if met_product.variants[1].available == false %}disabled{% endif %}>3-pack</option>
+                                                    <option value="5-pack" {% if met_product.variants[2].available == false %}disabled{% endif %}>5-pack</option>
+                                                </select>
+                                            {% endif %}
+
+                                        </div>
+                                        <div class="mt-2">
+                                            <a href="{{ met_product.url }}" target="_blank" class="contact-link" style="font-size: 16px;">Learn more...</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% assign count = count | plus: 1 %}
+                            {% endfor %}
+                            <input type="submit" value="Add to cart" id="met-button" class="btn btn-add-to-cart" disabled/>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
 </section>
-{{ 'single-product-hero.js' | asset_url | script_tag }}
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var submitButton = document.getElementById('back-in-stock-submit');
-
-        submitButton.addEventListener('click', function (e) {
-            var apiKey = 'W7YYih';
-            var emailInput = document.getElementById('back-in-stock-email');
-            var emailValue = emailInput.value;
-            var newsletterCheckbox = document.getElementById('back-in-stock-newsletter');
-            var privacyCheckbox = document.getElementById('back-in-stock-privacy');
-
-            console.log(privacyCheckbox.checked);
-            if (!privacyCheckbox.checked) {
-                alert('You must agree to the privacy policy.');
-                return;
-            }
-
-            if (!emailValue || !validateEmail(emailValue)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            const payload = {
-                "data": {
-                    "type": "back-in-stock-subscription",
-                    "attributes": {
-                        "profile": {
-                            "data": {
-                                "type": "profile",
-                                "attributes": {
-                                    "email": emailValue,
-                                },
-                            }
-                        },
-                        "channels": ["EMAIL"],
-                    },
-                    "relationships": {
-                        "variant": {
-                            "data": {
-                                "type": "catalog-variant",
-                                "id": "$shopify:::$default:::{{ product.variants.first.id }}"
-                            }
-                        }
-                    }
-                }
-            }
-
-            var requestOptions = {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json",
-                    "revision": "2023-12-15",
-                },
-                body: JSON.stringify(payload),
-            };
-
-            fetch("https://a.klaviyo.com/client/back-in-stock-subscriptions/?company_id=" + apiKey, requestOptions)
-                .then(result => console.log(result))
-                .catch(error => alert(error))
-                .finally(() => {
-                    if (newsletterCheckbox.checked) {
-                        const newsletterPayload = {
-                            "data": {
-                                "type": "subscription",
-                                "attributes": {
-                                    "profile": {
-                                        "data": {
-                                            "type": "profile",
-                                            "attributes": {
-                                                "email": emailValue,
-                                            },
-                                        }
-                                    },
-                                },
-                                "relationships": {
-                                    "list": {
-                                        "data": {
-                                            "type": "list",
-                                            "id": "TF8i52"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        var newsletterRequestOptions = {
-                            method: 'POST',
-                            headers: {
-                                "Content-Type": "application/json",
-                                "revision": "2023-12-15",
-                            },
-                            body: JSON.stringify(newsletterPayload),
-                        };
-                        fetch("https://a.klaviyo.com/client/subscriptions/?company_id=" + apiKey, newsletterRequestOptions)
-                            .then(result => console.log(result))
-                            .catch(error => alert(error))
-                    }
-                    document.getElementById('back-in-stock').style.display = 'none';
-                    document.getElementById('waiting-listed').style.display = 'flex';
-                });
-        });
-
-
-        function validateEmail(email) {
-            let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(String(email).toLowerCase());
-        }
-    });
-
-
-</script>
