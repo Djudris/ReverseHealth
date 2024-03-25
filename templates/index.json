@@ -201,7 +201,7 @@
       "type": "collection-product-slider",
       "settings": {
         "title": "our best sellers",
-        "collection": "",
+        "collection": "best-sellers",
         "products_to_show": 4
       }
     }
