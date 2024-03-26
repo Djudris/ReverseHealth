@@ -431,8 +431,19 @@ select {
     max-width: none;
     border-radius: 15px !IMPORTANT;
 }
+
+.shopify-cleanslate  [data-testid="ApplePay-button"] {
+    width: 440px !IMPORTANT;
+    max-width: none;
+    border-radius: 15px !IMPORTANT;
+}
 @media screen and (max-width: 749.9px) {
     .shopify-cleanslate .paypalLight {
+        width: 100% !IMPORTANT;
+        border-radius: 12px !IMPORTANT;
+    }
+
+    .shopify-cleanslate  [data-testid="ApplePay-button"] {
         width: 100% !IMPORTANT;
         border-radius: 12px !IMPORTANT;
     }
