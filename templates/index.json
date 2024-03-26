@@ -87,41 +87,80 @@
     "landing_symptom_list": {
       "type": "landing-symptoms-list",
       "blocks": {
-        "column_C9jtMr": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Collection_Better_Sleep.jpg",
-            "title": "Poor sleep",
-            "link": "shopify:\/\/collections\/better-sleep"
-          }
-        },
         "column_ceMPK9": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/back-pain.jpg",
+            "title": "Joint and Back Pain",
+            "link": "shopify:\/\/collections\/bone-and-joint-health"
+          }
+        },
+        "column_C9jtMr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/poor-sleep.jpg",
+            "title": "Poor sleep",
+            "link": "shopify:\/\/collections\/better-sleep"
           }
         },
         "column_J8U4yL": {
           "type": "column",
           "settings": {
-            "title": "Headache",
-            "link": "shopify:\/\/collections\/joint-back-pain"
+            "image": "shopify:\/\/shop_images\/gut-issues.jpg",
+            "title": "Gut issues",
+            "link": "shopify:\/\/collections\/digestive-health"
           }
         },
         "column_j3tbrd": {
           "type": "column",
           "settings": {
-            "title": "Some pain",
-            "link": "shopify:\/\/collections\/poor-sleep"
+            "image": "shopify:\/\/shop_images\/GLP1nutrition.jpg",
+            "title": "GLP-1 Nutrition",
+            "link": "shopify:\/\/collections\/glp-1-supplement-support"
+          }
+        },
+        "column_eUnrmT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skin-elasticity.jpg",
+            "title": "Poor skin elasticity",
+            "link": "shopify:\/\/collections\/improved-aging"
+          }
+        },
+        "column_dpmiWr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/low-muscle-mass.jpg",
+            "title": "Low muscle mass",
+            "link": "shopify:\/\/collections\/wellness-essentials"
+          }
+        },
+        "column_teCiBq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brain-fog.jpg",
+            "title": "Brain fog",
+            "link": "shopify:\/\/collections\/mind-and-mood"
+          }
+        },
+        "column_cheqTM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mood.jpg",
+            "title": "Mood swings",
+            "link": "shopify:\/\/collections\/mind-and-mood"
           }
         }
       },
       "block_order": [
-        "column_C9jtMr",
         "column_ceMPK9",
+        "column_C9jtMr",
         "column_J8U4yL",
-        "column_j3tbrd"
+        "column_j3tbrd",
+        "column_eUnrmT",
+        "column_dpmiWr",
+        "column_teCiBq",
+        "column_cheqTM"
       ],
       "settings": {
         "title": "How can we help?",
