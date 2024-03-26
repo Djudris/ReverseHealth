@@ -4,13 +4,15 @@
       "type": "landing-hero",
       "settings": {
         "hero-title": "MENOPAUSE SYMPTOMS RELIEF",
-        "hero-subtitle": "Natural evidence-based supplements for women managing their perimenopause, menopause and postmenopause health and wellness"
+        "hero-subtitle": "Natural evidence-based supplements for women managing their perimenopause, menopause and postmenopause health and wellness",
+        "is_full_image": false,
+        "hero-image": "shopify:\/\/shop_images\/hero-desktop-bundle-white.png",
+        "hero-image-full": "shopify:\/\/shop_images\/Screenshot_2024-01-29_at_10.28.57.png"
       }
     },
     "landing_image_with_text": {
       "type": "landing-img-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/wellinda_women_our_supplements.jpg",
         "heading": "The best supplements for menopause relief",
         "text": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
       }
@@ -21,7 +23,6 @@
         "column_ceMPK9": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/back-pain.jpg",
             "title": "Joint and Back Pain",
             "link": "shopify:\/\/collections\/bone-and-joint-health"
           }
@@ -29,7 +30,6 @@
         "column_C9jtMr": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/poor-sleep.jpg",
             "title": "Poor sleep",
             "link": "shopify:\/\/collections\/better-sleep"
           }
@@ -37,7 +37,6 @@
         "column_J8U4yL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gut-issues.jpg",
             "title": "Gut issues",
             "link": "shopify:\/\/collections\/digestive-health"
           }
@@ -45,7 +44,6 @@
         "column_j3tbrd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/low-muscle-mass.jpg",
             "title": "GLP-1 Nutrition",
             "link": "shopify:\/\/collections\/glp-1-supplement-support"
           }
@@ -53,7 +51,6 @@
         "column_eUnrmT": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/skin-elasticity.jpg",
             "title": "Poor skin elasticity",
             "link": "shopify:\/\/collections\/improved-aging"
           }
@@ -61,7 +58,6 @@
         "column_dpmiWr": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GLP1nutrition.jpg",
             "title": "Low muscle mass",
             "link": "shopify:\/\/collections\/wellness-essentials"
           }
@@ -69,7 +65,6 @@
         "column_teCiBq": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/brain-fog.jpg",
             "title": "Brain fog",
             "link": "shopify:\/\/collections\/mind-and-mood"
           }
@@ -77,7 +72,6 @@
         "column_cheqTM": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mood.jpg",
             "title": "Mood swings",
             "link": "shopify:\/\/collections\/mind-and-mood"
           }
