@@ -10,7 +10,6 @@
     "landing_image_with_text": {
       "type": "landing-img-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/wellinda_women_our_supplements.jpg",
         "heading": "The best supplements for menopause relief",
         "text": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
       }
@@ -70,6 +69,7 @@
         "featured_collection_XfEbb8",
         "featured_collection_qqhtzp"
       ],
+      "disabled": true,
       "settings": {
         "title": "How can we help?",
         "heading_size": "h1",
@@ -80,6 +80,62 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_DU7aXA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_C9jtMr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-02_at_09.22.26.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ceMPK9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-02_at_09.25.03.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_J8U4yL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-02-02_at_09.27.07.png",
+            "title": "Headache",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/joint-back-pain"
+          }
+        }
+      },
+      "block_order": [
+        "column_C9jtMr",
+        "column_ceMPK9",
+        "column_J8U4yL"
+      ],
+      "settings": {
+        "title": "How can we help?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -202,6 +258,7 @@
     "landing_hero",
     "landing_image_with_text",
     "landing_collection_list",
+    "multicolumn_DU7aXA",
     "best_seller",
     "reviews",
     "landing_mission",
