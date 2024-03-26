@@ -1,7 +1,7 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
 <section id="hero-id" class="position-relative landing-hero-bg">
     <img loading="lazy" width="815" height="538" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.webp' | asset_url }}" alt="Squares">
-    <img loading="eager" width="375" height="569" class="landing-hero-feather-2 d-lg-none"  src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
+    <img loading="eager" width="375" height="569" class="landing-hero-feather-2 d-lg-none" src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
 
     <div class="w-100 d-lg-none position-relative">
         <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
@@ -22,15 +22,25 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
-                <div class="hero-abs-pic d-flex justify-content-end">
-                    <div class="landing-hero-custom">
-                        {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
-                        <img loading="lazy" class="hero-yummy desktop" src="{{ 'hero-yummy-desktop.svg' | asset_url }}" alt="Hero Yummy">
-                        <img class="desk-hero-prod" src="{{ 'hero-desktop-bundle-white.png' | asset_url }}" alt="Hero picture" loading="eager">
+            {% if section.settings.is_full_image %}
+                <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
+                    <div class="hero-abs-pic d-flex justify-content-end">
+                        <div class="landing-hero-custom">
+                            <img class="desk-hero-prod" src="{{ section.settings.hero-image-full | img_url: '1000x1000' }}" alt="Hero picture" loading="eager">
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
+                    <div class="hero-abs-pic d-flex justify-content-end">
+                        <div class="landing-hero-custom">
+                            {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
+                            <img loading="lazy" class="hero-yummy desktop" src="{{ 'hero-yummy-desktop.svg' | asset_url }}" alt="Hero Yummy">
+                            <img class="desk-hero-prod" src="{{ section.settings.hero-image | img_url: '1000x1000'}}" alt="Hero picture" loading="eager">
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 
@@ -58,7 +68,7 @@
                 </div>
                 <div class="col-lg-2 w-100-sm d-flex flex-column justify-content-center align-items-center">
                     <div>
-                        <img loading="lazy" width="60" height="60"  src="{{ 'gluten_i.svg' | asset_url }}" alt="Gluten icon">
+                        <img loading="lazy" width="60" height="60" src="{{ 'gluten_i.svg' | asset_url }}" alt="Gluten icon">
                     </div>
                     <div class="icons-text mt-3">
                         Gluten free
@@ -90,19 +100,19 @@
                 </div>
             </div>
             {% comment %}<div class="container hero-carouse-btn-parent ">{% endcomment %}
-                {% comment %}<div class="position-relative d-none">{% endcomment %}
-                    {% comment %}<div class="css--prev-btn-hero d-flex justify-content-start d-lg-none">{% endcomment %}
-                        {% comment %}<button class="customPrevBtnHero caps text-center d-flex d-sm-inline align-items-center disabled">{% endcomment %}
-                            {% comment %}<img loading="lazy" class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow left">{% endcomment %}
-                        {% comment %}</button>{% endcomment %}
-                    {% comment %}</div>{% endcomment %}
-                    {% comment %}<div class="css--next-btn-hero d-flex justify-content-end d-lg-none">{% endcomment %}
-                        {% comment %}<button class="customNextBtnHero caps d-flex d-sm-inline align-items-center">{% endcomment %}
-                            {% comment %}<img loading="lazy" class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow right">{% endcomment %}
-                        {% comment %}</button>{% endcomment %}
-                    {% comment %}</div>{% endcomment %}
-                {% comment %}</div>{% endcomment %}
-{% comment %}{% endcomment %}
+            {% comment %}<div class="position-relative d-none">{% endcomment %}
+            {% comment %}<div class="css--prev-btn-hero d-flex justify-content-start d-lg-none">{% endcomment %}
+            {% comment %}<button class="customPrevBtnHero caps text-center d-flex d-sm-inline align-items-center disabled">{% endcomment %}
+            {% comment %}<img loading="lazy" class="carousel-arrow-img" src="{{ 'arrow-left.svg' | asset_url }}" alt="Arrow left">{% endcomment %}
+            {% comment %}</button>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+            {% comment %}<div class="css--next-btn-hero d-flex justify-content-end d-lg-none">{% endcomment %}
+            {% comment %}<button class="customNextBtnHero caps d-flex d-sm-inline align-items-center">{% endcomment %}
+            {% comment %}<img loading="lazy" class=" carousel-arrow-img" src="{{ 'arrow-right.svg' | asset_url }}" alt="Arrow right">{% endcomment %}
+            {% comment %}</button>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+            {% comment %}</div>{% endcomment %}
+            {% comment %}{% endcomment %}
             {% comment %}</div>{% endcomment %}
         </div>
     </div>
@@ -112,25 +122,43 @@
 
 {% schema %}
 {
-"name": "Values",
-"settings": [
-{
-"id": "hero-title",
-"type": "text",
-"label": "Title",
-"default": "THE SPECIAL BLEND FOR MATURE WOMEN"
-},
-{
-"id": "hero-subtitle",
-"type": "text",
-"label": "Subtitle",
-"default":"Our products are designed to boost weight loss and increase lifespan"
-}
-],
-"presets": [
-{
-"name": "Values"
-}
-]
+  "name": "Values",
+  "settings": [
+    {
+      "id": "hero-title",
+      "type": "text",
+      "label": "Title",
+      "default": "THE SPECIAL BLEND FOR MATURE WOMEN"
+    },
+    {
+      "id": "hero-subtitle",
+      "type": "text",
+      "label": "Subtitle",
+      "default": "Our products are designed to boost weight loss and increase lifespan"
+    },
+    {
+      "id": "is_full_image",
+      "type": "checkbox",
+      "label": "Full Image Enabled",
+      "default": false
+    },
+    {
+      "id": "hero-image",
+      "type": "image_picker",
+      "label": "Hero Image",
+      "default": "hero-desktop-bundle-white.png"
+    },
+    {
+      "id": "hero-image-full",
+      "type": "image_picker",
+      "label": "Hero Image Mobile",
+      "default": "hero-desktop-bundle-white.png"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Values"
+    }
+  ]
 }
 {% endschema %}
