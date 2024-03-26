@@ -157,12 +157,16 @@ cart-items.is-empty .title-wrapper-with-link,
 
 [data-testid="ApplePay-button"] {
     border-radius: 12px;
-    max-width: 440px; !important;
-    width: auto; !important;
+    width: 315px; !important;
 }
 
 .dynamic-checkout__content iframe {
     border-radius: 12px !important;
+}
+@media screen and (min-width: 750px) {
+    [data-testid="ApplePay-button"] {
+        width: 440px; !important;
+    }
 }
 
 @media screen and (min-width: 990px) {
@@ -188,8 +192,6 @@ cart-items.is-empty .title-wrapper-with-link,
 
     [data-testid="ApplePay-button"] {
         border-radius: 15px;
-        max-width: 440px; !important;
-        width: auto; !important;
     }
 
     .dynamic-checkout__content iframe {
