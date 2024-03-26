@@ -157,6 +157,8 @@ cart-items.is-empty .title-wrapper-with-link,
 
 [data-testid="ApplePay-button"] {
     border-radius: 12px;
+    max-width: 440px; !important;
+    width: auto; !important;
 }
 
 .dynamic-checkout__content iframe {
@@ -186,6 +188,8 @@ cart-items.is-empty .title-wrapper-with-link,
 
     [data-testid="ApplePay-button"] {
         border-radius: 15px;
+        max-width: 440px; !important;
+        width: auto; !important;
     }
 
     .dynamic-checkout__content iframe {
