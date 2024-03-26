@@ -83,8 +83,8 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_DU7aXA": {
-      "type": "multicolumn",
+    "landing_symptom_list": {
+      "type": "landing-symptoms-list",
       "blocks": {
         "column_C9jtMr": {
           "type": "column",
@@ -258,7 +258,7 @@
     "landing_hero",
     "landing_image_with_text",
     "landing_collection_list",
-    "multicolumn_DU7aXA",
+    "landing_symptom_list",
     "best_seller",
     "reviews",
     "landing_mission",
