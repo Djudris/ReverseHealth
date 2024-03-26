@@ -90,8 +90,9 @@
         "column_C9jtMr": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/Collection_Better_Sleep.jpg",
+            "title": "Poor sleep",
+            "link": "shopify:\/\/collections\/better-sleep"
           }
         },
         "column_ceMPK9": {
