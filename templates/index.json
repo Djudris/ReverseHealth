@@ -15,75 +15,6 @@
         "text": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
       }
     },
-    "landing_collection_list": {
-      "type": "landing-collection-list",
-      "blocks": {
-        "featured_collection_Vqebf7": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "better-sleep"
-          }
-        },
-        "featured_collection_M9Q4V9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "digestive-health"
-          }
-        },
-        "featured_collection_7fgtD9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bone-and-joint-health"
-          }
-        },
-        "featured_collection_LRHbWV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "improved-aging"
-          }
-        },
-        "featured_collection_RT8A8L": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mind-and-mood"
-          }
-        },
-        "featured_collection_XfEbb8": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "glp-1-supplement-support"
-          }
-        },
-        "featured_collection_qqhtzp": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "wellness-essentials"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_Vqebf7",
-        "featured_collection_M9Q4V9",
-        "featured_collection_7fgtD9",
-        "featured_collection_LRHbWV",
-        "featured_collection_RT8A8L",
-        "featured_collection_XfEbb8",
-        "featured_collection_qqhtzp"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "How can we help?",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "landing_symptom_list": {
       "type": "landing-symptoms-list",
       "blocks": {
@@ -224,6 +155,74 @@
         "text-3": "14-day, no questions asked refund"
       }
     },
+    "landing_collection_list": {
+      "type": "landing-collection-list",
+      "blocks": {
+        "featured_collection_Vqebf7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "better-sleep"
+          }
+        },
+        "featured_collection_M9Q4V9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "digestive-health"
+          }
+        },
+        "featured_collection_7fgtD9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bone-and-joint-health"
+          }
+        },
+        "featured_collection_LRHbWV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "improved-aging"
+          }
+        },
+        "featured_collection_RT8A8L": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mind-and-mood"
+          }
+        },
+        "featured_collection_XfEbb8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "glp-1-supplement-support"
+          }
+        },
+        "featured_collection_qqhtzp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wellness-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Vqebf7",
+        "featured_collection_M9Q4V9",
+        "featured_collection_7fgtD9",
+        "featured_collection_LRHbWV",
+        "featured_collection_RT8A8L",
+        "featured_collection_XfEbb8",
+        "featured_collection_qqhtzp"
+      ],
+      "settings": {
+        "title": "Health Goals",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "landing_coaches": {
       "type": "landing-coaches",
       "settings": {
@@ -293,12 +292,12 @@
   "order": [
     "landing_hero",
     "landing_image_with_text",
-    "landing_collection_list",
     "landing_symptom_list",
     "best_seller",
     "reviews",
     "landing_mission",
     "landing_delivery",
+    "landing_collection_list",
     "landing_coaches",
     "landing_bottom_image",
     "faq",
