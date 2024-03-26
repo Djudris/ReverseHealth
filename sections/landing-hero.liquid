@@ -4,8 +4,12 @@
     <img loading="eager" width="375" height="569" class="landing-hero-feather-2 d-lg-none" src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
 
     <div class="w-100 d-lg-none position-relative">
-        <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
-        <img loading="eager" fetchpriority="high" width="360" height="307" class="position-relative w-96 img-hero-mobile" src="{{ 'hero-desktop-bundle-white.png' | asset_url }}" alt="Hero picture">
+        {% if section.settings.is_full_image %}
+            <img class="hero-full-image-mobile" src="{{ section.settings.hero-image-full | img_url: '1000x1000' }}" alt="Hero picture" loading="eager">
+        {% else %}
+            <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
+            <img loading="eager" fetchpriority="high" width="360" height="307" class="position-relative w-96 img-hero-mobile" src="{{ section.settings.hero-image | img_url: '1000x1000' }}" alt="Hero picture">
+        {% endif %}
     </div>
     <div class="container position-unset">
         <div class="row position-unset">
@@ -24,11 +28,7 @@
             </div>
             {% if section.settings.is_full_image %}
                 <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
-                    <div class="hero-abs-pic d-flex justify-content-end">
-                        <div class="landing-hero-custom">
-                            <img class="desk-hero-prod" src="{{ section.settings.hero-image-full | img_url: '1000x1000' }}" alt="Hero picture" loading="eager">
-                        </div>
-                    </div>
+                    <img class="hero-full-image" src="{{ section.settings.hero-image-full | img_url: '1000x1000' }}" alt="Hero picture" loading="eager">
                 </div>
             {% else %}
                 <div class="col-lg-6 position-unset col-12 order-lg-2 order-1 z-100 d-lg-block d-none" style="height: 538px">
@@ -36,7 +36,7 @@
                         <div class="landing-hero-custom">
                             {% comment %}<img src="{{ 'hero-desktop-f.png' | asset_url }}" alt="Hero picture">{% endcomment %}
                             <img loading="lazy" class="hero-yummy desktop" src="{{ 'hero-yummy-desktop.svg' | asset_url }}" alt="Hero Yummy">
-                            <img class="desk-hero-prod" src="{{ section.settings.hero-image | img_url: '1000x1000'}}" alt="Hero picture" loading="eager">
+                            <img class="desk-hero-prod" src="{{ section.settings.hero-image | img_url: '1000x1000' }}" alt="Hero picture" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
       "id": "hero-image-full",
       "type": "image_picker",
       "label": "Hero Image Full",
-       "info": "Image for when full image mode is enabled"
+      "info": "Image for when full image mode is enabled"
     }
   ],
   "presets": [
