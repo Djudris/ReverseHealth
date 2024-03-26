@@ -114,7 +114,7 @@
         "column_j3tbrd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GLP1nutrition.jpg",
+            "image": "shopify:\/\/shop_images\/low-muscle-mass.jpg",
             "title": "GLP-1 Nutrition",
             "link": "shopify:\/\/collections\/glp-1-supplement-support"
           }
@@ -130,7 +130,7 @@
         "column_dpmiWr": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/low-muscle-mass.jpg",
+            "image": "shopify:\/\/shop_images\/GLP1nutrition.jpg",
             "title": "Low muscle mass",
             "link": "shopify:\/\/collections\/wellness-essentials"
           }
