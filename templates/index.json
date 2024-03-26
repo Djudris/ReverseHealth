@@ -1,19 +1,18 @@
 {
   "sections": {
+    "landing_hero": {
+      "type": "landing-hero",
+      "settings": {
+        "hero-title": "MENOPAUSE SYMPTOMS RELIEF",
+        "hero-subtitle": "Natural evidence-based supplements for women managing their perimenopause, menopause and postmenopause health and wellness"
+      }
+    },
     "landing_image_with_text": {
       "type": "landing-img-with-text",
       "settings": {
         "image": "shopify:\/\/shop_images\/wellinda_women_our_supplements.jpg",
         "heading": "The best supplements for menopause relief",
         "text": "Welcome to Wellinda, your trusted ally in women's health during perimenopause, to menopause and overall improved healthspan. Our core mission is to provide support for menopause symptoms with targeted, high-quality supplements and expert education, championing a proactive approach to women's health & wellness. At Wellinda, we understand the challenges of menopause and strive to simplify the path to optimal vitality.\n\nJoin our community of vibrant women, embracing each day with energy and enthusiasm. With Wellinda, you're not just managing symptoms; you're actively thriving. Live Vibrantly with us!"
-      }
-    },
-    "landing_hero": {
-      "type": "landing-hero",
-      "disabled": true,
-      "settings": {
-        "hero-title": "MENOPAUSE SYMPTOMS RELIEF",
-        "hero-subtitle": "Natural evidence-based supplements for women managing their perimenopause, menopause and postmenopause health and wellness"
       }
     },
     "landing_collection_list": {
@@ -200,8 +199,8 @@
     }
   },
   "order": [
-    "landing_image_with_text",
     "landing_hero",
+    "landing_image_with_text",
     "landing_collection_list",
     "best_seller",
     "reviews",
