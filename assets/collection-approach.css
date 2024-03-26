@@ -16,7 +16,7 @@
 .alternating-image-text-section .image-block img {
     width: 100%;
     border-radius: 15px;
-    height: 14.688rem;
+    height: auto;
     object-fit: cover;
 }
 
@@ -52,7 +52,7 @@
         max-width: 100%;
         border-radius: 12px;
         margin-bottom: 30px;
-        height: 210px;
+        height: auto;
     }
 
     .alternating-image-text-section .text-block h2 {
