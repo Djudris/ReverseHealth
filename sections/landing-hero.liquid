@@ -1,13 +1,13 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
 <section id="hero-id" class="position-relative landing-hero-bg" style="background: {{ section.settings.hero-bg-color }}">
-    <img loading="lazy" width="815" height="538" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.webp' | asset_url }}" alt="Squares">
+<!---    <img loading="lazy" width="815" height="538" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.webp' | asset_url }}" alt="Squares">
     <img loading="eager" width="375" height="569" class="landing-hero-feather-2 d-lg-none" src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
-
+--->
     <div class="w-100 d-lg-none position-relative">
         {% if section.settings.is_full_image %}
             <img class="hero-full-image-mobile" src="{{ section.settings.hero-image-full | img_url: '1000x1000' }}" alt="Hero picture" loading="eager">
         {% else %}
-            <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
+      <img loading="lazy" class="hero-yummy mobile" src="{{ 'hero-yummy-mobile.svg' | asset_url }}" alt="Hero Yummy">
             <img loading="eager" fetchpriority="high" width="360" height="307" class="position-relative w-96 img-hero-mobile" src="{{ section.settings.hero-image | img_url: '1000x1000' }}" alt="Hero picture">
         {% endif %}
     </div>
