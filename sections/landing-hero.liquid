@@ -1,5 +1,5 @@
 {{ 'landing-hero.css' | asset_url | stylesheet_tag }}
-<section id="hero-id" class="position-relative landing-hero-bg">
+<section id="hero-id" class="position-relative landing-hero-bg" style="background: {{ section.settings.hero-bg-color }}">
     <img loading="lazy" width="815" height="538" class="landing-hero-feather-1 d-none d-lg-block" src="{{ 'landing_squares1.webp' | asset_url }}" alt="Squares">
     <img loading="eager" width="375" height="569" class="landing-hero-feather-2 d-lg-none" src="{{ 'landing_squares2.webp' | asset_url }}" alt="Squares">
 
@@ -16,7 +16,7 @@
             <div class="col-lg-6 col-12  pe-lg-5  ps-lg-0 d-flex align-items-center position-unset order-lg-1 order-2" id="textCol">
                 <div class="w-100 hero-landing-text-block padding-square">
                     <h1 class="hero-title">
-                        <span>{{ section.settings.hero-title }}</span>
+                        <span style="color: {{ section.settings.hero-title-color }}">{{ section.settings.hero-title }}</span>
                     </h1>
                     <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
                     <div class=" btn-padding-mobile">
@@ -125,7 +125,7 @@
   "name": "Values",
   "settings": [
     {
-      "id": "hero_bg_color",
+      "id": "hero-bg-color",
       "type": "color",
       "label": "Hero Background Color",
       "default": "#F1E4D4"

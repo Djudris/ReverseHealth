@@ -1,10 +1,9 @@
 .hero-title span {
-    background-color: #4F4B91;
-    color: white;
+    /*background-color: #4F4B91;*/
     font-size: 30px !important;
     font-weight: 700;
     line-height: 150%;
-    box-shadow: 10px 0 0 0 #4F4B91, -10px 0 0 0 #4F4B91;
+    /*box-shadow: 10px 0 0 0 #4F4B91, -10px 0 0 0 #4F4B91;*/
     -webkit-box-decoration-break: clone;
     -moz-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -168,7 +167,7 @@
 }
 
 .landing-hero-bg {
-    background: #FFF3E5;
+    /*background: #FFF3E5;*/
     overflow: hidden;
 }
 
