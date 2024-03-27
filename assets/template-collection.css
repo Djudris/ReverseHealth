@@ -146,7 +146,8 @@
 }
 
 .grid-header {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
+  padding-top: 40px !important;
 }
 
 .collection-title {
@@ -179,6 +180,7 @@
 @media screen and (max-width:768px) {
   .grid-header {
     padding-bottom: 20px !important;
+    padding-top: 20px !important;
   }
 
   .collection-title h2 {
@@ -222,6 +224,7 @@ select.product-select {
   font-size: 16px;
   cursor: pointer;
   border-radius: 12px;
+  width: 200px;
 }
 
 select.product-select:focus-visible {

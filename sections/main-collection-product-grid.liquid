@@ -17,7 +17,7 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <section id="section-collection-grid">
     <div class="container grid-header">
-        <div class="d-flex flex-column flex-lg-row">
+        <div class="d-flex flex-column flex-lg-row gap-2 gap-lg-0">
             <div class="col-lg-4 d-none d-lg-block">&nbsp;</div>
             <div class="collection-title col-lg-4">
                 <h2>All products</h2>
@@ -31,8 +31,6 @@
                         <option value="title-descending">Alphabetically, Z-A</option>
                         <option value="price-ascending">Price, low to high</option>
                         <option value="price-descending">Price, high to low</option>
-                        <option value="created-descending">Date, new to old</option>
-                        <option value="created-ascending">Date, old to new</option>
                     </select>
                 </div>
             </div>
