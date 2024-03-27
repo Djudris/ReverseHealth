@@ -3,11 +3,11 @@
     "landing_hero": {
       "type": "landing-hero",
       "settings": {
-        "hero-bg-color": "#1d2e42",
+        "hero-bg-color": "#f1e4d4",
         "hero-title": "MENOPAUSE SYMPTOMS RELIEF",
-        "hero-title-color": "#ffffff",
+        "hero-title-color": "#1d2e42",
         "hero-subtitle": "Natural evidence-based supplements for women managing their perimenopause, menopause and postmenopause health and wellness",
-        "hero-subtitle-color": "#ffffff",
+        "hero-subtitle-color": "#1d2e42",
         "is_full_image": true,
         "hero-image": "shopify:\/\/shop_images\/Bundle-white.png",
         "hero-image-full": "shopify:\/\/shop_images\/wellinda-friendship-menopause-supplements.jpg"
