@@ -18,7 +18,7 @@
                     <h1 class="hero-title">
                         <span style="color: {{ section.settings.hero-title-color }}">{{ section.settings.hero-title }}</span>
                     </h1>
-                    <h2 class=" hero-subtitle">{{ section.settings.hero-subtitle }}</h2>
+                    <h2 class=" hero-subtitle" style="color: {{ section.settings.hero-subtitle-color }}">{{ section.settings.hero-subtitle }}</h2>
                     <div class=" btn-padding-mobile">
                         <a href="{{ shop.url }}/collections/all">
                             <button class="btn btn-primary btn-top">check availability</button>
@@ -147,6 +147,12 @@
       "type": "text",
       "label": "Subtitle",
       "default": "Our products are designed to boost weight loss and increase lifespan"
+    },
+    {
+      "id": "hero-subtitle-color",
+      "type": "color",
+      "label": "Hero Subtitle Color",
+      "default": "#000000"
     },
     {
       "id": "is_full_image",
