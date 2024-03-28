@@ -177,6 +177,12 @@
   margin-bottom: 30px;
 }
 
+@media screen and (max-width:400px) {
+  .row {
+    --bs-gutter-x: 10px !important;
+  }
+}
+
 @media screen and (max-width:768px) {
   .grid-header {
     padding-bottom: 20px !important;
