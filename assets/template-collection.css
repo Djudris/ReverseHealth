@@ -183,8 +183,8 @@
     padding-top: 20px !important;
   }
 
-  .collection-title h2 {
-    font-size: 24px;
+  .full-unstyled-link{
+    font-size: 20px;
   }
 
   #section-collection-grid .container {
@@ -203,8 +203,7 @@
   .grid__item {
     list-style: none;
     margin-bottom: 20px;
-    padding-right: 0;
-    padding-left: 0;
+
   }
 
   #product-grid .grid__item:last-of-type {

@@ -8,6 +8,13 @@
     .card__content {
         grid-template-rows: unset !important;
     }
+
+    @media screen and (max-width:768px) {
+        .card__content {
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+        }
+    }
 </style>
 {%- if section.settings.enable_quick_add -%}
     <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -46,7 +53,7 @@
                         {%- if forloop.index > 2 -%}
                             {%- assign lazy_load = true -%}
                         {%- endif -%}
-                        <li class="grid__item col-12 col-md-6 col-lg-4">
+                        <li class="grid__item col-6 col-lg-4">
                             {% render 'card-product',
                                     card_product: product,
                                     media_aspect_ratio: section.settings.image_ratio,
