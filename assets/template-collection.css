@@ -183,6 +183,7 @@
 @media screen and (max-width: 500px) {
     .row {
         --bs-gutter-x: 10px !important;
+
     }
 }
 
